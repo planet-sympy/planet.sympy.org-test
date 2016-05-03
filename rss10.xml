@@ -7,6 +7,43 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">http://srajangarg.github.io//Selected</guid>
+      <title>Selected</title>
+      <author>Srajan Garg (srajangarg)</author>
+      <pubDate>Fri, 29 Apr 2016 00:00:00 GMT</pubDate>
+      <link>http://srajangarg.github.io//Selected/</link>
+      <description>&lt;p&gt;I have been selected for GSoC&amp;#8217;16! The results came out on Apr 23, and I have never been happier! I got around to writing this blog post only now, because of my end semester examinations which ended yesterday. I have been alotted &lt;a href="https://github.com/isuruf"&gt;Isuru&lt;/a&gt; and &lt;a href="https://github.com/sumith1896"&gt;Sumith&lt;/a&gt; as my official mentors. I&amp;#8217;m very excited to start working on the project, alongside them.&lt;/p&gt;
+
+&lt;p&gt;Right now, I&amp;#8217;ll start my discussions on the implementation details, and overall structure of the code. Also I will begin work on the Fast Fourier algorithm for univariate polynomial multiplication.&lt;/p&gt;
+
+&lt;p&gt;Looking forward to a busy summer!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://rajithsays.wordpress.com/?p=46</guid>
+      <title>GSoC &#x2013; Prologue</title>
+      <author>Rajith Vidanaarachchi (rajithv)</author>
+      <pubDate>Tue, 26 Apr 2016 06:53:46 GMT</pubDate>
+      <link>https://rajithsays.wordpress.com/2016/04/26/gsoc-prologue/</link>
+      <description>&lt;p&gt;So, I have been accepted for the Google Summer of Code &amp;#8211; 2016 for the project &amp;#8220;Ruby Wrappers for SymEngine&amp;#8221;, under the mentoring organization SciRuby.&lt;/p&gt;
+&lt;p&gt;The aim of this post is to give an introduction to the project.&lt;/p&gt;
+&lt;p&gt;The abstract of the project is as follows:&lt;/p&gt;
+&lt;div&gt;A project started by the SymPy organisation, SymEngine is a standalone fast C++ symbolic manipulation library. It solves mathematical problems the same way a human does, but way more quickly and precisely. The motivation for SymEngine is to develop the Computer Algebra System once in C++ and then use it from other languages rather than doing the same thing all over again for each language that it is required in. The project for Ruby bindings has already been setup at symengine.rb. Few things that the project involves are:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Extending the C interface of SymEngine library.&lt;/li&gt;
+&lt;li&gt;Wrapping up the C interface for Ruby using Ruby C API, including error handling.&lt;/li&gt;
+&lt;li&gt;Designing the Ruby interface.&lt;/li&gt;
+&lt;li&gt;Integrating IRuby with symengine gem for better printing and writing IRuby notebooks.&lt;/li&gt;
+&lt;li&gt;Integrating the gem with existing gems like gmp, mpfr and mpc.&lt;/li&gt;
+&lt;li&gt;Making the installation of symengine gem easier.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are interested, the &lt;a href="https://docs.google.com/document/d/1HKEzqpm3yk9ax5Fs7POQaBFZFxSOjy1MXNyeB7JXBxg/edit?usp=sharing" target="_blank"&gt;full proposal&lt;/a&gt;, which includes the timeline is available online.&lt;/p&gt;
+&lt;p&gt;Also, the GitHub repository for the project is at &lt;a href="https://github.com/symengine/symengine.rb" target="_blank"&gt;SymEngine/SymEngine.rb&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The actual coding phase starts in about a month, and before that I plan to complete the&amp;#160;&lt;a href="https://github.com/symengine/symengine.rb/pull/23"&gt;&lt;span style="font-weight: 400;"&gt;Ruby Wrappers for the Trigonometric and Hyperbolic Functions&lt;/span&gt;&lt;/a&gt;&lt;span style="font-weight: 400;"&gt; and to write the necessary tests.&amp;#160;&lt;/span&gt;&lt;span style="font-weight: 400;"&gt;Next, the NTheory CWrappers can be wrapped into Ruby. This too will be done before the GSoC period starts.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Keep checking the blog if you are interested to track the progress of this project. I will be posting&amp;#160;weekly updates in the blog.&lt;/p&gt;
+&lt;p&gt;Auf Wiedersehen!&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/46/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/46/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&amp;#038;blog=110498904&amp;#038;post=46&amp;#038;subd=rajithsays&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">http://iamit.in/blog/SymPy Workshop at FOSSASIA 2016, Singapore</guid>
       <title>SymPy Workshop at FOSSASIA 2016, Singapore</title>
       <author>Amit Kumar (aktech)</author>
@@ -55,6 +92,16 @@ I would not have been able to attend the conference without the generous financi
 
 &lt;p&gt;Good bye! everyone, see you on my next blog post, meanwhile you can have a look at a Picture of me doing back flip at Sentosa ;)
 &lt;img align="center" src="http://iamit.in/assets/amit-backflip.gif" /&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://srajangarg.github.io//Initial-Commit</guid>
+      <title>Initial Commit</title>
+      <author>Srajan Garg (srajangarg)</author>
+      <pubDate>Mon, 07 Mar 2016 00:00:00 GMT</pubDate>
+      <link>http://srajangarg.github.io//Initial-Commit/</link>
+      <description>&lt;p&gt;This is my first blog post. The blog was made to track progress of my GSoC project and get feedback from my mentors, if my proposal gets selected. I&amp;#8217;m proposing to implement the Multivariate and Univariate polynomial class in SymEngine.&lt;/p&gt;
+
+&lt;p&gt;Wish me luck!&lt;/p&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">http://iamit.in/blog/SymPy Workshop at PyDelhi Meetup</guid>
@@ -2162,146 +2209,6 @@ Here is my PR reports. &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;That's all this week. &lt;br /&gt;
 &lt;strong&gt;Ciao&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://sartajsingh.me/gsoc-update-week-5</guid>
-      <title>GSoC: Update Week-5</title>
-      <author>Sartaj Singh (leosartaj)</author>
-      <pubDate>Wed, 01 Jul 2015 17:03:41 GMT</pubDate>
-      <link>https://sartajsingh.me/gsoc-update-week-5</link>
-      <description>&lt;p&gt;Midterm evaluation has started and is scheduled to end by 3rd of July.
-So, far GSoC has been a very good experience and hopefully the next half
-would even be better.&lt;/p&gt;
-
-&lt;p&gt;Yesterday, I had a meeting with my mentor &lt;a href="http://github.com/jcrist"&gt;@jcrist&lt;/a&gt;. It was decided
-that we will meet every Tuesday on &lt;a href="http://gitter.im/sympy/sympy"&gt;gitter&lt;/a&gt; at 7:30 P.M IST. We discussed
-my next steps in implementing the algorithm and completing &lt;code&gt;FormalPowerSeries&lt;/code&gt;.&lt;/p&gt;
-
-
-
-&lt;h3&gt;Highlights:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Most of my time was spent on writing a rough implementation
-for the second part of the algorithm. Currently it is able
-to compute series for some functions. But fails for a lot
-of them. Some early testing indicates, this maybe due to
-&lt;code&gt;rsolve&lt;/code&gt; not being able to solve some type of recurrence equations.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;FourierSeries&lt;/code&gt; and &lt;code&gt;FormalPowerSeries&lt;/code&gt; no longer computes the
-series of a function. Computation is performed inside &lt;code&gt;fourier_series&lt;/code&gt;
-and &lt;code&gt;fps&lt;/code&gt; functions respectively. Both the classes are now
-used for &lt;em&gt;representing&lt;/em&gt; the series only.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I decided it was time to add sphinx documentation for
-&lt;code&gt;sequences&lt;/code&gt;. So, I opened &lt;a href="http://github.com/sympy/sympy/pull/9590"&gt;#9590&lt;/a&gt;. Probably, it will be
-best to add documentation at the same time as the implementation from
-next time.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Also opened &lt;a href="http://github.com/sympy/sympy/pull/9599"&gt;#9599&lt;/a&gt; that allows &lt;code&gt;Idx&lt;/code&gt; instances to be used
-as limits in both &lt;code&gt;Sum&lt;/code&gt; and &lt;code&gt;sequence&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Tasks Week-6:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="http://github.com/sympy/sympy/pull/9523"&gt;#9523&lt;/a&gt;'s review is mostly done and should get merged soon. Also,
-add the documentation for Fourier series.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Polish &lt;a href="http://github.com/sympy/sympy/pull/9572"&gt;#9572&lt;/a&gt; and make it more robust.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Improve the range of functions for which series can be computed. Probably
-will need to improve the algorithm for solving the recurrence equations.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This week is going to be fun. Lots to do :)&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">tag:blogger.com,1999:blog-8848761645772749389.post-4453412233278624654</guid>
-      <title>GSoC Week 5</title>
-      <author>Isuru Fernando (isuruf)</author>
-      <pubDate>Sat, 27 Jun 2015 02:40:10 GMT</pubDate>
-      <link>http://isuruf.blogspot.com/2015/06/gsoc-week-5.html</link>
-      <description>&lt;div dir="ltr" style="text-align: left;"&gt;This week, I looked into installing SymEngine in Sage and wrappers. One issue was that we have a header named `complex.h` and some libraries look inside `$SAGE_LOCAL/include` for the C header `complex` and this leads to errors. It was decided to install symengine headers inside a folder called `symengine` so that a header could be accessed by `symengine/basic.h` form and it avoids clashes.&lt;br /&gt;&lt;br /&gt;I looked at other libraries for how this is done. Some libraries have the installing headers in a separate folder like `include/project_name`, but `.cpp`s under `src`. Some libraries have headers and source files in the same folder and they are included in `project_name` folder. Since SymEngine has headers and sources in the same folder, we decided to rename `src` to `symengine`. This lead to another problem. Python wrappers folder was named `symengine`. So I moved them to `symengine/python/symengine` to enable using symengine python wrappers inside the build directory (although you have to change directory into `symengine/python` to use it).&lt;br /&gt;&lt;br /&gt;Some other work involved, making sure `make install` installed all the python tests and installing dependencies in Travis-ci without using sudo.&lt;br /&gt;&lt;br /&gt;That's all the updates for this week. Mid evaluations are coming this week, so I hope to get a SymEngine spkg done this week.&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://sumith1896.github.io//GSoC-Progress-Week-5</guid>
-      <title>GSoC Progress - Week 5</title>
-      <author>Sumith (sumith1896)</author>
-      <pubDate>Fri, 26 Jun 2015 00:00:00 GMT</pubDate>
-      <link>http://sumith1896.github.io//GSoC-Progress-Week-5</link>
-      <description>&lt;p&gt;Hello, this post contains the fourth report of my GSoC progress. We hit &lt;code&gt;Piranha&lt;/code&gt;'s speed,
-the highlight of this week. &lt;/p&gt;
-
-&lt;h3&gt;Progress&lt;/h3&gt;
-
-&lt;p&gt;We were able to reach &lt;code&gt;Piranha&lt;/code&gt;'s speed. At an average &lt;code&gt;14-ish ms&lt;/code&gt; to the benchmark, we are happy enough (still can be improved) to start wrapping this low-level implementation to a &lt;code&gt;Polynomial&lt;/code&gt; class. Last week I had reported speed &lt;code&gt;23ms&lt;/code&gt; and this week we are better. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;We had missed out a compiler flag, &lt;code&gt;DNDEBUG&lt;/code&gt; to indicate &lt;code&gt;Release&lt;/code&gt; mode of &lt;code&gt;Piranha&lt;/code&gt; leading to slow-down, &lt;a href="https://github.com/sympy/symengine/issues/482"&gt;#482&lt;/a&gt;. &lt;br /&gt;
-Adding this compiler flag means we should not be using &lt;code&gt;assert&lt;/code&gt; statement, which &lt;code&gt;SymEngine&lt;/code&gt; does in &lt;code&gt;SYMENGINE_ASSERT&lt;/code&gt; and test files too. These had to be sorted out if &lt;code&gt;Piranha&lt;/code&gt; were to be a hard dependency of &lt;code&gt;SymEngine&lt;/code&gt;'s polynomial module. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hence, the issue of moving the tests suite from &lt;code&gt;assert&lt;/code&gt;s to a well-developed test framework came up again, &lt;a href="https://github.com/sympy/symengine/issues/282"&gt;#282&lt;/a&gt;. We explored a couple, but &lt;code&gt;Catch&lt;/code&gt; still seemed to be the best option. &lt;br /&gt;
-&lt;code&gt;Catch&lt;/code&gt; was implemented, which is a benefit to &lt;code&gt;SymEngine&lt;/code&gt; in the long run too. &lt;br /&gt;
-As for the &lt;code&gt;SYMENGINE_ASSERT&lt;/code&gt;, we decided to change our macro to raise an exception or just abort the program. &lt;br /&gt;
-&lt;a href="https://github.com/philsquared/Catch"&gt;Catch&lt;/a&gt; is a very good tool. We thank &lt;a href="https://github.com/philsquared"&gt;Phil Nash&lt;/a&gt; and all the contributors for making it.&lt;/p&gt;
-
-&lt;p&gt;Next up, wrapping into &lt;code&gt;Polynomial&lt;/code&gt;. &lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;We need some functionality to convert a &lt;code&gt;SymEngine&lt;/code&gt; expression(&lt;code&gt;Basic&lt;/code&gt;) into one of &lt;code&gt;hashset&lt;/code&gt; representations directly. Now I convert &lt;code&gt;basic&lt;/code&gt; to &lt;code&gt;poly&lt;/code&gt; and then to &lt;code&gt;hashset&lt;/code&gt; as just getting the speed right was the issue. &lt;br /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Domains of coefficients need to be thought of. &lt;code&gt;SymPy&lt;/code&gt; and &lt;code&gt;Sage&lt;/code&gt; will be need to looked into and their APIs need to be studied. We need &lt;code&gt;ZZ&lt;/code&gt;, &lt;code&gt;QQ&lt;/code&gt; and &lt;code&gt;EX&lt;/code&gt;, the work for &lt;code&gt;EX&lt;/code&gt; has been done by &lt;a href="https://github.com/bluescarni"&gt;Francesco Biscani&lt;/a&gt;, this will be patched for the latest master and commited in his name.
-There could also be an automatic mode, which figures out the fastest representation for the given expression, at the price of a little slower conversion, as it needs to traverse the expression to figure out what representation fits. &lt;br /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;tuple&lt;/code&gt; to &lt;code&gt;packed&lt;/code&gt; conversion when exponents don't fit. Also &lt;code&gt;encode&lt;/code&gt; supports signed ints which is a boon to us, as we don't have to worry about negative exponents. For &lt;code&gt;rational&lt;/code&gt; exponents we use tuple. &lt;br /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I still haven't figured out the reason for slow down of &lt;code&gt;expand2&lt;/code&gt; and &lt;code&gt;expand2b&lt;/code&gt; in my &lt;code&gt;packint&lt;/code&gt; branch. I have been suggested to use &lt;code&gt;git bisect&lt;/code&gt;. Will do next week.&lt;/p&gt;
-
-&lt;h3&gt;Report&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;expand2d&lt;/code&gt; results:&lt;/p&gt;
-
-&lt;p&gt;Result of 10 execution:  &lt;br /&gt;
-&lt;code&gt;14ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;14ms&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;14ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;15ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;14ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;15ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;14ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;14ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;15ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;14ms&lt;/code&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Maximum: 15ms &lt;br /&gt;
-Minimum: 14ms &lt;br /&gt;
-Average: 14.3ms &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here, the &lt;code&gt;evaluate_sparsity()&lt;/code&gt; gave the following result for the &lt;code&gt;hash_set&lt;/code&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;0,11488&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;1,3605&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;2,1206&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;3,85&lt;/code&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Piranha&lt;/code&gt; has the following results &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Average: 13.421ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;Maximum: 13.875ms&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;Minimum: 12.964ms&lt;/code&gt;  &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;A more detailed report of benchmarks and comparisons can be found &lt;a href="https://github.com/sympy/sympy/wiki/Benchmark-results-expand2b,-SymEngine"&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A minor PR where MPFR was added as a Piranha dependency, &lt;a href="https://github.com/sympy/symengine/pull/472"&gt;472&lt;/a&gt; was merged. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Another PR in which the tests where moved to &lt;code&gt;Catch&lt;/code&gt; is good to play with and merge, minor build nits remaining, &lt;a href="https://github.com/sympy/symengine/pull/484"&gt;484&lt;/a&gt;. &lt;br /&gt;&lt;/p&gt;
-
-&lt;h3&gt;Targets for Week 5&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Figure out the reason for &lt;a href="https://github.com/sympy/sympy/wiki/Benchmark-results-expand2b,-SymEngine#why-is-there-a-slowdown-in-packint-branch-for-expand-and-expand2b"&gt;slow down&lt;/a&gt; in benchmarks, fix that. &lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Change the &lt;code&gt;SYMENGINE_ASSERT&lt;/code&gt; &lt;a href="https://github.com/sympy/symengine/blob/bbe3c9baf653d18d37e3bfcd424e0781786098c1/symengine/symengine_assert.h#L7"&gt;macro&lt;/a&gt; to raise an &lt;a href="https://github.com/sympy/symengine/blob/bbe3c9baf653d18d37e3bfcd424e0781786098c1/symengine/symengine_assert.h#L13"&gt;exception&lt;/a&gt;. &lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Add the &lt;code&gt;DNDEBUG&lt;/code&gt; flag for with &lt;code&gt;Piranha&lt;/code&gt; builds, as now &lt;code&gt;SymEngine&lt;/code&gt; doesn't use &lt;code&gt;assert&lt;/code&gt;, close issue &lt;a href="https://github.com/sympy/symengine/issues/482"&gt;#482&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Port &lt;a href="https://github.com/bluescarni"&gt;&lt;code&gt;@bluescarni&lt;/code&gt;&lt;/a&gt;'s &lt;a href="https://github.com/sympy/symengine/compare/master...bluescarni:expression"&gt;work&lt;/a&gt; of &lt;code&gt;EX&lt;/code&gt; to SymEngine. &lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Wrap the lower-level into &lt;code&gt;Polynomial&lt;/code&gt; for signed integer exponents in &lt;code&gt;ZZ&lt;/code&gt; domain with functionality atleast that of &lt;code&gt;UnivariatePolynomial&lt;/code&gt;. &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;That's all this week. &lt;br /&gt;
-&lt;strong&gt;Sbohem&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -41,6 +41,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Shekhar Prasad Rajak (shekharrajak)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document>
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="http://s-hacker.info/blog/gsoc16/feeds/sympy.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Sartaj Singh (leosartaj)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://sartajsingh.me/">
@@ -53,11 +65,47 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Srajan Garg (srajangarg)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="http://srajangarg.github.io//">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="http://srajangarg.github.io/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Sumith (sumith1896)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="http://sumith1896.github.io//">
             <rdfs:seeAlso>
               <rss:channel rdf:about="http://sumith1896.github.io/feeds/feed.sympy.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Rajith Vidanaarachchi (rajithv)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://rajithsays.wordpress.com">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://rajithsays.wordpress.com/category/symengine/feed/"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Subham Tibra (shubhamtibra)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document>
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://shubhamtibra.wordpress.com/feed/"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
