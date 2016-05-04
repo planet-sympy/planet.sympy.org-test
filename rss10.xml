@@ -7,6 +7,52 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://gxyd.github.io/GSoC 2016 Phase I : Proposal, Acceptance</guid>
+      <title>GSoC 2016 Phase I : Proposal, Acceptance</title>
+      <author>Gaurav Dhingra (gxyd)</author>
+      <pubDate>Wed, 04 May 2016 18:30:00 GMT</pubDate>
+      <link>https://gxyd.github.io/gsoc2016/gsoc-with-sympy.html</link>
+      <description>&lt;p&gt;Hello, I'm Gaurav Dhingra a 3rd year undergraduate student at IIT Roorkee, my proposal on Group Theory with &lt;i&gt;SymPy&lt;/i&gt; has been accepted as a part of &lt;a href="https://summerofcode.withgoogle.com/"&gt;Google Summer of Code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+First, a little bit about &lt;a href="http://www.sympy.org/"&gt;SymPy&lt;/a&gt;, a &lt;i&gt;Computer Algebra System&lt;/i&gt; (CAS) written entirely in Python. SymPy 1.0 was released about 2 months ago, &lt;i&gt;Sympy&lt;/i&gt; has been created by hundreds of contributors starting from 2006.
+
+I will be working on Group Theory over the summer, for the next 3 months, to implement Computational Group Theory (CGT) and Group Theory, which are parts of mathematics I particularly enjoy. You can view my project proposal &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory"&gt;GSoC 2016 Application Gaurav Dhingra: Group Theory&lt;/a&gt;. Until a few days ago I was pretty busy with my exams, but in the next few weeks I will go over working on the project. I will particularly focus on Finite and Finitely Presented Groups.
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+I hope that I'll be able to implement everything that I promised in it. Moving onto the ongoing community bonding. Since I am very well acquitted with the workflow of SymPy, I can get straight to few important things, which i will do in the next few days.
+
+&lt;br /&gt;&lt;br /&gt;
+This includes things like:
+&lt;ul&gt;
+  &lt;li&gt;
+    Setting up a blog with RSS feed i.e this blog in which I am supposed to add an RSS feed functionality.
+  &lt;/li&gt;
+  &lt;li&gt;
+    Talking to my mentors regarding the time, and place of chat on internet, we differ by almost 5hrs. Time wouldn't be an issue, since seeing from past, I haven't faced such difficulty as both me and my mentor work for almost the same time intervals. From the GSoC 2015 discussions, I remember that Ondrej tries to make sure everyone knows what time student-mentor meet, since of different time zones.
+  &lt;/li&gt;
+  &lt;li&gt;
+    In the past we have had discussion on my private gitter channel &lt;a href="https://gxyd.github.io/feeds/atom.xml"&gt;Group Theory Implementation&lt;/a&gt;. &lt;i&gt;Would it be wise to continue code discussions there?&lt;/i&gt;. Since no one can be added in the channel without my permission.
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+One thing that has been a hell of a lot annoying has been the GSoC mailing list, it's a lot distracting. I changed list settings to abridged daily updates because I was getting like 50 mails every day and that too about some really stupid and irrelevant things. But yeah like whatever.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;i&gt;"LESS TALK, MORE CODE"&lt;/i&gt; is the policy that I always tend to follow (not for blog!!). I will try my best to implement it in a strict way this summer. I have seen this policy working fine for me, mostly first I start writing question in a message box to my mentor, and then i think more about it myself and in the end I come up with a solution on my own, instead of asking.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+I'm quite sure that I will write more than enough blog posts about my project during the summers. Since I enjoy writing and that too regarding things that occupy larger part of my day.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+I'd like to thank all the people involved with contributions to &lt;i&gt;SymPy&lt;/i&gt;. My special thanks to my mentor - &lt;a href="https://github.com/jksuom"&gt;Kalevi Suominen&lt;/a&gt; and my co-mentor - &lt;a href="https://github.com/asmeurer"&gt;Aaron Meurer&lt;/a&gt; for all the suggestions while making my proposal, and showing faith and enthusiasm in my ability and my proposal.
+&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">http://srajangarg.github.io//Selected</guid>
       <title>Selected</title>
       <author>Srajan Garg (srajangarg)</author>
@@ -2150,65 +2196,6 @@ That's all for now, looking forward for week #7. :grinning:&lt;/p&gt;</descripti
       <pubDate>Sat, 04 Jul 2015 03:03:04 GMT</pubDate>
       <link>http://isuruf.blogspot.com/2015/07/gsoc-week-6.html</link>
       <description>&lt;div dir="ltr" style="text-align: left;"&gt;This week, I worked on improving the testing and making Sage wrappers. First, building with Clang had several issues and they were not tested. One issue was a clang bug when `-ffast-math` optimization is used. This flag would make floating point arithmetic perform better, but it may do arithmetic not allowed by the IEEE floating point standard. Since it performs faster we have enabled it in Release mode and due to a bug in clang, a compiler error is given saying&amp;nbsp;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px; line-height: inherit;"&gt; error: unknown type name '&lt;/span&gt;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px; line-height: inherit;"&gt;__extern_always_inline'&amp;nbsp;&lt;/span&gt;. This was fixed by first checking if the error is there in cmake and then adding a flag&amp;nbsp;&lt;span&gt;D__extern_always_inline=inline.&amp;nbsp;&lt;/span&gt;Another issue was that type_traits header was not found. This was fixed by upgrading the standard C++ library, libstdc++&lt;br /&gt;&lt;br /&gt;This week, I finished the wrappers for Sage. Now converters to and from sage can be found at&amp;nbsp;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px;"&gt;sage.symbolic.symengine&lt;/span&gt;. For this module to convert using the C++ level members,&amp;nbsp;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px;"&gt;symengine_wrapper.pyx&amp;nbsp;&lt;/span&gt;'s definitions of the classes were taken out and declared in&amp;nbsp;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px;"&gt;symengine_wrapper.pxd&amp;nbsp;&lt;/span&gt;and implemented in pyx file. To install symengine in sage,&amp;nbsp;https://github.com/sympy/symengine/issues/474 has to be resolved. A cmake check will be added to find whether this issue exists and if so, then the flag -Wa,-q will be added to the list of flags. We have to make a release of symengine if we were to make spkg's to install symengine in Sage, so some of my time next week will involve getting symengine ready for a release and then making spkgs for everyone to try out symengine.&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://sumith1896.github.io//GSoC-Progress-Week-6</guid>
-      <title>GSoC Progress - Week 6</title>
-      <author>Sumith (sumith1896)</author>
-      <pubDate>Fri, 03 Jul 2015 00:00:00 GMT</pubDate>
-      <link>http://sumith1896.github.io//GSoC-Progress-Week-6</link>
-      <description>&lt;p&gt;Hello, received a mail few minutes into typing this, passed the midterm review successfully :) &lt;br /&gt;
-Just left me wondering how do these guys process so many evaluations so quickly. I do have to confirm with &lt;a href="https://github.com/certik"&gt;Ond&amp;#345;ej&lt;/a&gt; about this. &lt;br /&gt;
-Anyways, the project goes on and here is my this week's summary. &lt;br /&gt;&lt;/p&gt;
-
-&lt;h3&gt;Progress&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;SymEngine&lt;/code&gt; successfully moved to using &lt;code&gt;Catch&lt;/code&gt; as a testing framework. &lt;/p&gt;
-
-&lt;p&gt;The travis builds for clang were breaking, this let me to play around with travis and clang builds to fix this issue. The linux clang build used to break because we used to mix-up and link libraries like &lt;code&gt;GMP&lt;/code&gt; compiled with different standard libraries.  &lt;br /&gt;
-Thanks to &lt;a href="https://github.com/isuruf"&gt;Isuru&lt;/a&gt; for lending a helping hand and fixing it in his PR.&lt;/p&gt;
-
-&lt;p&gt;Next task to make &lt;code&gt;SYMENGINE_ASSERT&lt;/code&gt; not use standard &lt;code&gt;assert()&lt;/code&gt;, hence I wrote my custom assert which simulates the internal &lt;code&gt;assert&lt;/code&gt;.  &lt;br /&gt;
-Now we could add the &lt;code&gt;DNDEBUG&lt;/code&gt; as a release flag when &lt;code&gt;Piranha&lt;/code&gt; is a dependence, this was also done.&lt;/p&gt;
-
-&lt;p&gt;Started work on &lt;code&gt;Expression&lt;/code&gt; wrapper, PR that starts off from Francesco's work sent in.&lt;/p&gt;
-
-&lt;p&gt;Investigated the slow down in benchmarks that I have been reporting in the last couple of posts. Using &lt;code&gt;git commit&lt;/code&gt;(amazing tool, good to see binary search in action!), the first bad &lt;a href="https://github.com/Sumith1896/csympy/commit/35f384a484315efbb900ec4ec0b0eb97e791c193"&gt;commit&lt;/a&gt; was tracked. We realized that the inclusion of &lt;code&gt;piranha.hpp&lt;/code&gt; header caused the slowdown and was resolved by using &lt;code&gt;mp_integer.hpp&lt;/code&gt;, just the requirement header.  &lt;br /&gt;
-With immense help of &lt;a href="https://github.com/bluescarni"&gt;Franceso&lt;/a&gt;, the problem was cornered to this: &lt;br /&gt;
-* Inclusion of &lt;code&gt;thread_pool&lt;/code&gt; leads to the slowdown, a global variable that it declares to be specific. &lt;br /&gt;
-* In general a multi-threaded application may result in some compiler optimizations going off, hence slowdown. &lt;br /&gt;
-* Since this benchmark is memory allocation intensive, another speculation is that compiler allocates memory differently. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;This SO &lt;a href="http://stackoverflow.com/questions/31212943/performance-cost-of-threading-constructs-missed-optimisations-and-memory-alloca"&gt;question&lt;/a&gt; asked by &lt;a href="https://github.com/bluescarni"&gt;@bluescarni&lt;/a&gt; should lead to very interesting developments. &lt;/p&gt;
-
-&lt;p&gt;We have to investigate this problem and get it sorted. Not only because we depend on &lt;code&gt;Piranha&lt;/code&gt;, we might also have multi-threading in &lt;code&gt;SymEngine&lt;/code&gt; later too.&lt;/p&gt;
-
-&lt;h3&gt;Report&lt;/h3&gt;
-
-&lt;p&gt;No benchmarking was done this week. &lt;br /&gt;
-Here is my PR reports. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;WIP&lt;/strong&gt; &lt;br /&gt;
-* &lt;a href="https://github.com/sympy/symengine/pull/500"&gt;#500&lt;/a&gt; - Expression Wrapper &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Merged&lt;/strong&gt; &lt;br /&gt;
-* &lt;a href="https://github.com/sympy/symengine/pull/493"&gt;#493&lt;/a&gt; - The PR with &lt;code&gt;Catch&lt;/code&gt; got merged. &lt;br /&gt;
-* &lt;a href="https://github.com/sympy/symengine/pull/498"&gt;#498&lt;/a&gt; - Made &lt;code&gt;SYMENGINE_ASSERT&lt;/code&gt; use custom assert instead of &lt;code&gt;assert()&lt;/code&gt; and &lt;code&gt;DNDEBUG&lt;/code&gt; as a release flag with &lt;code&gt;PIRANHA&lt;/code&gt;. &lt;br /&gt;
-* &lt;a href="https://github.com/sympy/symengine/pull/502"&gt;#502&lt;/a&gt; - Make &lt;code&gt;poly_mul&lt;/code&gt; used &lt;code&gt;mpz_addmul&lt;/code&gt; (FMA), nice speedup of &lt;code&gt;expand2b&lt;/code&gt;.
-* &lt;a href="https://github.com/sympy/symengine/pull/496"&gt;#496&lt;/a&gt; - En route to fixing &lt;code&gt;SYMENGINE_ASSERT&lt;/code&gt; led to a minor fix in one of the assert statements. &lt;br /&gt;
-* &lt;a href="https://github.com/sympy/symengine/pull/491"&gt;#491&lt;/a&gt; - Minor fix in compiler choice documentation.&lt;/p&gt;
-
-&lt;h3&gt;Targets for Week 7&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Get the &lt;code&gt;Expression&lt;/code&gt; class merged. &lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Investigate and fix the slow-downs. &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The rest of tasks can be finalized in later discussion with &lt;a href="https://github.com/certik"&gt;Ond&amp;#345;ej&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;That's all this week. &lt;br /&gt;
-&lt;strong&gt;Ciao&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
