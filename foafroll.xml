@@ -113,6 +113,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Sampad Saha (sampadsaha5)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://sampadblog.wordpress.com">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://sampadblog.wordpress.com/feed/"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Subham Tibra (shubhamtibra)</foaf:name>
         <foaf:weblog>
           <foaf:Document>

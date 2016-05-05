@@ -7,10 +7,38 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">http://sampadblog.wordpress.com/2016/05/02/google-summer-of-code-with-sympy/</guid>
+      <title>Google Summer of Code with Sympy</title>
+      <author>Sampad Saha (sampadsaha5)</author>
+      <pubDate>Mon, 02 May 2016 11:04:16 GMT</pubDate>
+      <link>https://sampadblog.wordpress.com/2016/05/02/google-summer-of-code-with-sympy/</link>
+      <description>&lt;p&gt;About one and half week ago, the results of Google Summer of Code were out.&amp;#160;I am extremely glad to inform that my project for Sympy on Implementation of Singularity Functions got selected for GSoC 2016.&lt;/p&gt;
+&lt;h3&gt;&lt;em&gt;&lt;strong&gt;Google Summer of Code&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;&lt;a href="http://en.wikipedia.org/wiki/Google_Summer_of_Code"&gt;Google Summer of Code&lt;/a&gt;&lt;/strong&gt; is a global annual program focused on bringing more student developers into open source software development. It is a global program that offers students stipends to write code for open source projects.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3&gt;&lt;em&gt;&lt;strong&gt;Sympy&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;&lt;a href="https://sampadblog.wordpress.com/2016/05/02/google-summer-of-code-with-sympy/" target="_blank"&gt;SymPy&lt;/a&gt;&lt;/strong&gt;&amp;#160; is a Python library for symbolic mathematics. It aims to become a full-featured&amp;#160;&lt;strong&gt;&lt;a href="http://en.wikipedia.org/wiki/Computer_algebra_system"&gt;Computer Algebra System&lt;/a&gt;&lt;/strong&gt; (CAS) while keeping the code as simple as possible in order to be comprehensible and easily extensible.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3&gt;&lt;em&gt;&lt;strong&gt;About my &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2016-Application-Sampad-Kumar-Saha:-Singularity-Functions" target="_blank"&gt;Project&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;I have proposed to work on the Implementation of a full fledged&amp;#160;&lt;strong&gt;Computer Algebra System&lt;/strong&gt; (CAS) of Singularity Functions. I will create a module&amp;#160;to represent a Singularity Function and implement different mathematical operations. This module will be further used to create an another module which would be used for solving complicated beam bending problems.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/moorepants" target="_blank"&gt; Jason Moore&lt;/a&gt;, &lt;a href="https://github.com/leosartaj" target="_blank"&gt;Sartaj Singh&lt;/a&gt; and&amp;#160;&lt;a href="https://github.com/certik" target="_blank"&gt;Ond&amp;#345;ej &amp;#268;ert&amp;#237;k&lt;/a&gt;&amp;#160;are going to mentor me throughout the whole program. All of them are really talented and very humble people. I have learned a lot from all of them. I am extremely lucky to work under such great people.&lt;/p&gt;
+&lt;p&gt;Now Community Bonding Period is going on. This is intended to get students ready to start contributing to their organization full time from 23rd May. I am supposed to :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Become familiar with the community practices and processes.&lt;/li&gt;
+&lt;li&gt;Participate on Mailing Lists / IRC / etc.&lt;/li&gt;
+&lt;li&gt;Set up your development environment.&lt;/li&gt;
+&lt;li&gt;Small (or large) patches/bug fixes.&lt;/li&gt;
+&lt;li&gt;Participate in code reviews for others.&lt;/li&gt;
+&lt;li&gt;Work with my mentor and other org members on refining my project plan. This might include finalizing deadlines and milestones, adding more detail, figuring out potential issues, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Looking forward toward a great summer.&lt;/p&gt;
+&lt;p&gt;Cheers!!!&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/sampadblog.wordpress.com/14/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/sampadblog.wordpress.com/14/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=sampadblog.wordpress.com&amp;#038;blog=102728326&amp;#038;post=14&amp;#038;subd=sampadblog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://gxyd.github.io/GSoC 2016 Phase I : Proposal, Acceptance</guid>
       <title>GSoC 2016 Phase I : Proposal, Acceptance</title>
       <author>Gaurav Dhingra (gxyd)</author>
-      <pubDate>Wed, 04 May 2016 18:30:00 GMT</pubDate>
+      <pubDate>Sun, 01 May 2016 18:30:00 GMT</pubDate>
       <link>https://gxyd.github.io/gsoc2016/gsoc-with-sympy.html</link>
       <description>&lt;p&gt;Hello, I'm Gaurav Dhingra a 3rd year undergraduate student at IIT Roorkee, my proposal on Group Theory with &lt;i&gt;SymPy&lt;/i&gt; has been accepted as a part of &lt;a href="https://summerofcode.withgoogle.com/"&gt;Google Summer of Code&lt;/a&gt;&lt;/p&gt;
 
@@ -2188,14 +2216,6 @@ finally got Merged Thanks! to &lt;a href="http://github.com/hargup"&gt;@hargup&l
 
 &lt;p&gt;
 That's all for now, looking forward for week #7. :grinning:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">tag:blogger.com,1999:blog-8848761645772749389.post-3854617412195607759</guid>
-      <title>GSoC Week 6</title>
-      <author>Isuru Fernando (isuruf)</author>
-      <pubDate>Sat, 04 Jul 2015 03:03:04 GMT</pubDate>
-      <link>http://isuruf.blogspot.com/2015/07/gsoc-week-6.html</link>
-      <description>&lt;div dir="ltr" style="text-align: left;"&gt;This week, I worked on improving the testing and making Sage wrappers. First, building with Clang had several issues and they were not tested. One issue was a clang bug when `-ffast-math` optimization is used. This flag would make floating point arithmetic perform better, but it may do arithmetic not allowed by the IEEE floating point standard. Since it performs faster we have enabled it in Release mode and due to a bug in clang, a compiler error is given saying&amp;nbsp;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px; line-height: inherit;"&gt; error: unknown type name '&lt;/span&gt;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px; line-height: inherit;"&gt;__extern_always_inline'&amp;nbsp;&lt;/span&gt;. This was fixed by first checking if the error is there in cmake and then adding a flag&amp;nbsp;&lt;span&gt;D__extern_always_inline=inline.&amp;nbsp;&lt;/span&gt;Another issue was that type_traits header was not found. This was fixed by upgrading the standard C++ library, libstdc++&lt;br /&gt;&lt;br /&gt;This week, I finished the wrappers for Sage. Now converters to and from sage can be found at&amp;nbsp;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px;"&gt;sage.symbolic.symengine&lt;/span&gt;. For this module to convert using the C++ level members,&amp;nbsp;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px;"&gt;symengine_wrapper.pyx&amp;nbsp;&lt;/span&gt;'s definitions of the classes were taken out and declared in&amp;nbsp;&lt;span style="color: #333333; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 11.8999996185303px;"&gt;symengine_wrapper.pxd&amp;nbsp;&lt;/span&gt;and implemented in pyx file. To install symengine in sage,&amp;nbsp;https://github.com/sympy/symengine/issues/474 has to be resolved. A cmake check will be added to find whether this issue exists and if so, then the flag -Wa,-q will be added to the list of flags. We have to make a release of symengine if we were to make spkg's to install symengine in Sage, so some of my time next week will involve getting symengine ready for a release and then making spkgs for everyone to try out symengine.&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>
