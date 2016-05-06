@@ -2,8 +2,8 @@
 <opml version="2.0">
   <head>
     <title>Planet SymPy</title>
-    <dateCreated>Thu, 05 May 2016 23:45:51 GMT</dateCreated>
-    <dateModified>Thu, 05 May 2016 23:45:51 GMT</dateModified>
+    <dateCreated>Fri, 06 May 2016 13:28:04 GMT</dateCreated>
+    <dateModified>Fri, 06 May 2016 13:28:04 GMT</dateModified>
     <ownerName>Sumith</ownerName>
     <ownerEmail>sumith1896@gmail.com</ownerEmail>
   </head>
@@ -11,6 +11,7 @@
     <outline text="Aaron Meurer (asmeurer)" xmlUrl="http://asmeurer.github.io/blog/rss.xml"/>
     <outline text="Amit Kumar (aktech)" xmlUrl="http://iamit.in/blog/feeds/sympy.xml"/>
     <outline text="Isuru Fernando (isuruf)" xmlUrl="http://isuruf.blogspot.com/feeds/posts/default"/>
+    <outline text="Nishant Nikhil (nishnik)" xmlUrl="http://nishnik.github.io/feed.xml"/>
     <outline text="Shekhar Prasad Rajak (shekharrajak)" xmlUrl="http://s-hacker.info/blog/gsoc16/feeds/sympy.xml"/>
     <outline text="Sartaj Singh (leosartaj)" xmlUrl="http://sartajsingh.me/feeds/sympy.xml"/>
     <outline text="Srajan Garg (srajangarg)" xmlUrl="http://srajangarg.github.io/feed.xml"/>

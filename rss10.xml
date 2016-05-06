@@ -168,6 +168,23 @@ I would not have been able to attend the conference without the generous financi
 &lt;img align="center" src="http://iamit.in/assets/amit-backflip.gif" /&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <guid isPermaLink="false">http://nishnik.github.io/Hello-World</guid>
+      <title>Hello World</title>
+      <author>Nishant Nikhil (nishnik)</author>
+      <pubDate>Thu, 24 Mar 2016 00:00:00 GMT</pubDate>
+      <link>http://nishnik.github.io/Hello-World/</link>
+      <description>&lt;p&gt;Hello World!
+My previous blog posts were at: &lt;a href="http://nishantnikhil.weebly.com/"&gt;Global Class&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You should try not to reinvent the wheel, So I thought it would be better for me to fork &lt;a href="https://github.com/barryclark/jekyll-now"&gt;jekyll-now&lt;/a&gt; repo and build this jekyll blog in minutes :smile: .&lt;/p&gt;
+
+&lt;p&gt;This is cool and the awesome most part is that &lt;strong&gt;It is Markdown flavoured&lt;/strong&gt; . Its quite cool writing in markdown now. Oh! I remember how weird I felt writing in markdown back in December. Snap!&lt;/p&gt;
+
+&lt;p&gt;Now, I will search for a way to do spell correction in markdown. It is so much nedded, I know a little bit of googling will help me.&lt;/p&gt;
+
+&lt;p&gt;Happy Holi! :fire:&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">http://srajangarg.github.io//Initial-Commit</guid>
       <title>Initial Commit</title>
       <author>Srajan Garg (srajangarg)</author>
@@ -2138,84 +2155,6 @@ to &lt;code&gt;Min/Max&lt;/code&gt;.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;That's it. See you all next week. Happy Coding!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://iamit.in/blog/GSoC : This week in SymPy #6</guid>
-      <title>GSoC : This week in SymPy #6</title>
-      <author>Amit Kumar (aktech)</author>
-      <pubDate>Sun, 05 Jul 2015 18:30:00 GMT</pubDate>
-      <link>http://iamit.in/blog/GSoC-week-6</link>
-      <description>&lt;p&gt;Hi there! It's been six weeks into &lt;a href="https://en.wikipedia.org/wiki/Google_Summer_of_Code"&gt;GSoC&lt;/a&gt;,
-and it marks the half of GSoC. The Mid term evaluations have been done now, Google has been preety quick doing this, I recieved the passing mail within 15 minutes after the deadline to fill up evaluations, so basically GSoC Admin did the following, (I guess):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;code class="language-sql"&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;GSoCStudents&lt;/span&gt;
-&lt;span class="k"&gt;WHERE&lt;/span&gt; &lt;span class="n"&gt;EvaluationResult&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'PASS'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;code class="language-sql"&gt;&lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="n"&gt;SendThemMail&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;(Don't Judge my SQL, I am not good at it!)&lt;/p&gt;
-
-&lt;h3&gt;&amp;nbsp; &lt;strong&gt;Progress of Week 6&lt;/strong&gt; &lt;img src="http://iamit.in/assets/gsoc/pr.png" style="float: left;" /&gt;&lt;/h3&gt;
-
-&lt;p&gt;
-Last week my &lt;code&gt;Linsolve&lt;/code&gt; &lt;a href="https://github.com/sympy/sympy/pull/9438"&gt;PR #9438&lt;/a&gt;
-finally got Merged Thanks! to &lt;a href="http://github.com/hargup"&gt;@hargup&lt;/a&gt; &lt;a href="http://github.com/moorepants"&gt;@moorepants&lt;/a&gt; &lt;a href="http://github.com/flacjacket"&gt;@flacjacket&lt;/a&gt; &lt;a href="http://github.com/debugger22"&gt;@debugger22&lt;/a&gt; for reviewing it and suggesting constructive changes.&lt;/p&gt;
-
-&lt;p&gt;This week I worked on Intersection's of &lt;code&gt;FiniteSet&lt;/code&gt; with symbolic elements, which was a blocking issue for lot of things, I managed to Fix the failing test which I mentioned in my last post. Eventually this PR got Merged as well, which has opened doors for lot of improvements.&lt;/p&gt;
-
-&lt;p&gt;Thanks to &lt;a href="https://github.com/jksuom"&gt;@jksuom&lt;/a&gt; &amp;amp; &lt;a href="https://github.com/hargup"&gt;@hargup&lt;/a&gt; for iterating over this PR, and making some very useful comments for improving it to make it Mergeable.&lt;/p&gt;
-
-&lt;p&gt;I had a couple of hangout meeting with &lt;a href="https://github.com/hargup"&gt;@hargup&lt;/a&gt; this week, (though now he has left for SciPy for a couple of weeks), we discussed about the further plan, for making &lt;code&gt;solveset&lt;/code&gt; more robust, such as like returning the domain of invert while calling the &lt;code&gt;invert_real&lt;/code&gt; , See &lt;a href="https://github.com/sympy/sympy/issues/9617"&gt;#9617&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Motivation for this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;code class="language-python"&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Symbol&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'x'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;real&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Symbol&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'n'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;real&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;solveset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The solution returned above is not actually complete, unless, somehow we state &lt;code&gt;n&lt;/code&gt; should be positive for the output set to be non-Empty. See &lt;a href="https://github.com/sympy/sympy/issues/9588"&gt;#9588&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;from &lt;strong&gt;future&lt;/strong&gt; import plan&lt;/strong&gt;  Week #7:&lt;/h3&gt;
-
-&lt;p&gt;This week I plan to work on making &lt;code&gt;invert_real&lt;/code&gt; more robust.&lt;/p&gt;
-
-&lt;p&gt;Relavant Issue:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/sympy/sympy/issues/9617"&gt;#9617&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/sympy/sympy/issues/9588"&gt;#9588&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&lt;strong&gt;$ git log&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img align="left" src="http://iamit.in/assets/gsoc/opr.png" /&gt; &amp;nbsp; &lt;a href="https://github.com/sympy/sympy/pull/9618"&gt;PR #9618&lt;/a&gt; : Add test for &lt;code&gt;solveset(x**2 + a, x)&lt;/code&gt; issue 9557&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img align="left" src="http://iamit.in/assets/gsoc/opr.png" /&gt; &amp;nbsp; &lt;a href="https://github.com/sympy/sympy/pull/9587"&gt;PR #9587&lt;/a&gt; : Add Linsolve Docs&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img align="left" src="http://iamit.in/assets/gsoc/opr.png" /&gt; &amp;nbsp; &lt;a href="https://github.com/sympy/sympy/pull/9500"&gt;PR #9500&lt;/a&gt; :  Documenting &lt;code&gt;solveset&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img align="left" src="http://iamit.in/assets/gsoc/mpr.png" /&gt; &amp;nbsp; &lt;a href="https://github.com/sympy/sympy/pull/9612"&gt;PR #9612&lt;/a&gt; : solveset return solution for &lt;code&gt;solveset(True, ..)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img align="left" src="http://iamit.in/assets/gsoc/mpr.png" /&gt; &amp;nbsp; &lt;a href="https://github.com/sympy/sympy/pull/9540"&gt;PR #9540&lt;/a&gt; : Intersection's of FiniteSet with symbolic elements&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img align="left" src="http://iamit.in/assets/gsoc/mpr.png" /&gt; &amp;nbsp; &lt;a href="https://github.com/sympy/sympy/pull/9438"&gt;PR #9438&lt;/a&gt; : Linsolve&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img align="left" src="http://iamit.in/assets/gsoc/mpr.png" /&gt; &amp;nbsp; &lt;a href="https://github.com/sympy/sympy/pull/9463"&gt;PR #9463&lt;/a&gt; : ComplexPlane &lt;/p&gt;
-
-&lt;p&gt;
-&lt;img src="http://iamit.in/assets/gsoc/mpr.png" style="float: left;" /&gt; &amp;nbsp; &lt;a href="https://github.com/sympy/sympy/pull/9527"&gt;PR #9527&lt;/a&gt; : Printing of ProductSets   &lt;/p&gt;
-
-&lt;p&gt;
-&lt;img src="http://iamit.in/assets/gsoc/mpr.png" style="float: left;" /&gt; &amp;nbsp; &lt;a href="https://github.com/sympy/sympy/pull/9524"&gt;PR # 9524&lt;/a&gt; : Fix solveset returned solution making denom zero &lt;/p&gt;
-
-&lt;p&gt;
-That's all for now, looking forward for week #7. :grinning:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
