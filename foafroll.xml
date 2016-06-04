@@ -55,7 +55,7 @@
       <foaf:Agent>
         <foaf:name>Kshitij Saraogi(kshitij10496)</foaf:name>
         <foaf:weblog>
-          <foaf:Document>
+          <foaf:Document rdf:about="https://github.com/kshitij10496/">
             <rdfs:seeAlso>
               <rss:channel rdf:about="http://kshitij10496.github.io/feed.xml"/>
             </rdfs:seeAlso>
@@ -77,11 +77,11 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Shekhar Prasad Rajak (shekharrajak)</foaf:name>
+        <foaf:name>Sartaj Singh (leosartaj)</foaf:name>
         <foaf:weblog>
           <foaf:Document>
             <rdfs:seeAlso>
-              <rss:channel rdf:about="http://s-hacker.info/blog/gsoc16/feeds/sympy.xml"/>
+              <rss:channel rdf:about="http://sartajsingh.me/feeds/sympy.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
@@ -89,11 +89,11 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Sartaj Singh (leosartaj)</foaf:name>
+        <foaf:name>Shekhar Prasad Rajak (shekharrajak)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="https://sartajsingh.me/">
+          <foaf:Document rdf:about="http://shekharrajak.github.io/">
             <rdfs:seeAlso>
-              <rss:channel rdf:about="http://sartajsingh.me/feeds/sympy.xml"/>
+              <rss:channel rdf:about="http://shekharrajak.github.io/feed.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
@@ -163,7 +163,7 @@
       <foaf:Agent>
         <foaf:name>Subham Tibra (shubhamtibra)</foaf:name>
         <foaf:weblog>
-          <foaf:Document>
+          <foaf:Document rdf:about="https://shubhamtibra.wordpress.com">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://shubhamtibra.wordpress.com/feed/"/>
             </rdfs:seeAlso>
