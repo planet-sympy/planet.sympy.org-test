@@ -2,13 +2,12 @@
 <opml version="2.0">
   <head>
     <title>Planet SymPy</title>
-    <dateCreated>Sat, 04 Jun 2016 15:06:15 GMT</dateCreated>
-    <dateModified>Sat, 04 Jun 2016 15:06:15 GMT</dateModified>
+    <dateCreated>Wed, 10 Aug 2016 06:26:37 GMT</dateCreated>
+    <dateModified>Wed, 10 Aug 2016 06:26:37 GMT</dateModified>
     <ownerName>Sumith</ownerName>
     <ownerEmail>sumith1896@gmail.com</ownerEmail>
   </head>
   <body>
-    <outline text="Aaron Meurer (asmeurer)" xmlUrl="http://asmeurer.github.io/blog/rss.xml"/>
     <outline text="Amit Kumar (aktech)" xmlUrl="http://iamit.in/blog/feeds/sympy.xml"/>
     <outline text="Isuru Fernando (isuruf)" xmlUrl="http://isuruf.blogspot.com/feeds/posts/default"/>
     <outline text="James Milam (jbm950)" xmlUrl="http://jbm950.github.io/feed.xml"/>
@@ -18,6 +17,7 @@
     <outline text="Shekhar Prasad Rajak (shekharrajak)" xmlUrl="http://shekharrajak.github.io/feed.xml"/>
     <outline text="Srajan Garg (srajangarg)" xmlUrl="http://srajangarg.github.io/feed.xml"/>
     <outline text="Sumith (sumith1896)" xmlUrl="http://sumith1896.github.io/feeds/feed.sympy.xml"/>
+    <outline text="Aaron Meurer (asmeurer)" xmlUrl="https://asmeurer.github.io/blog/rss.xml"/>
     <outline text="Gaurav Dhingra (gxyd)" xmlUrl="https://gxyd.github.io/feeds/atom.xml"/>
     <outline text="Rajith Vidanaarachchi (rajithv)" xmlUrl="https://rajithsays.wordpress.com/category/symengine/feed/"/>
     <outline text="Sampad Saha (sampadsaha5)" xmlUrl="https://sampadblog.wordpress.com/feed/"/>
