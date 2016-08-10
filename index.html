@@ -3008,7 +3008,7 @@ Then I have started working on Shoup&#8217;s algorithm for polynomial factorizat
 <div class="channelgroup ">
 	<div class="row">
     	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-b298e897 feed-" id="item-a1bc7f41">
+		    <div class="box" class="item feed-b298e897 feed-" id="item-ac2c9f58">
 			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
 			    	<table class="table borderless table-condensed">
 			    		<tr>
@@ -3061,7 +3061,68 @@ Then I have started working on Shoup&#8217;s algorithm for polynomial factorizat
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-xs-12 descript">
-						
+						<p>
+Hi everyone.
+</p>
+<br />
+<br />
+<p>
+Here's what we have been doing for <i>7th</i> week of <i>GSoC</i>.
+</p>
+
+<p>
+Kalevi mentioned about the $LaTex$ not getting rendered on Planet Sympy website, thought it works fine on my website. Following the conversation Aaron opened issue <a href="https://github.com/sympy/planet-sympy/issues/45">planet-sympy/issues/45</a>, though it hasn't been fixed.
+</p>
+
+<p>
+This week we completed PR <a href="https://github.com/sympy/sympy/pull/11295">#11295</a> on Reidemeister Schreier algorithm. Remember the <a href="https://gitter.im/sympy/GroupTheory?at=5776b220cdab7a1f4fbebd34">blog issue</a> I asked on our gitter channel. Kalevi suggested to be more on the 'descriptive' side.
+</p>
+
+<p>
+<h4>What do we do this week?</h4>
+Implemented the Reidemeister Schreier algorithm (shortly RS algorithm) and Titze Transformations (shortly TT) in PR #11295 . Most of the pseudo code for RS algorithm is there in the Handbook [1], perhaps majority of the time was spent working with TT. There isn't any pseudo code available for making that work, but we gathered detailed information from [1] combined with Havas Paper [2].
+
+What issues were there?
+In the both [1] and [2], there a few assumptions made, like
+
+<pre>
+> shall assume that all relators are always cyclically reduced; that is, that
+whenever a relator is changed, it is immediately replaced by its cyclic reduction.
+</pre>
+
+</p>
+
+<p>I opened the issue <a href="https://github.com/sympy/sympy/issues/11352">#11352</a> regarding a typo I left in <code>coset_enumeration_c</code>. Though I didn't expect a PR, @kritkaran94 fixed it. Perhaps a good test case which makes use of different value of <code>max_stack_size</code> was suggested by Kalevi. One thing came back to me, "everthing is an object in Python", the fact that initially <code>CosetTableDefaultMaxLimit</code> was a module level variable initially and we changed it to <code>CosetTable.CosetTableDefaultMaxLimit</code>, module is an object so is a <code>class</code>.
+</p>
+
+<p>
+<h4>What hasn't been done?</h4>
+<ul>
+<li>No testing for a few of techniques, for example currently no tests exist for <code>elimination_technique_2</code>, which is a variant of the elimination procedures.
+<li>TT doesn't produce the best possible result.
+</ul>
+</p>
+
+<p>
+Though doing this seemed easy at first. But I didn't wanted to apply <code>identity_cyclic_reduction</code> every change as there can be a few instance where it not necessary to do this, perhaps because of the property of <i>words</i>.
+</p>
+
+<p>
+The good thing about this week was that I could now understand the limitations that will remain after my GSoC project. The scope of Computational Group Theory is more than what I expected. Apart from that I will be leaving for my college this week stars from <i>15th</i> of <i>July</i>, perhaps I don't know how things will shift regarding time for GSoC. Let's be realistic :)
+</p>
+<p>
+&#2309;&#2354;&#2357;&#2367;&#2342;&#2366;
+</p>
+          <h4>References</h4>
+                    <i>
+
+                    <ul>
+                      <li>1. Derek F. Holt, Bettina Eick, Bettina, Eamonn A. O'Brien, "Handbook of computational group theory", Discrete Mathematics and its Applications (Boca Raton). Chapman & Hall/CRC, Boca Raton, FL, 2005. ISBN 1-5848-372-3 .</li>
+
+                      <li>2.<a href="http://staff.itee.uq.edu.au/havas/1974h.pdf"> George Havas, "Reidemeister-Schreier program"</a></li>
+                    </i>
+                    <br />
+                    </ul>
 					</div>
 				</div>
 			</div>
@@ -3532,86 +3593,86 @@ Out[19]: log(x)
 <tr class="feedsrow">
 <td><a href="https://asmeurer.github.io/blog/">Aaron Meurer's Blog</a></td>
 <td><a class="xmlbutton" href="https://asmeurer.github.io/blog/rss.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://iamit.in/blog">Amit Kumar</a></td>
 <td><a class="xmlbutton" href="http://iamit.in/blog/feeds/sympy.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://gxyd.github.io">Gaurav Dhingra</a></td>
 <td><a class="xmlbutton" href="https://gxyd.github.io/feeds/atom.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td>http://sartajsingh.me/feeds/sympy.xml</td>
 <td><a class="xmlbutton" href="http://sartajsingh.me/feeds/sympy.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://isuruf.blogspot.com/">Isuru Fernando's blog</a></td>
 <td><a class="xmlbutton" href="http://isuruf.blogspot.com/feeds/posts/default">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://jbm950.github.io">James Milam</a></td>
 <td><a class="xmlbutton" href="http://jbm950.github.io/feed.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://kshitij10496.github.io//">Kshitij Saraogi</a></td>
 <td><a class="xmlbutton" href="http://kshitij10496.github.io/feed.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://nishnik.github.io/">Nishant Nikhil</a></td>
 <td><a class="xmlbutton" href="http://nishnik.github.io/feed.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://sampadblog.wordpress.com">Sampad Saha</a></td>
 <td><a class="xmlbutton" href="https://sampadblog.wordpress.com/feed/">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://shekharrajak.github.io/feed.xml">Shekhar Prasad Rajak</a></td>
 <td><a class="xmlbutton" href="http://shekharrajak.github.io/feed.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://srajangarg.github.io//">Srajan Garg</a></td>
 <td><a class="xmlbutton" href="http://srajangarg.github.io/feed.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://shubhamtibra.wordpress.com">Subham Tibra</a></td>
 <td><a class="xmlbutton" href="https://shubhamtibra.wordpress.com/feed/">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://sumith1896.github.io//">Sumith</a></td>
 <td><a class="xmlbutton" href="http://sumith1896.github.io/feeds/feed.sympy.xml">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://rajithsays.wordpress.com">SymEngine &#8211; Rajith says&#8230;</a></td>
 <td><a class="xmlbutton" href="https://rajithsays.wordpress.com/category/symengine/feed/">XML</a></td>
-<td>12:05, Wednesday, 10 August</td>
-<td>12:20, Wednesday, 10 August</td>
+<td>12:25, Wednesday, 10 August</td>
+<td>12:40, Wednesday, 10 August</td>
 </tr>
 </table>
 
