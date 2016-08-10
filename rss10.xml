@@ -221,7 +221,7 @@ these &lt;code class="highlighter-rouge"&gt;symbols&lt;/code&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;Idea about improved _solve_trig in Solveset :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Idea for improved _solve_trig in Solveset :&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;
 In [1]: solveset(sin(x) + cos(y), x, S.Reals)
