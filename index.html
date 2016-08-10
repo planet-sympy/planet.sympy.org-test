@@ -89,6 +89,148 @@
 
     <div class="container">
          <div class="day">
+<h2 class="dayform">August 09, 2016</h2>
+<div class="channelgroup ">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		    <div class="box" class="item feed-b298e897 feed-" id="item-a7c84080">
+			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
+			    	<table class="table borderless table-condensed">
+			    		<tr>
+			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
+			    				<div style="margin-right:5px;">
+				    				 <img src="hackergotchi/gxyd.jpg"/> 
+				    				
+				    			</div>
+			    			</td>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row" style="margin-top:15px;">
+					    			<div class="col-md-8">
+							    		<a href="">Gaurav Dhingra (gxyd) </a>
+							    	</div>
+							    	<div class="col-md-4 dtdate">
+							    		<a href="https://gxyd.github.io/gsoc2016/gsoc_week_12.html">18:30, Tuesday, 09 August UTC</a>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    		<tr>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row">
+							    	<div class="col-md-12 col-xs-12">
+							    		<h4><a class="boxh2" href="https://gxyd.github.io/gsoc2016/gsoc_week_12.html">GSoC Week 12</a></h4>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    	</table>
+			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
+			    		 <img src="hackergotchi/gxyd.jpg"/> 
+			    		
+			    	</div>
+			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
+			    		<div class="row">
+			    			<div class="col-md-8">
+					    		<a href="">Gaurav Dhingra (gxyd) </a>
+					    	</div>
+					    	<div class="col-md-4 dtdate">
+					    		<a href="https://gxyd.github.io/gsoc2016/gsoc_week_12.html">18:30, Tuesday, 09 August UTC</a>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12 col-xs-12">
+					    		<h4><a class="boxh2" href="https://gxyd.github.io/gsoc2016/gsoc_week_12.html">GSoC Week 12</a></h4>
+					    	</div>
+					    </div>
+				    </div-->
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 descript">
+						<p>
+Hi all, here's a brief summary of the 12th week of my GSoC:
+<br />
+Last week I uploaded the <a href="https://gxyd.github.io/gsoc2016/covhtml/index.html">test-coverage files</a> on my website, that revealed some interesting places where a few versions of <code>scan</code> routine in coset enumeration have un-tested <code>if-elif-else</code> case.
+</p>
+
+<p>
+As we are now approaching the end of GSoC time period, we decided to do some testing with some of the examples from 1973cdhw paper [2]. Coset Enumeration got my attention again since:
+</p>
+
+<p>
+There seemed to be one bug raising <code>TypeError</code> so opened issue <a href="https://github.com/sympy/sympy/issues/11449">sympy/sympy/#11449</a>, resulting from coset enumeration by the coset-table based method. From beginning it was clear that the issue was not in <code>compress()</code> method. It was quite difficult for me get onto the main source of problem. But then Kalevi had a closer look on the pseudo-code in Derek Holt and also in Sims Finitely Presented Groups.
+</p>
+
+<p>
+I wrote docstrings for a few of methods and fixed the issue <a href="https://github.com/sympy/sympy/issue/11449">#11449</a> in PR <a href="https://github.com/sympy/sympy/pull/11460">#11460</a>.
+</p>
+
+<p>
+The problem there in code is explained briefly below
+</p>
+
+<b>Previous code-snippet</b>
+<p>
+<pre>
+1    i = 0
+2    while i < len(C.omega):
+3        alpha = C.omega[i]
+4        i += 1
+5        for x in C.A:
+6            if C.table[alpha][C.A_dict[x]] is None:
+7                C.define_f(alpha, x)
+8                C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
+
+</pre>
+</p>
+
+<b>After code-snippet</b>
+<p>
+<pre>
+1     while alpha < len(C.table):
+2         if C.p[alpha] == alpha:
+3             for x in C.A:
+4                 if C.p[alpha] != alpha:
+5                     break
+6                 if C.table[alpha][C.A_dict[x]] is None:
+7                    C.define_c(alpha, x)
+8                     C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
+
+</pre>
+</p>
+
+<p>
+Here $\alpha$ looks over in till $\lt$ <code>C.table</code>. This way all elements of $C.\Omega$ are tested even in case that the set becomes very small. The inner for $x$ loop should also tests $p[i]$ at each round and break if that becomes different from $i$.
+</p>
+
+<p>
+The changes that have been addressed in <a href="https://github.com/sympy/sympy/pull/11460">PR #11460</a> also include chaging the file name <code>free_group.py</code> to <code>free_groups.py</code>, similar to what we have.
+</p>
+
+<p>
+It seems that Presentation of Permutation Groups won't happen during GSoC since there's just one more week; instead, I plan to focus on improving and completing the current PR's <a href="https://github.com/sympy/sympy/pull/11361">#11361</a> on Modified Todd-Coxeter algorithm and <a href="https://github.com/sympy/sympy/pull/11460">PR #11460</a> on addition of docstrings and better user methods.
+</p>
+
+<p>
+One more thing, that I would start in this week though may not be completed this week will be the sphinx documentation of finitely presented groups. I found the documentation of Poly's module by Kalevi very much readable and interesting, may be I can seek to follow that.
+</p>
+
+<p>
+<h4>References</h4>
+<i>
+
+<ul>
+  <li>1. Derek F. Holt, Bettina Eick, Bettina, Eamonn A. O'Brien, "Handbook of computational group theory", Discrete Mathematics and its Applications (Boca Raton). Chapman & Hall/CRC, Boca Raton, FL, 2005. ISBN 1-5848-372-3 .</li>
+  <li>2. <a href="http://staff.itee.uq.edu.au/havas/1973cdhw.pdf">John J. Cannon; Lucien A. Dimino; George Havas; Jane M. Watson, "Implementation and Analysis of the Todd-Coxeter Algorithm" , Mathematics of Computation, Vol. 27, No. 123. (Jul., 1973), pp. 463-490</a></li>
+  </i>
+<br />
+</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="day">
 <h2 class="dayform">August 08, 2016</h2>
 <div class="channelgroup ">
 	<div class="row">
@@ -2866,7 +3008,7 @@ Then I have started working on Shoup&#8217;s algorithm for polynomial factorizat
 <div class="channelgroup ">
 	<div class="row">
     	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-b298e897 feed-" id="item-ac2c9f58">
+		    <div class="box" class="item feed-b298e897 feed-" id="item-a1bc7f41">
 			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
 			    	<table class="table borderless table-condensed">
 			    		<tr>
@@ -2919,68 +3061,7 @@ Then I have started working on Shoup&#8217;s algorithm for polynomial factorizat
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-xs-12 descript">
-						<p>
-Hi everyone.
-</p>
-<br />
-<br />
-<p>
-Here's what we have been doing for <i>7th</i> week of <i>GSoC</i>.
-</p>
-
-<p>
-Kalevi mentioned about the $LaTex$ not getting rendered on Planet Sympy website, thought it works fine on my website. Following the conversation Aaron opened issue <a href="https://github.com/sympy/planet-sympy/issues/45">planet-sympy/issues/45</a>, though it hasn't been fixed.
-</p>
-
-<p>
-This week we completed PR <a href="https://github.com/sympy/sympy/pull/11295">#11295</a> on Reidemeister Schreier algorithm. Remember the <a href="https://gitter.im/sympy/GroupTheory?at=5776b220cdab7a1f4fbebd34">blog issue</a> I asked on our gitter channel. Kalevi suggested to be more on the 'descriptive' side.
-</p>
-
-<p>
-<h4>What do we do this week?</h4>
-Implemented the Reidemeister Schreier algorithm (shortly RS algorithm) and Titze Transformations (shortly TT) in PR #11295 . Most of the pseudo code for RS algorithm is there in the Handbook [1], perhaps majority of the time was spent working with TT. There isn't any pseudo code available for making that work, but we gathered detailed information from [1] combined with Havas Paper [2].
-
-What issues were there?
-In the both [1] and [2], there a few assumptions made, like
-
-<pre>
-> shall assume that all relators are always cyclically reduced; that is, that
-whenever a relator is changed, it is immediately replaced by its cyclic reduction.
-</pre>
-
-</p>
-
-<p>I opened the issue <a href="https://github.com/sympy/sympy/issues/11352">#11352</a> regarding a typo I left in <code>coset_enumeration_c</code>. Though I didn't expect a PR, @kritkaran94 fixed it. Perhaps a good test case which makes use of different value of <code>max_stack_size</code> was suggested by Kalevi. One thing came back to me, "everthing is an object in Python", the fact that initially <code>CosetTableDefaultMaxLimit</code> was a module level variable initially and we changed it to <code>CosetTable.CosetTableDefaultMaxLimit</code>, module is an object so is a <code>class</code>.
-</p>
-
-<p>
-<h4>What hasn't been done?</h4>
-<ul>
-<li>No testing for a few of techniques, for example currently no tests exist for <code>elimination_technique_2</code>, which is a variant of the elimination procedures.
-<li>TT doesn't produce the best possible result.
-</ul>
-</p>
-
-<p>
-Though doing this seemed easy at first. But I didn't wanted to apply <code>identity_cyclic_reduction</code> every change as there can be a few instance where it not necessary to do this, perhaps because of the property of <i>words</i>.
-</p>
-
-<p>
-The good thing about this week was that I could now understand the limitations that will remain after my GSoC project. The scope of Computational Group Theory is more than what I expected. Apart from that I will be leaving for my college this week stars from <i>15th</i> of <i>July</i>, perhaps I don't know how things will shift regarding time for GSoC. Let's be realistic :)
-</p>
-<p>
-&#2309;&#2354;&#2357;&#2367;&#2342;&#2366;
-</p>
-          <h4>References</h4>
-                    <i>
-
-                    <ul>
-                      <li>1. Derek F. Holt, Bettina Eick, Bettina, Eamonn A. O'Brien, "Handbook of computational group theory", Discrete Mathematics and its Applications (Boca Raton). Chapman & Hall/CRC, Boca Raton, FL, 2005. ISBN 1-5848-372-3 .</li>
-
-                      <li>2.<a href="http://staff.itee.uq.edu.au/havas/1974h.pdf"> George Havas, "Reidemeister-Schreier program"</a></li>
-                    </i>
-                    <br />
-                    </ul>
+						
 					</div>
 				</div>
 			</div>
@@ -3424,104 +3505,6 @@ Out[19]: log(x)
 		</div>
 	</div>
 </div></div>
-<div class="day">
-<h2 class="dayform">July 08, 2016</h2>
-<div class="channelgroup ">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-6163205f feed-" id="item-c9b3fde6">
-			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
-			    	<table class="table borderless table-condensed">
-			    		<tr>
-			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
-			    				<div style="margin-right:5px;">
-				    				 <img src="hackergotchi/jbm950.jpg"/> 
-				    				
-				    			</div>
-			    			</td>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row" style="margin-top:15px;">
-					    			<div class="col-md-8">
-							    		<a href="">James Milam (jbm950) </a>
-							    	</div>
-							    	<div class="col-md-4 dtdate">
-							    		<a href="http://jbm950.github.io//2016/07/08/GSoC-week-7.html">00:00, Friday, 08 July UTC</a>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    		<tr>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row">
-							    	<div class="col-md-12 col-xs-12">
-							    		<h4><a class="boxh2" href="http://jbm950.github.io//2016/07/08/GSoC-week-7.html">GSoC Week 7</a></h4>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    	</table>
-			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
-			    		 <img src="hackergotchi/jbm950.jpg"/> 
-			    		
-			    	</div>
-			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
-			    		<div class="row">
-			    			<div class="col-md-8">
-					    		<a href="">James Milam (jbm950) </a>
-					    	</div>
-					    	<div class="col-md-4 dtdate">
-					    		<a href="http://jbm950.github.io//2016/07/08/GSoC-week-7.html">00:00, Friday, 08 July UTC</a>
-					    	</div>
-					    </div>
-					    <div class="row">
-					    	<div class="col-md-12 col-xs-12">
-					    		<h4><a class="boxh2" href="http://jbm950.github.io//2016/07/08/GSoC-week-7.html">GSoC Week 7</a></h4>
-					    	</div>
-					    </div>
-				    </div-->
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 descript">
-						<p>This week the focus was on the support code for the featherstone method.
-I finished adding examples to the docstrings of every function I made. I
-then wrote up test code for all of the new functions primarily focusing
-on expected outputs but included some expected error messages for one of
-the functions. Lastly I have coded up the functions themselves. This
-work can be seen in <a href="https://github.com/sympy/sympy/pull/11331">PR
-#11331</a>.</p>
-
-<p>I continued following the PR I reviewed last week and give suggestions
-as he worked on it. The PR is now in my opinion ready to be merged and
-is a beneficial addition to the sympy codebase.</p>
-
-<p>The last thing I did this week was have a meeting about the presentation
-that I will be aiding in on Monday. After the meeting I have spent some
-time looking over my portions of the presentation and making sure I am
-prepared to speak.</p>
-
-<h3 id="future-directions">Future Directions</h3>
-
-<p>Next week is the SciPy conference were I will be aiding in PyDy&#8217;s
-tutorial. Also I will be meeting with my mentor in person and during our
-time there I suspect we will work on a variety of things from
-Featherstone&#8217;s articulated body method to the base class.</p>
-
-<h3 id="prs-and-issues">PR&#8217;s and Issues</h3>
-
-<blockquote>
-  <ul>
-    <li>(Open) Added docstrings to ast.py <a href="https://github.com/sympy/sympy/pull/11333">PR
-  #11333</a></li>
-    <li>(Open) [WIP] Featherstones EOM support <a href="https://github.com/sympy/sympy/pull/11331">PR
-  #11331</a></li>
-  </ul>
-</blockquote>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div></div>
 <br><p><a href="index1.html" class="btn btn-mat"><span class="icon-kdeArrowLeft"></span> Older blog entries</a></p>
 
         <hr class="blueline">
@@ -3549,86 +3532,86 @@ Featherstone&#8217;s articulated body method to the base class.</p>
 <tr class="feedsrow">
 <td><a href="https://asmeurer.github.io/blog/">Aaron Meurer's Blog</a></td>
 <td><a class="xmlbutton" href="https://asmeurer.github.io/blog/rss.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://iamit.in/blog">Amit Kumar</a></td>
 <td><a class="xmlbutton" href="http://iamit.in/blog/feeds/sympy.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://gxyd.github.io">Gaurav Dhingra</a></td>
 <td><a class="xmlbutton" href="https://gxyd.github.io/feeds/atom.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td>http://sartajsingh.me/feeds/sympy.xml</td>
 <td><a class="xmlbutton" href="http://sartajsingh.me/feeds/sympy.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://isuruf.blogspot.com/">Isuru Fernando's blog</a></td>
 <td><a class="xmlbutton" href="http://isuruf.blogspot.com/feeds/posts/default">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://jbm950.github.io">James Milam</a></td>
 <td><a class="xmlbutton" href="http://jbm950.github.io/feed.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://kshitij10496.github.io//">Kshitij Saraogi</a></td>
 <td><a class="xmlbutton" href="http://kshitij10496.github.io/feed.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://nishnik.github.io/">Nishant Nikhil</a></td>
 <td><a class="xmlbutton" href="http://nishnik.github.io/feed.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://sampadblog.wordpress.com">Sampad Saha</a></td>
 <td><a class="xmlbutton" href="https://sampadblog.wordpress.com/feed/">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://shekharrajak.github.io/feed.xml">Shekhar Prasad Rajak</a></td>
 <td><a class="xmlbutton" href="http://shekharrajak.github.io/feed.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://srajangarg.github.io//">Srajan Garg</a></td>
 <td><a class="xmlbutton" href="http://srajangarg.github.io/feed.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://shubhamtibra.wordpress.com">Subham Tibra</a></td>
 <td><a class="xmlbutton" href="https://shubhamtibra.wordpress.com/feed/">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://sumith1896.github.io//">Sumith</a></td>
 <td><a class="xmlbutton" href="http://sumith1896.github.io/feeds/feed.sympy.xml">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://rajithsays.wordpress.com">SymEngine &#8211; Rajith says&#8230;</a></td>
 <td><a class="xmlbutton" href="https://rajithsays.wordpress.com/category/symengine/feed/">XML</a></td>
-<td>11:45, Wednesday, 10 August</td>
-<td>12:00, Wednesday, 10 August</td>
+<td>12:05, Wednesday, 10 August</td>
+<td>12:20, Wednesday, 10 August</td>
 </tr>
 </table>
 
