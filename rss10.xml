@@ -7,6 +7,48 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">http://nishnik.github.io/GSoC-Eleventh-Week</guid>
+      <title>GSoC Eleventh Week</title>
+      <author>Nishant Nikhil (nishnik)</author>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 GMT</pubDate>
+      <link>http://nishnik.github.io/GSoC-Eleventh-Week/</link>
+      <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This week I worked on little refactoring of &lt;code class="highlighter-rouge"&gt;Fields&lt;/code&gt; module. Like moving functions implementations from &lt;code class="highlighter-rouge"&gt;.h&lt;/code&gt; file to &lt;code class="highlighter-rouge"&gt;.cpp&lt;/code&gt; file in &lt;a href="https://github.com/symengine/symengine/pull/1060"&gt;this&lt;/a&gt; PR. I added a &lt;code class="highlighter-rouge"&gt;from_uintpoly&lt;/code&gt; method which allows us to create a &lt;code class="highlighter-rouge"&gt;GaloisField&lt;/code&gt; object from &lt;code class="highlighter-rouge"&gt;UIntPoly&lt;/code&gt; object in &lt;a href="https://github.com/symengine/symengine/pull/1059/"&gt;this&lt;/a&gt; PR. After which I worked on the implementation of &lt;code class="highlighter-rouge"&gt;diff&lt;/code&gt; method for &lt;code class="highlighter-rouge"&gt;GaloisField&lt;/code&gt; in &lt;a href="https://github.com/symengine/symengine/pull/1060"&gt;this&lt;/a&gt; PR.
+&lt;br /&gt;
+Then I worked on &lt;code class="highlighter-rouge"&gt;Logic&lt;/code&gt; module. It is needed for the implementation of &lt;code class="highlighter-rouge"&gt;Intersection&lt;/code&gt; class in &lt;code class="highlighter-rouge"&gt;Sets&lt;/code&gt; module. It has the implementation for Logical And, Or and Not operations.
+&lt;br /&gt;
+Both &lt;code class="highlighter-rouge"&gt;Or&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;And&lt;/code&gt; class have a private variable named &lt;code class="highlighter-rouge"&gt;container_&lt;/code&gt; which is a set of &lt;code class="highlighter-rouge"&gt;RCP&amp;lt;const Boolean&amp;gt;&lt;/code&gt;. It stores the &lt;code class="highlighter-rouge"&gt;Boolean&lt;/code&gt; objects on which &lt;code class="highlighter-rouge"&gt;And&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Or&lt;/code&gt; operator can&amp;#8217;t be applied using the known rules.
+&lt;br /&gt;
+&lt;code class="highlighter-rouge"&gt;Not&lt;/code&gt; also has one private variable which is an &lt;code class="highlighter-rouge"&gt;RCB&amp;lt;const Boolean&amp;gt;&lt;/code&gt; object, which stores the &lt;code class="highlighter-rouge"&gt;Boolean&lt;/code&gt; object on which we were not able to apply &lt;code class="highlighter-rouge"&gt;not&lt;/code&gt; operator using the current rules.
+&lt;br /&gt;
+Then we have three functions:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-C++"&gt;RCP&amp;lt;const Boolean&amp;gt; logical_and(const set_boolean &amp;amp;s);
+RCP&amp;lt;const Boolean&amp;gt; logical_or(const set_boolean &amp;amp;s);
+RCP&amp;lt;const Boolean&amp;gt; logical_not(const RCP&amp;lt;const Boolean&amp;gt; &amp;amp;s);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These are used to do the respective operation on the operands supplied.
+&lt;br /&gt;
+Talking little about implementaion details:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-C++"&gt;RCP&amp;lt;const Boolean&amp;gt; logical_and(const set_boolean &amp;amp;s)
+{
+   return and_or&amp;lt;And&amp;gt;(s, false);
+}
+
+RCP&amp;lt;const Boolean&amp;gt; logical_or(const set_boolean &amp;amp;s)
+{
+   return and_or&amp;lt;Or&amp;gt;(s, true);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And the function &lt;code class="highlighter-rouge"&gt;and_or&lt;/code&gt; do the required operations.
+&lt;br /&gt;
+After &lt;a href="https://github.com/symengine/symengine/pull/1061/"&gt;this&lt;/a&gt; PR gets merged, I would start working on &lt;code class="highlighter-rouge"&gt;Intersection&lt;/code&gt; class.&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://gxyd.github.io/GSoC Week 12</guid>
       <title>GSoC Week 12</title>
       <author>Gaurav Dhingra (gxyd)</author>
@@ -1693,119 +1735,6 @@ Out[19]: log(x)
 &lt;p&gt;In the proposal, I had promised an auxiliary feature of LaTeX friendly outputs for SymEngine Expresions, given I am on time. But considering I am barely hanging on to the time line, I decided to push this to the end of the time line.&lt;/p&gt;
 &lt;p&gt;So I will immediately start working on the lambdify functions, and hopefully start exception catching in the same week. This will give me time to come back to the LaTeX friendly expressions in the last weeks.&lt;/p&gt;
 &lt;p&gt;See you!&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/362/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/362/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&amp;#038;blog=110498904&amp;#038;post=362&amp;#038;subd=rajithsays&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://srajangarg.github.io//2016/07/09/Rational-Polynomials</guid>
-      <title>Rational Polynomials</title>
-      <author>Srajan Garg (srajangarg)</author>
-      <pubDate>Sat, 09 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://srajangarg.github.io//2016/07/09/Rational-Polynomials/</link>
-      <description>&lt;h3 id="overview"&gt;Overview&lt;/h3&gt;
-
-&lt;p&gt;This last week was divided into two parts. The first half was spent in fixing miscellaneous issue with the last PR, regarding the basic to polynomial converisons. The second half was spent in thinking of how SymEngine should store rational polynomials (polynomials with rational coefficients) and how infact should they be implemented.&lt;/p&gt;
-
-&lt;h3 id="leftovers-from-basic-conversions"&gt;Leftovers from Basic Conversions&lt;/h3&gt;
-
-&lt;p&gt;As mentioned, the first half of my week was spent finalizing the basic to polynomial conversions PR.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Using &lt;code class="highlighter-rouge"&gt;divnum&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;mulnum&lt;/code&gt; methods instead of using &lt;code class="highlighter-rouge"&gt;rcp_cast&amp;lt;Number&amp;gt;&lt;/code&gt; on &lt;code class="highlighter-rouge"&gt;mul&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;div&lt;/code&gt; respectively. These made the code much more readable too.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Use &lt;code class="highlighter-rouge"&gt;static_cast&amp;lt;const Rational &amp;amp;&amp;gt;(*rat_rcp).get_den()&lt;/code&gt; instead of &lt;code class="highlighter-rouge"&gt;rcp_static_cast&amp;lt;const Rational&amp;gt;(rat_rcp)-&amp;gt;get_den()&lt;/code&gt;. The logic behind this is, that in the second case, another &lt;code class="highlighter-rouge"&gt;RCP&lt;/code&gt; is being constructed, and the &lt;code class="highlighter-rouge"&gt;get_den&lt;/code&gt; function is called on this new RCP. This is unecessary and can be avoided using the former approach.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At many places within the visitor pattern, I was calling the external function &lt;code class="highlighter-rouge"&gt;basic_to_poly&lt;/code&gt;. This was not wrong, but caused necessary overhead and recursion, which is not usually desired. Isuru suggested that I can reuse the visitor and successfully avoid the recursion. Here&amp;#8217;s an example&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class="language-c++ highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="n"&gt;dict_type&lt;/span&gt; &lt;span class="nf"&gt;_basic_to_poly&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;basic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;	
-    &lt;span class="n"&gt;BasicToPolyV&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;basic&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="c1"&gt;// dict is the answer we will be returning
-&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;BasicToPolyV&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;bvisit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Add&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;auto&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dict_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="c1"&gt;// unnecessary overhead
-&lt;/span&gt;        &lt;span class="n"&gt;dict&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;_basic_to_upoly&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;becomes this&lt;/p&gt;
-
-&lt;div class="language-c++ highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="c1"&gt;// dict is the answer we will be returning
-&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;BasicToPolyV&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;bvisit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Add&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;	
-    &lt;span class="n"&gt;dict_type&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;auto&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dict_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="c1"&gt;// no overhead
-&lt;/span&gt;        &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;BasicToPolyV&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="n"&gt;dict&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;move&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There was also a &lt;a href="https://github.com/symengine/symengine/pull/1003#discussion_r69408888"&gt;discussion&lt;/a&gt; on how the visitor for &lt;code class="highlighter-rouge"&gt;Pow&lt;/code&gt; in &lt;code class="highlighter-rouge"&gt;find_gen_pow&lt;/code&gt; was implemented. Isuru pointed out, how it would give wrong answers in the cases he put forward. But I had thought of other cases (like &lt;code class="highlighter-rouge"&gt;2**(2**(x+1))&lt;/code&gt;) which would would then not work, if the code was changed. These were special type of cases where the expression could be &amp;#8216;simplified&amp;#8217;. There&amp;#8217;s some discussion on the issue &lt;a href="https://github.com/symengine/symengine/issues/1021"&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id="starting-rational-polynomials"&gt;Starting Rational Polynomials&lt;/h3&gt;
-
-&lt;p&gt;I began thinking of how the polynomials with rational coefficients class should be implemented. In Flint, the &lt;code class="highlighter-rouge"&gt;fmpq_poly&lt;/code&gt; class is implemented as a &lt;code class="highlighter-rouge"&gt;fmpz_poly&lt;/code&gt; class with another just another integer acting as the common denominatior. This kind of implementation saves up on a lot of time! (think of canonicalization of coefficients, after multiplication) But this kind of implementation would require a lot of extra code be written, and we could not reuse any of the code we have already written. So, after discussion with Isuru, he suggested that I can go ahead with the trivial implementation of using a map from &lt;code class="highlighter-rouge"&gt;uint&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;rational_class&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class="language-c++ highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;URatDict&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ODictWrapper&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;uint&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rational_class&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Add in some constructors and that&amp;#8217;s it! The internal container for rational polynomials in SymEngine is ready, because of the way we had strcutured the earlier code.&lt;/p&gt;
-
-&lt;p&gt;Now the question was how the end classes should be implemented (i.e. &lt;code class="highlighter-rouge"&gt;URatPoly&lt;/code&gt;) If you think about it, the methods of both the rational and integer polynomials will look exactly the same. &lt;code class="highlighter-rouge"&gt;from_vec&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;container_from_dict&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;eval&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;compare&lt;/code&gt; will all look the same with minor differences. The minor differences are only what type of container is being used (&lt;code class="highlighter-rouge"&gt;URatDict&lt;/code&gt; or &lt;code class="highlighter-rouge"&gt;UIntDict&lt;/code&gt;?) and what coefficient class is being used (&lt;code class="highlighter-rouge"&gt;integer_class&lt;/code&gt; or &lt;code class="highlighter-rouge"&gt;rational_class&lt;/code&gt;?) Infact, I checked this for our other polynomial types Flint and Piranha and it holds true over there too!&lt;/p&gt;
-
-&lt;p&gt;So, what came to mind was that all the methods had to be reused! Thus I formed a &lt;code class="highlighter-rouge"&gt;USymEnginePoly&lt;/code&gt; class which acts as the &amp;#8216;SymEngine&amp;#8217; implementation of polynomials. You can pass it a &lt;code class="highlighter-rouge"&gt;BaseType&lt;/code&gt; from which it will deduce what type of polynomial would be constructed. Ideally, all you need to do now for implenting end polynomial classes is choose a implementation type (SymEngine or Piranha or Flint?) and a polynomial type (Integer or Rational?)&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#8217;s some pseudo code for the class structure aimed at&lt;/p&gt;
-
-&lt;div class="language-c++ highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="c1"&gt;// the base
-&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;Container&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UPolyBase&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Basic&lt;/span&gt;
-
-&lt;span class="c1"&gt;// super class for all non-expr polys, all methods which are
-// common for all non-expr polys go here eg. degree, eval etc.
-&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;Cont&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UNonExprPoly&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;UPolyBase&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Cont&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="c1"&gt;// the specialized non-expr classes
-&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UIntPolyBase&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;UNonExprPoly&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;integer_class&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;// and
-&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;URatPolyBase&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;UNonExprPoly&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rational_class&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="c1"&gt;// a specific implementation
-// similar classes like UPiranhaPoly/UFlintPoly
-&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BaseType&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;USymEnginePoly&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;BaseType&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;D&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="c1"&gt;// end classes (few examples)
-&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UIntPoly&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;USymEnginePoly&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;UIntDict&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;UIntPolyBase&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;URatPoly&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;USymEnginePoly&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;URatDict&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;URatPolyBase&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UIntPolyPir&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;UPiranhaPoly&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;piranha&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;poly&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;UIntPolyBase&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;URatPolyFlint&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;UFlintPoly&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;flint&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;poly&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;URatPolyBase&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Here&amp;#8217;s a bonus picture!&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt="" src="http://srajangarg.github.io/assets/class.jpg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;I hope to get all the rational polynomials ready and tested in the next two to three days. The existing work can be seen in &lt;a href="https://github.com/symengine/symengine/pull/1028"&gt;#1028&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tata!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
