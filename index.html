@@ -89,6 +89,127 @@
 
     <div class="container">
          <div class="day">
+<h2 class="dayform">August 12, 2016</h2>
+<div class="channelgroup ">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		    <div class="box" class="item feed-6163205f feed-" id="item-2607faf6">
+			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
+			    	<table class="table borderless table-condensed">
+			    		<tr>
+			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
+			    				<div style="margin-right:5px;">
+				    				 <img src="hackergotchi/jbm950.jpg"/> 
+				    				
+				    			</div>
+			    			</td>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row" style="margin-top:15px;">
+					    			<div class="col-md-8">
+							    		<a href="">James Milam (jbm950) </a>
+							    	</div>
+							    	<div class="col-md-4 dtdate">
+							    		<a href="http://jbm950.github.io//2016/08/12/GSoC-week-13.html">00:00, Friday, 12 August UTC</a>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    		<tr>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row">
+							    	<div class="col-md-12 col-xs-12">
+							    		<h4><a class="boxh2" href="http://jbm950.github.io//2016/08/12/GSoC-week-13.html">GSoC Week 13</a></h4>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    	</table>
+			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
+			    		 <img src="hackergotchi/jbm950.jpg"/> 
+			    		
+			    	</div>
+			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
+			    		<div class="row">
+			    			<div class="col-md-8">
+					    		<a href="">James Milam (jbm950) </a>
+					    	</div>
+					    	<div class="col-md-4 dtdate">
+					    		<a href="http://jbm950.github.io//2016/08/12/GSoC-week-13.html">00:00, Friday, 12 August UTC</a>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12 col-xs-12">
+					    		<h4><a class="boxh2" href="http://jbm950.github.io//2016/08/12/GSoC-week-13.html">GSoC Week 13</a></h4>
+					    	</div>
+					    </div>
+				    </div-->
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 descript">
+						<p>This week I spent a lot of time working on FeatherstonesMethod and its
+component parts. I started off by moving a bunch of spatial vector functions
+from another PR I have to the featherstone PR and used some of those functions
+to calculate the spatial inertia of Body objects. The next thing I worked on
+was completely rewriting the internals of the joint code. The joints now
+consist of 4 reference frames and points (one set at each of the bodys mass
+centers and one set per body at the joint location).</p>
+
+<p>After this I ran some basic code that used these new features and kept making
+changes until the code was able to run without producing errors. I used this
+same method of work with FeatherstonesMethod and now it too is able to run
+without producing errors. Now that the code runs it was time to make sure that
+the output is correct which is a lot more involved than the previous step of
+work. To begin I solved for the spatial inertia by hand and used this
+calculation to create test code for Body.spatial_inertia. As expected the code
+initially was completely incorrect but it now passes the test. I have since
+been working on the tests for the joint code. Since this code is completely new
+to the sympy repository it takes a lot more planning than the body test did.
+Also I need to solve the kinematics by hand for the joints so that I have a
+base for the test code. This is where I am currently located in the process.</p>
+
+<p>Also this week I addressed review comments on SymbolicSystem and have moved
+that PR closer to being able to merge. One of the current hang ups is trying to
+force Sphinx to autodocument the __init__ method. I think the best solution
+currently is to move the relevant code back to the main docstring for the class
+and not worry about trying to document the __init__ method.</p>
+
+<p>While working on rewriting the joint code I came across a bug in frame.py and
+have created a docstring with a fix to this along with a test to make sure the
+fix works.</p>
+
+<p>Lastly I reviewed a PR that adds a docstring to a method that did not yet have
+a docstring. The PR had some information in it that was incorrect and after
+some research I was able to make some suggestions for its implementation.</p>
+
+<h3 id="future-directions">Future Directions</h3>
+
+<p>Next week is the last full week of GSoC and my main priority is getting the
+final evaluation information correctly finished so that the work can be
+processed correctly. My next goal is to make sure SymbolicSystem gets merged
+into SymPy. This is not entirely in my hands, however, as I will be having to
+wait for feedback and so while waiting I will be pulling off different parts of
+FeatherstonesMethod for separate PR&#8217;s at the recomendation of my advisor. These
+separate PR&#8217;s I hope to possibly include in my final evaluation.</p>
+
+<h3 id="prs-and-issues">PR&#8217;s and Issues</h3>
+
+<blockquote>
+  <ul>
+    <li>(Open) [WIP] Added system.py to physics/mechanics <a href="https://github.com/sympy/sympy/pull/11431">PR
+  #11431</a></li>
+    <li>(Open) [WIP] FeatherstonesMethod <a href="https://github.com/sympy/sympy/pull/11415">PR
+  #11415</a></li>
+    <li>(Open) Added docstring to jordan_cell method <a href="https://github.com/sympy/sympy/pull/10356">PR
+#10356</a></li>
+  </ul>
+</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="day">
 <h2 class="dayform">August 11, 2016</h2>
 <div class="channelgroup ">
 	<div class="row">
@@ -3421,82 +3542,6 @@ Out[19]: log(x)
 			</div>
 		</div>
 	</div>
-</div><div class="channelgroup ">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-19a67809 feed-" id="item-ef416d0b">
-			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
-			    	<table class="table borderless table-condensed">
-			    		<tr>
-			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
-			    				<div style="margin-right:5px;">
-				    				 <img src="hackergotchi/rajithv.jpg"/> 
-				    				
-				    			</div>
-			    			</td>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row" style="margin-top:15px;">
-					    			<div class="col-md-8">
-							    		<a href="">Rajith Vidanaarachchi (rajithv) </a>
-							    	</div>
-							    	<div class="col-md-4 dtdate">
-							    		<a href="https://rajithsays.wordpress.com/2016/07/09/gsoc-weeks-6-7-progress/">11:50, Saturday, 09 July UTC</a>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    		<tr>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row">
-							    	<div class="col-md-12 col-xs-12">
-							    		<h4><a class="boxh2" href="https://rajithsays.wordpress.com/2016/07/09/gsoc-weeks-6-7-progress/">GSoC Weeks 6 &amp; 7 Progress</a></h4>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    	</table>
-			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
-			    		 <img src="hackergotchi/rajithv.jpg"/> 
-			    		
-			    	</div>
-			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
-			    		<div class="row">
-			    			<div class="col-md-8">
-					    		<a href="">Rajith Vidanaarachchi (rajithv) </a>
-					    	</div>
-					    	<div class="col-md-4 dtdate">
-					    		<a href="https://rajithsays.wordpress.com/2016/07/09/gsoc-weeks-6-7-progress/">11:50, Saturday, 09 July UTC</a>
-					    	</div>
-					    </div>
-					    <div class="row">
-					    	<div class="col-md-12 col-xs-12">
-					    		<h4><a class="boxh2" href="https://rajithsays.wordpress.com/2016/07/09/gsoc-weeks-6-7-progress/">GSoC Weeks 6 &amp; 7 Progress</a></h4>
-					    	</div>
-					    </div>
-				    </div-->
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 descript">
-						<p>Week 6 was quite a rush, with many other things happening, and the work getting lagged behind. But with week 7, I was able to put much extra time into the project and get more or less up-to date with the time-line.</p>
-<p>Since, the end of week 5, the progress is as follows:</p>
-<ul>
-<li>Completed and merged Matrix CWrappers in <a href="https://github.com/symengine/symengine/pull/992" target="_blank">PR #992</a>.</li>
-<li>Completed and merged Parser CWrapper in <a href="https://github.com/symengine/symengine/pull/1029" target="_blank">PR #1029</a>.</li>
-<li>Completed and merged <a href="https://github.com/symengine/symengine/pull/1027" target="_blank">PR #1027</a> which had wrappers for various functions for Number class, needed for the tests in Ruby to function properly.</li>
-<li><a href="https://github.com/symengine/symengine.rb/pull/56" target="_blank">PR #56</a> in the Ruby Wrapper for Matrices is almost ready, with several review feedback to be incorporated.</li>
-<li><a href="https://github.com/symengine/symengine.rb/pull/60" target="_blank">PR #60</a> in the Ruby Wrapper for Parser is ready to be merged.</li>
-<li><a href="https://github.com/symengine/symengine.rb/pull/59" target="_blank">PR #59</a> contains the updates for the IRuby Notebooks, which will be used by @certik for SciPy 2016&#8217;s SymEngine talk.</li>
-<li><a href="https://github.com/symengine/symengine.rb/pull/55" target="_blank">PR #55</a> with the Ruby wrappers for evalf was finally merged after quite a time going into accmmodating floating point tests.</li>
-<li><a href="https://github.com/symengine/symengine.rb/issues/57">Issue #57</a> was closed in the Ruby Wrapper.</li>
-</ul>
-<p>In the proposal, I had promised an auxiliary feature of LaTeX friendly outputs for SymEngine Expresions, given I am on time. But considering I am barely hanging on to the time line, I decided to push this to the end of the time line.</p>
-<p>So I will immediately start working on the lambdify functions, and hopefully start exception catching in the same week. This will give me time to come back to the LaTeX friendly expressions in the last weeks.</p>
-<p>See you!</p><br />  <a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/362/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/362/" /></a> <img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&#038;blog=110498904&#038;post=362&#038;subd=rajithsays&#038;ref=&#038;feed=1" width="1" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </div></div>
 <br><p><a href="index1.html" class="btn btn-mat"><span class="icon-kdeArrowLeft"></span> Older blog entries</a></p>
 
@@ -3525,86 +3570,86 @@ Out[19]: log(x)
 <tr class="feedsrow">
 <td><a href="https://asmeurer.github.io/blog/">Aaron Meurer's Blog</a></td>
 <td><a class="xmlbutton" href="https://asmeurer.github.io/blog/rss.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://iamit.in/blog">Amit Kumar</a></td>
 <td><a class="xmlbutton" href="http://iamit.in/blog/feeds/sympy.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://gxyd.github.io">Gaurav Dhingra</a></td>
 <td><a class="xmlbutton" href="https://gxyd.github.io/feeds/atom.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td>http://sartajsingh.me/feeds/sympy.xml</td>
 <td><a class="xmlbutton" href="http://sartajsingh.me/feeds/sympy.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://isuruf.blogspot.com/">Isuru Fernando's blog</a></td>
 <td><a class="xmlbutton" href="http://isuruf.blogspot.com/feeds/posts/default">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://jbm950.github.io">James Milam</a></td>
 <td><a class="xmlbutton" href="http://jbm950.github.io/feed.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://kshitij10496.github.io//">Kshitij Saraogi</a></td>
 <td><a class="xmlbutton" href="http://kshitij10496.github.io/feed.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://nishnik.github.io/">Nishant Nikhil</a></td>
 <td><a class="xmlbutton" href="http://nishnik.github.io/feed.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://sampadblog.wordpress.com">Sampad Saha</a></td>
 <td><a class="xmlbutton" href="https://sampadblog.wordpress.com/feed/">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://shekharrajak.github.io/feed.xml">Shekhar Prasad Rajak</a></td>
 <td><a class="xmlbutton" href="http://shekharrajak.github.io/feed.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://srajangarg.github.io//">Srajan Garg</a></td>
 <td><a class="xmlbutton" href="http://srajangarg.github.io/feed.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://shubhamtibra.wordpress.com">Subham Tibra</a></td>
 <td><a class="xmlbutton" href="https://shubhamtibra.wordpress.com/feed/">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://sumith1896.github.io//">Sumith</a></td>
 <td><a class="xmlbutton" href="http://sumith1896.github.io/feeds/feed.sympy.xml">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://rajithsays.wordpress.com">SymEngine &#8211; Rajith says&#8230;</a></td>
 <td><a class="xmlbutton" href="https://rajithsays.wordpress.com/category/symengine/feed/">XML</a></td>
-<td>05:58, Friday, 12 August</td>
-<td>06:13, Friday, 12 August</td>
+<td>17:39, Sunday, 14 August</td>
+<td>17:54, Sunday, 14 August</td>
 </tr>
 </table>
 

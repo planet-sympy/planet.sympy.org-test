@@ -7,6 +7,70 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">http://jbm950.github.io//2016/08/12/GSoC-week-13.html</guid>
+      <title>GSoC Week 13</title>
+      <author>James Milam (jbm950)</author>
+      <pubDate>Fri, 12 Aug 2016 00:00:00 GMT</pubDate>
+      <link>http://jbm950.github.io//2016/08/12/GSoC-week-13.html</link>
+      <description>&lt;p&gt;This week I spent a lot of time working on FeatherstonesMethod and its
+component parts. I started off by moving a bunch of spatial vector functions
+from another PR I have to the featherstone PR and used some of those functions
+to calculate the spatial inertia of Body objects. The next thing I worked on
+was completely rewriting the internals of the joint code. The joints now
+consist of 4 reference frames and points (one set at each of the bodys mass
+centers and one set per body at the joint location).&lt;/p&gt;
+
+&lt;p&gt;After this I ran some basic code that used these new features and kept making
+changes until the code was able to run without producing errors. I used this
+same method of work with FeatherstonesMethod and now it too is able to run
+without producing errors. Now that the code runs it was time to make sure that
+the output is correct which is a lot more involved than the previous step of
+work. To begin I solved for the spatial inertia by hand and used this
+calculation to create test code for Body.spatial_inertia. As expected the code
+initially was completely incorrect but it now passes the test. I have since
+been working on the tests for the joint code. Since this code is completely new
+to the sympy repository it takes a lot more planning than the body test did.
+Also I need to solve the kinematics by hand for the joints so that I have a
+base for the test code. This is where I am currently located in the process.&lt;/p&gt;
+
+&lt;p&gt;Also this week I addressed review comments on SymbolicSystem and have moved
+that PR closer to being able to merge. One of the current hang ups is trying to
+force Sphinx to autodocument the __init__ method. I think the best solution
+currently is to move the relevant code back to the main docstring for the class
+and not worry about trying to document the __init__ method.&lt;/p&gt;
+
+&lt;p&gt;While working on rewriting the joint code I came across a bug in frame.py and
+have created a docstring with a fix to this along with a test to make sure the
+fix works.&lt;/p&gt;
+
+&lt;p&gt;Lastly I reviewed a PR that adds a docstring to a method that did not yet have
+a docstring. The PR had some information in it that was incorrect and after
+some research I was able to make some suggestions for its implementation.&lt;/p&gt;
+
+&lt;h3 id="future-directions"&gt;Future Directions&lt;/h3&gt;
+
+&lt;p&gt;Next week is the last full week of GSoC and my main priority is getting the
+final evaluation information correctly finished so that the work can be
+processed correctly. My next goal is to make sure SymbolicSystem gets merged
+into SymPy. This is not entirely in my hands, however, as I will be having to
+wait for feedback and so while waiting I will be pulling off different parts of
+FeatherstonesMethod for separate PR&amp;#8217;s at the recomendation of my advisor. These
+separate PR&amp;#8217;s I hope to possibly include in my final evaluation.&lt;/p&gt;
+
+&lt;h3 id="prs-and-issues"&gt;PR&amp;#8217;s and Issues&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;(Open) [WIP] Added system.py to physics/mechanics &lt;a href="https://github.com/sympy/sympy/pull/11431"&gt;PR
+  #11431&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;(Open) [WIP] FeatherstonesMethod &lt;a href="https://github.com/sympy/sympy/pull/11415"&gt;PR
+  #11415&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;(Open) Added docstring to jordan_cell method &lt;a href="https://github.com/sympy/sympy/pull/10356"&gt;PR
+#10356&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">http://nishnik.github.io/GSoC-Eleventh-Week</guid>
       <title>GSoC Eleventh Week</title>
       <author>Nishant Nikhil (nishnik)</author>
@@ -1713,28 +1777,6 @@ Out[19]: log(x)
 &lt;/ul&gt;
 &lt;p&gt;That&amp;#8217;s all for this week. Cheers !!&lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/sampadblog.wordpress.com/761/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/sampadblog.wordpress.com/761/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=sampadblog.wordpress.com&amp;#038;blog=102728326&amp;#038;post=761&amp;#038;subd=sampadblog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://rajithsays.wordpress.com/?p=362</guid>
-      <title>GSoC Weeks 6 &amp; 7 Progress</title>
-      <author>Rajith Vidanaarachchi (rajithv)</author>
-      <pubDate>Sat, 09 Jul 2016 11:50:05 GMT</pubDate>
-      <link>https://rajithsays.wordpress.com/2016/07/09/gsoc-weeks-6-7-progress/</link>
-      <description>&lt;p&gt;Week 6 was quite a rush, with many other things happening, and the work getting lagged behind. But with week 7, I was able to put much extra time into the project and get more or less up-to date with the time-line.&lt;/p&gt;
-&lt;p&gt;Since, the end of week 5, the progress is as follows:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Completed and merged Matrix CWrappers in &lt;a href="https://github.com/symengine/symengine/pull/992" target="_blank"&gt;PR #992&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Completed and merged Parser CWrapper in &lt;a href="https://github.com/symengine/symengine/pull/1029" target="_blank"&gt;PR #1029&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Completed and merged &lt;a href="https://github.com/symengine/symengine/pull/1027" target="_blank"&gt;PR #1027&lt;/a&gt; which had wrappers for various functions for Number class, needed for the tests in Ruby to function properly.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/symengine/symengine.rb/pull/56" target="_blank"&gt;PR #56&lt;/a&gt; in the Ruby Wrapper for Matrices is almost ready, with several review feedback to be incorporated.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/symengine/symengine.rb/pull/60" target="_blank"&gt;PR #60&lt;/a&gt; in the Ruby Wrapper for Parser is ready to be merged.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/symengine/symengine.rb/pull/59" target="_blank"&gt;PR #59&lt;/a&gt; contains the updates for the IRuby Notebooks, which will be used by @certik for SciPy 2016&amp;#8217;s SymEngine talk.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/symengine/symengine.rb/pull/55" target="_blank"&gt;PR #55&lt;/a&gt; with the Ruby wrappers for evalf was finally merged after quite a time going into accmmodating floating point tests.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/symengine/symengine.rb/issues/57"&gt;Issue #57&lt;/a&gt; was closed in the Ruby Wrapper.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In the proposal, I had promised an auxiliary feature of LaTeX friendly outputs for SymEngine Expresions, given I am on time. But considering I am barely hanging on to the time line, I decided to push this to the end of the time line.&lt;/p&gt;
-&lt;p&gt;So I will immediately start working on the lambdify functions, and hopefully start exception catching in the same week. This will give me time to come back to the LaTeX friendly expressions in the last weeks.&lt;/p&gt;
-&lt;p&gt;See you!&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/362/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/362/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&amp;#038;blog=110498904&amp;#038;post=362&amp;#038;subd=rajithsays&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
     </item>
   </channel>
 </rss>
