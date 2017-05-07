@@ -7,7 +7,7 @@
       <foaf:Agent>
         <foaf:name>Amit Kumar (aktech)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="http://iamit.in/blog">
+          <foaf:Document rdf:about="http://aktech.github.io/blog">
             <rdfs:seeAlso>
               <rss:channel rdf:about="http://iamit.in/blog/feeds/sympy.xml"/>
             </rdfs:seeAlso>
@@ -43,7 +43,7 @@
       <foaf:Agent>
         <foaf:name>Kshitij Saraogi(kshitij10496)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="http://kshitij10496.github.io//">
+          <foaf:Document>
             <rdfs:seeAlso>
               <rss:channel rdf:about="http://kshitij10496.github.io/feed.xml"/>
             </rdfs:seeAlso>
@@ -79,7 +79,7 @@
       <foaf:Agent>
         <foaf:name>Shekhar Prasad Rajak (shekharrajak)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="http://shekharrajak.github.io/feed.xml">
+          <foaf:Document rdf:about="http://shekharrajak.github.io">
             <rdfs:seeAlso>
               <rss:channel rdf:about="http://shekharrajak.github.io/feed.xml"/>
             </rdfs:seeAlso>
@@ -117,7 +117,19 @@
         <foaf:weblog>
           <foaf:Document rdf:about="https://asmeurer.github.io/blog/">
             <rdfs:seeAlso>
-              <rss:channel rdf:about="https://asmeurer.github.io/blog/rss.xml"/>
+              <rss:channel rdf:about="http://www.asmeurer.com/blog/rss.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Shikhar Jaiswal (ShikharJ)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://shikharj.github.io//">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://ShikharJ.github.io/feed.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>

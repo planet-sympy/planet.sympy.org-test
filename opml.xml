@@ -2,8 +2,8 @@
 <opml version="2.0">
   <head>
     <title>Planet SymPy</title>
-    <dateCreated>Mon, 15 Aug 2016 20:30:40 GMT</dateCreated>
-    <dateModified>Mon, 15 Aug 2016 20:30:40 GMT</dateModified>
+    <dateCreated>Sun, 07 May 2017 15:34:06 GMT</dateCreated>
+    <dateModified>Sun, 07 May 2017 15:34:06 GMT</dateModified>
     <ownerName>Sumith</ownerName>
     <ownerEmail>sumith1896@gmail.com</ownerEmail>
   </head>
@@ -17,7 +17,8 @@
     <outline text="Shekhar Prasad Rajak (shekharrajak)" xmlUrl="http://shekharrajak.github.io/feed.xml"/>
     <outline text="Srajan Garg (srajangarg)" xmlUrl="http://srajangarg.github.io/feed.xml"/>
     <outline text="Sumith (sumith1896)" xmlUrl="http://sumith1896.github.io/feeds/feed.sympy.xml"/>
-    <outline text="Aaron Meurer (asmeurer)" xmlUrl="https://asmeurer.github.io/blog/rss.xml"/>
+    <outline text="Aaron Meurer (asmeurer)" xmlUrl="http://www.asmeurer.com/blog/rss.xml"/>
+    <outline text="Shikhar Jaiswal (ShikharJ)" xmlUrl="https://ShikharJ.github.io/feed.xml"/>
     <outline text="Gaurav Dhingra (gxyd)" xmlUrl="https://gxyd.github.io/feeds/atom.xml"/>
     <outline text="Rajith Vidanaarachchi (rajithv)" xmlUrl="https://rajithsays.wordpress.com/category/symengine/feed/"/>
     <outline text="Sampad Saha (sampadsaha5)" xmlUrl="https://sampadblog.wordpress.com/feed/"/>

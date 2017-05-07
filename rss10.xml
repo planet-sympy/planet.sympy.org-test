@@ -7,6 +7,1296 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://shikharj.github.io//2017/05/04/Google-Summer-of-Code-with-SymPy</guid>
+      <title>Google Summer of Code with SymPy</title>
+      <author>Shikhar Jaiswal (ShikharJ)</author>
+      <pubDate>Thu, 04 May 2017 00:00:00 GMT</pubDate>
+      <link>https://shikharj.github.io//2017/05/04/Google-Summer-of-Code-with-SymPy/</link>
+      <description>&lt;p&gt;&lt;img align="center" src="https://ShikharJ.github.io/assets/GSoC.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hi!&lt;/p&gt;
+
+&lt;p&gt;The Google Summer of Code results are out and I have been selected. My project, &lt;code class="highlighter-rouge"&gt;Improving SymEngine's Python Wrappers and SymPy-SymEngine Integration&lt;/code&gt; has been chosen and I&amp;#8217;ll get to work with &lt;a href="https://github.com/symengine/symengine"&gt;SymEngine&lt;/a&gt; and &lt;a href="https://github.com/sympy/sympy"&gt;SymPy&lt;/a&gt; communities.&lt;/p&gt;
+
+&lt;h3 id="exciting-times"&gt;Exciting Times!&lt;/h3&gt;
+
+&lt;p&gt;I really thank the community for accepting me as a freshman to work on a project. The community over at &lt;code class="highlighter-rouge"&gt;SymPy&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt; is really helpful and motivating.&lt;/p&gt;
+
+&lt;p&gt;My mentors are &lt;a href="https://github.com/sumith1896"&gt;Sumith Kulal&lt;/a&gt; and &lt;a href="https://github.com/isuruf"&gt;Isuru Fernando&lt;/a&gt;, both of them being previous GSoC-ers at &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt; (then &lt;code class="highlighter-rouge"&gt;CSymPy&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;d also like to congratulate &lt;a href="https://github.com/ranjithkumar007"&gt;Ranjith&lt;/a&gt;, for getting a project under &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt; and all others who have been selected under &lt;code class="highlighter-rouge"&gt;SymPy&lt;/code&gt; in general.&lt;/p&gt;
+
+&lt;h3 id="sympy-and-symengine"&gt;SymPy and SymEngine&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="https://ShikharJ.github.io/assets/sympy.png" style="float: right;" /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class="highlighter-rouge"&gt;SymPy&lt;/code&gt; is a Python library for symbolic mathematics. It aims to become a full-featured &lt;a href="http://en.wikipedia.org/wiki/Computer_algebra_system"&gt;Computer Algebra System&lt;/a&gt; (CAS) while keeping the code as simple as possible in order to be comprehensible and easily extensible.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt; is a fast symbolic manipulation library, written in C++. Optional thin wrappers allow usage of the library from other languages. It plans to serve as a symbolic backend for the &lt;code class="highlighter-rouge"&gt;SymPy&lt;/code&gt; CAS.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Looking forward to a great summer!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://shikharj.github.io//2017/03/15/Hello-Blogging!</guid>
+      <title>Hello Blogging!</title>
+      <author>Shikhar Jaiswal (ShikharJ)</author>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 GMT</pubDate>
+      <link>https://shikharj.github.io//2017/03/15/Hello-Blogging!/</link>
+      <description>&lt;p&gt;My very first blog post. This blog&amp;#8217;s purpose is primarily to track the progress of my GSoC project and get feedback from my mentors, if my proposal gets selected. I propose to improve upon the Python wrappers for &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt;, and work on rooting it as a symbolic backend for &lt;code class="highlighter-rouge"&gt;SymPy&lt;/code&gt; CAS, the purpose for which it has been in development for a number of years. My proposal can be found &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Shikhar-Jaiswal:-Improving-SymEngine's-Python-Wrappers-and-SymPy-SymEngine-Integration"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Till Next Time!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://asmeurer.github.io/blog/posts/github-reviews-gripes/</guid>
+      <title>GitHub Reviews Gripes</title>
+      <author>Aaron Meurer (asmeurer)</author>
+      <pubDate>Thu, 06 Oct 2016 00:12:16 GMT</pubDate>
+      <link>https://asmeurer.github.io/blog/posts/github-reviews-gripes/</link>
+      <description>&lt;div&gt;&lt;p&gt;&lt;em&gt;Update: I want to keep the original post intact, but I'll post any feature
+updates that GitHub makes here as they are released.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;You can now &lt;a href="https://github.com/blog/2265-dismissing-reviews-on-pull-requests"&gt;dismiss a review&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;You can
+now
+&lt;a href="https://github.com/blog/2306-filter-pull-request-reviews-and-review-requests"&gt;filter the pull request list by review&lt;/a&gt;.
+The review status of a PR also appears in the pull request list (albeit in
+very tiny and easy to miss text).&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;You can
+now
+&lt;a href="https://github.com/blog/2330-restrict-review-dismissals-with-protected-branches"&gt;restrict review dismissals&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;GitHub
+&lt;a href="https://github.com/blog/2256-a-whole-new-github-universe-announcing-new-tools-forums-and-features"&gt;recently&lt;/a&gt; rolled
+out a new feature on their pull requests called "Reviews". The feature is (in
+theory), something that I've
+been
+&lt;a href="https://groups.google.com/d/msg/sympy/KJwDwT_P6Lw/27ha6ipuBwAJ"&gt;asking for&lt;/a&gt;.
+However, it really falls short in a big way, and I wanted to write down my
+gripes with it, in the hopes that it spurs someone at GitHub to fix it.&lt;/p&gt;
+&lt;p&gt;If you don't know, GitHub has had, for some time, a feature called "pull
+requests" ("PRs"), which lets you quite nicely show the diff and commit
+differences between two branches before merging them. People can comment on
+pull requests, or on individual lines in the diff. Once an administrator feels
+that the pull request is "ready", they can click a button and have the branch
+automatically merged.&lt;/p&gt;
+&lt;p&gt;The concept seems super simple
+in &lt;a href="https://en.wikipedia.org/wiki/Hindsight_bias"&gt;retrospect&lt;/a&gt;, but this
+feature completely revolutionized open source software development. It really
+is the bread and butter of GitHub. I would argue that this one single feature
+has made GitHub the (&lt;em&gt;the&lt;/em&gt;) primary hosting site for open source software.&lt;/p&gt;
+&lt;p&gt;Aside from being an awesome idea, GitHub's trademark with pull requests, along
+with their other features, has been absolute simplicity in implementation.
+GitHub Reviews marks, by my estimation, the first major feature released by
+GitHub that completely and utterly lacks in this execution of simplicity.&lt;/p&gt;
+&lt;p&gt;Let's look at what Reviews is. When the feature first came out, I had a hard
+time figuring out how it even worked (the
+poor
+&lt;a href="https://twitter.com/asmeurer/status/776125249712717824"&gt;release date docs&lt;/a&gt;
+didn't help here either).&lt;/p&gt;
+&lt;p&gt;Basically, at the bottom of a pull request, you now see this&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://asmeurer.github.io/blog/reviews1.png" width="788" /&gt;&lt;/p&gt;
+&lt;p&gt;Clicking the "Add your review" button takes you to the diff page (first gripe:
+why does it move you to the diff page?), and opens this dialog&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://asmeurer.github.io/blog/reviews2.png" width="1020" /&gt;&lt;/p&gt;
+&lt;p&gt;"OK", you might think, "this is simple enough. A review is just a special
+comment box where I can approve or reject a pull request." (This is basically
+the feature that I've been wanting, the ability to approve or reject pull
+requests.) And if you thought that, you'd be wrong.&lt;/p&gt;
+&lt;p&gt;The simplest way I can describe a review, having played with it, is that it is
+a distinct method of commenting on pull requests and on lines of diffs of pull
+requests. Distinct, that is, from the methods that &lt;strong&gt;already exist&lt;/strong&gt; in the
+GitHub pull requests feature. That's right. There are now two ways to comment
+on a pull request (or on a line in a pull request). There's the old way, which
+involves typing text into the box at the bottom of the main pull request page
+(or on a line, and then pressing "Add a single comment"), and the new way,
+which involves clicking a special button at the top of the diff view (and the
+diff view only) (or by clicking a line in the diff and
+clicking "Start a review").&lt;/p&gt;
+&lt;p&gt;How do these two ways of the extremely simple task of commenting differ from
+one another? Two ways. One, with the old way, when you comment on a PR (or
+line), the comment is made immediately. It's saved instantly to the GitHub
+database, and a notification email is sent to everyone subscribed to the PR.
+With the new way, the comment is &lt;strong&gt;not&lt;/strong&gt; made immediately.  Instead, you start
+a "review", which postpones all comments from being published until you scroll
+to the top and press a button ("Review changes"). &lt;strong&gt;Did you forget to scroll
+to the top and press that button? Oh well, your comments never got sent to
+anyone.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now, I've been told by some people that delayed commenting is a feature that
+they like. I can see how fewer total emails could be nice. &lt;strong&gt;But if you just
+want a way to delay comments, why do you need distinct commenting UIs?&lt;/strong&gt;
+Couldn't the same thing be achieved via a user setting (I highly suspect that
+any given person will either like or dislike delayed commenting universally)?
+Or with a checkbox next to the comment button, like "delay notifications for
+this comment"? You can probably guess by now which of the two commenting
+systems I prefer. But guess what happens when I press the "Cmd-Enter" keyboard
+shortcut that's been hard-wired into my brain to submit a comment? I'll give
+you a hint: the
+result
+&lt;a href="https://twitter.com/asmeurer/status/781949163562999808"&gt;does not make me happy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The second distinction between normal, old-fashioned commenting and the
+new-fangled reviews system is that when you finalize a review, you can elect
+to "approve" or "reject" the pull request. This approval or rejection gets set
+as a special status on the pull request. This status, for me personally, is
+the only feature here that I've been wanting. It turns out, however, that it's
+completely broken, and useless.&lt;/p&gt;
+&lt;p&gt;Here's my problem. We have, at the time of
+writing, &lt;a href="https://github.com/sympy/sympy/pulls"&gt;382 open pull requests&lt;/a&gt; in
+SymPy. A lot of these are old, and need to be triaged. But the problem from my
+point of view is the new ones. When I look through the list of pull requests,
+I want to be able to know, at a glance, which ones are "reviewable". For me,
+this means two things&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;The tests pass.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;No other reviewer (myself included) has already requested changes, which
+still need to be made by the PR author.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Point 1 is really easy to see. In the pull request list, there is a nice green
+checkmark if Travis passed and a red X if it failed.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://asmeurer.github.io/blog/prlist.png" width="608" /&gt;&lt;/p&gt;
+&lt;p&gt;The second point is a disaster. Unfortunately, there's no simple way to do
+this. You might suggest adding a special label, like "Needs changes", to pull
+requests that have been reviewed. The problem with this is that the label
+won't go away when the changes have been made. And to worsen things, people
+who don't have push access (in the list above, only two PR authors have push
+access, and one of them is me), cannot add or remove labels on pull requests.&lt;/p&gt;
+&lt;p&gt;Another thing
+that
+&lt;a href="https://twitter.com/asmeurer/status/771393023389339649"&gt;has been suggested to me&lt;/a&gt; is
+an external "review" service that sets a status for a review. The problem with
+this (aside from the fact that I couldn't find one that actually did the very
+simple thing that I wanted), is that you now have to teach all your pull
+request reviewers to use this service. You might as well forget about it.&lt;/p&gt;
+&lt;p&gt;Having a first-class way in GitHub for reviewers to say "I approve these
+changes" or "I don't approve these changes" would be a huge boon, because then
+everyone would use it.&lt;/p&gt;
+&lt;p&gt;So great right, this new Reviews feature is exactly what you want, you say.
+You can now approve or reject pull requests.&lt;/p&gt;
+&lt;p&gt;Well no, because GitHub managed to overengineer this feature to the point of
+making it useless. This completely simple feature. All they had to do was
+extend the status UI and add a simple "I approve/I reject" button. If they did
+that, it would have worked perfectly.&lt;/p&gt;
+&lt;p&gt;Here are the problems. First, the pull request list has no indication of
+review status. Guess which pull requests in the above screenshot have reviews
+(and which are positive and which are negative). You can't tell (for example,
+the last one in the list has a negative review). If they were actually treated
+like statuses, like the UI suggests that they would, you would at least see an
+X on the ones that have negative reviews (positive reviews I'm much less
+worried about; most people who review PRs have merge access, so if they like
+the PR they can just merge it). I would suggest to GitHub to add, next to the
+status checkbox, a picture of everyone who's made a review on the PR, with a
+green checkmark or red X to indicate the type of review. Also, add buttons
+(&lt;strong&gt;buttons&lt;/strong&gt;, not just buried advanced search options) to filter by reviews.&lt;/p&gt;
+&lt;p&gt;OK, so that's a minor UI annoyance, but it gets worse. Next on the docket, &lt;strong&gt;you
+can't review your own pull requests.&lt;/strong&gt; It's not allowed for some reason.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://asmeurer.github.io/blog/reviews3.png" width="411" /&gt;&lt;/p&gt;
+&lt;p&gt;Now why would you want to review your own pull request, you might ask? Aren't
+you always going to "approve" your own PR? Well, first off, no. There is such
+a thing as
+a &lt;a href="http://ben.balter.com/2015/12/08/types-of-pull-requests/"&gt;WIP PR&lt;/a&gt;. The
+author setting a negative review on his own PR would be a great way to
+indicate WIP status (especially given the way reviews work, see my next
+gripe). Secondly, the "author" of a pull request is just the person who
+clicked the "New pull request" button. That's not necessarily the only person
+who has changes in the pull request. Thanks to the magic of how git works,
+it's quite easy to have a pull request with commits from many people. Multiple
+people pushing to a shared branch, with a matching pull request for discussion
+(and easy viewing of new commits and diff) is a valid and useful workflow
+(it's the only one I know of that works for writing collaborative prose). For
+the &lt;a href="https://github.com/sympy/sympy-paper"&gt;SymPy paper&lt;/a&gt;, I wanted to use
+GitHub Reviews to sign off on a common branch, but since I'm the one who
+started the pull request, I couldn't do it.&lt;/p&gt;
+&lt;p&gt;Next gripe, and this, I want to stress, makes the whole feature completely
+useless for my needs: &lt;strong&gt;reviews do not reset when new commits are pushed&lt;/strong&gt;.
+Now, I just outlined above two use-cases where you might want to do a review
+that doesn't reset (marking WIP, and marking approval, although the second is
+debatable), but both of those can easily be done by other means, like editing
+the title of the PR, or old-fashioned commenting. The whole point of Reviews
+(especially negative reviews), you'd think, would be to indicate to people
+that the pull request, as it currently stands, needs new changes. A negative
+review is like failing your "human" test suite.&lt;/p&gt;
+&lt;p&gt;But unlike your automated test suite, which reset and get a new go every time
+you push a change (because hey, who knows, maybe the change ACTUALLY FIXED THE
+ISSUE), reviews do not reset, unless the original reviewers explicitly change
+them. So my dream of being able to glance at the pull request list and see
+which PRs need changes has officially
+been &lt;a href="https://en.wiktionary.org/wiki/pipe_dream"&gt;piped&lt;/a&gt;. Even if the list
+actually showed what PRs have been reviewed, it would be a lie, because as
+soon as the PR author pushes a change, the review status becomes potentially
+outdated.&lt;/p&gt;
+&lt;p&gt;Now, given the rocky start that this whole feature has had, I figured that
+this was probably just a simple bug. But after I reported it to GitHub,
+they've informed me that this is in fact &lt;em&gt;intended behavior&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To make things worse, GitHub has another feature with Reviews,
+called
+&lt;a href="https://help.github.com/articles/approving-a-pull-request-with-required-reviews/"&gt;required reviews&lt;/a&gt;.
+You can make it so that every pull request must receive at least one positive
+review and zero negative reviews before it can be merged (go to the branch
+settings for your repository). This works similar to required status checks,
+which make it so that your tests must pass before a PR can be merged. In
+practice, this means you need zero negative reviews, since anyone with push
+access could just do a positive review before merging (although annoyingly,
+you have to actually manually do it; IMHO, just requiring zero negative
+reviews should be sufficient, since merging is implicitly a positive review).&lt;/p&gt;
+&lt;p&gt;Now, you can see that the above "feature" of reviews not resetting breaks the
+whole thing. If someone negative reviews a PR, that one person has to go in
+and change their review before it can be merged. And even if the author pushes
+new changes to fix the issues outlined in the review, the PR cannot be merged
+until the reviewer resets it. So this actually makes the reviewing situation
+&lt;em&gt;worse&lt;/em&gt;, because now anyone who reviews a pull request at any point in time
+has to go through with it all the way to the merge. I can't go to a PR that
+someone requested changes for, which were later made by the author, and merge
+it. I have to ping the reviewer and get them to change their review first.
+Needless to say, we do not have this feature enabled for SymPy's repo.&lt;/p&gt;
+&lt;p&gt;I think I maybe see the intended use-case here. You want to make it so that
+people's reviews are not forgotten or ignored. But that's completely foreign
+to my own problems. I trust the SymPy community, and the people who have push
+access to do due diligence before merging a pull request. And if a bad change
+gets in, we can revert it. Maybe this feature matters more for projects that
+continuously deploy. Likely most of the code internal at GitHub works like
+that. But guess what GitHub, most of the code &lt;em&gt;on&lt;/em&gt; GitHub does &lt;em&gt;not&lt;/em&gt; work like
+that. You need to rethink this feature to support more than just your
+use-cases.&lt;/p&gt;
+&lt;p&gt;I think starting simple, say, just a simple "approve/reject" button on each
+PR, which just adds an icon, and that's it, would have been a better approach.
+Then they could have listened to the feedback on what sorts of things people
+wanted it to be able to do (like setting a status, or showing up in the search
+list, or "delayed commenting" if that's really what people want). This is how
+GitHub used to do things. It's frustrating to see a feature implemented that
+doesn't (yet) do quite what you want, but it's even more frustrating to see a
+feature implemented that does all the things that you don't want.&lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Yes, I'm a little mad here. I hope you enjoyed my rant. Here are what I see as
+the problems with the "Reviews" feature. I don't know how to fix these
+problems (I'm not a UI/UX guy. GitHub supposedly hires them, though).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;There are now two distinct ways to comment on a PR (delayed and non-delayed).
+There should be one (say, with a checkbox to delay commenting).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you insist on keeping delayed commenting, let me turn it off by default
+(default = the Cmd-Enter keyboard shortcut).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The reviews button is buried on the diff page. I would put it under the
+main PR comment box, and just reuse the same comment box.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Reviews should show up in the pull request list. They should be filterable
+with a nice UI.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Let me review my own pull requests. These can be excluded from required
+reviews (that makes sense to me). Beyond that, there's no reason this
+shouldn't be allowed.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Don't require a positive review for required reviews, only zero negative
+reviews. Merging a PR is implicitly positively reviewing it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Allow reviews to reset when new commits are pushed.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I get that the last point may not be what everyone wants. But GitHub needs to
+think about UI, and defaults here. Right now, the UI looks like reviews are
+like statuses, but they actually aren't because of this.&lt;/p&gt;
+&lt;p&gt;I am dispirited to see GitHub release such a broken feature, but even the best
+trip up sometimes. I'm not yet calling "doom" on GitHub. Everyone has
+their &lt;a href="https://en.wikipedia.org/wiki/Apple_USB_Mouse"&gt;hockey puck mice&lt;/a&gt;. I'm
+actually hopeful that they can fix these issues, and implement a feature that
+makes real headway into helping me solve one of my biggest problems on GitHub
+right now, the reviewing of pull requests.&lt;/p&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://asmeurer.github.io/blog/posts/tuples/</guid>
+      <title>Tuples</title>
+      <author>Aaron Meurer (asmeurer)</author>
+      <pubDate>Thu, 22 Sep 2016 02:33:14 GMT</pubDate>
+      <link>https://asmeurer.github.io/blog/posts/tuples/</link>
+      <description>&lt;div&gt;&lt;p&gt;Today, David Beazley made some tweets:&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;At the bookstore. I'll admit I judge Python books by their tuple description. "Read only list?"  Back on the shelf.  Nope.&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778634205395845120"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
+
+
+
+&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;Usually there's a sentence nearby "sometimes you need a read only list." No. No, I haven't. Not in 20 years. Not even once. Sorry.&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778635637457088512"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
+
+
+
+&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;My main objection is that "read only list" is a lazy description lacking thought. A red flag for every other topic that might be covered.&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778639979052498944"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;There are quite a few good responses to these tweets, both from David and from
+others (and from yours truly). I recommend reading the the thread (click on
+the &lt;a href="https://twitter.com/dabeaz/status/778634205395845120"&gt;first tweet&lt;/a&gt; above).&lt;/p&gt;
+&lt;p&gt;Now to start off, I want to say that I respect the hell out of David Beazley.
+The guy literally &lt;a href="http://www.dabeaz.com/cookbook.html"&gt;wrote the book&lt;/a&gt; on
+Python, and he knows way more about Python than I ever will. He's also one of
+the most entertaining Python people you can
+&lt;a href="https://twitter.com/dabeaz"&gt;follow on Twitter&lt;/a&gt;. But hey, that doesn't mean I
+can't disagree sometimes.&lt;/p&gt;
+&lt;h2&gt;List vs. Tuple. Fight!&lt;/h2&gt;
+&lt;p&gt;As you probably know, there are two "array" datatypes in Python, &lt;code&gt;list&lt;/code&gt; and
+&lt;code&gt;tuple&lt;/code&gt;.&lt;sup id="fnref:list"&gt;&lt;a class="footnote-ref" href="https://asmeurer.github.io/blog/posts/tuples/#fn:list" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; The primary difference between the two is that lists are &lt;em&gt;mutable&lt;/em&gt;,
+that is you can change their entries and length after they are created, with
+methods like &lt;code&gt;.append&lt;/code&gt; or &lt;code&gt;+=&lt;/code&gt;. Tuples, on the other hand, are &lt;em&gt;immutable&lt;/em&gt;.
+Once you create one, you cannot change it. This makes the implementation
+simpler (and hence faster, although don't let anyone tell you you should use a
+tuple just because it's faster). This, as
+&lt;a href="http://nedbatchelder.com/blog/201608/lists_vs_tuples.html"&gt;Ned Batchelder&lt;/a&gt;
+points out, is the only technical difference between the two.&lt;/p&gt;
+&lt;p&gt;The the idea that particularly bugs me here is that tuples are primarily
+useful as "record" datatypes.&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;&lt;a href="https://twitter.com/AllenDowney"&gt;@AllenDowney&lt;/a&gt; Better than "read-only-list." ;-).   Mainly looking for the tuple-as-record description. That's often what's missing.&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778685294593716224"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;Tuples are awesome for records. This is both by design&amp;#8212;since they have a
+fixed shape, the positions in a tuple can be "fixed" values, and by convention&amp;#8212;if a
+Python programmer sees parentheses instead of square brackets, he is more
+likely to see the object as "record-like". The &lt;code&gt;namedtuple&lt;/code&gt; object in the standard library
+takes the record idea further by letting you actually name the fields:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;collections&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Person'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'name, age'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Aaron'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Person&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'Aaron'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;But is that really the &lt;em&gt;only&lt;/em&gt; place you'd want to use a tuple over a list?&lt;/p&gt;
+&lt;p&gt;Consider five other places you might encounter a tuple in Python, courtesy of
+Allen Downey:&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;&lt;a href="https://twitter.com/dabeaz"&gt;@dabeaz&lt;/a&gt; (1) tuple assignment (2) multiple return values (3) *args (4) output from zip, enumerate, etc (5) key in dictionary&lt;/p&gt;&amp;#8212; Allen Downey (@AllenDowney) &lt;a href="https://twitter.com/AllenDowney/status/778691102094176257"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;In code these look like:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Multiple assignments:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; (a, b) = 1, 2
+&lt;/pre&gt;
+
+
+&lt;p&gt;(yes, the parentheses are optional here, as they are in many places where a
+tuple can be used, but this is still a tuple, or at least it looks like one ;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Multiple return values:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For example,
+&lt;a href="https://docs.python.org/3/library/os.html#os.walk"&gt;&lt;code&gt;os.walk&lt;/code&gt;&lt;/a&gt;. This is
+for the most part a special case of using tuples as records.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;*args&lt;/code&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; def f(*args):
+...     print(type(args), args)
+...
+&amp;gt;&amp;gt;&amp;gt; f(1, 2, 3)
+&amp;lt;class 'tuple'&amp;gt; (1, 2, 3)
+&lt;/pre&gt;
+
+
+&lt;p&gt;Arbitrary positional function arguments are always stored as a &lt;code&gt;tuple&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Return value from builtins &lt;code&gt;zip&lt;/code&gt;, &lt;code&gt;enumerate&lt;/code&gt;, etc.:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; for i in zip(range(3), 'abc'):
+...     print(i)
+...
+(0, 'a')
+(1, 'b')
+(2, 'c')
+&amp;gt;&amp;gt;&amp;gt; for i in enumerate('abc'):
+...     print(i)
+...
+(0, 'a')
+(1, 'b')
+(2, 'c')
+&lt;/pre&gt;
+
+
+&lt;p&gt;This also applies to the combinatoric generators in
+&lt;a href="https://docs.python.org/3.6/library/itertools.html"&gt;itertools&lt;/a&gt; (like
+&lt;code&gt;product&lt;/code&gt;, &lt;code&gt;combinations&lt;/code&gt;, etc.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dictionary keys:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; {
+...     (0, 0): '.',
+...     (0, 1): ' ',
+...     (1, 0): '.',
+...     (1, 1): ' ',
+... }
+{(0, 1): ' ', (1, 0): '.', (0, 0): '.', (1, 1): ' '}
+&lt;/pre&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This last one I find to be very important. You could arguably use a list for
+the first four of Allen Downey's points&lt;sup id="fnref:assign"&gt;&lt;a class="footnote-ref" href="https://asmeurer.github.io/blog/posts/tuples/#fn:assign" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt; (or Python could have, if it wanted to). But it
+is
+&lt;a href="https://asmeurer.github.io/blog/posts/what-happens-when-you-mess-with-hashing-in-python/"&gt;impossible&lt;/a&gt;
+to meaningfully hash a mutable data structure in Python, and hashability is a
+requirement for dictionary keys.&lt;/p&gt;
+&lt;p&gt;However, be careful. Not all tuples are hashable. Tuples can contain
+anything, but only tuples of immutable values are hashable. Consider&lt;sup id="fnref:TypeError"&gt;&lt;a class="footnote-ref" href="https://asmeurer.github.io/blog/posts/tuples/#fn:TypeError" rel="footnote"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Such tuples are not hashable, and cannot be used as dictionary keys.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;hash&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s"&gt;"&amp;lt;ipython-input-39-36822ba665ca&amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;module&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;hash&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="ne"&gt;TypeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;unhashable&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;'list'&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Why is &lt;code&gt;list&lt;/code&gt; the Default?&lt;/h2&gt;
+&lt;p&gt;My second gripe here is this notion that your default ordered collection
+object in Python should be &lt;code&gt;list&lt;/code&gt;. &lt;code&gt;tuples&lt;/code&gt; are only to be used as "records",
+or if you suspect &lt;em&gt;might&lt;/em&gt; want to use it as a dictionary key. First off, you
+never know when you'll want something to be hashable. Both dictionary keys and
+&lt;code&gt;sets&lt;/code&gt; require hashability. Suppose you want to de-duplicate a collection of
+sequences. If you represent the sequences with &lt;code&gt;list&lt;/code&gt;, you'll either have to
+write a custom loop that checks for duplicates, or manually convert them to
+&lt;code&gt;tuple&lt;/code&gt; and throw them in a &lt;code&gt;set&lt;/code&gt;. If you start with &lt;code&gt;tuple&lt;/code&gt;, you don't have
+to worry about it (again, assuming the entries of the tuples are all hashable
+as well).&lt;/p&gt;
+&lt;p&gt;Consider another usage of tuples, which I consider to be
+important, namely tree structures. Say you wanted a simple representation of a
+Python syntax tree. You might represent &lt;code&gt;1 - 2*(-3 + 4)&lt;/code&gt; as&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'-'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'*'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'+'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'-'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;This isn't really a record. The meaning of the entries in the tuples is
+determined by the first value of the tuple, not position. In this example, the length
+of the tuple also signifies meaning (binary vs. unary &lt;code&gt;-&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;If this looks familiar to you, it's because this is how the language Lisp
+represents all programs. This is a common pattern.
+&lt;a href="http://dask.pydata.org/en/latest/graphs.html"&gt;Dask graphs&lt;/a&gt; use tuples and
+dictionaries to represent computations.
+&lt;a href="http://docs.sympy.org/latest/tutorial/manipulation.html"&gt;SymPy expression trees&lt;/a&gt;
+use tuples and Python classes to represent symbolic mathematical expressions.&lt;/p&gt;
+&lt;p&gt;But why use tuples over lists here? Suppose you had an object like the one
+above, but using lists: &lt;code&gt;['-', 1, ['*', 2, ['+', ['-', 3], 4]]]&lt;/code&gt;. If you
+discover you need to use this as a dictionary key, or want to put it in a
+&lt;code&gt;set&lt;/code&gt;, you would need to convert this to a hashable object. To do this you
+need to write a function that recursively converts each &lt;code&gt;list&lt;/code&gt; to a &lt;code&gt;tuple&lt;/code&gt;.
+See how long it takes you to write that function correctly.&lt;/p&gt;
+&lt;h2&gt;Mutability is Bad&lt;/h2&gt;
+&lt;p&gt;More to the point, however, mutability is bad. I counted 12 distinct methods
+on &lt;code&gt;list&lt;/code&gt; that mutate it (how many can you remember off the top of your
+head?&lt;sup id="fnref:mutate"&gt;&lt;a class="footnote-ref" href="https://asmeurer.github.io/blog/posts/tuples/#fn:mutate" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;). &lt;em&gt;Any&lt;/em&gt; function that gets access to a list can mutate it,
+using any one of these methods. All it takes is for someone to forget that
+&lt;code&gt;+=&lt;/code&gt; mutates a list (and that they should copy it first) for code completely
+distant from the origin definition to cause issues. The hardest bug I ever
+debugged had a three character
+&lt;a href="https://github.com/inducer/pudb/commit/b979fc5909c8d731eb907fc25f4e97904fb7cbbd"&gt;fix&lt;/a&gt;,
+adding &lt;code&gt;[:]&lt;/code&gt; to copy a global list that I was (accidentally) mutating. It took
+me a several hour airplane ride and some deep dark magic that I'll leave for
+another blog post to discover the source of my problems (the problems I was
+having appeared to be quite distant from the actual source).&lt;/p&gt;
+&lt;h2&gt;A Better "Default"&lt;/h2&gt;
+&lt;p&gt;I propose that Python code in general would be vastly improved if people used
+&lt;code&gt;tuple&lt;/code&gt; as the default ordered collection, and only switched to &lt;code&gt;list&lt;/code&gt; if
+mutation was necessary (it's less necessary than you think; you can always
+copy a tuple instead of mutating it). I agree with David Beazley that you
+don't "sometimes need a read only list". Rather, you "sometimes need a
+writable tuple".&lt;/p&gt;
+&lt;p&gt;This makes more sense than defaulting to &lt;code&gt;list&lt;/code&gt;, and only switching to &lt;code&gt;tuple&lt;/code&gt;
+when hashability is needed, or when some weird "rule of thumb" applies that
+says that you should use &lt;code&gt;tuple&lt;/code&gt; if you have a "record". Maybe there's a good
+reason that &lt;code&gt;*args&lt;/code&gt; and almost all builtin and standard library functions
+return tuples instead of lists. It's harder to accidentally break someone
+else's code, or have someone else accidentally break your code, when your data
+structures are immutable.&lt;/p&gt;
+&lt;h2&gt;Footnotes&lt;/h2&gt;
+&lt;div class="footnote"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn:list"&gt;
+&lt;p&gt;I want to avoid saying "a tuple is an immutable list", since "list"
+can be interpreted in two ways, as an English word meaning "ordered
+collection" (in
+which case, the statement is true), or as the Python type &lt;code&gt;list&lt;/code&gt; (in which
+case, the statement is false&amp;#8212;&lt;code&gt;tuple&lt;/code&gt; is not a subclass of &lt;code&gt;list&lt;/code&gt;).&amp;#160;&lt;a class="footnote-backref" href="https://asmeurer.github.io/blog/posts/tuples/#fnref:list" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:assign"&gt;
+&lt;p&gt;Yes,&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; [a, b] = 1, 2
+&lt;/pre&gt;
+
+
+&lt;p&gt;works.&amp;#160;&lt;a class="footnote-backref" href="https://asmeurer.github.io/blog/posts/tuples/#fnref:assign" rev="footnote" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:mutate"&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div id="spoiler" style="display: none;"&gt;
+&lt;code&gt;__delitem__&lt;/code&gt;, &lt;code&gt;__iadd__&lt;/code&gt;, &lt;code&gt;__imul__&lt;/code&gt;, &lt;code&gt;__setitem__&lt;/code&gt;, &lt;code&gt;append&lt;/code&gt;, &lt;code&gt;clear&lt;/code&gt;, &lt;code&gt;extend&lt;/code&gt;, &lt;code&gt;insert&lt;/code&gt;,
+&lt;code&gt;pop&lt;/code&gt;, &lt;code&gt;remove&lt;/code&gt;, &lt;code&gt;reverse&lt;/code&gt;, and &lt;code&gt;sort&lt;/code&gt;.
+&lt;/div&gt;
+&lt;button title="Click to show/hide content" type="button"&gt;Show/hide answer&lt;/button&gt;&amp;#160;&lt;a class="footnote-backref" href="https://asmeurer.github.io/blog/posts/tuples/#fnref:mutate" rev="footnote" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li id="fn:TypeError"&gt;
+&lt;p&gt;One of the tweets from the conversation:&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;&lt;a href="https://twitter.com/asmeurer"&gt;@asmeurer&lt;/a&gt; &lt;a href="https://twitter.com/AllenDowney"&gt;@AllenDowney&lt;/a&gt; As yes:&lt;br /&gt;&lt;br /&gt;t = (1,2, [3, 4])&lt;br /&gt;t[2] += [5,6]&lt;br /&gt;&lt;br /&gt;;-)&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778697399975813120"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt; 
+&lt;p&gt;This is similar to this example. But
+it turns out this one doesn't work:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; t = (1,2, [3, 4])
+&amp;gt;&amp;gt;&amp;gt; t[2] += [5,6]
+Traceback (most recent call last):
+  File "&amp;lt;stdin&amp;gt;", line 1, in &amp;lt;module&amp;gt;
+TypeError: 'tuple' object does not support item assignment
+&lt;/pre&gt;
+
+
+&lt;p&gt;I have no idea why. It seems to me that it should work. &lt;code&gt;t[2]&lt;/code&gt; is a list
+and &lt;code&gt;list&lt;/code&gt; has &lt;code&gt;__iadd__&lt;/code&gt; defined. It seems that Python gets kind of weird
+about things on the left-hand side of an assignment. &lt;strong&gt;EDIT:
+&lt;a href="http://stackoverflow.com/a/29747466/161801"&gt;Here's&lt;/a&gt; why.&lt;/strong&gt;&amp;#160;&lt;a class="footnote-backref" href="https://asmeurer.github.io/blog/posts/tuples/#fnref:TypeError" rev="footnote" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://nishnik.github.io/GSoC-Thirteenth-Week</guid>
+      <title>GSoC Thirteenth Week</title>
+      <author>Nishant Nikhil (nishnik)</author>
+      <pubDate>Fri, 02 Sep 2016 00:00:00 GMT</pubDate>
+      <link>http://nishnik.github.io/GSoC-Thirteenth-Week/</link>
+      <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This week I worked on the &lt;a href="https://github.com/symengine/symengine/pull/1066"&gt;PR&lt;/a&gt; of factoring square free polynomials.
+Adding many changes for size in base. Like changing this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-C++"&gt;auto l = std::ceil(std::log(2 * B + 1) / std::log(mp_get_ui(fsqf.first)));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;to&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-C++"&gt;if (mp_fits_slong_p(B)) {
+    temp = 2 * B + 1;
+    l = std::ceil(std::log(mp_get_d(temp))
+                  / std::log(mp_get_ui(fsqf.first)));
+} else {
+    auto b_d = mp_get_d(mp_abs(b));
+    l = std::ceil(
+        (1 + std::log2(n + 1) / 2.0 + n + log2_d_A + std::log2(b_d))
+        / (std::log2(mp_get_ui(fsqf.first))));
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This prevented over-flow.
+And a lot of implementation changes were incorporated in &lt;code class="highlighter-rouge"&gt;gf_gcdex&lt;/code&gt; also.&lt;/p&gt;
+
+&lt;p&gt;I also wrote documentation on &lt;code class="highlighter-rouge"&gt;Fields&lt;/code&gt; module &lt;a href="https://github.com/symengine/symengine/wiki/Fields-in-SymEngine"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://gxyd.github.io/GSoC GSoC 2016 Project with SymPy(wrap up): Computational Group Theory</guid>
+      <title>GSoC 2016 Project with SymPy(wrap up): Computational Group Theory</title>
+      <author>Gaurav Dhingra (gxyd)</author>
+      <pubDate>Sun, 21 Aug 2016 18:30:00 GMT</pubDate>
+      <link>https://gxyd.github.io/gsoc2016/gsoc2016_project.html</link>
+      <description>&lt;p&gt;
+                    Hi, I'm Gaurav Dhingra (&lt;a href="https://github.com/gxyd"&gt;@gxyd&lt;/a&gt;) and this post is a report of my work for SymPy under &lt;a href="https://summerofcode.withgoogle.com"&gt;Google Summer of Code 2016&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+This is also intended to be a description of my work for submission to &lt;b&gt;GSoC's Final Evaluation&lt;/b&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;h3&gt;
+    &lt;u&gt;Work Product Submission&lt;/u&gt;
+&lt;/h3&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="https://github.com/gxyd/sympy/pull/6"&gt;PR for GSoC 2016 product submission: Gaurav Dhingra&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;
+&lt;a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory"&gt;GSoC proposal&lt;/a&gt;
+&lt;h4&gt;Pull Requests&lt;/h4&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;ul&gt;
+    &lt;font color="green"&gt;[Completed]&lt;/font&gt;
+
+    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;#10350 &lt;i&gt;FreeGroup&lt;/i&gt; implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11140"&gt;#11140 &lt;i&gt;FpGroup&lt;/i&gt; implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11231"&gt;#11231 &lt;i&gt;Low Index Subgroups&lt;/i&gt; algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11295"&gt;#11295 &lt;i&gt;Reidemeister Schreier&lt;/i&gt; algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;#11460 Add documentation for FpGroup file and fix separate bug&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;ul&gt;
+    &lt;font color="red"&gt;[Work-in-progress]&lt;/font&gt;
+    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;#11361 &lt;i&gt;Modified Todd Coxeter&lt;/i&gt; algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;/p&gt;
+&lt;p&gt;
+&lt;h4&gt;Bugs reported&lt;/h4&gt;
+&lt;font color="green"&gt;[closed]&lt;/font&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;#11449 &lt;i&gt;TypeError&lt;/i&gt; on compressing a Coset Table generated by coset table method&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;h3&gt;Brief Information&lt;/h3&gt;
+
+&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;b&gt;Project&lt;/b&gt;: &lt;a href="https://summerofcode.withgoogle.com/projects/#5798586428162048"&gt;Group Theory&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+
+&lt;b&gt;Blog&lt;/b&gt;: &lt;a href="https://gxyd.github.io/gsoc.html"&gt;https://gxyd.github.io/gsoc.html&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+
+&lt;b&gt;My Website&lt;/b&gt;: https://gxyd.github.io
+&lt;br /&gt;&lt;br /&gt;
+
+&lt;b&gt;e-mail&lt;/b&gt;: axyd0000[at]gmail.com, igauravdhingra[at]protonmail.com
+&lt;br /&gt;&lt;br /&gt;
+
+I am a pre-final year undergraduate student of Applied Mathematics at IIT Roorkee.
+&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;h3&gt;Before GSoC&lt;/h3&gt;
+
+&lt;/p&gt;
+&lt;p&gt;
+I heard about the GSoC program and about SymPy org. since of one of my college mate, Prasoon Shukla (he also participated in GSoC with SymPy). I was quite amazed by how mathematics and computer science could intersect and help in solving math problems.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have been contributing to SymPy from May last year. In the beginning I tended often to work on issues that were more often related to my then on-going courses in my college. In December I completed a basic course on Group Theory, so I thought of choosing to work on Group Theory and I saw quite a few things in CGT were missing from SymPy and those functionalities were already there in GAP and Magma. So I asked them from Kalevi, regarding things that could be taken up for a gsoc project. So finally with some discussions with him and Aaron, I was sure by December end that I was going to work on implementing Finitely Presented Group in SymPy. I looked upto the last GSoC project on CGT by Alexandar Makelov, for reference material that could be used for the implementation and it turned out that the book by Derek Holt, Handbook of Computational Group Theory (will mention as shortly &lt;i&gt;the Handbook&lt;/i&gt;).
+&lt;p&gt;
+
+&lt;p&gt;
+
+Though I already started working on &lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;PR #10350&lt;/a&gt; for implementation of free groups in beginning January though I started working on the proposal from February beginning.
+
+&lt;/p&gt;
+&lt;p&gt;
+
+So what I should do? Since I was quite sure of the project. Well at that moment I thought, since I am a mathematics major, choosing this project would also help me. So I reached out to Kalevi, said to him what I was thinking to do, what could be good for the project. So we worked upon making a good gsoc proposal.
+&lt;/p&gt;
+
+&lt;p&gt;
+Here is my &lt;a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory"&gt;GSoC proposal&lt;/a&gt;. Now that the summer is over and I've tackled a lot more with computational group theory, it seems that the main points in my GSoC proposal were:
+
+&lt;ul&gt;
+
+    &lt;li&gt;Implementation of different algebraic structures monoid, free monoid, free group, semi group, free semi group, magma, etc.
+    &lt;li&gt;Rewriting System for reducing the elements of finitely presented groups.
+    &lt;li&gt;The Todd-Coxeter algorithm for coset enumeration, used to find the index of a subgroup of a finitely presented group.
+    &lt;li&gt;Reidemeister Schreier algorithm.
+    &lt;li&gt;Implementation of main &lt;code&gt;Group&lt;/code&gt; class.
+
+&lt;/ul&gt;
+
+&lt;/p&gt;
+&lt;p&gt;
+
+Well, I submitted my proposal and needed to wait until April 22 to the result, and then...
+&lt;/p&gt;
+
+&lt;img height="200" src="https://gxyd.github.io/images/gsoc_selection.png" width="650" /&gt;
+&lt;br /&gt;&lt;br /&gt;
+
+&lt;i&gt;I was selected _/\_&lt;/i&gt;
+&lt;p&gt;
+I got lucky to have Kalevi Suominen like mentor too. Aaron Meurer, the project leader of SymPy was to be co-mentor, and I felt honored to be alloted my preferred mentors.
+&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;h3&gt;During GSoC&lt;/h3&gt;
+&lt;/p&gt;
+&lt;p&gt;
+A more detailed account of my progress can be found on my blog &lt;a href="https://gxyd.gitub.io/gsoc.html"&gt;here&lt;/a&gt;
+
+&lt;ul&gt;
+
+    &lt;li&gt;We started working on 7th May, we first started with working on completing the Free Group &lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;PR#10350&lt;/a&gt; and we discussed things on our channel &lt;a href="https://gitter.im/sympy/GroupTheory"&gt;sympy/GroupTheory&lt;/a&gt;. We had some discussion on whether &lt;code&gt;Basic&lt;/code&gt; should be a &lt;i&gt;super-class&lt;/i&gt; of &lt;code&gt;FreeGroup&lt;/code&gt; or not. In the end we decied not to derive &lt;code&gt;FreeGroup&lt;/code&gt; from &lt;code&gt;Basic&lt;/code&gt;. Its basic methods had already been written, most of them inspired from GAP software.&lt;/li&gt;
+
+    &lt;li&gt;For the first point in my proposal (i.e implementation of algebraic structures), we didn't started with them (infact we never worked on them). We then moved onto the Coset Enumeration which covered 5 weeks of work in my timeline, but we didn't spend that much time, atleast on the first go at that moment, that did took alomost 3 weeks including the implementation of two strategies of enumeration &lt;i&gt;Felsch&lt;/i&gt; and &lt;i&gt;HLT&lt;/i&gt;. It was the very heart of our GSoC project. There were quite a few bugs that were there in algorithm, especially the bug #11449, to which the Kalevi found the solution.&lt;/li&gt;
+
+    &lt;li&gt;For the second point we never reached it, there wasn't sufficient time for that. Then we decided to rather implement the &lt;i&gt;Low Index Subgroups&lt;/i&gt; algortithm. It was quite fun to implement the algorithm, since it gave some good insight into CGT. More on this on &lt;a href="https://gxyd.github.io/feeds/gsoc_week_5.html"&gt;blog for week 5&lt;/a&gt;.&lt;/li&gt;
+
+    &lt;li&gt;From here I had passed my mid-term evaluations. Then we started with work on &lt;i&gt;Reidemeister Schreier&lt;/i&gt; algorithm. The algorithm was mainly implemeted using the &lt;a href="http://staff.itee.uq.edu.au/havas/1974h.pdf"&gt;Havas paper&lt;/a&gt;, though the current implementation in SymPy doesn't produce the best simplifed presentation. No good pseudocode is available for the algorithm, the major difficulty being the &lt;i&gt;sequence&lt;/i&gt; of applying the operation. More on this on &lt;a href="https://gxyd.github.io/gsoc_week_6.html"&gt;blog for week 6&lt;/a&gt;.&lt;/li&gt;
+
+    &lt;li&gt;After we thought that the result returned by Reidemeister Schreier algorithm we moved onto &lt;i&gt;modified todd coxeter&lt;/i&gt; algorithm. The main difficulty in it was defining the $\tau$ which can be read on the our channel for comments by Kalevi, I belive it can help in solving that problem.&lt;/li&gt;
+
+    &lt;li&gt;As to the fifth point (i.e making &lt;code&gt;Group&lt;/code&gt; class), we never worked upon it. Also the topic of &lt;i&gt;Presenation of Finite Groups&lt;/i&gt; , could not get much attention, since of my busy college schedule.&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;h5&gt;&lt;u&gt;Commits/Code written during GSoC&lt;/u&gt;&lt;/h5&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Since I have commited quite a few commits un-related to my project. So I decided to &lt;i&gt;cherry-pick&lt;/i&gt; the commits made for my GSoC project. So the combined commits makes the things quite clear. &lt;a href="https://github.com/sympy/sympy/commits/master?author=gxyd"&gt;commits in GSoC 2016 product submission: Gaurav Dhingra&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;h5&gt;&lt;u&gt;Most annoying issue&lt;/u&gt;&lt;/h5&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;issue #11449&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;h3&gt;After GSoC&lt;/h3&gt;
+&lt;/p&gt;
+&lt;p&gt;
+There is still much to be done regarding the finitely presented groups. As during the program my efforts were directed mainly towards getting the fundamental algorithms for finitely presented groups in, the overall structure of the module hasn't received much attention.
+&lt;/p&gt;
+&lt;p&gt;
+The algorithms are in, but the methods in sympy/combinatorics/fp_groups.py are not that much user-friendly. The code organization is not terrible, I think. Some suggestions (both for me and anyone else interested) for future work are:
+
+&lt;ul&gt;
+
+    &lt;li&gt;&lt;b&gt;Cosets in permutation groups&lt;/b&gt;: [verbatim-copy of Kalevi's mail - &lt;i&gt;"next thing to do"&lt;/i&gt;] Finding cosets in permutation groups is more challenging to implement since there seems to be no ready-made pseudocode. However, there is a description of the procedure with an example in section 4.6.7. It can be based on the existing implementation of the &lt;i&gt;Screier-Sims algorithm&lt;/i&gt;.&lt;/li&gt;
+
+
+    &lt;li&gt;&lt;b&gt;Finitely generated abelian groups&lt;/b&gt;: [verbatim-copy of Kalevi's mail - &lt;i&gt;"next thing to do"&lt;/i&gt;] There is useful pseudocode in chapter 9 of the book by Holt that should make it fairly easy to implement the basic methods of abelian groups. We should probably try to base the implementation on the code in &lt;code&gt;polys.agca&lt;/code&gt; as abelian groups are the same as Z-modules. It is all essentially about linear algebra over the integers.&lt;/li&gt;
+
+    &lt;li&gt;&lt;b&gt;Complete modified Todd Coxeter algorithm&lt;/b&gt;: &lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;PR #11361&lt;/a&gt; One bug is currently there in the algorithm, which can be fixed since we have to make assignments to $\tau$. Also currently no tests have been added, which can be added.&lt;/li&gt;
+
+    &lt;li&gt;&lt;b&gt;Rewriting System&lt;/b&gt;: This can be a good candidate for a major work, I included this topic in my proposal though was left untouched. Perhaps &lt;i&gt;GAP&lt;/i&gt; could be first seen in this regard. Like always&lt;/li&gt;
+
+    &lt;li&gt;&lt;b&gt;Groups folder&lt;/b&gt;: After a few of the above mentioned things have been done, I believe it could be a good time to make a folder named &lt;code&gt;groups&lt;/code&gt;, since finitely presented groups should not be a part of combinatorics module which would contain the all algebraic structures including the permutation groups.&lt;/li&gt;
+
+    &lt;li&gt;&lt;b&gt;Non-associative algebra&lt;/b&gt;: (Perhaps I got the spelling of &lt;i&gt;associative&lt;/i&gt; this time right!) Albert CAS could be used to understand the workings related to non-associative algebra, it contains quite good functionalities.&lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;h3&gt;Things I did right/wrong&lt;/h3&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;I often lagged in writing blogs.&lt;/li&gt;
+    &lt;li&gt;I worked more than expected hours before 15 July (before college started) but much less in the last one month of GSoC because of a little busy schedule.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/p&gt;
+
+&lt;p&gt;
+
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+
+&lt;/p&gt;
+&lt;p&gt;
+
+I had say that I did about 70% of the work I promised to do in my proposal, considering that I also did two non-included task of Low Index subgroups algorithm and Modified Todd Coxeter algorithm, so I can say I swapped my work. It is good enough, and I hope to get back to extending the things that I have started. There's still some revision to be made, some code to be clean up. And I'm doing that.
+&lt;/p&gt;
+
+&lt;p&gt;
+I don't really know if I'll pass final evaluations by Google, but, regardless, I'm really glad for all the coding and development experience I got during these weeks. I'll probably use for personal projects, may be in Dissertation in last year, and try to contribute more to SymPy.
+&lt;/p&gt;
+&lt;p&gt;
+I appreciate the help of my mentor &lt;a href="https://github.com/jksuom"&gt;Kalevi Suominen&lt;/a&gt; who was always there for any query that I had regarding Group Theory in project, and I appreciate his ability to reply back within 1 hour for any message I left any time of day and every day of the week including weekend (I call it 1-hour rule). I think he was a wonderful mentor and I learnt a lot from him, and my co-mentor &lt;a href="https://github.com/asmeurer"&gt;Aaron Meurer&lt;/a&gt;, the current project leader of SymPy, and the entire SymPy community for helping me out and reviewing my work!
+&lt;/p&gt;
+&lt;p&gt;
+Also thank you &lt;font color="#4885ed"&gt;G&lt;/font&gt;&lt;font color="#db3236"&gt;o&lt;/font&gt;&lt;font color="#f4c20d"&gt;o&lt;/font&gt;&lt;font color="#4885ed"&gt;g&lt;/font&gt;&lt;font color="#3cba54"&gt;l&lt;/font&gt;&lt;font color="#db3236"&gt;e&lt;/font&gt;.
+&lt;/p&gt;
+          &lt;/p&gt;
+
+&lt;p&gt;
+&lt;p&gt;
+&amp;#2309;&amp;#2354;&amp;#2357;&amp;#2367;&amp;#2342;&amp;#2366; !
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://nishnik.github.io/GSoC-Twelfth-Week</guid>
+      <title>GSoC Twelfth Week</title>
+      <author>Nishant Nikhil (nishnik)</author>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 GMT</pubDate>
+      <link>http://nishnik.github.io/GSoC-Twelfth-Week/</link>
+      <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This week I started work on polynomial factorization in &lt;code class="highlighter-rouge"&gt;Z&lt;/code&gt;.
+I implemented the zassenhaus&amp;#8217;s algorithm, which factors a primitive square-free polynomial.&lt;br /&gt;
+The basic idea behind factoring a polynomial in &lt;code class="highlighter-rouge"&gt;Z&lt;/code&gt; is first to make it square free using &lt;code class="highlighter-rouge"&gt;Yun's&lt;/code&gt; algorithm or something similar and then choosing a prime number &lt;code class="highlighter-rouge"&gt;p&lt;/code&gt;, such that the polynomial mod &lt;code class="highlighter-rouge"&gt;p&lt;/code&gt; is square free, and &lt;code class="highlighter-rouge"&gt;p&lt;/code&gt; doesn&amp;#8217;t divide its leading coefficient.
+After that it is reduced to factoring polynomial in finite field. Which has already been implemented, then we lift all the factors from the finite field to &lt;code class="highlighter-rouge"&gt;Z&lt;/code&gt; using hensel lifting.
+&lt;br /&gt;
+The number of time Hensel Lifting has to be done is found using the &lt;a href="http://www.csd.uwo.ca/~moreno//CS424/Lectures/ResultantGcd.html/node5.html"&gt;Mignotte&amp;#8217;s bound&lt;/a&gt;.
+&lt;br /&gt;
+This wall required implementation of extended euclidean GCD in the finite fields.
+So, after the implementation of factorization of square free algorithms, we were able to perform:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-C++"&gt;f = UIntPoly::from_vec(x, {1_z, 0_z, -9_z});
+// f = -9x**2 + 1
+out = f-&amp;gt;zz_zassenhaus();
+// out is a set of RCP&amp;lt;const UIntPoly&amp;gt;
+// out = {-3x + 1, -3x - 1}
+out_f = f-&amp;gt;zz_factor_sqf();
+// out_f is a pair&amp;lt;integer_class, std::set&amp;lt;RCP&amp;lt;const UIntPoly&amp;gt;&amp;gt;
+// out_.f.first = 1
+// out_f. second = {3x + 1, 3x - 1}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After this I need to implement the algorithm for square free factorization and the trial division for finding the power of factor in the polynomial, this way we will be able to factor the polynomials.
+The PR is &lt;a href="https://github.com/symengine/symengine/pull/1066"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-13</guid>
+      <title>Coding Period Week 13 - Last week and conclusion</title>
+      <author>Shekhar Prasad Rajak (shekharrajak)</author>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 GMT</pubDate>
+      <link>http://shekharrajak.github.io/Coding-Period-week-13/</link>
+      <description>&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Documentation nonlinsolve:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;PR &lt;a href="https://github.com/sympy/sympy/pull/11532"&gt;#11532&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So the GSoC coding period is going to end. Here I am writing what I did, my todo list and suggestions for future work.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;One can see the progress report of each week and minutes of meeting here :
+&lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2016-Solvers-Progress"&gt;GSoC-2016-Solvers-Progress&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;My all the PRs link is here : &lt;a href="https://github.com/sympy/sympy/pulls?utf8=%E2%9C%93&amp;amp;q=is%3Aopen%7Cclosed%20is%3Apr%20author%3AShekharrajak%20"&gt;sympy/pulls/shekharrajak&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I have created a vertical timeline to show all the work in chrononical order in this link : &lt;a href="http://shekharrajak.github.io/gsoc16_final.html"&gt;timeline&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Meanwhile :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;I find one issue : &lt;a href="https://github.com/sympy/sympy/issues/11534"&gt;#11534&lt;/a&gt; in mailing list discussion. This shows that we need better
+&lt;code class="highlighter-rouge"&gt;invert&lt;/code&gt; method for inverting nested roots/powers equtions in &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; .&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;and this &lt;a href="https://github.com/sympy/sympy/issues/11528"&gt;#11528&lt;/a&gt;. &lt;code class="highlighter-rouge"&gt;factor_list&lt;/code&gt; will be helpful in factoring the equation in &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; and solve for it factors and union the solution(during the PR #11188 discussion with Harsh this idea came out). It will actually replace the &lt;a href="https://github.com/sympy/sympy/blob/master/sympy/solvers/solveset.py#L646"&gt;elif f.is_Mul and all(_is_finite_with_finite_vars(m, domain)&lt;/a&gt; statement in &lt;code class="highlighter-rouge"&gt;_solveset&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;factor_list&lt;/code&gt; will be used soon.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://sampadblog.wordpress.com/?p=1042</guid>
+      <title>GSoC Week 12 and Wrap-up</title>
+      <author>Sampad Saha (sampadsaha5)</author>
+      <pubDate>Fri, 19 Aug 2016 18:49:39 GMT</pubDate>
+      <link>https://sampadblog.wordpress.com/2016/08/19/gsoc-week-12-and-wrap-up/</link>
+      <description>&lt;p&gt;Hello all! This is officially the last week for Google Summer of Code 2016. The submission and final evaluation has already started. Last week I was busy with fixing bugs and preparing documentation for the beam module.&lt;/p&gt;
+&lt;h4&gt;&lt;em&gt;&lt;strong&gt;The things that I have implemented till now&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;DiracDelta can be represented in piecewise form.&lt;/li&gt;
+&lt;li&gt;DiracDelta and Heaviside have a detailed docstring.&lt;/li&gt;
+&lt;li&gt;DiracDelta can be pretty printed using &amp;#948;(x).&lt;/li&gt;
+&lt;li&gt;Singularity Function module which can perform all sort of mathematical operations on discontinuity functions.&lt;/li&gt;
+&lt;li&gt;Beam module which can solve 2D beam bending problems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;&lt;em&gt;&lt;strong&gt;Future Plans&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Jason has came up with some new ideas for beam module:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Plot the shear, bending, slope and deflection diagrams..&lt;/li&gt;
+&lt;li&gt;Compute the strain and stress at any location in the beam.&lt;/li&gt;
+&lt;li&gt;Improve the beam module for more complicated loads.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I have planed for a long term association with SymPy, I am taking the full responsibilty of my code and I will try to contribute as much as I can. I will help the new developers with the Sympy code paradigms and the development workflow.&lt;/p&gt;
+&lt;p&gt;I have been able to meet all the target that I had mentioned in my &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2016-Application-Sampad-Kumar-Saha:-Singularity-Functions"&gt;proposal&lt;/a&gt;&amp;#160;and all of my pull requests have got merged except PR &lt;a href="https://github.com/sympy/sympy/pull/11494"&gt;11494&lt;/a&gt;.&amp;#160;It was great working with Sympy. Jason, Sartaj, Aaron, Kalevi, Isuru and all other sympy members have helped me a lot. Many of the times, I used to get stuck with some implementation, testing or with the Travis CI build but, for everytime they have always tried to help me fix them. My mentors have always appreciated and motivated me. I got to learn many new thing about the software development workflow. Thank you Sympy for making this summer an awesome journey of learning and coding.&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s all folks.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/sampadblog.wordpress.com/1042/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/sampadblog.wordpress.com/1042/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=sampadblog.wordpress.com&amp;#038;blog=102728326&amp;#038;post=1042&amp;#038;subd=sampadblog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://rajithsays.wordpress.com/?p=445</guid>
+      <title>GSoC : Epilogue</title>
+      <author>Rajith Vidanaarachchi (rajithv)</author>
+      <pubDate>Fri, 19 Aug 2016 05:01:52 GMT</pubDate>
+      <link>https://rajithsays.wordpress.com/2016/08/19/gsoc-epilogue/</link>
+      <description>&lt;h2&gt;Overview:&lt;/h2&gt;
+&lt;p style="text-align: justify;"&gt;For the duration of GSoC, I have worked on the SymEngine project, with focus on writing the Cwrapper and specifically the Ruby Wrapper. Major work during the project timeline included wrapping already existing features such as MPC, MPFR, arbitrary precision evaluations, Matrices, expression parsing etc., and new features such as lambdifying expressions in Ruby and Exception Handling.&lt;/p&gt;
+&lt;h2&gt;Proposal:&lt;/h2&gt;
+&lt;p&gt;My proposal for GSoC 2016 can be viewed here &lt;a href="https://docs.google.com/document/d/1HKEzqpm3yk9ax5Fs7POQaBFZFxSOjy1MXNyeB7JXBxg/edit#heading=h.t8we2dfbtvd1"&gt;[1]&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Progress Report:&lt;/h2&gt;
+&lt;p style="text-align: justify;"&gt;After 13 weeks of GSoC, we&amp;#8217;re now at the end of the summer, and it is time for me to explain and report what I did with SymEngine and its Ruby Wrappers throughout the summer.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;For reporting purposes, I will take each week&amp;#8217;s workload and indicate the status in a tabular manner, with links to the relevant PRs. Due to the nature of the project, each part usually consists of two PRs. One to the SymEngine repository &lt;a href="https://github.com/symengine/symengine/"&gt;[2]&lt;/a&gt;, and the other to the SymEngine.rb &lt;a href="https://github.com/symengine/symengine.rb/"&gt;[3]&lt;/a&gt; repository.&lt;/p&gt;
+&lt;table cellpadding="4" cellspacing="0" width="100%"&gt;
+&lt;colgroup&gt;
+&lt;col width="51*" /&gt;
+&lt;col width="51*" /&gt;
+&lt;col width="51*" /&gt;
+&lt;col width="51*" /&gt;
+&lt;col width="51*" /&gt; &lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;Week&lt;/td&gt;
+&lt;td width="20%"&gt;Work&lt;/td&gt;
+&lt;td width="20%"&gt;SymEngine&lt;/td&gt;
+&lt;td width="20%"&gt;SymEngine.RB&lt;/td&gt;
+&lt;td width="20%"&gt;Comments&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;1, 2&lt;/td&gt;
+&lt;td width="20%"&gt;Complex Numbers &amp;amp; Floating Points&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;Wrappers for Real Double: &lt;a href="https://github.com/symengine/symengine/pull/954"&gt;PR#954&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Implementing real_double_get_d method: &lt;a href="https://github.com/symengine/symengine/pull/966"&gt;PR#966&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Wrappers for Real MPFR and Complex MPC: &lt;a href="https://github.com/symengine/symengine/pull/972"&gt;PR#972&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;fixes #974: &lt;a href="https://github.com/symengine/symengine/pull/975"&gt;PR#975&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;Real Double Class: &lt;a href="https://github.com/symengine/symengine.rb/pull/46"&gt;PR#46&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ruby Wrappers for Real MPFR and Complex MPC: &lt;a href="https://github.com/symengine/symengine.rb/pull/49"&gt;PR#49&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;3&lt;/td&gt;
+&lt;td width="20%"&gt;Derivatives, Substitutions, Abs&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;Function symbol Cwrappers: &lt;a href="https://github.com/symengine/symengine/pull/982"&gt;PR#982&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;Abs: &lt;a href="https://github.com/symengine/symengine.rb/pull/50"&gt;PR#50&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Function symbol Ruby Wrappers: &lt;a href="https://github.com/symengine/symengine.rb/pull/51"&gt;PR#51&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;3&lt;/td&gt;
+&lt;td width="20%"&gt;Series &amp;amp; Polynomials&lt;/td&gt;
+&lt;td width="20%"&gt;&amp;#8211;&lt;/td&gt;
+&lt;td width="20%"&gt;&amp;#8211;&lt;/td&gt;
+&lt;td width="20%"&gt;The relevant parts in SymEngine&amp;#8217;s C++ code library was not ready, so I had to skip this part.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;3&lt;/td&gt;
+&lt;td width="20%"&gt;Evalf&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;Common evals method and its Cwrappers: &lt;a href="https://github.com/symengine/symengine/pull/987"&gt;PR#987&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sign check for Numbers: &lt;a href="https://github.com/symengine/symengine/pull/1027"&gt;PR#1027&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;evalf ruby wrapper: &lt;a href="https://github.com/symengine/symengine.rb/pull/55"&gt;PR#55&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;This was not included in the original proposal. Completed to compensate for Series and Polynomials.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;4, 5, 6&lt;/td&gt;
+&lt;td width="20%"&gt;Matrices&lt;/td&gt;
+&lt;td width="20%"&gt;Completed.&lt;/p&gt;
+&lt;p&gt;Matrix Cwrappers: &lt;a href="https://github.com/symengine/symengine/pull/992"&gt;PR#992&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;PR Under Review.&lt;/p&gt;
+&lt;p&gt;Matrix Ruby Wrappers: &lt;a href="https://github.com/symengine/symengine.rb/pull/56"&gt;PR#56&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;7&lt;/td&gt;
+&lt;td width="20%"&gt;Parser&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;CWrapper for parser: &lt;a href="https://github.com/symengine/symengine/pull/1029"&gt;PR#1029&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;Completed.&lt;/p&gt;
+&lt;p&gt;Ruby wrapper for parser: &lt;a href="https://github.com/symengine/symengine.rb/pull/60"&gt;PR#60&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;Awaiting merging.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;8&lt;/td&gt;
+&lt;td width="20%"&gt;Lambdify&lt;/td&gt;
+&lt;td width="20%"&gt;N/A&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;Lambdify as a module level function: &lt;a href="https://github.com/symengine/symengine.rb/pull/61"&gt;PR#61&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;All work was performed on Ruby Wrappers directly.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;9, 10&lt;/td&gt;
+&lt;td width="20%"&gt;Exception Handling&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;Exception Handling: &lt;a href="https://github.com/symengine/symengine/pull/1044"&gt;PR#1044&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fixing enum issue in Exceptions: &lt;a href="https://github.com/symengine/symengine/pull/1069"&gt;PR#1069&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;Completed&lt;/p&gt;
+&lt;p&gt;Exception Handling: &lt;a href="https://github.com/symengine/symengine.rb/pull/64"&gt;PR#64&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;Wiki on exception handling. &lt;a href="https://github.com/symengine/symengine/wiki/SymEngine-Exceptions"&gt;[4]&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;11&lt;/td&gt;
+&lt;td width="20%"&gt;Interfacing with GMP, MPFR, MPC gems&lt;/td&gt;
+&lt;td width="20%"&gt;Incomplete&lt;/td&gt;
+&lt;td width="20%"&gt;Incomplete&lt;/td&gt;
+&lt;td width="20%"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;12&lt;/td&gt;
+&lt;td width="20%"&gt;Buffer Period&lt;/td&gt;
+&lt;td width="20%"&gt;N/A&lt;/td&gt;
+&lt;td width="20%"&gt;N/A&lt;/td&gt;
+&lt;td width="20%"&gt;Allocated time to catch up with missed work.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="top"&gt;
+&lt;td width="20%"&gt;13&lt;/td&gt;
+&lt;td width="20%"&gt;Iruby Notebooks&lt;/td&gt;
+&lt;td width="20%"&gt;N/A&lt;/td&gt;
+&lt;td width="20%"&gt;Awaiting Merging&lt;br /&gt;
+Changes to beginner notebook:&lt;br /&gt;
+&lt;a href="https://github.com/symengine/symengine.rb/pull/59"&gt;PR#59&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;Although the examples are ready, and were included in SymEngine&amp;#8217;s presentation at SciPy &lt;a href="https://www.youtube.com/watch?v=03rBe2RdMt4"&gt;[5]&lt;/a&gt;, they were not merged, pending improvements to the formatting.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Other PRs:&lt;/h3&gt;
+&lt;p&gt;The following PRs were made for minor contributions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixes several warnings : &lt;a href="https://github.com/symengine/symengine/pull/994"&gt;PR#994&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adding symengine_config.h to Cwrapper: &lt;a href="https://github.com/symengine/symengine/pull/984"&gt;PR#984&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Formating Fix: &lt;a href="https://github.com/symengine/symengine.rb/pull/65"&gt;PR#65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create ruby_example.ipynb: &lt;a href="https://github.com/certik/scipy-2016-symengine-talk/pull/17"&gt;PR#17 2016-symengine-talk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Summary of Merged Contributions:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;On SymEngine/SymEngine Repository:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/symengine/symengine/commits?author=rajithv"&gt;https://github.com/symengine/symengine/commits?author=rajithv&lt;br /&gt;
+&lt;/a&gt;106 commits / 4,316 ++ / 1,928 &amp;#8212;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On SymEngine/SymEngine.RB Repository:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/symengine/symengine.rb/commits?author=rajithv"&gt;https://github.com/symengine/symengine.rb/commits?author=rajithv&lt;br /&gt;
+&lt;/a&gt;134 commits / 3,756 ++ / 1,319 &amp;#8212;&lt;/p&gt;
+&lt;p&gt;&amp;#8212;&lt;/p&gt;
+&lt;p&gt;[1] &lt;a href="https://docs.google.com/document/d/1HKEzqpm3yk9ax5Fs7POQaBFZFxSOjy1MXNyeB7JXBxg/edit#heading=h.t8we2dfbtvd1"&gt;https://docs.google.com/document/d/1HKEzqpm3yk9ax5Fs7POQaBFZFxSOjy1MXNyeB7JXBxg/edit#heading=h.t8we2dfbtvd1&lt;br /&gt;
+&lt;/a&gt;[2] &lt;a href="https://github.com/symengine/symengine/pull/994"&gt;https://github.com/symengine/symengine/&lt;br /&gt;
+&lt;/a&gt;[3] &lt;a href="https://github.com/symengine/symengine.rb/"&gt;https://github.com/symengine/symengine.rb/&lt;/a&gt;&lt;br /&gt;
+[4] &lt;a href="https://github.com/symengine/symengine/wiki/SymEngine-Exceptions"&gt;https://github.com/symengine/symengine/wiki/SymEngine-Exceptions&lt;/a&gt;&lt;br /&gt;
+[5] &lt;a href="https://www.youtube.com/watch?v=03rBe2RdMt4"&gt;https://www.youtube.com/watch?v=03rBe2RdMt4&lt;/a&gt;&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/445/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/445/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&amp;#038;blog=110498904&amp;#038;post=445&amp;#038;subd=rajithsays&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://jbm950.github.io//2016/08/19/GSoC-week-14.html</guid>
+      <title>GSoC Week 14</title>
+      <author>James Milam (jbm950)</author>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 GMT</pubDate>
+      <link>http://jbm950.github.io//2016/08/19/GSoC-week-14.html</link>
+      <description>&lt;p&gt;This is the final week of GSoC! I have the write up of the work done on a
+different &lt;a href="http://jbm950.github.io/../../../GSoC-Final-Submission.html"&gt;page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This project has been a wonderful learning experience and I have met many
+wonderful people over the course of this summer. Before the summer began I had
+never written any test code. Now at the conclusion of the summer I have written
+benchmark tests and I try to make sure the code I write has complete unit
+coverage. I feel that this is one of my biggest areas of improvement over the
+past 3 months. I have also learned a considerable amount about the combination
+of programming and dynamics. Prior to GSoC my experience with dynamics
+consisted solely of finding the equations of motion by hand. With my time in
+GSoC I have been exposed to finding the equations of motion programatically and
+using the results with an ode integrator. I have also obtained a more in depth
+knowledge of different algorithms for creating the equations of motion.&lt;/p&gt;
+
+&lt;p&gt;Another thing that I have enjoyed in this experience is seeing how a large
+programming project works. I feel that this will make me more employable in the
+future as well as allow me to help any other new open source community get up
+and running.&lt;/p&gt;
+
+&lt;p&gt;Lastly, one of the big highlights of my summer was my trip to Austin, TX for
+Scipy 2016. Being a GSoC student I not only got to go to my first professional
+conference but I was able to help give one of the tutorials. Also I was able to
+meet many of the other people who work on sympy. This went a long way in making
+my contributions to sympy from being just contributions to some organization to
+working on a project with other people. It was also neat to meet the developers
+of other open source projects. Like my comment about sympy, I now see those
+projects less as being &amp;#8220;project name&amp;#8221; and more as the people actually working
+on them.&lt;/p&gt;
+
+&lt;p&gt;I have enjoyed my GSoC experience and if I were eligible I would not hesitate
+to apply again. I would like to thank those who chose me and made this summer
+of learning and experiences possible.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://srajangarg.github.io//2016/08/16/Containers-for-MPoly</guid>
+      <title>Containers for Multivariate Polynomials</title>
+      <author>Srajan Garg (srajangarg)</author>
+      <pubDate>Tue, 16 Aug 2016 00:00:00 GMT</pubDate>
+      <link>http://srajangarg.github.io//2016/08/16/Containers-for-MPoly/</link>
+      <description>&lt;h3 id="overview"&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;After the last blog post, I started working on the &amp;#8220;fixing up the remainder of rational polynomials&amp;#8221;. This also included adding support for basic to rational polynomial conversions. The current work is in &lt;a href="https://github.com/symengine/symengine/pull/1055"&gt;#1055&lt;/a&gt; which has not been merged in yet.&lt;/p&gt;
+
+&lt;p&gt;Another thing I started working on was conversions from SymEngine symbolics to multivariate polynomials. The way the current conversions work, led me to change the overall structure of multivariate polynomials.&lt;/p&gt;
+
+&lt;h3 id="restructuring-multivariate-polynomials"&gt;Restructuring Multivariate Polynomials&lt;/h3&gt;
+
+&lt;p&gt;The current working of basic conversions is that it constructs the &amp;#8220;internal container&amp;#8221; of the polynomial as it parses the expression. These containers have operators overloaded and they can easily be manipulated by the functions. Handling multivariate polynomials using this approach would be impossible with the current structure of the code. There were no &amp;#8220;containers&amp;#8221; per se in the previous implementation.&lt;/p&gt;
+
+&lt;p&gt;I thought it would be better if we can implement a container based polynomial structure for multivariate polynomials too. Fortunately, the way the SymEngine polynomials work, an approach similar to the univariate case of containers worked. The container is a wrapper around a map from vector to a value (the coefficient)&lt;/p&gt;
+
+&lt;div class="language-c++ highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;Vec&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;Value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;Wrapper&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UDictWrapper&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="n"&gt;Dict&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;unordered_map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Vec&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;vec_hash&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Vec&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;Dict&lt;/span&gt; &lt;span class="n"&gt;dict_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kt"&gt;unsigned&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;vec_size&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The polynomial class uses this as a container, along with information about the generators and their ordering. Apart from holding the map, this class has various constructors, and all the operators overloaded for it. It also has helper functions, which help translate the current keys to another specific order/ arrangement. The container assumes that the all operations done to it are with other &amp;#8220;adjusted&amp;#8221; containers. Currently, the job of adjusting/aligning th container has been delegated to functions like &lt;code class="highlighter-rouge"&gt;add_mpoly&lt;/code&gt; etc.&lt;/p&gt;
+
+&lt;div class="language-c++ highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;Poly&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="n"&gt;RCP&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Poly&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;add_mpoly&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Poly&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Poly&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;Poly&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;container_type&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;set_basic&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_translated_container&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Poly&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;from_container&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;move&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;div class="language-c++ highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;Poly&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;typename&lt;/span&gt; &lt;span class="n"&gt;Container&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="n"&gt;set_basic&lt;/span&gt; &lt;span class="n"&gt;get_translated_container&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Container&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Container&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+                                   &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Poly&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Poly&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;vec_uint&lt;/span&gt; &lt;span class="n"&gt;v1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;set_basic&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="kt"&gt;unsigned&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;sz&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;reconcile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;vars_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;vars_&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;poly_&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sz&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;poly_&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sz&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Basically, both the containers get the ordering of generators in the &amp;#8220;new&amp;#8221; polynomial which will soon be constructed, and adjust the ordering of the vectors inside their maps accordingly. Thus consistency is maintained. All the work done is in &lt;a href="https://github.com/symengine/symengine/pull/1049"&gt;#1049&lt;/a&gt; and this has been merged in.&lt;/p&gt;
+
+&lt;h3 id="remaining-work"&gt;Remaining work&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;After getting this restructure done, I started work on the basic to multivariate conversions, though I have not been able to cover it completely. The idea for these conversions remains the same and should be easy to implement.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I also could not spend time to integrate wrappers to Piranha polynomials which can be used as multivariate polynomials within SymEngine&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="wrapping-up-gsoc"&gt;Wrapping up GSoC&lt;/h3&gt;
+
+&lt;p&gt;This is officially the last week of Google Summer of Code &amp;#8216;16. Although GSoC is over, I plan to get the above mentioned work finished within August, before any other big undertaking. It has been a wonderful journey of insight and knowledge. Thanks a lot to my mentors Isuru, Ondrej and Sumith for helping me throughout the summers, and always being there for discussions and the silly issues I bombarded them with!&lt;/p&gt;
+
+&lt;p&gt;Bye!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-12</guid>
+      <title>Coding Period Week 12</title>
+      <author>Shekhar Prasad Rajak (shekharrajak)</author>
+      <pubDate>Mon, 15 Aug 2016 00:00:00 GMT</pubDate>
+      <link>http://shekharrajak.github.io/Coding-Period-week-12/</link>
+      <description>&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;nonlinsolve continue:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;PR : &lt;a href="https://github.com/sympy/sympy/pull/11111"&gt;#11111&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;few things that should be improved in &lt;code class="highlighter-rouge"&gt;nonlinsolve&lt;/code&gt; :&lt;/p&gt;
+
+    &lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;- If system of equation contains trigonometric functions, `nonlinsolve`
+sometime fails because `solve_trig` of `solveset` is not much better and
+`nonlinsolve` have to identify what is the Intersection soln when we have
+`2*n*pi + pi/2` and `n*pi + pi/2`(means something similar cases).Right now it is returning
+one of them.
+
+- `substitution` function which solves the system of equation using substitution method.
+There should be better method to handle `imageset` (Complex solution).
+
+- Code quality of `substitution` should be improved.
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Continue Simplified Trig soln&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;PR &lt;a href="https://github.com/sympy/sympy/pull/11188"&gt;#11188&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Imageset/union is generalized and now it handle basically these three cases:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;# img1 = ImageSet(Lambda(n, a*n + b), S.Integers)
+# img2 = ImageSet(Lambda(n, c*n + d), S.Integers)
+In [1]: img1 = ImageSet(Lambda(n, 4*n + 4), S.Integers)
+
+In [2]: img2 = ImageSet(Lambda(n, 4*n), S.Integers)
+# when a == c and (b - d == a) then ans is img2.
+In [3]: Union(img1, img2)
+Out[3]: {4&amp;#8901;n | n &amp;#8714; &amp;#8484;}
+
+# -------------------------------------------------------------
+
+In [4]: img1 = ImageSet(Lambda(n, 4*n + 2), S.Integers)
+# when a == c and (b - d) == a/2, means value is  a/2 * n
+In [5]: Union(img1, img2)
+Out[5]: {2&amp;#8901;n | n &amp;#8714; &amp;#8484;}
+
+# -------------------------------------------------------------
+
+# 5*n + 5/4 ==&amp;gt; 5*n + 1 + 1/4
+# 5*n + 1 + 1/4 is in n + 1/4
+# check using img1.superset(img2) == true so img1 in ans
+img1 = ImageSet(Lambda(n, n + S(1)/4 ), S.Integers)
+img2 = ImageSet(Lambda(n, 5*n + S(5)/4 ), S.Integers)
+
+In [4]: Union(img1, img2)
+Out[4]: {n + 1/4 | n &amp;#8714; &amp;#8484;}
+
+# -------------------------------------------------------------
+
+# img1.issuperset(img2) is false so no change
+img1 = ImageSet(Lambda(n, 2*n + S(1)/4 ), S.Integers)
+img2 = ImageSet(Lambda(n, 5*n +S(5)/4), S.Integers)
+In [5]: Union(img1, img2)
+Out[5]: {2&amp;#8901;n + 1/4 | n &amp;#8714; &amp;#8484;} &amp;#8746; {5&amp;#8901;n + 5/4 | n &amp;#8714; &amp;#8484;}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Meanwhile :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I found some more cases where &lt;code class="highlighter-rouge"&gt;factor_list&lt;/code&gt; fails and opened a PR : https://github.com/sympy/sympy/issues/11528&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;continue..&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">http://jbm950.github.io//2016/08/12/GSoC-week-13.html</guid>
       <title>GSoC Week 13</title>
       <author>James Milam (jbm950)</author>
@@ -229,149 +1519,6 @@ x&amp;#8901;&amp;#8495;
 &lt;p&gt;Right now we are trying to find a way to include convergence conditions in the result while converting Holonomic Functions to expressions.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/shubhamtibra.wordpress.com/854/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/shubhamtibra.wordpress.com/854/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=shubhamtibra.wordpress.com&amp;#038;blog=106149936&amp;#038;post=854&amp;#038;subd=shubhamtibra&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">http://kshitij10496.github.io//2016/08/07/GSoC-Week-10-11/</guid>
-      <title>GSoC Week 10 &amp; 11 - The One with `solvify`</title>
-      <author>Kshitij Saraogi(kshitij10496)</author>
-      <pubDate>Sun, 07 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://kshitij10496.github.io//2016/08/07/GSoC-Week-10-11/</link>
-      <description>&lt;p&gt;During the past couple of weeks, I worked on replacing &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt; with &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; in solving inequalities.&lt;/p&gt;
-
-&lt;h3 id="issue"&gt;&lt;strong&gt;Issue&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;SymPy&amp;#8217;s univariate inequality solver, &lt;code class="highlighter-rouge"&gt;solve_univariate_inequality&lt;/code&gt; relies on &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt; for reducing inequalities.&lt;/p&gt;
-
-&lt;div class="language-python highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;isolve&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;solve_univariate_inequality&lt;/span&gt; &lt;span class="c"&gt;# for simplicity&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;As we would prefer using &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; internally, it is important to remove the dependency on &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt; here.
-However, there are a lot of issues which need to be handled carefully. Here are a few of them:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;The major issue with using &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; is the &lt;code class="highlighter-rouge"&gt;Set&lt;/code&gt; output API.
- As &lt;code class="highlighter-rouge"&gt;isolve&lt;/code&gt; is designed to work according to &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt;&amp;#8217;s results, this seems to be &lt;em&gt;the&lt;/em&gt; roadblock.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;No support for restricted domain.&lt;/p&gt;
-
-    &lt;p&gt;Generally, the inequalties are solved in the entire real domain. However, this might not be what the user want 
- (especially while dealing with trigonometric inequalties). Also, to maintain uniformity across all our solvers,
- support for user-speicifed &lt;code class="highlighter-rouge"&gt;domain&lt;/code&gt; is a must.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Incorrect results for trigonometric inequalties&lt;/p&gt;
-
-    &lt;p&gt;As Issue &lt;a href="https://github.com/sympy/sympy/issues/9721"&gt;#9721&lt;/a&gt;, &lt;code class="highlighter-rouge"&gt;isolve&lt;/code&gt; returns incorrect results for certain trigonometric inequalities.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class="language-python highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;  &lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="n"&gt;isolve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;relational&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;oo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-  &lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="n"&gt;isolve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tan&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;relational&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;oo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id="solutions"&gt;&lt;strong&gt;Solutions&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Implementing &lt;code class="highlighter-rouge"&gt;solvify&lt;/code&gt; : &amp;#8220;solve&amp;#8221;-fy &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;&amp;#8217;s solutions.&lt;br /&gt;
-  There were two possible ways to tackle the issue of APIs:&lt;/p&gt;
-
-    &lt;p&gt;a. Refactoring &lt;code class="highlighter-rouge"&gt;isolve&lt;/code&gt; in according with &lt;code class="highlighter-rouge"&gt;Set&lt;/code&gt; API.&lt;/p&gt;
-
-    &lt;p&gt;b. Somehow returning &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt; results from &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;.&lt;/p&gt;
-
-    &lt;p&gt;&lt;em&gt;Solution&lt;/em&gt; : &lt;strong&gt;b&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;In order to resolve the issue of portability from &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;, I implemented &lt;code class="highlighter-rouge"&gt;solvify&lt;/code&gt; which returns solve-like results.
- We classify the return value based on the type of solution returned by &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;.&lt;/p&gt;
-
-    &lt;p&gt;Solution    |    Output
-   &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;-
-   FiniteSet   | list&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;ImageSet,&lt;/td&gt;
-          &lt;td&gt;list (if &lt;code class="highlighter-rouge"&gt;f&lt;/code&gt; is periodic)&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Union&lt;/td&gt;
-          &lt;td&gt;&amp;#160;&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;EmptySet&lt;/td&gt;
-          &lt;td&gt;empty list&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Others&lt;/td&gt;
-          &lt;td&gt;None&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adding &lt;code class="highlighter-rouge"&gt;domain&lt;/code&gt; support.&lt;/p&gt;
-
-    &lt;p&gt;I added a &lt;code class="highlighter-rouge"&gt;domain&lt;/code&gt; argument to &lt;code class="highlighter-rouge"&gt;isolve&lt;/code&gt; whose default value is the real domain (&lt;code class="highlighter-rouge"&gt;domain=S.Reals&lt;/code&gt;).
- A few limitation to the conditions of &lt;code class="highlighter-rouge"&gt;S.Infinity&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;S.NegativeInfinity&lt;/code&gt; followed.&lt;/p&gt;
-
-    &lt;p&gt;Another noticable point, from the point of implementation, was to deal with singularities and discontinuities of the given inequality.
- For this, I used the &lt;code class="highlighter-rouge"&gt;continuous_domain&lt;/code&gt; method to find the continuous domains of the expression within the specified domain.&lt;/p&gt;
-
-    &lt;p&gt;This was a minimalistic addition with considerable returns (especially for solving periodic inequalties).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Solving trigonometric inequalities.&lt;/p&gt;
-
-    &lt;p&gt;Since most of the trigonometric inequalities are periodic in nature and have infinite solutions, 
- solving the expression in the entire real domain is a repetitive task and computationally expensive.&lt;/p&gt;
-
-    &lt;p&gt;In order to simplify the problem, I intend to solve all the inequalities in a positive periodic interval (say &lt;code class="highlighter-rouge"&gt;[0, 2*pi)&lt;/code&gt; for &lt;code class="highlighter-rouge"&gt;sin(x)&lt;/code&gt;).
- We already have a function to compute the real period of a function : &lt;code class="highlighter-rouge"&gt;periodicity&lt;/code&gt;.&lt;br /&gt;
- In case of a non-finite &lt;code class="highlighter-rouge"&gt;domain&lt;/code&gt; argument, I intend to use this to restrict the solutions of the problem to a periodic interval.&lt;/p&gt;
-
-    &lt;p&gt;This might not seem the perfect approach but it seems reasonable to handle infinite interval sets for now.
- We need a new &lt;code class="highlighter-rouge"&gt;Set&lt;/code&gt; object : &lt;code class="highlighter-rouge"&gt;BigUnion&lt;/code&gt; to represent infinite number of interval objects.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id="new-implementation"&gt;&lt;em&gt;New Implementation&lt;/em&gt;&lt;/h3&gt;
-
-&lt;p&gt;I have opened &lt;a href="https://github.com/sympy/sympy/pull/11458"&gt;PR#11458&lt;/a&gt; for the same with all the implementation details.&lt;/p&gt;
-
-&lt;div class="language-python highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="n"&gt;isolve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;relational&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;U&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="n"&gt;isolve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tan&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;relational&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id="after-thoughts"&gt;&lt;em&gt;After thoughts&lt;/em&gt;&lt;/h3&gt;
-
-&lt;p&gt;For the past couple of weeks, I haven&amp;#8217;t been able to give much time to the project due to my college schedule.
-I try to make up for the lost time during the weekend and meet the 40 hour weekly deadline.&lt;/p&gt;
-
-&lt;p&gt;With the endsem evaluation soon approaching, I expect this PR to get merged and count as a part of my project.&lt;/p&gt;</description>
-    </item>
-    <item>
       <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-11</guid>
       <title>Coding Period Week 11</title>
       <author>Shekhar Prasad Rajak (shekharrajak)</author>
@@ -465,10 +1612,11 @@ ValueError:
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;Absolute values cannot be inverted in the complex domain.
-- In 1st case (for complex domain) ans should be &lt;a href="http://www.wolframalpha.com/input/?i=Abs(x)+-+(1+)+%3D0+for+x"&gt;http://www.wolframalpha.com/input/?i=Abs(x)+-+(1+)+%3D0+for+x&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;Absolute values cannot be inverted in the complex domain.&lt;/p&gt;
 &lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In 1st case (for complex domain) ans should be &lt;a href="http://www.wolframalpha.com/input/?i=Abs(x)+-+(1+)+%3D0+for+x"&gt;http://www.wolframalpha.com/input/?i=Abs(x)+-+(1+)+%3D0+for+x&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;In 2nd case EmptySet.
 and in 3rd case (general solution when domain=S.Complexes) soln should be &lt;a href="http://www.wolframalpha.com/input/?i=Abs(x)+-+y+%3D0+for+x"&gt;http://www.wolframalpha.com/input/?i=Abs(x)+-+y+%3D0+for+x&lt;/a&gt;&lt;/p&gt;
@@ -1103,70 +2251,6 @@ irb(main):005:0&amp;gt;&lt;/pre&gt;
 &lt;p&gt;See you next week!&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/416/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/416/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&amp;#038;blog=110498904&amp;#038;post=416&amp;#038;subd=rajithsays&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">http://kshitij10496.github.io//2016/07/24/GSoC-Week-09/</guid>
-      <title>GSoC Week 09 - The One with Inequalities</title>
-      <author>Kshitij Saraogi(kshitij10496)</author>
-      <pubDate>Sun, 24 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://kshitij10496.github.io//2016/07/24/GSoC-Week-09/</link>
-      <description>&lt;p&gt;This week I worked on solving trigonometric inequalities.&lt;/p&gt;
-
-&lt;h3 id="trigonometric-inequalities"&gt;&lt;strong&gt;Trigonometric inequalities&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;The primary univariate inequality solver - &lt;code class="highlighter-rouge"&gt;solve_univariate_inequality&lt;/code&gt;,&lt;br /&gt;
-depends upon the results of &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt; in order to solve the given inequality.
-Taking a cue from &lt;a href="https://github.com/sympy/sympy/pull/10022"&gt;PR#10022&lt;/a&gt; on incorporating &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; for inequalities, I worked on developing an approach for replacing the use of &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt; 
-with &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; in solving inequalities.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Idea&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Convert &lt;code class="highlighter-rouge"&gt;Set&lt;/code&gt;-type output from &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;list&lt;/code&gt; objects similar to that returned by &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The most striking difference between both the APIs is the uniform &lt;code class="highlighter-rouge"&gt;Set&lt;/code&gt; output returned by &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;. 
-Hence, the prime concern while transitioning from &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; should be handling the various type of solutions.&lt;/p&gt;
-
-&lt;p&gt;Here are a few implementation ideas on the same:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;FiniteSet&lt;/strong&gt; : finite number of solutions&lt;br /&gt;
-Using the &lt;code class="highlighter-rouge"&gt;list&lt;/code&gt; constructor on these type of objects works extremely well.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;ImageSet&lt;/strong&gt; : infinite number of solutions&lt;br /&gt;
-This is generally the case with trigonometric functions as most of them are periodic in nature.
-We need to limit the number of solutions to be finite.&lt;br /&gt;
-For this, I intend to use the a periodic interval: &lt;code class="highlighter-rouge"&gt;[0, period]&lt;/code&gt; as the basis for filtering the solution set.
-This returns a simplified &lt;code class="highlighter-rouge"&gt;FiniteSet&lt;/code&gt; of solutions which can be used to solve inequalities in a restricted interval.
-Following which we can generalise the output over the entire domain of the function.&lt;/p&gt;
-
-    &lt;p&gt;A major issue here is the representation of the final solution set.&lt;br /&gt;
-For example:&lt;/p&gt;
-
-    &lt;div class="language-python highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="n"&gt;solveset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;domain&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Reals&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#9121;&lt;/span&gt;         &lt;span class="err"&gt;&amp;#960;&lt;/span&gt;           &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="err"&gt;&amp;#8901;&amp;#960;&lt;/span&gt;         &lt;span class="err"&gt;&amp;#9124;&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#9122;&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;&amp;#9472;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="err"&gt;&amp;#9472;&amp;#9472;&amp;#9472;&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="err"&gt;&amp;#8714;&lt;/span&gt; &lt;span class="err"&gt;&amp;#8484;&amp;#9125;&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#9123;&lt;/span&gt;         &lt;span class="mi"&gt;2&lt;/span&gt;            &lt;span class="mi"&gt;2&lt;/span&gt;          &lt;span class="err"&gt;&amp;#9126;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-
-    &lt;p&gt;Currently, we do not have a &lt;code class="highlighter-rouge"&gt;Set&lt;/code&gt; object for representing this.&lt;br /&gt;
-For this, we need to implement an &lt;em&gt;Indexed Union&lt;/em&gt; : &lt;code class="highlighter-rouge"&gt;Union(X(a) for a in I)&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;We can symbolically represent the above solution as &lt;code class="highlighter-rouge"&gt;BigUnion(Interval(2*n*pi + pi/2, 2*n*pi + 3*pi/2), n, S.Intgers)&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;After thoughts&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Also, this week my &lt;a href="https://github.com/sympy/sympy/pull/11277"&gt;PR#11277&lt;/a&gt; on periodicity got merged finally.
-I have updated the corresponding &lt;a href="https://github.com/sympy/sympy/pull/11141"&gt;PR#11141&lt;/a&gt; which has been stalled for some time now.
-Hopefully, it will get merged soon.&lt;/p&gt;
-
-&lt;p&gt;The next week I will devote my time to the implementation part of solving inequalities.&lt;/p&gt;</description>
-    </item>
-    <item>
       <guid isPermaLink="false">http://srajangarg.github.io//2016/07/23/Rational-Polynomials-ft-Bugs</guid>
       <title>Rational Polynomials ft. Bugs</title>
       <author>Srajan Garg (srajangarg)</author>
@@ -1210,573 +2294,6 @@ Hopefully, it will get merged soon.&lt;/p&gt;
 &lt;p&gt;Also a small bug was present in our flint and gmp rational number wrappers. We were not canonicalizing on construction from two integers. It was fixed in &lt;a href="https://github.com/symengine/symengine/pull/1031"&gt;#1031&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Laters!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://sampadblog.wordpress.com/?p=942</guid>
-      <title>GSoC Week 9</title>
-      <author>Sampad Saha (sampadsaha5)</author>
-      <pubDate>Fri, 22 Jul 2016 19:48:05 GMT</pubDate>
-      <link>https://sampadblog.wordpress.com/2016/07/22/gsoc-week-9/</link>
-      <description>&lt;p&gt;Hello, guys. Welcome back.&amp;#160;It&amp;#8217;s been nine weeks into the coding period. I had a meeting with Jason on 17&lt;sup&gt;th&amp;#160;&lt;/sup&gt; of this month. He was attending the code sprints at Scipy and I am very glad to meet other Sympy developers.&lt;/p&gt;
-&lt;h4&gt;&lt;em&gt;&lt;strong&gt;So Far&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;I have closed the PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11266"&gt;11266&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;In PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11374"&gt;11374&lt;/a&gt;, I have removed the use of mechanics Point.&lt;/li&gt;
-&lt;li&gt;I have made boundary_conditions as property and the inputs are no longer as **kwargs. Each of the inputs namely moment, slope and deflection are initiated as an empty list. But I have some doubts regarding the behaviour of this method. I feel that this should be used only in the case when a full new set of boundary conditions are given as input. Since to input dynamically, there exists some methods already which would handle each of the cases explicitly. Those methods appends the new inputs whereas this method would delete the existing boundary conditions and apply the newer one. This way the property of being mutable would remain.&lt;/li&gt;
-&lt;li&gt;Replaced the solve function by linsolve. Since solve is going to be depreciated in the mear future.&lt;/li&gt;
-&lt;li&gt;I have added the docstrings for slope and deflection method as well as for the beam class.&lt;/li&gt;
-&lt;li&gt;In deflection method, I have added a new case where if there is no slope boundary condition but there is deflection boundary conditions, it would give operate.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;I will be working on adding a documentation file for this beam bending problem module exclusively.&lt;/li&gt;
-&lt;li&gt;Add some more test for checking the corner cases.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;That&amp;#8217;s all for this week. Cheers !!&lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/sampadblog.wordpress.com/942/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/sampadblog.wordpress.com/942/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=sampadblog.wordpress.com&amp;#038;blog=102728326&amp;#038;post=942&amp;#038;subd=sampadblog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://jbm950.github.io//2016/07/22/GSoC-week-8-9.html</guid>
-      <title>GSoC Week 8 &amp; 9</title>
-      <author>James Milam (jbm950)</author>
-      <pubDate>Fri, 22 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://jbm950.github.io//2016/07/22/GSoC-week-8-9.html</link>
-      <description>&lt;p&gt;Last week I did not end up writing a blog post and so I am combining that
-week&amp;#8217;s post with this week. Last week I attended the SciPy 2016 conference and
-was able to meet my mentor, and many other contributers to SymPy, in person. I
-was also able to help out with the Pydy tutorial.  During this time at the
-conference (and this current week) I was able to flesh out the remaining
-details on the different portions of the project. I have updated &lt;a href="https://github.com/pydy/pydy/pull/353"&gt;PR
-#353&lt;/a&gt; to reflect the api decisions for
-SymbolicSystem (previously eombase.EOM).&lt;/p&gt;
-
-&lt;p&gt;In line with trying to put the finishing touches on implementation details
-before diving in to code, Jason and I met with someone who has actually
-implemented the algorithm in the past to help us with details surrounding
-Featherstone&amp;#8217;s method. He also pointed me to a different description of the
-same algorithm that may be easier to implement.&lt;/p&gt;
-
-&lt;p&gt;This week I also worked on rewriting the docstrings in
-physics/mechanics/body.py because I found the docstrings currently there to be
-somewhat confusing. I also did a review on one of Jason&amp;#8217;s PR&amp;#8217;s where he reduces
-the amount of work that *method.rhs() has to do when inverting the mass matrix
-by pulling out the kinematical information before the inversion takes place.&lt;/p&gt;
-
-&lt;h3 id="future-directions"&gt;Future Directions&lt;/h3&gt;
-
-&lt;p&gt;With the work these past two weeks being focused on implementing the different
-parts of the projects, I will start implementing these various parts next week.
-I will first work on finishing off the SymbolicSystem object and then move
-towards implementing the OrderNMethod. This work should be very straight
-forward with all the work that has been put into planning the api&amp;#8217;s.&lt;/p&gt;
-
-&lt;h3 id="prs-and-issues"&gt;PR&amp;#8217;s and Issues&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;ul&gt;
-    &lt;li&gt;(Merged) Speeds up the linear system solve in KanesMethod.rhs() &lt;a href="https://github.com/sympy/sympy/pull/10965"&gt;PR
-  #10965&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;(Open) Docstring cleanup of physics/mechanics/body.py &lt;a href="https://github.com/sympy/sympy/pull/11416"&gt;PR
-  #11416&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;(Open) [WIP] Created a basis on which to discuss EOM class &lt;a href="https://github.com/pydy/pydy/pull/353"&gt;PR
-  #353&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://nishnik.github.io/GSoC-Eighth-Week</guid>
-      <title>GSoC Eighth Week</title>
-      <author>Nishant Nikhil (nishnik)</author>
-      <pubDate>Wed, 20 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://nishnik.github.io/GSoC-Eighth-Week/</link>
-      <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;After completing the work on &lt;code class="highlighter-rouge"&gt;gf_factor&lt;/code&gt;, I moved on to implement Gathen-Shoup&amp;#8217;s factorization algorithm. Like Zassenhaus&amp;#8217;s agorithm, it is also a probabilistic algorithm.
-&lt;br /&gt;
-The paper is available &lt;a href="http://www.shoup.net/papers/frobenius.pdf"&gt;here&lt;/a&gt;.
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;strong&gt;First question: Why this algorithm ?&lt;/strong&gt;
-&lt;br /&gt;
-&amp;gt; Because, it is kind of faster than zassenhaus&amp;#8217;s algorithm.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;Second question: What is &amp;#8220;kind of&amp;#8221; here ?&lt;/strong&gt;
-&lt;br /&gt;
-&amp;gt; Well, it is faster when a specific condition satisfies.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-Its asymptotic runtime is &lt;code class="highlighter-rouge"&gt;O(n**2 + n log q).(log n)**2.loglog n&lt;/code&gt;, where &lt;code class="highlighter-rouge"&gt;n&lt;/code&gt; is degree of polynomial and &lt;code class="highlighter-rouge"&gt;q&lt;/code&gt; is the field characteristics.
-&lt;br /&gt;
-In &lt;a href="https://en.wikipedia.org/wiki/&amp;#213;#Mathematical_use"&gt;&amp;#8220;Soft O&amp;#8221; notation&lt;/a&gt;, it is &lt;code class="highlighter-rouge"&gt;O~(n**2 + n log q)&lt;/code&gt;. While the cantor zassenhaus&amp;#8217;s algorithm has &lt;code class="highlighter-rouge"&gt;O~(n**2 log q)&lt;/code&gt; asymptotic runtime.
-&lt;br /&gt;
-So when &lt;code class="highlighter-rouge"&gt;log q&lt;/code&gt; approaches &lt;code class="highlighter-rouge"&gt;n&lt;/code&gt;, the difference is remarkable.
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Algorithm&lt;/th&gt;
-      &lt;th style="text-align: center;"&gt;Asymptotic Runtime&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Shoup&lt;/td&gt;
-      &lt;td style="text-align: center;"&gt;&lt;code class="highlighter-rouge"&gt;O~(n**2)&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Zassenhaus&lt;/td&gt;
-      &lt;td style="text-align: center;"&gt;&lt;code class="highlighter-rouge"&gt;O~(n**3)&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;It also works in three parts, firstly square free factorization, then distinct degree and finally equal degree factorization.
-&lt;br /&gt;
-I have completed the implementation of this algorithm on &lt;a href="https://github.com/nishnik/symengine/tree/shoup_factorization"&gt;shoup_factorization&lt;/a&gt; branch.
-And also, I changed the container (which stores factors) type to &lt;code class="highlighter-rouge"&gt;set&lt;/code&gt;.&lt;br /&gt;
-Will send a PR soon.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-9</guid>
-      <title>Coding Period Week 9</title>
-      <author>Shekhar Prasad Rajak (shekharrajak)</author>
-      <pubDate>Wed, 20 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://shekharrajak.github.io/Coding-Period-week-9/</link>
-      <description>&lt;p&gt;&lt;strong&gt;Some points regarding trigonometric and inverse trigonometric functions in solveset :&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;There are many issues in solveset &lt;code class="highlighter-rouge"&gt;solve_trig&lt;/code&gt;.More inverse trigonometric formula and trigonometric identities should be defined/added or improved.
-Also &lt;code class="highlighter-rouge"&gt;simplify&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;trigsimp&lt;/code&gt; and in &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; &lt;code class="highlighter-rouge"&gt;_invert&lt;/code&gt; methods should be improved accordingly.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Some links, that is helpful to improve these functions.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions"&gt;https://en.wikipedia.org/wiki/Inverse_trigonometric_functions&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Proofs_of_trigonometric_identities"&gt;https://en.wikipedia.org/wiki/Proofs_of_trigonometric_identities&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://owlcation.com/stem/List-of-Inverse-Trig-Function-Identities-Integrals-and-Derivatives"&gt;https://owlcation.com/stem/List-of-Inverse-Trig-Function-Identities-Integrals-and-Derivatives&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class="highlighter-rouge"&gt;trigsimp&lt;/code&gt; must be more powerful so that &lt;code class="highlighter-rouge"&gt;solve_trig&lt;/code&gt; get simplified eq. (which solves trig equation by converting them into its &lt;code class="highlighter-rouge"&gt;exp&lt;/code&gt; form).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class="highlighter-rouge"&gt;solve_trig&lt;/code&gt; solves the trig eq. using its &lt;code class="highlighter-rouge"&gt;exp&lt;/code&gt; form. There may be cases when that &lt;code class="highlighter-rouge"&gt;exp&lt;/code&gt; form is complicated and solveset fail to handle that form.
-There should be technique to convert that complicated form to simpler form(if possible) and then call the &lt;code class="highlighter-rouge"&gt;solveset_complex&lt;/code&gt;. That may help to improve the &lt;code class="highlighter-rouge"&gt;solve_trig&lt;/code&gt; method.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We can use &lt;code class="highlighter-rouge"&gt;_osbornei&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;hyper_as_trig&lt;/code&gt; methods defined in &lt;code class="highlighter-rouge"&gt;simplify/fu.py&lt;/code&gt; to convert hyperbolic function to trigonometric function, then we can use &lt;code class="highlighter-rouge"&gt;trigsimp&lt;/code&gt; (we can&amp;#8217;t use &lt;code class="highlighter-rouge"&gt;trigsimp&lt;/code&gt; for hyperbolic functions).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;First need to improve basic concepts and add more identities. I opened a new PR to improve &lt;code class="highlighter-rouge"&gt;rewrite&lt;/code&gt; for trigonometric functions , PR is &lt;a href="https://github.com/sympy/sympy/pull/11424/"&gt;#11424&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;eliminate() :&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;issue &lt;a href="https://github.com/sympy/sympy/issues/2720"&gt;#2720&lt;/a&gt; : We need some kind of eliminate function, like &lt;a href="http://reference.wolfram.com/mathematica/ref/Eliminate.html"&gt;http://reference.wolfram.com/mathematica/ref/Eliminate.html&lt;/a&gt;. See also &lt;a href="http://stackoverflow.com/q/20826969/161801"&gt;http://stackoverflow.com/q/20826969/161801 &lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;It looks something related to &lt;a href="https://github.com/sympy/sympy/pull/11111/files#diff-eec0422923e8f100745c015cd8fdd6cfR1135"&gt;substitution&lt;/a&gt; function.
-But they are not same. Using &lt;code class="highlighter-rouge"&gt;eliminate()&lt;/code&gt; we will try to remove the variable(s) from the each equations(not solving the eq).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Plan : First choose eq that have min. variables and get the value of the variable, to be eliminated. Go further and &lt;code class="highlighter-rouge"&gt;subs&lt;/code&gt; the value to next min. variable eq., and so on.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Work in progress.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Meanwhile :&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;I found some basic issues in &lt;code class="highlighter-rouge"&gt;ComplexInfinity&lt;/code&gt; and trying to solve them in this PR &lt;a href="https://github.com/sympy/sympy/pull/11409"&gt;#11409&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;there may be many things to be added about &lt;code class="highlighter-rouge"&gt;ComplexInfinity&lt;/code&gt;, one can refer this link to implement them :
-&lt;a href="http://reference.wolfram.com/language/ref/ComplexInfinity.html"&gt;http://reference.wolfram.com/language/ref/ComplexInfinity.html&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;continue..&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-8</guid>
-      <title>Coding Period Week 8</title>
-      <author>Shekhar Prasad Rajak (shekharrajak)</author>
-      <pubDate>Mon, 18 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://shekharrajak.github.io/Coding-Period-week-8/</link>
-      <description>&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Continue - Diophantine in Solveset :&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;PR &lt;a href="https://github.com/sympy/sympy/pull/11234"&gt;11234&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;For general Pythagorean diop_type (Diophantine eq type), it seems diophantine always returns parameterized solution so I did some changes in the PR. &lt;a href="https://github.com/sympy/sympy/pull/11334/commits/6af46fc35db3a74dfda78b6d8e2a0f7d4ec65afe"&gt;commit&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;You can refer this &lt;a href="https://github.com/sympy/sympy/pull/11334#issuecomment-230334645"&gt;comment&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Continue Simplified Trig soln&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;PR &lt;a href="https://github.com/sympy/sympy/pull/11188"&gt;#11188&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;After some changes, the PR is ready for review.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Continue nonlinsolve :&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;PR &lt;a href="https://github.com/sympy/sympy/pull/11111"&gt;#11111&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Added some XFAIL test-cases of system of Trigonometric equations. &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; trig solver (&lt;code class="highlighter-rouge"&gt;solve_trig&lt;/code&gt;) is not smart enough(&lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; returns &lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt;, where soln can be simply inverse trig functions using &lt;code class="highlighter-rouge"&gt;_invert&lt;/code&gt; or inverse Trigonometric functions). So &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; returns &lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt; that means &lt;code class="highlighter-rouge"&gt;substitution&lt;/code&gt; is not getting soln.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;It is better to replace trigonometric functions or other &lt;code class="highlighter-rouge"&gt;Function&lt;/code&gt; with symbols&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(e.g. &lt;code class="highlighter-rouge"&gt;sin(x)&lt;/code&gt; &amp;#8211;&amp;gt; &lt;code class="highlighter-rouge"&gt;u&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;sin(y)&lt;/code&gt;&amp;#8211;&amp;gt; &lt;code class="highlighter-rouge"&gt;v&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;f(x)&lt;/code&gt;&amp;#8211;&amp;gt; &lt;code class="highlighter-rouge"&gt;f_x&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;g(x)&lt;/code&gt; &amp;#8211;&amp;gt; &lt;code class="highlighter-rouge"&gt;g_x&lt;/code&gt;)&lt;/p&gt;
-
-&lt;p&gt;and then solve for the symbols. After getting solution from &lt;code class="highlighter-rouge"&gt;nonlinsolve&lt;/code&gt; user can invert or do &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;(e.g. solveset(Eq(sin(x), soln_u), x, domain) to get value of &lt;code class="highlighter-rouge"&gt;x&lt;/code&gt;).&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Ready for review.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Meanwhile :&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;We already know that solveset need improved &lt;code class="highlighter-rouge"&gt;invert_real&lt;/code&gt; , &lt;code class="highlighter-rouge"&gt;invert_complex&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Imageset&lt;/code&gt; Intersections.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;previous work is in this PR &lt;a href="https://github.com/sympy/sympy/pull/10971"&gt;10971&lt;/a&gt;. Trying to improve them.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some cases is here :&lt;/p&gt;
-
-&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;# In 2, 4, 5 intersection is not needed.
-
-In [1]: img = ImageSet(Lambda(n, x/n), S.Complexes)
-
-In [2]: Intersection(img, S.Complexes)
-Out[2]:
-    &amp;#9127;x        &amp;#9131;
-&amp;#8450; &amp;#8745; &amp;#9128;&amp;#9472; | n &amp;#8714; &amp;#8450;&amp;#9132;
-    &amp;#9129;n        &amp;#9133;
-
-In [3]: img = ImageSet(Lambda(n, x/n), S.Integers)
-
-In [4]: Intersection(img, S.Complexes)
-Out[4]:
-&amp;#9127;x        &amp;#9131;    
-&amp;#9128;&amp;#9472; | n &amp;#8714; &amp;#8484;&amp;#9132; &amp;#8745; &amp;#8450;
-&amp;#9129;n        &amp;#9133;    
-
-In [5]: Intersection(ImageSet(Lambda(n, 2*n*I*pi), S.Integers), S.Complexes)
-Out[5]: {2&amp;#8901;&amp;#8520;&amp;#8901;&amp;#960;&amp;#8901;n | n &amp;#8714; &amp;#8484;} &amp;#8745; &amp;#8450;
-
-# ImageSet Intersection is not implemented when inverter returns multiple values.
-# here ans should be {0, 1}
-In [6]: img1 = ImageSet(Lambda(n, n**2), S.Integers)
-
-In [7]: Intersection(img1, Interval(0,2))
-Out[7]:
-         &amp;#9127; 2        &amp;#9131;
-[0, 2] &amp;#8745; &amp;#9128;n  | n &amp;#8714; &amp;#8484;&amp;#9132;
-         &amp;#9129;          &amp;#9133;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;continue..&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://rajithsays.wordpress.com/?p=393</guid>
-      <title>GSoC Week 8 Progress</title>
-      <author>Rajith Vidanaarachchi (rajithv)</author>
-      <pubDate>Sat, 16 Jul 2016 16:09:06 GMT</pubDate>
-      <link>https://rajithsays.wordpress.com/2016/07/16/gsoc-week-8-progress/</link>
-      <description>&lt;p&gt;When this week started, most of the work up to week 7 were done. In the first couple of days this week, code for parsing was merged, and I started looking into wrapping lambdification of SymEngine Basic expressions.&lt;/p&gt;
-&lt;p&gt;This was a seemingly easy task, with two options ahead of me. One was to directly wrap C++&amp;#8217;s lambdify_double method, while the other was to create Ruby lambdas directly.&lt;/p&gt;
-&lt;p&gt;After considering various aspects, and with feedback from other contributors, I decided to go ahead with writing them directly in Ruby.&lt;/p&gt;
-&lt;p&gt;It is now completed, and undergoing review.&lt;/p&gt;
-&lt;p&gt;The code implemented allows lamdifying SymEngine::Basic expressions with free symbols.&lt;/p&gt;
-&lt;p&gt;i.e. let, f = x + y, where x and y are SymEngine::Symbols,&lt;/p&gt;
-&lt;p&gt;a lambda is expected, such that it can be called, f_lambda.call(3, 4) which would return 7.&lt;/p&gt;
-&lt;p&gt;For expressions with single or multiple symbols, it works as following:&lt;/p&gt;
-&lt;pre&gt;f = x + y
-f_lambda = SymEngine::lambdify(f, [x, y])&lt;/pre&gt;
-&lt;p&gt;For expressions with a single symbol, it can be used through the to_proc method, using a &amp;amp; call.&lt;/p&gt;
-&lt;pre&gt;f_diam = 2 * SymEngine::PI * r
-radii = [2, 3, 4]
-diams = radii.map(&amp;amp;f_diam)&lt;/pre&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;With another day left already, I am looking at Exception Handling, which I expect to be complicated in implementing.&lt;/p&gt;
-&lt;p&gt;See you next week!&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/393/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/393/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&amp;#038;blog=110498904&amp;#038;post=393&amp;#038;subd=rajithsays&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://sampadblog.wordpress.com/?p=841</guid>
-      <title>GSoC Week 8</title>
-      <author>Sampad Saha (sampadsaha5)</author>
-      <pubDate>Fri, 15 Jul 2016 19:47:56 GMT</pubDate>
-      <link>https://sampadblog.wordpress.com/2016/07/15/gsoc-week-8/</link>
-      <description>&lt;p&gt;Hello, guys. Welcome back.&amp;#160;It&amp;#8217;s been eight weeks into the coding period and this week I enjoyed a lot while working. I learned to build a list without using a loop, in case, it can be done&amp;#160;more concisely with a &lt;b&gt;&lt;em&gt;list comprehension&lt;/em&gt;&amp;#160;&lt;/b&gt;such as:&lt;/p&gt;
-&lt;p&gt;Instead of doing :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;In [ ]: b = []
-In [ ]: for x in a:
-       b.append(10 * x)
- ....:
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;we can do :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;In [ ]: b = [&lt;span class="lit"&gt;10&lt;/span&gt; &lt;span class="pun"&gt;*&lt;/span&gt;&lt;span class="pln"&gt; x &lt;/span&gt;&lt;span class="kwd"&gt;for&lt;/span&gt;&lt;span class="pln"&gt; x &lt;/span&gt;&lt;span class="kwd"&gt;in&lt;/span&gt;&lt;span class="pln"&gt; a]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I came to know about stuff , like using zip for transposing a matrix and dividing a list into groups of&lt;em&gt;&lt;strong&gt;&amp;#160;&lt;/strong&gt;&lt;/em&gt;&lt;strong&gt;&lt;strong&gt;&lt;em&gt;n&lt;/em&gt; .&amp;#160;&lt;/strong&gt;&lt;/strong&gt;This week I had my weekly meeting with Jason and Sartaj on 13th of this month.&amp;#160;They were in&amp;#160;Austin, Texas attending &lt;a href="http://scipy2016.scipy.org/ehome/index.php?eventid=146062&amp;amp;tabid=332930&amp;amp;"&gt;Scipy 2016&lt;/a&gt;,&amp;#160;the 15th annual Scientific Computing with Python conference.&lt;/p&gt;
-&lt;h4&gt;&lt;em&gt;&lt;strong&gt;So Far&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11178"&gt;PR 11178 &lt;/a&gt;&amp;#160;and&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11237"&gt;PR 11237&lt;/a&gt;&amp;#160;got merged. So, now the&amp;#160;master branch is updated with a module of singularity functions which can handle almost all the mathematical operations.&lt;/li&gt;
-&lt;li&gt;I have used the Singularity Functions &amp;#160;to continue developing the beam bending module at &lt;a href="https://github.com/sympy/sympy/pull/11374"&gt;PR 11374&lt;/a&gt;. I have added the following methods:
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;load_as_SingularityFunction&lt;/strong&gt; &lt;/em&gt;: This is a private method which represents a PointLoad and DistributedLoad object into a Singularity Function object and stores in the load beam object attribute.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;load_distribution&lt;/strong&gt;&lt;/em&gt; : This is a public method which outputs a load distribution curve of a beam.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;shear_force :&amp;#160;&lt;/strong&gt;&lt;/em&gt;This is also a public method. It at first checks whether the moment list in boundary conditions dictionary have elements. If it has then it call the bending_moment method and then differentiate the output w.r.t to the free symbol else it just integrates the output of load_distribution method.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;bending_moment&lt;/strong&gt;&lt;/em&gt; : The initial part of this method is similar to the method shear_force. If the test passes then it integrates the load_distibution twice using contants of integrations and later the contants are solved else&amp;#160;it just integrates the output of shear_force method.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;slope&lt;/strong&gt;&lt;/em&gt; : It outputs the slope of a beam by solving the constants.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;deflection&lt;/strong&gt;&lt;/em&gt; : It outputs the elastic curve of the beam.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Modify the Beam Module.&lt;/li&gt;
-&lt;li&gt;Add Sphinx documentations.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="entry-content"&gt;
-&lt;p&gt;That&amp;#8217;s all for this week. Cheers !!&lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;
-&lt;/div&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/sampadblog.wordpress.com/841/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/sampadblog.wordpress.com/841/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=sampadblog.wordpress.com&amp;#038;blog=102728326&amp;#038;post=841&amp;#038;subd=sampadblog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://nishnik.github.io/GSoC-Seventh-Week</guid>
-      <title>GSoC Seventh Week</title>
-      <author>Nishant Nikhil (nishnik)</author>
-      <pubDate>Wed, 13 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://nishnik.github.io/GSoC-Seventh-Week/</link>
-      <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Previous week, I had started the work on Equal degree factorization &lt;a href="https://github.com/symengine/symengine/pull/1026"&gt;here&lt;/a&gt;. Here I was storing the factors in a vector and then sorting the factors. Certik pointed out that its better to use some other data structure instead of &lt;code class="highlighter-rouge"&gt;vector&lt;/code&gt;. So I have changed the container type to &lt;code class="highlighter-rouge"&gt;set&lt;/code&gt;.
-&lt;br /&gt;Then after both Distinct degree factorization and Equal degree factorization being implemented, I started to work on factoring a polynomial in finite field, this needed integrating square free factorization with these two. I worked on &lt;code class="highlighter-rouge"&gt;gf_factor()&lt;/code&gt; method. In this method we take a polynomial in a given field as input, and return all the factors and their respective powers, and polynomial&amp;#8217;s leading coefficient as output.
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;GaloisFieldDict::gf_factor() const
-{
-  integer_class lc;
-  GaloisFieldDict monic;
-  gf_monic(lc, outArg(monic));
-  if (monic.degree() &amp;lt; 1)
-      return std::make_pair(lc, factors);
-  std::vector&amp;lt;std::pair&amp;lt;GaloisFieldDict, integer_class&amp;gt;&amp;gt; sqf_list
-      = monic.gf_sqf_list();
-  for (auto a : sqf_list) {
-      auto temp = (a.first).gf_zassenhaus();
-      for (auto f : temp)
-          factors.insert({f, a.second});
-  }
-  return factors;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For a given polynomial firstly we get its monic representation and it leading coefficient. Then we find the Square free factors of the monic representation. And on each of the square free factor we run the &lt;code class="highlighter-rouge"&gt;zassenhaus&lt;/code&gt;&amp;#8217;s algorithm.
-&lt;br /&gt;
-I have been working on &lt;a href="https://github.com/nishnik/symengine/tree/gf_factor"&gt;this&lt;/a&gt; branch, will create a PR after the Equal degree factorization PR gets merged.
-&lt;br /&gt;
-Then I have started working on Shoup&amp;#8217;s algorithm for polynomial factorization, will post about it in the coming weeks.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://gxyd.github.io/GSoC Week 7</guid>
-      <title>GSoC Week 7</title>
-      <author>Gaurav Dhingra (gxyd)</author>
-      <pubDate>Sun, 10 Jul 2016 18:30:00 GMT</pubDate>
-      <link>https://gxyd.github.io/gsoc2016/gsoc_week_7.html</link>
-      <description>&lt;p&gt;
-Hi everyone.
-&lt;/p&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;p&gt;
-Here's what we have been doing for &lt;i&gt;7th&lt;/i&gt; week of &lt;i&gt;GSoC&lt;/i&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-Kalevi mentioned about the $LaTex$ not getting rendered on Planet Sympy website, thought it works fine on my website. Following the conversation Aaron opened issue &lt;a href="https://github.com/sympy/planet-sympy/issues/45"&gt;planet-sympy/issues/45&lt;/a&gt;, though it hasn't been fixed.
-&lt;/p&gt;
-
-&lt;p&gt;
-This week we completed PR &lt;a href="https://github.com/sympy/sympy/pull/11295"&gt;#11295&lt;/a&gt; on Reidemeister Schreier algorithm. Remember the &lt;a href="https://gitter.im/sympy/GroupTheory?at=5776b220cdab7a1f4fbebd34"&gt;blog issue&lt;/a&gt; I asked on our gitter channel. Kalevi suggested to be more on the 'descriptive' side.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;h4&gt;What do we do this week?&lt;/h4&gt;
-Implemented the Reidemeister Schreier algorithm (shortly RS algorithm) and Titze Transformations (shortly TT) in PR #11295 . Most of the pseudo code for RS algorithm is there in the Handbook [1], perhaps majority of the time was spent working with TT. There isn't any pseudo code available for making that work, but we gathered detailed information from [1] combined with Havas Paper [2].
-
-What issues were there?
-In the both [1] and [2], there a few assumptions made, like
-
-&lt;pre&gt;
-&gt; shall assume that all relators are always cyclically reduced; that is, that
-whenever a relator is changed, it is immediately replaced by its cyclic reduction.
-&lt;/pre&gt;
-
-&lt;/p&gt;
-
-&lt;p&gt;I opened the issue &lt;a href="https://github.com/sympy/sympy/issues/11352"&gt;#11352&lt;/a&gt; regarding a typo I left in &lt;code&gt;coset_enumeration_c&lt;/code&gt;. Though I didn't expect a PR, @kritkaran94 fixed it. Perhaps a good test case which makes use of different value of &lt;code&gt;max_stack_size&lt;/code&gt; was suggested by Kalevi. One thing came back to me, "everthing is an object in Python", the fact that initially &lt;code&gt;CosetTableDefaultMaxLimit&lt;/code&gt; was a module level variable initially and we changed it to &lt;code&gt;CosetTable.CosetTableDefaultMaxLimit&lt;/code&gt;, module is an object so is a &lt;code&gt;class&lt;/code&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;h4&gt;What hasn't been done?&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;No testing for a few of techniques, for example currently no tests exist for &lt;code&gt;elimination_technique_2&lt;/code&gt;, which is a variant of the elimination procedures.
-&lt;li&gt;TT doesn't produce the best possible result.
-&lt;/ul&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-Though doing this seemed easy at first. But I didn't wanted to apply &lt;code&gt;identity_cyclic_reduction&lt;/code&gt; every change as there can be a few instance where it not necessary to do this, perhaps because of the property of &lt;i&gt;words&lt;/i&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-The good thing about this week was that I could now understand the limitations that will remain after my GSoC project. The scope of Computational Group Theory is more than what I expected. Apart from that I will be leaving for my college this week stars from &lt;i&gt;15th&lt;/i&gt; of &lt;i&gt;July&lt;/i&gt;, perhaps I don't know how things will shift regarding time for GSoC. Let's be realistic :)
-&lt;/p&gt;
-&lt;p&gt;
-&amp;#2309;&amp;#2354;&amp;#2357;&amp;#2367;&amp;#2342;&amp;#2366;
-&lt;/p&gt;
-          &lt;h4&gt;References&lt;/h4&gt;
-                    &lt;i&gt;
-
-                    &lt;ul&gt;
-                      &lt;li&gt;1. Derek F. Holt, Bettina Eick, Bettina, Eamonn A. O'Brien, "Handbook of computational group theory", Discrete Mathematics and its Applications (Boca Raton). Chapman &amp; Hall/CRC, Boca Raton, FL, 2005. ISBN 1-5848-372-3 .&lt;/li&gt;
-
-                      &lt;li&gt;2.&lt;a href="http://staff.itee.uq.edu.au/havas/1974h.pdf"&gt; George Havas, "Reidemeister-Schreier program"&lt;/a&gt;&lt;/li&gt;
-                    &lt;/i&gt;
-                    &lt;br /&gt;
-                    &lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://shubhamtibra.wordpress.com/?p=604</guid>
-      <title>GSoC Week 7</title>
-      <author>Subham Tibra (shubhamtibra)</author>
-      <pubDate>Sun, 10 Jul 2016 17:19:17 GMT</pubDate>
-      <link>https://shubhamtibra.wordpress.com/2016/07/10/gsoc-week-7/</link>
-      <description>&lt;p&gt;I started working on the support for additional symbolic parameters in the module. So I added an extra argument in the method&amp;#160;&lt;code&gt;expr_to_holonomic&lt;/code&gt; for using custom domains. This will be helpful in integrations. For instance:&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [5]: expr_to_holonomic(sin(x*y), x=x, domain=QQ[y]).integrate(x).to_expr()
-Out[5]:
--cos(x&amp;#8901;y) + 1
-&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;
-     y
-In [15]: expr_to_holonomic(log(x*y), x=x, domain=QQ[y]).integrate((x, 1, x)).to_expr()
-Out[15]: x&amp;#8901;log(x) + x&amp;#8901;log(y) - x - log(y) + 1
-&lt;/pre&gt;
-&lt;p&gt;Code upto here was merged at&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11330"&gt;#11330&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;After that I implemented the &lt;code&gt;Frobenius method&lt;/code&gt;&amp;#160;to support functions where the series may have negative or fractional exponents. Although there are limitations in the algorithm. First one being that we don&amp;#8217;t have an algorithm to compute the general solution. There doesn&amp;#8217;t seem to be a direct algorithm if roots of the &lt;code&gt;indicial equation&lt;/code&gt;&amp;#160;differ by an integer. Second one is the initial conditions. Initial conditions of the function (most of the times they won&amp;#8217;t even exist) can&amp;#8217;t be used if the exponents are fractional or negative.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [23]: expr_to_holonomic(sqrt(x**2-x)).series()
-Out[23]:
-            3/2       5/2       7/2         9/2         11/2
-        C&amp;#8320;&amp;#8901;x      C&amp;#8320;&amp;#8901;x      C&amp;#8320;&amp;#8901;x      5&amp;#8901;C&amp;#8320;&amp;#8901;x      7&amp;#8901;C&amp;#8320;&amp;#8901;x        &amp;#9115; 6&amp;#9118;
-C&amp;#8320;&amp;#8901;&amp;#8730;x - &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; - &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; - &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; - &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; - &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; + O&amp;#9117;x &amp;#9120;
-           2         8         16        128         256            
-
-In [28]: expr_to_holonomic(cos(x)**2/x**2, initcond=False).series()
-Out[28]:
-         2         4                       3         5
-     C&amp;#8322;&amp;#8901;x    2&amp;#8901;C&amp;#8322;&amp;#8901;x    C&amp;#8321;   2&amp;#8901;C&amp;#8321;&amp;#8901;x   2&amp;#8901;C&amp;#8321;&amp;#8901;x    4&amp;#8901;C&amp;#8321;&amp;#8901;x    C&amp;#8320;    &amp;#9115; 6&amp;#9118;
-C&amp;#8322; - &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; + &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; + &amp;#9472;&amp;#9472; - &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; + &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; - &amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; + &amp;#9472;&amp;#9472; + O&amp;#9117;x &amp;#9120;
-       3        45     x      3         15       315      2
-                                                         x
-&lt;/pre&gt;
-&lt;p&gt;I will be working more on this and hope to add more functionality in this method.&lt;/p&gt;
-&lt;p&gt;Right now I am working on an algorithm to convert a given Holonomic Function to Meijer G-function. This also doesn&amp;#8217;t look so straightforward. Kalevi helped me with the theory and we wrote a basic that works for some cases. We hope to add more things in it.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [17]: hyperexpand(expr_to_holonomic(exp(x)).to_meijerg())
-Out[17]:
- x
-&amp;#8495;
-In [19]: hyperexpand(expr_to_holonomic(log(x)).to_meijerg()).simplify()
-Out[19]: log(x)
-&lt;/pre&gt;
-&lt;p&gt;These are at&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11360"&gt;#11360&lt;/a&gt;.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/shubhamtibra.wordpress.com/604/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/shubhamtibra.wordpress.com/604/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=shubhamtibra.wordpress.com&amp;#038;blog=106149936&amp;#038;post=604&amp;#038;subd=shubhamtibra&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://sampadblog.wordpress.com/?p=761</guid>
-      <title>GSoc Week 7</title>
-      <author>Sampad Saha (sampadsaha5)</author>
-      <pubDate>Sat, 09 Jul 2016 16:52:24 GMT</pubDate>
-      <link>https://sampadblog.wordpress.com/2016/07/09/gsoc-week-7/</link>
-      <description>&lt;p&gt;Hi there! It&amp;#8217;s been seven weeks into the coding period&amp;#160;and the&amp;#160;second half has started now. I had a meeting with Jason on 3&lt;sup&gt;rd&lt;/sup&gt; of July. We discussed some modifications that were needed to be done in the existing PRs. Further, we had a conversation on the beam bending module. We ended up with some good ideas regarding the&amp;#160;implementation of beam object.&lt;/p&gt;
-&lt;h4&gt;&lt;em&gt;&lt;strong&gt;So Far&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;In PR&amp;#160;&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11178"&gt;PR 11178 &lt;/a&gt;&amp;#160;and&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11237"&gt;PR 11237&lt;/a&gt;, I have added the suggested modifications.&lt;/li&gt;
-&lt;li&gt;In PR&amp;#160;&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11266"&gt;11266&lt;/a&gt;, I have done some modifications in the DistributedLoad class. Initially, it had &amp;#8220;start&amp;#8221;,&amp;#8221; end&amp;#8221; and &amp;#8220;value&amp;#8221; as its attribute but Jason suggested me to add an attribute which would denote the order of the load. This attribute would help while representing a load in the&amp;#160;form of Singularity Functions. Such as:
-&lt;ul&gt;
-&lt;li&gt;Order = 0 will denote Step Function,&lt;/li&gt;
-&lt;li&gt;Order = 1 will denote Ramp Function,&lt;/li&gt;
-&lt;li&gt;Order = 2 will denote Parabolic Ramp Function and&lt;/li&gt;
-&lt;li&gt;so on &amp;#8230;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;In the same PR, I have added some more method for taking boundary conditions explicitly for different cases such as for deflection, slope and moment as inputs. I made a private attribute &lt;em&gt;_boundary_conditions&lt;/em&gt; and initiated as an empty dictionary of lists with keywords&amp;#160;&amp;#160;deflection, slope and moment. Later on each of the methods, namely,
-&lt;ul&gt;
-&lt;li&gt;apply_boundary_conditions&lt;/li&gt;
-&lt;li&gt;apply_moment_boundary_conditions&lt;/li&gt;
-&lt;li&gt;apply_slope_boundary_conditions&lt;/li&gt;
-&lt;li&gt;apply_deflection_boundary_conditions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;just updates that dictionary. The method &lt;em&gt;boundary_conditions&lt;/em&gt; would return the dictionary itself.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;I will try to get&amp;#160;&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11178"&gt;PR 11178 &lt;/a&gt;&amp;#160;and&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11237"&gt;PR 11237&lt;/a&gt;&amp;#160;merged.&lt;/li&gt;
-&lt;li&gt;Add &lt;em&gt;apply_load&lt;/em&gt; method to the Beam class.&lt;/li&gt;
-&lt;li&gt;Successfully convert all the load inputs through the &amp;#160;&lt;em&gt;apply_load&lt;/em&gt; method into Singularity Functions.&lt;/li&gt;
-&lt;li&gt;Write methods which would output load curve, shear curve and moment curve.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;That&amp;#8217;s all for this week. Cheers !!&lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/sampadblog.wordpress.com/761/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/sampadblog.wordpress.com/761/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=sampadblog.wordpress.com&amp;#038;blog=102728326&amp;#038;post=761&amp;#038;subd=sampadblog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
     </item>
   </channel>
 </rss>
