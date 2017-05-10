@@ -8,8 +8,8 @@
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/05/04/Google-Summer-of-Code-with-SymPy</guid>
-      <title>Google Summer of Code with SymPy</title>
       <author>Shikhar Jaiswal (ShikharJ)</author>
+      <title>Shikhar Jaiswal (ShikharJ): Google Summer of Code with SymPy</title>
       <pubDate>Thu, 04 May 2017 00:00:00 GMT</pubDate>
       <link>https://shikharj.github.io//2017/05/04/Google-Summer-of-Code-with-SymPy/</link>
       <description>&lt;p&gt;&lt;img align="center" src="https://ShikharJ.github.io/assets/GSoC.png" /&gt;&lt;/p&gt;
@@ -42,8 +42,8 @@
     </item>
     <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/03/15/Hello-Blogging!</guid>
-      <title>Hello Blogging!</title>
       <author>Shikhar Jaiswal (ShikharJ)</author>
+      <title>Shikhar Jaiswal (ShikharJ): Hello Blogging!</title>
       <pubDate>Wed, 15 Mar 2017 00:00:00 GMT</pubDate>
       <link>https://shikharj.github.io//2017/03/15/Hello-Blogging!/</link>
       <description>&lt;p&gt;My very first blog post. This blog&amp;#8217;s purpose is primarily to track the progress of my GSoC project and get feedback from my mentors, if my proposal gets selected. I propose to improve upon the Python wrappers for &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt;, and work on rooting it as a symbolic backend for &lt;code class="highlighter-rouge"&gt;SymPy&lt;/code&gt; CAS, the purpose for which it has been in development for a number of years. My proposal can be found &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Shikhar-Jaiswal:-Improving-SymEngine's-Python-Wrappers-and-SymPy-SymEngine-Integration"&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -52,8 +52,8 @@
     </item>
     <item>
       <guid isPermaLink="false">https://asmeurer.github.io/blog/posts/github-reviews-gripes/</guid>
-      <title>GitHub Reviews Gripes</title>
       <author>Aaron Meurer (asmeurer)</author>
+      <title>Aaron Meurer (asmeurer): GitHub Reviews Gripes</title>
       <pubDate>Thu, 06 Oct 2016 00:12:16 GMT</pubDate>
       <link>https://asmeurer.github.io/blog/posts/github-reviews-gripes/</link>
       <description>&lt;div&gt;&lt;p&gt;&lt;em&gt;Update: I want to keep the original post intact, but I'll post any feature
@@ -301,8 +301,8 @@ right now, the reviewing of pull requests.&lt;/p&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">https://asmeurer.github.io/blog/posts/tuples/</guid>
-      <title>Tuples</title>
       <author>Aaron Meurer (asmeurer)</author>
+      <title>Aaron Meurer (asmeurer): Tuples</title>
       <pubDate>Thu, 22 Sep 2016 02:33:14 GMT</pubDate>
       <link>https://asmeurer.github.io/blog/posts/tuples/</link>
       <description>&lt;div&gt;&lt;p&gt;Today, David Beazley made some tweets:&lt;/p&gt;
@@ -559,8 +559,8 @@ about things on the left-hand side of an assignment. &lt;strong&gt;EDIT:
     </item>
     <item>
       <guid isPermaLink="false">http://nishnik.github.io/GSoC-Thirteenth-Week</guid>
-      <title>GSoC Thirteenth Week</title>
       <author>Nishant Nikhil (nishnik)</author>
+      <title>Nishant Nikhil (nishnik): GSoC Thirteenth Week</title>
       <pubDate>Fri, 02 Sep 2016 00:00:00 GMT</pubDate>
       <link>http://nishnik.github.io/GSoC-Thirteenth-Week/</link>
       <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
@@ -591,8 +591,8 @@ And a lot of implementation changes were incorporated in &lt;code class="highlig
     </item>
     <item>
       <guid isPermaLink="false">https://gxyd.github.io/GSoC GSoC 2016 Project with SymPy(wrap up): Computational Group Theory</guid>
-      <title>GSoC 2016 Project with SymPy(wrap up): Computational Group Theory</title>
       <author>Gaurav Dhingra (gxyd)</author>
+      <title>Gaurav Dhingra (gxyd): GSoC 2016 Project with SymPy(wrap up): Computational Group Theory</title>
       <pubDate>Sun, 21 Aug 2016 18:30:00 GMT</pubDate>
       <link>https://gxyd.github.io/gsoc2016/gsoc2016_project.html</link>
       <description>&lt;p&gt;
@@ -825,8 +825,8 @@ Also thank you &lt;font color="#4885ed"&gt;G&lt;/font&gt;&lt;font color="#db3236
     </item>
     <item>
       <guid isPermaLink="false">http://nishnik.github.io/GSoC-Twelfth-Week</guid>
-      <title>GSoC Twelfth Week</title>
       <author>Nishant Nikhil (nishnik)</author>
+      <title>Nishant Nikhil (nishnik): GSoC Twelfth Week</title>
       <pubDate>Sat, 20 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://nishnik.github.io/GSoC-Twelfth-Week/</link>
       <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
@@ -857,8 +857,8 @@ The PR is &lt;a href="https://github.com/symengine/symengine/pull/1066"&gt;here&
     </item>
     <item>
       <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-13</guid>
-      <title>Coding Period Week 13 - Last week and conclusion</title>
       <author>Shekhar Prasad Rajak (shekharrajak)</author>
+      <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 13 - Last week and conclusion</title>
       <pubDate>Sat, 20 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://shekharrajak.github.io/Coding-Period-week-13/</link>
       <description>&lt;hr /&gt;
@@ -902,8 +902,8 @@ The PR is &lt;a href="https://github.com/symengine/symengine/pull/1066"&gt;here&
     </item>
     <item>
       <guid isPermaLink="false">http://sampadblog.wordpress.com/?p=1042</guid>
-      <title>GSoC Week 12 and Wrap-up</title>
       <author>Sampad Saha (sampadsaha5)</author>
+      <title>Sampad Saha (sampadsaha5): GSoC Week 12 and Wrap-up</title>
       <pubDate>Fri, 19 Aug 2016 18:49:39 GMT</pubDate>
       <link>https://sampadblog.wordpress.com/2016/08/19/gsoc-week-12-and-wrap-up/</link>
       <description>&lt;p&gt;Hello all! This is officially the last week for Google Summer of Code 2016. The submission and final evaluation has already started. Last week I was busy with fixing bugs and preparing documentation for the beam module.&lt;/p&gt;
@@ -929,8 +929,8 @@ The PR is &lt;a href="https://github.com/symengine/symengine/pull/1066"&gt;here&
     </item>
     <item>
       <guid isPermaLink="false">http://rajithsays.wordpress.com/?p=445</guid>
-      <title>GSoC : Epilogue</title>
       <author>Rajith Vidanaarachchi (rajithv)</author>
+      <title>Rajith Vidanaarachchi (rajithv): GSoC : Epilogue</title>
       <pubDate>Fri, 19 Aug 2016 05:01:52 GMT</pubDate>
       <link>https://rajithsays.wordpress.com/2016/08/19/gsoc-epilogue/</link>
       <description>&lt;h2&gt;Overview:&lt;/h2&gt;
@@ -1084,8 +1084,8 @@ Changes to beginner notebook:&lt;br /&gt;
     </item>
     <item>
       <guid isPermaLink="false">http://jbm950.github.io//2016/08/19/GSoC-week-14.html</guid>
-      <title>GSoC Week 14</title>
       <author>James Milam (jbm950)</author>
+      <title>James Milam (jbm950): GSoC Week 14</title>
       <pubDate>Fri, 19 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://jbm950.github.io//2016/08/19/GSoC-week-14.html</link>
       <description>&lt;p&gt;This is the final week of GSoC! I have the write up of the work done on a
@@ -1124,8 +1124,8 @@ of learning and experiences possible.&lt;/p&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">http://srajangarg.github.io//2016/08/16/Containers-for-MPoly</guid>
-      <title>Containers for Multivariate Polynomials</title>
       <author>Srajan Garg (srajangarg)</author>
+      <title>Srajan Garg (srajangarg): Containers for Multivariate Polynomials</title>
       <pubDate>Tue, 16 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://srajangarg.github.io//2016/08/16/Containers-for-MPoly/</link>
       <description>&lt;h3 id="overview"&gt;Overview&lt;/h3&gt;
@@ -1203,8 +1203,8 @@ of learning and experiences possible.&lt;/p&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-12</guid>
-      <title>Coding Period Week 12</title>
       <author>Shekhar Prasad Rajak (shekharrajak)</author>
+      <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 12</title>
       <pubDate>Mon, 15 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://shekharrajak.github.io/Coding-Period-week-12/</link>
       <description>&lt;hr /&gt;
@@ -1298,8 +1298,8 @@ Out[5]: {2&amp;#8901;n + 1/4 | n &amp;#8714; &amp;#8484;} &amp;#8746; {5&amp;#89
     </item>
     <item>
       <guid isPermaLink="false">http://jbm950.github.io//2016/08/12/GSoC-week-13.html</guid>
-      <title>GSoC Week 13</title>
       <author>James Milam (jbm950)</author>
+      <title>James Milam (jbm950): GSoC Week 13</title>
       <pubDate>Fri, 12 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://jbm950.github.io//2016/08/12/GSoC-week-13.html</link>
       <description>&lt;p&gt;This week I spent a lot of time working on FeatherstonesMethod and its
@@ -1362,8 +1362,8 @@ separate PR&amp;#8217;s I hope to possibly include in my final evaluation.&lt;/p
     </item>
     <item>
       <guid isPermaLink="false">http://nishnik.github.io/GSoC-Eleventh-Week</guid>
-      <title>GSoC Eleventh Week</title>
       <author>Nishant Nikhil (nishnik)</author>
+      <title>Nishant Nikhil (nishnik): GSoC Eleventh Week</title>
       <pubDate>Thu, 11 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://nishnik.github.io/GSoC-Eleventh-Week/</link>
       <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
@@ -1404,8 +1404,8 @@ After &lt;a href="https://github.com/symengine/symengine/pull/1061/"&gt;this&lt;
     </item>
     <item>
       <guid isPermaLink="false">https://gxyd.github.io/GSoC Week 12</guid>
-      <title>GSoC Week 12</title>
       <author>Gaurav Dhingra (gxyd)</author>
+      <title>Gaurav Dhingra (gxyd): GSoC Week 12</title>
       <pubDate>Tue, 09 Aug 2016 18:30:00 GMT</pubDate>
       <link>https://gxyd.github.io/gsoc2016/gsoc_week_12.html</link>
       <description>&lt;p&gt;
@@ -1489,8 +1489,8 @@ One more thing, that I would start in this week though may not be completed this
     </item>
     <item>
       <guid isPermaLink="false">http://shubhamtibra.wordpress.com/?p=854</guid>
-      <title>GSoC Week 11</title>
       <author>Subham Tibra (shubhamtibra)</author>
+      <title>Subham Tibra (shubhamtibra): GSoC Week 11</title>
       <pubDate>Mon, 08 Aug 2016 10:55:52 GMT</pubDate>
       <link>https://shubhamtibra.wordpress.com/2016/08/08/gsoc-week-11/</link>
       <description>&lt;p&gt;This week I primarily worked on some bugs and added singular initial conditions to the result of &lt;code&gt;expr_to_holonomic()&lt;/code&gt;.&lt;/p&gt;
@@ -1520,8 +1520,8 @@ x&amp;#8901;&amp;#8495;
     </item>
     <item>
       <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-11</guid>
-      <title>Coding Period Week 11</title>
       <author>Shekhar Prasad Rajak (shekharrajak)</author>
+      <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 11</title>
       <pubDate>Sun, 07 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://shekharrajak.github.io/Coding-Period-week-11/</link>
       <description>&lt;hr /&gt;
@@ -1635,8 +1635,8 @@ ConditionSet(x, -Abs(re(y)) &amp;lt;= re(x) and re(x) &amp;lt;= Abs(re(y)) and r
     </item>
     <item>
       <guid isPermaLink="false">http://sampadblog.wordpress.com/?p=1005</guid>
-      <title>GSoC Week 11</title>
       <author>Sampad Saha (sampadsaha5)</author>
+      <title>Sampad Saha (sampadsaha5): GSoC Week 11</title>
       <pubDate>Sat, 06 Aug 2016 12:59:00 GMT</pubDate>
       <link>https://sampadblog.wordpress.com/2016/08/06/gsoc-week-11/</link>
       <description>&lt;p&gt;Hi there! It&amp;#8217;s been eleven weeks into GSoC . The module for solving beam bending problems is almost ready. Now, I am focusing fully on example documentation part because it&amp;#8217;s very important to let others know what&amp;#160;can be done.&lt;/p&gt;
@@ -1665,8 +1665,8 @@ ConditionSet(x, -Abs(re(y)) &amp;lt;= re(x) and re(x) &amp;lt;= Abs(re(y)) and r
     </item>
     <item>
       <guid isPermaLink="false">http://jbm950.github.io//2016/08/05/GSoC-week-12.html</guid>
-      <title>GSoC Week 12</title>
       <author>James Milam (jbm950)</author>
+      <title>James Milam (jbm950): GSoC Week 12</title>
       <pubDate>Fri, 05 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://jbm950.github.io//2016/08/05/GSoC-week-12.html</link>
       <description>&lt;p&gt;This week my main work was on Featherstone&amp;#8217;s articulated body algorithm. I
@@ -1734,8 +1734,8 @@ best.&lt;/p&gt;
     </item>
     <item>
       <guid isPermaLink="false">http://nishnik.github.io/GSoC-Tenth-Week</guid>
-      <title>GSoC Tenth Week</title>
       <author>Nishant Nikhil (nishnik)</author>
+      <title>Nishant Nikhil (nishnik): GSoC Tenth Week</title>
       <pubDate>Fri, 05 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://nishnik.github.io/GSoC-Tenth-Week/</link>
       <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
@@ -1789,8 +1789,8 @@ Apart from it, the &lt;code class="highlighter-rouge"&gt;set_intersection&lt;/co
     </item>
     <item>
       <guid isPermaLink="false">http://shubhamtibra.wordpress.com/?p=780</guid>
-      <title>GSoC Week 10</title>
       <author>Subham Tibra (shubhamtibra)</author>
+      <title>Subham Tibra (shubhamtibra): GSoC Week 10</title>
       <pubDate>Mon, 01 Aug 2016 07:31:06 GMT</pubDate>
       <link>https://shubhamtibra.wordpress.com/2016/08/01/gsoc-week-10/</link>
       <description>&lt;p&gt;Started off this week by continuing my work on &lt;a href="https://github.com/sympy/sympy/pull/11422"&gt;#11422&lt;/a&gt;. I added support for singular initial conditions in multiplication and made some amendments in addition too. They now can return a Holonomic function with singular initial condition. The input functions can have singular initial condition both or one of them can have singular one and the other one with ordinary initial condition.&lt;/p&gt;
@@ -1867,8 +1867,8 @@ x &amp;#8901;y
     </item>
     <item>
       <guid isPermaLink="false">http://srajangarg.github.io//2016/08/01/Multivariate-Polynomails</guid>
-      <title>Multivariate Polynomials</title>
       <author>Srajan Garg (srajangarg)</author>
+      <title>Srajan Garg (srajangarg): Multivariate Polynomials</title>
       <pubDate>Mon, 01 Aug 2016 00:00:00 GMT</pubDate>
       <link>http://srajangarg.github.io//2016/08/01/Multivariate-Polynomails/</link>
       <description>&lt;h3 id="overview"&gt;Overview&lt;/h3&gt;
@@ -1906,8 +1906,8 @@ x &amp;#8901;y
     </item>
     <item>
       <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-10</guid>
-      <title>Coding Period Week 10</title>
       <author>Shekhar Prasad Rajak (shekharrajak)</author>
+      <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 10</title>
       <pubDate>Sat, 30 Jul 2016 00:00:00 GMT</pubDate>
       <link>http://shekharrajak.github.io/Coding-Period-week-10/</link>
       <description>&lt;hr /&gt;
@@ -1971,8 +1971,8 @@ returning more simplified solution( &lt;a href="https://github.com/sympy/sympy/p
     </item>
     <item>
       <guid isPermaLink="false">http://sampadblog.wordpress.com/?p=985</guid>
-      <title>GSoC Week 10</title>
       <author>Sampad Saha (sampadsaha5)</author>
+      <title>Sampad Saha (sampadsaha5): GSoC Week 10</title>
       <pubDate>Fri, 29 Jul 2016 11:20:44 GMT</pubDate>
       <link>https://sampadblog.wordpress.com/2016/07/29/gsoc-week-10/</link>
       <description>&lt;p&gt;Hello, guys. Welcome back.&amp;#160;It&amp;#8217;s been ten weeks into the coding period. I had a meeting with Jason on 25th of this month. We discussed many new changed on the API that I had implemented before this week. Now, the beam bending module is almost ready to solve beam bending problems.&lt;/p&gt;
@@ -2036,8 +2036,8 @@ returning more simplified solution( &lt;a href="https://github.com/sympy/sympy/p
     </item>
     <item>
       <guid isPermaLink="false">http://jbm950.github.io//2016/07/29/GSoC-week-11.html</guid>
-      <title>GSoC Week 11</title>
       <author>James Milam (jbm950)</author>
+      <title>James Milam (jbm950): GSoC Week 11</title>
       <pubDate>Fri, 29 Jul 2016 00:00:00 GMT</pubDate>
       <link>http://jbm950.github.io//2016/07/29/GSoC-week-11.html</link>
       <description>&lt;p&gt;Somehow I think I was off by a week. I think last week&amp;#8217;s blog post covers week
@@ -2103,8 +2103,8 @@ processing methods.&lt;/p&gt;
     </item>
     <item>
       <guid isPermaLink="false">http://nishnik.github.io/GSoC-Ninth-Week</guid>
-      <title>GSoC Ninth Week</title>
       <author>Nishant Nikhil (nishnik)</author>
+      <title>Nishant Nikhil (nishnik): GSoC Ninth Week</title>
       <pubDate>Thu, 28 Jul 2016 00:00:00 GMT</pubDate>
       <link>http://nishnik.github.io/GSoC-Ninth-Week/</link>
       <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
@@ -2135,8 +2135,8 @@ Then I started working on change of base class of &lt;code class="highlighter-ro
     </item>
     <item>
       <guid isPermaLink="false">http://shubhamtibra.wordpress.com/?p=663</guid>
-      <title>GSoC Week 8 and 9</title>
       <author>Subham Tibra (shubhamtibra)</author>
+      <title>Subham Tibra (shubhamtibra): GSoC Week 8 and 9</title>
       <pubDate>Sun, 24 Jul 2016 18:28:08 GMT</pubDate>
       <link>https://shubhamtibra.wordpress.com/2016/07/24/gsoc-week-8-and-9/</link>
       <description>&lt;p&gt;I couldn&amp;#8217;t write a blog post last week so including progress of week 8 and 9 both here.&lt;/p&gt;
@@ -2203,8 +2203,8 @@ Out[7]: &amp;#8730;x&amp;#8901;(1 + &amp;#8730;2)
     </item>
     <item>
       <guid isPermaLink="false">http://rajithsays.wordpress.com/?p=416</guid>
-      <title>GSoC Week 9 Progress</title>
       <author>Rajith Vidanaarachchi (rajithv)</author>
+      <title>Rajith Vidanaarachchi (rajithv): GSoC Week 9 Progress</title>
       <pubDate>Sun, 24 Jul 2016 18:26:27 GMT</pubDate>
       <link>https://rajithsays.wordpress.com/2016/07/24/gsoc-week-9-progress/</link>
       <description>&lt;p&gt;In the &lt;a href="https://rajithsays.wordpress.com/2016/07/16/gsoc-week-8-progress/"&gt;last blog post&lt;/a&gt; I reported that lambdify function was fully wrapped. Yes, that&amp;#8217;s what I thought at the time! But it did indeed dragged on quite a bit, requiring many changes, which were very educative for me in terms of how Ruby looks at user experience. Several changes were done, including structural changes on calling lambdify, and for supporting older Ruby versions. The really interesting and long discussions on this can be viewed in the &lt;a href="https://github.com/symengine/symengine.rb/pull/61" target="_blank"&gt;PR 61&lt;/a&gt;.&lt;/p&gt;
@@ -2252,8 +2252,8 @@ irb(main):005:0&amp;gt;&lt;/pre&gt;
     </item>
     <item>
       <guid isPermaLink="false">http://srajangarg.github.io//2016/07/23/Rational-Polynomials-ft-Bugs</guid>
-      <title>Rational Polynomials ft. Bugs</title>
       <author>Srajan Garg (srajangarg)</author>
+      <title>Srajan Garg (srajangarg): Rational Polynomials ft. Bugs</title>
       <pubDate>Sat, 23 Jul 2016 00:00:00 GMT</pubDate>
       <link>http://srajangarg.github.io//2016/07/23/Rational-Polynomials-ft-Bugs/</link>
       <description>&lt;h3 id="overview"&gt;Overview&lt;/h3&gt;
