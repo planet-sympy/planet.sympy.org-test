@@ -89,6 +89,176 @@
 
     <div class="container">
          <div class="day">
+<h2 class="dayform">May 16, 2017</h2>
+<div class="channelgroup ">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		    <div class="box" class="item feed-f175fea9 feed-" id="item-27236248">
+			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
+			    	<table class="table borderless table-condensed">
+			    		<tr>
+			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
+			    				<div style="margin-right:5px;">
+				    				 <img src="hackergotchi/ShikharJ.jpg"/> 
+				    				
+				    			</div>
+			    			</td>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row" style="margin-top:15px;">
+					    			<div class="col-md-8">
+							    		<a href="">Shikhar Jaiswal (ShikharJ) </a>
+							    	</div>
+							    	<div class="col-md-4 dtdate">
+							    		<a href="https://shikharj.github.io//2017/05/16/Community-Bonding-Progress-Report/">00:00, Tuesday, 16 May UTC</a>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    		<tr>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row">
+							    	<div class="col-md-12 col-xs-12">
+							    		<h4><a class="boxh2" href="https://shikharj.github.io//2017/05/16/Community-Bonding-Progress-Report/">Shikhar Jaiswal (ShikharJ): Community Bonding - Progress Report</a></h4>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    	</table>
+			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
+			    		 <img src="hackergotchi/ShikharJ.jpg"/> 
+			    		
+			    	</div>
+			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
+			    		<div class="row">
+			    			<div class="col-md-8">
+					    		<a href="">Shikhar Jaiswal (ShikharJ) </a>
+					    	</div>
+					    	<div class="col-md-4 dtdate">
+					    		<a href="https://shikharj.github.io//2017/05/16/Community-Bonding-Progress-Report/">00:00, Tuesday, 16 May UTC</a>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12 col-xs-12">
+					    		<h4><a class="boxh2" href="https://shikharj.github.io//2017/05/16/Community-Bonding-Progress-Report/">Community Bonding - Progress Report</a></h4>
+					    	</div>
+					    </div>
+				    </div-->
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 descript">
+						<p>Hello there!
+It is the half-time in Community Bonding period, which will be officially closed in a couple of weeks. Since its been two weeks since I last posted, I thought it would be better to provide an update about the progress made.</p>
+
+<h3 id="community-bonding">Community Bonding</h3>
+
+<p>I had a number of conversations with <a href="https://github.com/isuruf">Isuru</a>, a lot of which cornered around PR reviews and workarounds, and the plans for the next two weeks.</p>
+
+<p>As a part of the community bonding, I&#8217;m becoming comfortable with <code class="highlighter-rouge">Cython</code> syntax and programming nuances by the day. Though I&#8217;m not completely thorough with the language, I think undertaking some amount of work would be the best way through.
+Here is a gist of the work I undertook till now:</p>
+
+<p><strong>Merged</strong></p>
+
+<p><strong>SymEngine</strong></p>
+
+<p><a href="https://github.com/symengine/symengine/pull/1269">#1269</a> Implemented additional functionalities for class <code class="highlighter-rouge">DenseMatrix</code></p>
+
+<p><strong>SymEngine.py</strong></p>
+
+<p><a href="https://github.com/symengine/symengine.py/pull/140">#140</a> Implemented <code class="highlighter-rouge">Float</code> class and ported functions to <code class="highlighter-rouge">sympy/sympy_compat.py</code></p>
+
+<p><a href="https://github.com/symengine/symengine.py/pull/129">#129</a> Introduced <code class="highlighter-rouge">MutableDenseMatrix</code> and <code class="highlighter-rouge">ImmutableDenseMatrix</code> in <code class="highlighter-rouge">symengine_wrapper.pyx</code></p>
+
+<p><strong>Pending</strong></p>
+
+<p><strong>SymEngine</strong></p>
+
+<p><a href="https://github.com/symengine/symengine/pull/1267">#1267</a> Removing redundant <code class="highlighter-rouge">inline</code> declarations and moving implementations to <code class="highlighter-rouge">.cpp</code> files from the headers</p>
+
+<p><a href="https://github.com/symengine/symengine/pull/1251">#1251</a> Applying <code class="highlighter-rouge">-Wsign-conversion</code> flag and fixing the warnings</p>
+
+<p><strong>SymEngine.py</strong></p>
+
+<p><a href="https://github.com/symengine/symengine.py/pull/128">#128</a> Making <code class="highlighter-rouge">Subs</code> and <code class="highlighter-rouge">Derivative</code> classes closer to their <code class="highlighter-rouge">SymPy</code> implementations</p>
+
+<p><a href="https://github.com/symengine/symengine.py/pull/126">#126</a> Wrapping <code class="highlighter-rouge">Min</code> and <code class="highlighter-rouge">Max</code> functions from SymPy</p>
+
+<p><code class="highlighter-rouge">SymEngine.py</code> has a planned release (<code class="highlighter-rouge">0.3.0</code>) scheduled for the 29th of this month, right before the official coding period begins. Hence, I will most probably be working on the pending PRs in the coming days.</p>
+
+<p>In my proposal, I had also planned on porting over <code class="highlighter-rouge">SymEngine</code> as a backend for simpler modules such as <code class="highlighter-rouge">Physics</code> and <code class="highlighter-rouge">Parsing</code>, which would be my main goal for now, and I&#8217;ll continue with this till the Community Bonding period ends.</p>
+
+<p>Catch you later!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="day">
+<h2 class="dayform">May 12, 2017</h2>
+<div class="channelgroup ">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		    <div class="box" class="item feed-29fba86e feed-" id="item-c20d1164">
+			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
+			    	<table class="table borderless table-condensed">
+			    		<tr>
+			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
+			    				<div style="margin-right:5px;">
+				    				 <img src="hackergotchi/valglad.jpg"/> 
+				    				
+				    			</div>
+			    			</td>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row" style="margin-top:15px;">
+					    			<div class="col-md-8">
+							    		<a href="">Valeriia Gladkova (valglad) </a>
+							    	</div>
+							    	<div class="col-md-4 dtdate">
+							    		<a href="http://valglad.github.io/2017/05/12/plan/">00:00, Friday, 12 May UTC</a>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    		<tr>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row">
+							    	<div class="col-md-12 col-xs-12">
+							    		<h4><a class="boxh2" href="http://valglad.github.io/2017/05/12/plan/">Valeriia Gladkova (valglad): The plan</a></h4>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    	</table>
+			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
+			    		 <img src="hackergotchi/valglad.jpg"/> 
+			    		
+			    	</div>
+			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
+			    		<div class="row">
+			    			<div class="col-md-8">
+					    		<a href="">Valeriia Gladkova (valglad) </a>
+					    	</div>
+					    	<div class="col-md-4 dtdate">
+					    		<a href="http://valglad.github.io/2017/05/12/plan/">00:00, Friday, 12 May UTC</a>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12 col-xs-12">
+					    		<h4><a class="boxh2" href="http://valglad.github.io/2017/05/12/plan/">The plan</a></h4>
+					    	</div>
+					    </div>
+				    </div-->
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 descript">
+						<p>This blog will follow the progress of my GSoC 2017 project for SymPy. My primary goal is to implement group homomorphisms and set it up in such a way that certain finite presentation groups (implemented as an FpGroup class in SymPy) could be considered as permutation groups via an isomorphism. That would be good because SymPy already has many group-theoretic algorithms implemented for perm groups. To get this to work, I will also need to implement rewriting systems for FpGroups. You can see my application for details.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="day">
 <h2 class="dayform">May 04, 2017</h2>
 <div class="channelgroup ">
 	<div class="row">
@@ -3860,211 +4030,6 @@ Out[7]: &#8730;x&#8901;(1 + &#8730;2)
 			</div>
 		</div>
 	</div>
-</div><div class="channelgroup ">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-19a67809 feed-" id="item-39d954bc">
-			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
-			    	<table class="table borderless table-condensed">
-			    		<tr>
-			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
-			    				<div style="margin-right:5px;">
-				    				 <img src="hackergotchi/rajithv.jpg"/> 
-				    				
-				    			</div>
-			    			</td>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row" style="margin-top:15px;">
-					    			<div class="col-md-8">
-							    		<a href="">Rajith Vidanaarachchi (rajithv) </a>
-							    	</div>
-							    	<div class="col-md-4 dtdate">
-							    		<a href="https://rajithsays.wordpress.com/2016/07/24/gsoc-week-9-progress/">18:26, Sunday, 24 July UTC</a>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    		<tr>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row">
-							    	<div class="col-md-12 col-xs-12">
-							    		<h4><a class="boxh2" href="https://rajithsays.wordpress.com/2016/07/24/gsoc-week-9-progress/">Rajith Vidanaarachchi (rajithv): GSoC Week 9 Progress</a></h4>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    	</table>
-			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
-			    		 <img src="hackergotchi/rajithv.jpg"/> 
-			    		
-			    	</div>
-			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
-			    		<div class="row">
-			    			<div class="col-md-8">
-					    		<a href="">Rajith Vidanaarachchi (rajithv) </a>
-					    	</div>
-					    	<div class="col-md-4 dtdate">
-					    		<a href="https://rajithsays.wordpress.com/2016/07/24/gsoc-week-9-progress/">18:26, Sunday, 24 July UTC</a>
-					    	</div>
-					    </div>
-					    <div class="row">
-					    	<div class="col-md-12 col-xs-12">
-					    		<h4><a class="boxh2" href="https://rajithsays.wordpress.com/2016/07/24/gsoc-week-9-progress/">GSoC Week 9 Progress</a></h4>
-					    	</div>
-					    </div>
-				    </div-->
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 descript">
-						<p>In the <a href="https://rajithsays.wordpress.com/2016/07/16/gsoc-week-8-progress/">last blog post</a> I reported that lambdify function was fully wrapped. Yes, that&#8217;s what I thought at the time! But it did indeed dragged on quite a bit, requiring many changes, which were very educative for me in terms of how Ruby looks at user experience. Several changes were done, including structural changes on calling lambdify, and for supporting older Ruby versions. The really interesting and long discussions on this can be viewed in the <a href="https://github.com/symengine/symengine.rb/pull/61" target="_blank">PR 61</a>.</p>
-<p>Apart from that, simultaneously I started reading and exchanging ideas on exception handling. It was agreed that in the C wrappers, an error code to be returned, which can be accessed from the Ruby wrapper, which in turn can raise a Ruby exception. The preliminary model can be seen in <a href="https://github.com/symengine/symengine/pull/1044" target="_blank">PR 1044</a> in SymEngine and <a href="https://github.com/symengine/symengine.rb/pull/64" target="_blank">PR 64</a> in SymEngine Ruby wrapper.</p>
-<p>Right now any exception is caught and sent to the Ruby Wrapper with an error code of -1, which raises a generic Runtime Error in Ruby. Although not very informative, this is helpful in prevention of crashing the Ruby runtime.</p>
-<p>To illustrate, when the following code (a division by zero) is run before and after is shown.</p>
-<p>Before:</p>
-<pre>irb(main):001:0&gt; require 'symengine'
-=&gt; true
-irb(main):002:0&gt; x = SymEngine(1)
-=&gt; #&lt;SymEngine::Integer(1)&gt;
-irb(main):003:0&gt; y = SymEngine(0)
-=&gt; #&lt;SymEngine::Integer(0)&gt;
-irb(main):004:0&gt; x/y
-terminate called after throwing an instance of 'Teuchos::NullReferenceError'
-&#160; what():&#160; /home/rajith/Development/symengine/symengine/utilities/teuchos/Teuchos_RCPNode.cpp:720:
-
-Throw number = 1
-
-Throw test that evaluated to true: true
-
-Teuchos::RCP&lt;SymEngine::Basic const&gt; : You can not call operator-&gt;() or operator*() if getRawPtr()==0!
-
-Abort caught. Printing stacktrace:
-
-Traceback (most recent call last):
-
-Done.
-[2]&#160;&#160;&#160; 590 abort (core dumped)&#160; irb</pre>
-<p>After:</p>
-<pre>irb(main):001:0&gt; require 'symengine'
-=&gt; true
-irb(main):002:0&gt; x = SymEngine(1)
-=&gt; #&lt;SymEngine::Integer(1)&gt;
-irb(main):003:0&gt; y = SymEngine(0)
-=&gt; #&lt;SymEngine::Integer(0)&gt;
-irb(main):004:0&gt; x/y
-RuntimeError: Runtime Error
-&#160;&#160; &#160;from (irb):4:in `/'
-&#160;&#160; &#160;from (irb):4
-&#160;&#160; &#160;from /usr/bin/irb:11:in `&lt;main&gt;'
-irb(main):005:0&gt;</pre>
-<p>This is a good improvement overall, but as it&#8217;s nicer to have a more descriptive error shown to the user, that part will be the continuation of exception handling during the 10th week.</p>
-<p>See you next week!</p><br />  <a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/416/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/416/" /></a> <img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&#038;blog=110498904&#038;post=416&#038;subd=rajithsays&#038;ref=&#038;feed=1" width="1" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div></div>
-<div class="day">
-<h2 class="dayform">July 23, 2016</h2>
-<div class="channelgroup ">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-aa06d76d feed-" id="item-4fa2aa45">
-			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
-			    	<table class="table borderless table-condensed">
-			    		<tr>
-			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
-			    				<div style="margin-right:5px;">
-				    				 <img src="hackergotchi/srajangarg.jpg"/> 
-				    				
-				    			</div>
-			    			</td>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row" style="margin-top:15px;">
-					    			<div class="col-md-8">
-							    		<a href="">Srajan Garg (srajangarg) </a>
-							    	</div>
-							    	<div class="col-md-4 dtdate">
-							    		<a href="http://srajangarg.github.io//2016/07/23/Rational-Polynomials-ft-Bugs/">00:00, Saturday, 23 July UTC</a>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    		<tr>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row">
-							    	<div class="col-md-12 col-xs-12">
-							    		<h4><a class="boxh2" href="http://srajangarg.github.io//2016/07/23/Rational-Polynomials-ft-Bugs/">Srajan Garg (srajangarg): Rational Polynomials ft. Bugs</a></h4>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    	</table>
-			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
-			    		 <img src="hackergotchi/srajangarg.jpg"/> 
-			    		
-			    	</div>
-			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
-			    		<div class="row">
-			    			<div class="col-md-8">
-					    		<a href="">Srajan Garg (srajangarg) </a>
-					    	</div>
-					    	<div class="col-md-4 dtdate">
-					    		<a href="http://srajangarg.github.io//2016/07/23/Rational-Polynomials-ft-Bugs/">00:00, Saturday, 23 July UTC</a>
-					    	</div>
-					    </div>
-					    <div class="row">
-					    	<div class="col-md-12 col-xs-12">
-					    		<h4><a class="boxh2" href="http://srajangarg.github.io//2016/07/23/Rational-Polynomials-ft-Bugs/">Rational Polynomials ft. Bugs</a></h4>
-					    	</div>
-					    </div>
-				    </div-->
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 descript">
-						<h3 id="overview">Overview</h3>
-
-<p>Sorry I haven&#8217;t been able to report my work for about two weeks now. Things have become slower mainly due to the fact that my university has resumed and along with it a heavily packed timetable and assignments in the first week don&#8217;t help. I also caught a bad fever the past week which really hindered my progress, but it&#8217;s dying down and I will resume my work with full vigor eventually.</p>
-
-<p>The work I did do has been summarized below.</p>
-
-<h3 id="bug-fixes">Bug Fixes</h3>
-
-<p>While writing the code for the rational polynomials, as mentioned in the last blogpost, I encountered various bugs. Some of them caused other bugs to be exposed, which took a lot of time for me to debug.</p>
-
-<ul>
-  <li>
-    <p><code class="highlighter-rouge">pow(Poly, uint)</code> was throwing a segmentation fault. After digging in and wasting more than four hours on unrelated checks I figured out that the <code class="highlighter-rouge">eq</code> inside the polynomial class was incorrect. Without checking whether the other parameter was a <code class="highlighter-rouge">Poly</code> or not, I was <code class="highlighter-rouge">static_cast</code>ing it which posed a problem.</p>
-  </li>
-  <li>
-    <p>The happiness was shortlived, as the bug persisted. On further inspection I found that the polynomial was being treated as a number! This was because <code class="highlighter-rouge">is_a_Number</code> relied on typecodes, and the polynomial types were defined before the <code class="highlighter-rouge">NUMBERWRAPPER</code> class, which deemed them numbers. The fix for this was simple, just move the polynomial type code definitions after the numbers.</p>
-  </li>
-  <li>
-    <p>The <code class="highlighter-rouge">pow</code> tests pass, but what&#8217;s this? All the <code class="highlighter-rouge">MSVC</code> builds on appveyor fail. They all fail a <code class="highlighter-rouge">coeff</code> test. Wow, I had not changed any code related to <code class="highlighter-rouge">coeff</code> at all, how does it affect that specific test and only on the <code class="highlighter-rouge">MSVC</code> compiler? This kept me wondering and looking at the source for a day. Finally, I had to login to the VM of appveyor running the tests. I was not familiar with windows development environment at all, which was the reason I failed a couple of times before I gave up debugging. The next morning I woke up determined to fix this Windows bug, I set the break points in Visual Studio and started the code execution. I found it! It was a bug in the <code class="highlighter-rouge">CoeffVisitor</code> itself. The code for the <code class="highlighter-rouge">coeff</code> function was incomplete. Why wasn&#8217;t this bug being captured before? Probably because the previous change (in the typecodes) caused a reordering in  a map, which no other compiler was doing. Do read up <a href="https://github.com/symengine/symengine/pull/1033#issuecomment-232973025">here</a> for more details.</p>
-  </li>
-  <li>
-    <p>An appveyor build was failing for unknown reason, which had to be shifted to allowed failures</p>
-  </li>
-</ul>
-
-<p>This was basically the components of <a href="https://github.com/symengine/symengine/pull/1033">#1033</a>. Less quantity of changes, but really important none the less.</p>
-
-<h3 id="rational-polynomials">Rational Polynomials</h3>
-
-<p>The work with rational polynomials continues. I had underestimated the amount of work required, and I also feel that I should have broken down rational polynomials into three parts each, just like integer polynomials. Right now, the work continues in <a href="https://github.com/symengine/symengine/pull/1028">#1028</a>, but it&#8217;s soon going to become huge with all varieties of changes.</p>
-
-<h3 id="miscellaneous">Miscellaneous</h3>
-
-<p>I finally benchmarked <a href="https://github.com/sakra/cotire">cotire</a> to see how much speedup it was providing to SymEngine builds. <a href="https://github.com/symengine/symengine/issues/1023">Here</a> is the short summary of the speedups obtained, and the work to include it is in <a href="https://github.com/symengine/symengine/pull/1041">#1041</a>.</p>
-
-<p>Also a small bug was present in our flint and gmp rational number wrappers. We were not canonicalizing on construction from two integers. It was fixed in <a href="https://github.com/symengine/symengine/pull/1031">#1031</a>.</p>
-
-<p>Laters!</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </div></div>
 <br><p><a href="index1.html" class="btn btn-mat"><span class="icon-kdeArrowLeft"></span> Older blog entries</a></p>
 
@@ -4093,92 +4058,98 @@ irb(main):005:0&gt;</pre>
 <tr class="feedsrow">
 <td><a href="https://asmeurer.github.io/blog/">Aaron Meurer's Blog</a></td>
 <td><a class="xmlbutton" href="http://www.asmeurer.com/blog/rss.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://aktech.github.io/blog">Amit Kumar</a></td>
 <td><a class="xmlbutton" href="http://iamit.in/blog/feeds/sympy.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://gxyd.github.io">Gaurav Dhingra</a></td>
 <td><a class="xmlbutton" href="https://gxyd.github.io/feeds/atom.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td>http://kshitij10496.github.io/feed.xml</td>
 <td><a class="xmlbutton" href="http://kshitij10496.github.io/feed.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td>http://sartajsingh.me/feeds/sympy.xml</td>
 <td><a class="xmlbutton" href="http://sartajsingh.me/feeds/sympy.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://isuruf.blogspot.com/">Isuru Fernando's blog</a></td>
 <td><a class="xmlbutton" href="http://isuruf.blogspot.com/feeds/posts/default">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://jbm950.github.io">James Milam</a></td>
 <td><a class="xmlbutton" href="http://jbm950.github.io/feed.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://nishnik.github.io/">Nishant Nikhil</a></td>
 <td><a class="xmlbutton" href="http://nishnik.github.io/feed.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://sampadblog.wordpress.com">Sampad Saha</a></td>
 <td><a class="xmlbutton" href="https://sampadblog.wordpress.com/feed/">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://shekharrajak.github.io">Shekhar Prasad Rajak</a></td>
 <td><a class="xmlbutton" href="http://shekharrajak.github.io/feed.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://shikharj.github.io//">Shikhar Jaiswal</a></td>
 <td><a class="xmlbutton" href="https://ShikharJ.github.io/feed.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://srajangarg.github.io//">Srajan Garg</a></td>
 <td><a class="xmlbutton" href="http://srajangarg.github.io/feed.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://shubhamtibra.wordpress.com">Subham Tibra</a></td>
 <td><a class="xmlbutton" href="https://shubhamtibra.wordpress.com/feed/">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://sumith1896.github.io//">Sumith</a></td>
 <td><a class="xmlbutton" href="http://sumith1896.github.io/feeds/feed.sympy.xml">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://rajithsays.wordpress.com">SymEngine &#8211; Rajith says&#8230;</a></td>
 <td><a class="xmlbutton" href="https://rajithsays.wordpress.com/category/symengine/feed/">XML</a></td>
-<td>21:30, Wednesday, 10 May</td>
-<td>21:45, Wednesday, 10 May</td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
+</tr>
+<tr class="feedsrow">
+<td><a href="http://valglad.github.io/">SymPy Group Theory (GSoC 2017)</a></td>
+<td><a class="xmlbutton" href="https://valglad.github.io/feed.xml">XML</a></td>
+<td>14:52, Wednesday, 17 May</td>
+<td>15:07, Wednesday, 17 May</td>
 </tr>
 </table>
 

@@ -7,6 +7,62 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://shikharj.github.io//2017/05/16/Community-Bonding-Progress-Report</guid>
+      <author>Shikhar Jaiswal (ShikharJ)</author>
+      <title>Shikhar Jaiswal (ShikharJ): Community Bonding - Progress Report</title>
+      <pubDate>Tue, 16 May 2017 00:00:00 GMT</pubDate>
+      <link>https://shikharj.github.io//2017/05/16/Community-Bonding-Progress-Report/</link>
+      <description>&lt;p&gt;Hello there!
+It is the half-time in Community Bonding period, which will be officially closed in a couple of weeks. Since its been two weeks since I last posted, I thought it would be better to provide an update about the progress made.&lt;/p&gt;
+
+&lt;h3 id="community-bonding"&gt;Community Bonding&lt;/h3&gt;
+
+&lt;p&gt;I had a number of conversations with &lt;a href="https://github.com/isuruf"&gt;Isuru&lt;/a&gt;, a lot of which cornered around PR reviews and workarounds, and the plans for the next two weeks.&lt;/p&gt;
+
+&lt;p&gt;As a part of the community bonding, I&amp;#8217;m becoming comfortable with &lt;code class="highlighter-rouge"&gt;Cython&lt;/code&gt; syntax and programming nuances by the day. Though I&amp;#8217;m not completely thorough with the language, I think undertaking some amount of work would be the best way through.
+Here is a gist of the work I undertook till now:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Merged&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SymEngine&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/symengine/symengine/pull/1269"&gt;#1269&lt;/a&gt; Implemented additional functionalities for class &lt;code class="highlighter-rouge"&gt;DenseMatrix&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SymEngine.py&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/symengine/symengine.py/pull/140"&gt;#140&lt;/a&gt; Implemented &lt;code class="highlighter-rouge"&gt;Float&lt;/code&gt; class and ported functions to &lt;code class="highlighter-rouge"&gt;sympy/sympy_compat.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/symengine/symengine.py/pull/129"&gt;#129&lt;/a&gt; Introduced &lt;code class="highlighter-rouge"&gt;MutableDenseMatrix&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;ImmutableDenseMatrix&lt;/code&gt; in &lt;code class="highlighter-rouge"&gt;symengine_wrapper.pyx&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pending&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SymEngine&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/symengine/symengine/pull/1267"&gt;#1267&lt;/a&gt; Removing redundant &lt;code class="highlighter-rouge"&gt;inline&lt;/code&gt; declarations and moving implementations to &lt;code class="highlighter-rouge"&gt;.cpp&lt;/code&gt; files from the headers&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/symengine/symengine/pull/1251"&gt;#1251&lt;/a&gt; Applying &lt;code class="highlighter-rouge"&gt;-Wsign-conversion&lt;/code&gt; flag and fixing the warnings&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SymEngine.py&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/symengine/symengine.py/pull/128"&gt;#128&lt;/a&gt; Making &lt;code class="highlighter-rouge"&gt;Subs&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Derivative&lt;/code&gt; classes closer to their &lt;code class="highlighter-rouge"&gt;SymPy&lt;/code&gt; implementations&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/symengine/symengine.py/pull/126"&gt;#126&lt;/a&gt; Wrapping &lt;code class="highlighter-rouge"&gt;Min&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Max&lt;/code&gt; functions from SymPy&lt;/p&gt;
+
+&lt;p&gt;&lt;code class="highlighter-rouge"&gt;SymEngine.py&lt;/code&gt; has a planned release (&lt;code class="highlighter-rouge"&gt;0.3.0&lt;/code&gt;) scheduled for the 29th of this month, right before the official coding period begins. Hence, I will most probably be working on the pending PRs in the coming days.&lt;/p&gt;
+
+&lt;p&gt;In my proposal, I had also planned on porting over &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt; as a backend for simpler modules such as &lt;code class="highlighter-rouge"&gt;Physics&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Parsing&lt;/code&gt;, which would be my main goal for now, and I&amp;#8217;ll continue with this till the Community Bonding period ends.&lt;/p&gt;
+
+&lt;p&gt;Catch you later!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://valglad.github.io/2017/05/12/plan</guid>
+      <author>Valeriia Gladkova (valglad)</author>
+      <title>Valeriia Gladkova (valglad): The plan</title>
+      <pubDate>Fri, 12 May 2017 00:00:00 GMT</pubDate>
+      <link>http://valglad.github.io/2017/05/12/plan/</link>
+      <description>&lt;p&gt;This blog will follow the progress of my GSoC 2017 project for SymPy. My primary goal is to implement group homomorphisms and set it up in such a way that certain finite presentation groups (implemented as an FpGroup class in SymPy) could be considered as permutation groups via an isomorphism. That would be good because SymPy already has many group-theoretic algorithms implemented for perm groups. To get this to work, I will also need to implement rewriting systems for FpGroups. You can see my application for details.</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/05/04/Google-Summer-of-Code-with-SymPy</guid>
       <author>Shikhar Jaiswal (ShikharJ)</author>
       <title>Shikhar Jaiswal (ShikharJ): Google Summer of Code with SymPy</title>
@@ -2200,100 +2256,6 @@ In [7]: _6.to_expr()
 Out[7]: &amp;#8730;x&amp;#8901;(1 + &amp;#8730;2)
 &lt;/pre&gt;
 &lt;p&gt;I plan to continue my work on this PR and add more support for this initial condition.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/shubhamtibra.wordpress.com/663/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/shubhamtibra.wordpress.com/663/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=shubhamtibra.wordpress.com&amp;#038;blog=106149936&amp;#038;post=663&amp;#038;subd=shubhamtibra&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://rajithsays.wordpress.com/?p=416</guid>
-      <author>Rajith Vidanaarachchi (rajithv)</author>
-      <title>Rajith Vidanaarachchi (rajithv): GSoC Week 9 Progress</title>
-      <pubDate>Sun, 24 Jul 2016 18:26:27 GMT</pubDate>
-      <link>https://rajithsays.wordpress.com/2016/07/24/gsoc-week-9-progress/</link>
-      <description>&lt;p&gt;In the &lt;a href="https://rajithsays.wordpress.com/2016/07/16/gsoc-week-8-progress/"&gt;last blog post&lt;/a&gt; I reported that lambdify function was fully wrapped. Yes, that&amp;#8217;s what I thought at the time! But it did indeed dragged on quite a bit, requiring many changes, which were very educative for me in terms of how Ruby looks at user experience. Several changes were done, including structural changes on calling lambdify, and for supporting older Ruby versions. The really interesting and long discussions on this can be viewed in the &lt;a href="https://github.com/symengine/symengine.rb/pull/61" target="_blank"&gt;PR 61&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Apart from that, simultaneously I started reading and exchanging ideas on exception handling. It was agreed that in the C wrappers, an error code to be returned, which can be accessed from the Ruby wrapper, which in turn can raise a Ruby exception. The preliminary model can be seen in &lt;a href="https://github.com/symengine/symengine/pull/1044" target="_blank"&gt;PR 1044&lt;/a&gt; in SymEngine and &lt;a href="https://github.com/symengine/symengine.rb/pull/64" target="_blank"&gt;PR 64&lt;/a&gt; in SymEngine Ruby wrapper.&lt;/p&gt;
-&lt;p&gt;Right now any exception is caught and sent to the Ruby Wrapper with an error code of -1, which raises a generic Runtime Error in Ruby. Although not very informative, this is helpful in prevention of crashing the Ruby runtime.&lt;/p&gt;
-&lt;p&gt;To illustrate, when the following code (a division by zero) is run before and after is shown.&lt;/p&gt;
-&lt;p&gt;Before:&lt;/p&gt;
-&lt;pre&gt;irb(main):001:0&amp;gt; require 'symengine'
-=&amp;gt; true
-irb(main):002:0&amp;gt; x = SymEngine(1)
-=&amp;gt; #&amp;lt;SymEngine::Integer(1)&amp;gt;
-irb(main):003:0&amp;gt; y = SymEngine(0)
-=&amp;gt; #&amp;lt;SymEngine::Integer(0)&amp;gt;
-irb(main):004:0&amp;gt; x/y
-terminate called after throwing an instance of 'Teuchos::NullReferenceError'
-&amp;#160; what():&amp;#160; /home/rajith/Development/symengine/symengine/utilities/teuchos/Teuchos_RCPNode.cpp:720:
-
-Throw number = 1
-
-Throw test that evaluated to true: true
-
-Teuchos::RCP&amp;lt;SymEngine::Basic const&amp;gt; : You can not call operator-&amp;gt;() or operator*() if getRawPtr()==0!
-
-Abort caught. Printing stacktrace:
-
-Traceback (most recent call last):
-
-Done.
-[2]&amp;#160;&amp;#160;&amp;#160; 590 abort (core dumped)&amp;#160; irb&lt;/pre&gt;
-&lt;p&gt;After:&lt;/p&gt;
-&lt;pre&gt;irb(main):001:0&amp;gt; require 'symengine'
-=&amp;gt; true
-irb(main):002:0&amp;gt; x = SymEngine(1)
-=&amp;gt; #&amp;lt;SymEngine::Integer(1)&amp;gt;
-irb(main):003:0&amp;gt; y = SymEngine(0)
-=&amp;gt; #&amp;lt;SymEngine::Integer(0)&amp;gt;
-irb(main):004:0&amp;gt; x/y
-RuntimeError: Runtime Error
-&amp;#160;&amp;#160; &amp;#160;from (irb):4:in `/'
-&amp;#160;&amp;#160; &amp;#160;from (irb):4
-&amp;#160;&amp;#160; &amp;#160;from /usr/bin/irb:11:in `&amp;lt;main&amp;gt;'
-irb(main):005:0&amp;gt;&lt;/pre&gt;
-&lt;p&gt;This is a good improvement overall, but as it&amp;#8217;s nicer to have a more descriptive error shown to the user, that part will be the continuation of exception handling during the 10th week.&lt;/p&gt;
-&lt;p&gt;See you next week!&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/416/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/416/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&amp;#038;blog=110498904&amp;#038;post=416&amp;#038;subd=rajithsays&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://srajangarg.github.io//2016/07/23/Rational-Polynomials-ft-Bugs</guid>
-      <author>Srajan Garg (srajangarg)</author>
-      <title>Srajan Garg (srajangarg): Rational Polynomials ft. Bugs</title>
-      <pubDate>Sat, 23 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://srajangarg.github.io//2016/07/23/Rational-Polynomials-ft-Bugs/</link>
-      <description>&lt;h3 id="overview"&gt;Overview&lt;/h3&gt;
-
-&lt;p&gt;Sorry I haven&amp;#8217;t been able to report my work for about two weeks now. Things have become slower mainly due to the fact that my university has resumed and along with it a heavily packed timetable and assignments in the first week don&amp;#8217;t help. I also caught a bad fever the past week which really hindered my progress, but it&amp;#8217;s dying down and I will resume my work with full vigor eventually.&lt;/p&gt;
-
-&lt;p&gt;The work I did do has been summarized below.&lt;/p&gt;
-
-&lt;h3 id="bug-fixes"&gt;Bug Fixes&lt;/h3&gt;
-
-&lt;p&gt;While writing the code for the rational polynomials, as mentioned in the last blogpost, I encountered various bugs. Some of them caused other bugs to be exposed, which took a lot of time for me to debug.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class="highlighter-rouge"&gt;pow(Poly, uint)&lt;/code&gt; was throwing a segmentation fault. After digging in and wasting more than four hours on unrelated checks I figured out that the &lt;code class="highlighter-rouge"&gt;eq&lt;/code&gt; inside the polynomial class was incorrect. Without checking whether the other parameter was a &lt;code class="highlighter-rouge"&gt;Poly&lt;/code&gt; or not, I was &lt;code class="highlighter-rouge"&gt;static_cast&lt;/code&gt;ing it which posed a problem.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The happiness was shortlived, as the bug persisted. On further inspection I found that the polynomial was being treated as a number! This was because &lt;code class="highlighter-rouge"&gt;is_a_Number&lt;/code&gt; relied on typecodes, and the polynomial types were defined before the &lt;code class="highlighter-rouge"&gt;NUMBERWRAPPER&lt;/code&gt; class, which deemed them numbers. The fix for this was simple, just move the polynomial type code definitions after the numbers.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The &lt;code class="highlighter-rouge"&gt;pow&lt;/code&gt; tests pass, but what&amp;#8217;s this? All the &lt;code class="highlighter-rouge"&gt;MSVC&lt;/code&gt; builds on appveyor fail. They all fail a &lt;code class="highlighter-rouge"&gt;coeff&lt;/code&gt; test. Wow, I had not changed any code related to &lt;code class="highlighter-rouge"&gt;coeff&lt;/code&gt; at all, how does it affect that specific test and only on the &lt;code class="highlighter-rouge"&gt;MSVC&lt;/code&gt; compiler? This kept me wondering and looking at the source for a day. Finally, I had to login to the VM of appveyor running the tests. I was not familiar with windows development environment at all, which was the reason I failed a couple of times before I gave up debugging. The next morning I woke up determined to fix this Windows bug, I set the break points in Visual Studio and started the code execution. I found it! It was a bug in the &lt;code class="highlighter-rouge"&gt;CoeffVisitor&lt;/code&gt; itself. The code for the &lt;code class="highlighter-rouge"&gt;coeff&lt;/code&gt; function was incomplete. Why wasn&amp;#8217;t this bug being captured before? Probably because the previous change (in the typecodes) caused a reordering in  a map, which no other compiler was doing. Do read up &lt;a href="https://github.com/symengine/symengine/pull/1033#issuecomment-232973025"&gt;here&lt;/a&gt; for more details.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;An appveyor build was failing for unknown reason, which had to be shifted to allowed failures&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This was basically the components of &lt;a href="https://github.com/symengine/symengine/pull/1033"&gt;#1033&lt;/a&gt;. Less quantity of changes, but really important none the less.&lt;/p&gt;
-
-&lt;h3 id="rational-polynomials"&gt;Rational Polynomials&lt;/h3&gt;
-
-&lt;p&gt;The work with rational polynomials continues. I had underestimated the amount of work required, and I also feel that I should have broken down rational polynomials into three parts each, just like integer polynomials. Right now, the work continues in &lt;a href="https://github.com/symengine/symengine/pull/1028"&gt;#1028&lt;/a&gt;, but it&amp;#8217;s soon going to become huge with all varieties of changes.&lt;/p&gt;
-
-&lt;h3 id="miscellaneous"&gt;Miscellaneous&lt;/h3&gt;
-
-&lt;p&gt;I finally benchmarked &lt;a href="https://github.com/sakra/cotire"&gt;cotire&lt;/a&gt; to see how much speedup it was providing to SymEngine builds. &lt;a href="https://github.com/symengine/symengine/issues/1023"&gt;Here&lt;/a&gt; is the short summary of the speedups obtained, and the work to include it is in &lt;a href="https://github.com/symengine/symengine/pull/1041"&gt;#1041&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Also a small bug was present in our flint and gmp rational number wrappers. We were not canonicalizing on construction from two integers. It was fixed in &lt;a href="https://github.com/symengine/symengine/pull/1031"&gt;#1031&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Laters!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
