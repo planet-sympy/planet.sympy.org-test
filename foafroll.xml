@@ -161,6 +161,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Ranjith Kumar (ranjithkumar007)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="http://ranjithkumar007.github.io/">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://ranjithkumar007.github.io/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Sampad Saha (sampadsaha5)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://sampadblog.wordpress.com">

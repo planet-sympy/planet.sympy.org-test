@@ -198,7 +198,7 @@ Here is a gist of the work I undertook till now:</p>
 <div class="channelgroup ">
 	<div class="row">
     	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-29fba86e feed-" id="item-c20d1164">
+		    <div class="box" class="item feed-29fba86e feed-" id="item-bd2c8001">
 			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
 			    	<table class="table borderless table-condensed">
 			    		<tr>
@@ -251,7 +251,21 @@ Here is a gist of the work I undertook till now:</p>
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-xs-12 descript">
-						<p>This blog will follow the progress of my GSoC 2017 project for SymPy. My primary goal is to implement group homomorphisms and set it up in such a way that certain finite presentation groups (implemented as an FpGroup class in SymPy) could be considered as permutation groups via an isomorphism. That would be good because SymPy already has many group-theoretic algorithms implemented for perm groups. To get this to work, I will also need to implement rewriting systems for FpGroups. You can see my application for details.
+						<p>This blog will follow the progress of my GSoC 2017 project for SymPy. My primary goal is to implement group homomorphisms and set it up in such a way that certain finite presentation groups (implemented as an <code class="highlighter-rouge">FpGroup</code> class in SymPy) could be considered as permutation groups via an isomorphism. That would be good because SymPy already has many group-theoretic algorithms implemented for perm groups. To get this to work, I will also need to implement rewriting systems for <code class="highlighter-rouge">FpGroup</code>s. You can see my <a href="https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Valeriia-Gladkova:-Group-Theory">application</a> for details.</p>
+
+<p>This post is a revised timeline for the project. I am currently in the middle of a term at uni and I&#8217;m going to have exams at the end of it: that&#8217;s 12-21 June (with 3 exam-free days in that period). For that reason I won&#8217;t be fully productive until 21 June but I&#8217;ll do my best (and certainly will catch up afterwards). As such, I think I should do a bit of coding before 30 May. I&#8217;ll start with some functionality unrelated to homomorphisms, as explained in my application. My current plan until the end of the First Evaluation period (26-30 June) is as follows:</p>
+
+<ul>
+  <li>
+    <p><strong>By 30 May:</strong> Add a <code class="highlighter-rouge">.subgroup()</code> method and a <code class="highlighter-rouge">.parent</code> attribute to <code class="highlighter-rouge">FpGroup</code>s and <code class="highlighter-rouge">PermutationGroup</code>s. Probably make some improvements in the Reidemeister-Schreier elimination techniques. Submit a PR.</p>
+  </li>
+  <li>
+    <p><strong>31 May - 11 June:</strong> Implement better checks for infinite <code class="highlighter-rouge">FpGroup</code>s. That will include the <code class="highlighter-rouge">abelian_invariants</code> function somewhere in the rings module (I&#8217;ll do it for integers unless there is an obvious way to make the same algorithm work for general rings) and a search for a finite cyclic subgroup (which might not terminate but it&#8217;s better to give it a try since if a group is infinite, this might works but <code class="highlighter-rouge">coset_enumeration</code> is unlikely to terminate). Create a PR by the end of it if it&#8217;s finished.</p>
+  </li>
+  <li>
+    <p><strong>12-25 June</strong> My exams start. I&#8217;ll start writing the <code class="highlighter-rouge">GroupHomomorphism</code> class and its functions with the assumption that rewriting systems and other things I might need are already implemented (which I will actually do later on). I&#8217;ll also start writing my evaluation at the end of this period.</p>
+  </li>
+</ul>
 					</div>
 				</div>
 			</div>
@@ -343,6 +357,77 @@ Here is a gist of the work I undertook till now:</p>
 </blockquote>
 
 <p>Looking forward to a great summer!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="day">
+<h2 class="dayform">April 01, 2017</h2>
+<div class="channelgroup ">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		    <div class="box" class="item feed-040fd9d5 feed-" id="item-71701428">
+			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
+			    	<table class="table borderless table-condensed">
+			    		<tr>
+			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
+			    				<div style="margin-right:5px;">
+				    				 <img src="hackergotchi/ranjithkumar007.png"/> 
+				    				
+				    			</div>
+			    			</td>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row" style="margin-top:15px;">
+					    			<div class="col-md-8">
+							    		<a href="">Ranjith Kumar (ranjithkumar007) </a>
+							    	</div>
+							    	<div class="col-md-4 dtdate">
+							    		<a href="http://ranjithkumar007.github.io/2017/04/01/gsoc-proposal/">00:00, Saturday, 01 April UTC</a>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    		<tr>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row">
+							    	<div class="col-md-12 col-xs-12">
+							    		<h4><a class="boxh2" href="http://ranjithkumar007.github.io/2017/04/01/gsoc-proposal/">Ranjith Kumar (ranjithkumar007): GSoC Proposal</a></h4>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    	</table>
+			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
+			    		 <img src="hackergotchi/ranjithkumar007.png"/> 
+			    		
+			    	</div>
+			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
+			    		<div class="row">
+			    			<div class="col-md-8">
+					    		<a href="">Ranjith Kumar (ranjithkumar007) </a>
+					    	</div>
+					    	<div class="col-md-4 dtdate">
+					    		<a href="http://ranjithkumar007.github.io/2017/04/01/gsoc-proposal/">00:00, Saturday, 01 April UTC</a>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12 col-xs-12">
+					    		<h4><a class="boxh2" href="http://ranjithkumar007.github.io/2017/04/01/gsoc-proposal/">GSoC Proposal</a></h4>
+					    	</div>
+					    </div>
+				    </div-->
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 descript">
+						<p>This is my first blog post. I am applying for GSoC this year to work on <code class="highlighter-rouge">Implementing Solvers for SymEngine</code>.Here is my <a href="https://docs.google.com/document/d/1yCicYJ0hfS8APcXIqoBOacx8n2HnjfSfR7q4OshLGYI/">proposal</a>.Feel free to give it a read and suggestions on improving it would be highly welcome. This blog would serve as a way to track and document progress of my GSoC project.</p>
+
+<p>Wish me Good Luck.</p>
+
+<p>Thanks</p>
+
+<p>Bye for now&#8230;.See You Soon !!</p>
 					</div>
 				</div>
 			</div>
@@ -3906,131 +3991,6 @@ Then I started working on change of base class of <code class="highlighter-rouge
 		</div>
 	</div>
 </div></div>
-<div class="day">
-<h2 class="dayform">July 24, 2016</h2>
-<div class="channelgroup ">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-3ebbee70 feed-" id="item-70f5184c">
-			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
-			    	<table class="table borderless table-condensed">
-			    		<tr>
-			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
-			    				<div style="margin-right:5px;">
-				    				 <img src="hackergotchi/shubham.jpg"/> 
-				    				
-				    			</div>
-			    			</td>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row" style="margin-top:15px;">
-					    			<div class="col-md-8">
-							    		<a href="">Subham Tibra (shubhamtibra) </a>
-							    	</div>
-							    	<div class="col-md-4 dtdate">
-							    		<a href="https://shubhamtibra.wordpress.com/2016/07/24/gsoc-week-8-and-9/">18:28, Sunday, 24 July UTC</a>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    		<tr>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row">
-							    	<div class="col-md-12 col-xs-12">
-							    		<h4><a class="boxh2" href="https://shubhamtibra.wordpress.com/2016/07/24/gsoc-week-8-and-9/">Subham Tibra (shubhamtibra): GSoC Week 8 and 9</a></h4>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    	</table>
-			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
-			    		 <img src="hackergotchi/shubham.jpg"/> 
-			    		
-			    	</div>
-			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
-			    		<div class="row">
-			    			<div class="col-md-8">
-					    		<a href="">Subham Tibra (shubhamtibra) </a>
-					    	</div>
-					    	<div class="col-md-4 dtdate">
-					    		<a href="https://shubhamtibra.wordpress.com/2016/07/24/gsoc-week-8-and-9/">18:28, Sunday, 24 July UTC</a>
-					    	</div>
-					    </div>
-					    <div class="row">
-					    	<div class="col-md-12 col-xs-12">
-					    		<h4><a class="boxh2" href="https://shubhamtibra.wordpress.com/2016/07/24/gsoc-week-8-and-9/">GSoC Week 8 and 9</a></h4>
-					    	</div>
-					    </div>
-				    </div-->
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 descript">
-						<p>I couldn&#8217;t write a blog post last week so including progress of week 8 and 9 both here.</p>
-<h1><strong>Week 8</strong></h1>
-<p>I continued working on the PR&#160;<a href="https://github.com/sympy/sympy/pull/11360">#11360</a>. We added functionality to store a different type of initial condition for regular singular points other than the usual <code>[y(0), y'(0), ...]</code>. The exact format is described <a href="https://github.com/sympy/sympy/blob/master/sympy/holonomic/holonomic.py#L354">here</a>&#160;in master, though it is changed to a more elegant form in&#160;<a href="https://github.com/sympy/sympy/pull/11422">#11422</a>.&#160;This type of initial condition provides more information at regular singular points and is helpful in converting to expressions. Examples on how to use it:</p>
-<pre class="brush: python; title: ; notranslate">
-In [22]: expr_to_holonomic(sin(x)/x**2, singular_ics={-1: [1, 0, -1]}).to_expr()
-Out[22]:
-sin(x)
-&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
-   2
-  x
-</pre>
-<p>I also added method to compute this type of initial condition for algebraic functions of the form <code>P^r</code>, for some Polynomial <code>P</code>&#160;and a Rational Number <code>R</code>.</p>
-<pre class="brush: python; title: ; notranslate">
-In [25]: expr_to_holonomic(sqrt(x**2+x))
-Out[25]: HolonomicFunction((-x - 1/2) + (x**2 + x)Dx, x), {1/2: [1]}
-
-In [26]: _25.to_expr()
-Out[26]:
-     _______
-&#8730;x&#8901;&#9586;&#9585; x + 1
-</pre>
-<p>After that I made some changes in `to_meijerg()` to return the polynomial itself if the `meijerg` function represents a polynomial instead of raising `NotImplementedError`.</p>
-<pre class="brush: python; title: ; notranslate">
-In [40]: expr_to_holonomic(4*x**3 + 2*x**2, lenics=3).to_meijerg().expand()
-Out[40]:
-   3      2
-4&#8901;x  + 2&#8901;x
-</pre>
-<p>I also added code to return the general solution in `_frobenius()` if none of the roots of indicial equation differ by an integer.</p>
-<h1>Week 9</h1>
-<p>I wasn&#8217;t able to do much this week because my college started. I travelled back and had some college related stuff to do.</p>
-<p>I opened <a href="https://github.com/sympy/sympy/pull/11422">#11422</a>&#160;and&#160;first added a basic method to determine the domain for polynomial coefficients in the differential equation.</p>
-<pre class="brush: python; title: ; notranslate">
-In [77]: expr_to_holonomic(sqrt(y*x+z), x=x, lenics=2).to_expr()
-Out[77]:
-  _________
-&#9586;&#9585; x&#8901;y + z 
-
-In [78]: expr_to_holonomic(1.1329138213*x)
-Out[78]: HolonomicFunction((-1.1329138213) + (1.1329138213*x)Dx, x), f(0) = 0
-</pre>
-<p>Then I added support for the new type of initial condition on regular singular points in <code>.integrate()</code>.</p>
-<pre class="brush: python; title: ; notranslate">
-In [83]: expr_to_holonomic(sin(x)/x**3, singular_ics={-2: [1, 0, -1]}).integrate(x).to_expr()
-Out[83]:
- &#9115; 2                          &#9118;
--&#9117;x &#8901;Si(x) + x&#8901;cos(x) + sin(x)&#9120;
-&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
-                 2
-              2&#8901;x               
-
-</pre>
-<p>Also added support for the same in addition.</p>
-<pre class="brush: python; title: ; notranslate">
-In [6]: expr_to_holonomic(sqrt(x)) + expr_to_holonomic(sqrt(2*x))
-Out[6]: HolonomicFunction((-1/2) + (x)Dx, x), {1/2: [1 + sqrt(2)]}
-
-In [7]: _6.to_expr()
-Out[7]: &#8730;x&#8901;(1 + &#8730;2)
-</pre>
-<p>I plan to continue my work on this PR and add more support for this initial condition.</p><br />  <a href="http://feeds.wordpress.com/1.0/gocomments/shubhamtibra.wordpress.com/663/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/shubhamtibra.wordpress.com/663/" /></a> <img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=shubhamtibra.wordpress.com&#038;blog=106149936&#038;post=663&#038;subd=shubhamtibra&#038;ref=&#038;feed=1" width="1" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div></div>
 <br><p><a href="index1.html" class="btn btn-mat"><span class="icon-kdeArrowLeft"></span> Older blog entries</a></p>
 
         <hr class="blueline">
@@ -4058,98 +4018,104 @@ Out[7]: &#8730;x&#8901;(1 + &#8730;2)
 <tr class="feedsrow">
 <td><a href="https://asmeurer.github.io/blog/">Aaron Meurer's Blog</a></td>
 <td><a class="xmlbutton" href="http://www.asmeurer.com/blog/rss.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://aktech.github.io/blog">Amit Kumar</a></td>
 <td><a class="xmlbutton" href="http://iamit.in/blog/feeds/sympy.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://gxyd.github.io">Gaurav Dhingra</a></td>
 <td><a class="xmlbutton" href="https://gxyd.github.io/feeds/atom.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td>http://kshitij10496.github.io/feed.xml</td>
 <td><a class="xmlbutton" href="http://kshitij10496.github.io/feed.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td>http://sartajsingh.me/feeds/sympy.xml</td>
 <td><a class="xmlbutton" href="http://sartajsingh.me/feeds/sympy.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://isuruf.blogspot.com/">Isuru Fernando's blog</a></td>
 <td><a class="xmlbutton" href="http://isuruf.blogspot.com/feeds/posts/default">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://jbm950.github.io">James Milam</a></td>
 <td><a class="xmlbutton" href="http://jbm950.github.io/feed.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://nishnik.github.io/">Nishant Nikhil</a></td>
 <td><a class="xmlbutton" href="http://nishnik.github.io/feed.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
+</tr>
+<tr class="feedsrow">
+<td><a href="http://ranjithkumar007.github.io/">Ranjith Kumar</a></td>
+<td><a class="xmlbutton" href="https://ranjithkumar007.github.io/feed.xml">XML</a></td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://sampadblog.wordpress.com">Sampad Saha</a></td>
 <td><a class="xmlbutton" href="https://sampadblog.wordpress.com/feed/">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://shekharrajak.github.io">Shekhar Prasad Rajak</a></td>
 <td><a class="xmlbutton" href="http://shekharrajak.github.io/feed.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://shikharj.github.io//">Shikhar Jaiswal</a></td>
 <td><a class="xmlbutton" href="https://ShikharJ.github.io/feed.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://srajangarg.github.io//">Srajan Garg</a></td>
 <td><a class="xmlbutton" href="http://srajangarg.github.io/feed.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://shubhamtibra.wordpress.com">Subham Tibra</a></td>
 <td><a class="xmlbutton" href="https://shubhamtibra.wordpress.com/feed/">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://sumith1896.github.io//">Sumith</a></td>
 <td><a class="xmlbutton" href="http://sumith1896.github.io/feeds/feed.sympy.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://rajithsays.wordpress.com">SymEngine &#8211; Rajith says&#8230;</a></td>
 <td><a class="xmlbutton" href="https://rajithsays.wordpress.com/category/symengine/feed/">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://valglad.github.io/">SymPy Group Theory (GSoC 2017)</a></td>
 <td><a class="xmlbutton" href="https://valglad.github.io/feed.xml">XML</a></td>
-<td>14:52, Wednesday, 17 May</td>
-<td>15:07, Wednesday, 17 May</td>
+<td>08:45, Monday, 22 May</td>
+<td>09:00, Monday, 22 May</td>
 </tr>
 </table>
 

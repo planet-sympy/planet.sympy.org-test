@@ -60,7 +60,21 @@ Here is a gist of the work I undertook till now:&lt;/p&gt;
       <title>Valeriia Gladkova (valglad): The plan</title>
       <pubDate>Fri, 12 May 2017 00:00:00 GMT</pubDate>
       <link>http://valglad.github.io/2017/05/12/plan/</link>
-      <description>&lt;p&gt;This blog will follow the progress of my GSoC 2017 project for SymPy. My primary goal is to implement group homomorphisms and set it up in such a way that certain finite presentation groups (implemented as an FpGroup class in SymPy) could be considered as permutation groups via an isomorphism. That would be good because SymPy already has many group-theoretic algorithms implemented for perm groups. To get this to work, I will also need to implement rewriting systems for FpGroups. You can see my application for details.</description>
+      <description>&lt;p&gt;This blog will follow the progress of my GSoC 2017 project for SymPy. My primary goal is to implement group homomorphisms and set it up in such a way that certain finite presentation groups (implemented as an &lt;code class="highlighter-rouge"&gt;FpGroup&lt;/code&gt; class in SymPy) could be considered as permutation groups via an isomorphism. That would be good because SymPy already has many group-theoretic algorithms implemented for perm groups. To get this to work, I will also need to implement rewriting systems for &lt;code class="highlighter-rouge"&gt;FpGroup&lt;/code&gt;s. You can see my &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Valeriia-Gladkova:-Group-Theory"&gt;application&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;p&gt;This post is a revised timeline for the project. I am currently in the middle of a term at uni and I&amp;#8217;m going to have exams at the end of it: that&amp;#8217;s 12-21 June (with 3 exam-free days in that period). For that reason I won&amp;#8217;t be fully productive until 21 June but I&amp;#8217;ll do my best (and certainly will catch up afterwards). As such, I think I should do a bit of coding before 30 May. I&amp;#8217;ll start with some functionality unrelated to homomorphisms, as explained in my application. My current plan until the end of the First Evaluation period (26-30 June) is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;By 30 May:&lt;/strong&gt; Add a &lt;code class="highlighter-rouge"&gt;.subgroup()&lt;/code&gt; method and a &lt;code class="highlighter-rouge"&gt;.parent&lt;/code&gt; attribute to &lt;code class="highlighter-rouge"&gt;FpGroup&lt;/code&gt;s and &lt;code class="highlighter-rouge"&gt;PermutationGroup&lt;/code&gt;s. Probably make some improvements in the Reidemeister-Schreier elimination techniques. Submit a PR.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;31 May - 11 June:&lt;/strong&gt; Implement better checks for infinite &lt;code class="highlighter-rouge"&gt;FpGroup&lt;/code&gt;s. That will include the &lt;code class="highlighter-rouge"&gt;abelian_invariants&lt;/code&gt; function somewhere in the rings module (I&amp;#8217;ll do it for integers unless there is an obvious way to make the same algorithm work for general rings) and a search for a finite cyclic subgroup (which might not terminate but it&amp;#8217;s better to give it a try since if a group is infinite, this might works but &lt;code class="highlighter-rouge"&gt;coset_enumeration&lt;/code&gt; is unlikely to terminate). Create a PR by the end of it if it&amp;#8217;s finished.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;12-25 June&lt;/strong&gt; My exams start. I&amp;#8217;ll start writing the &lt;code class="highlighter-rouge"&gt;GroupHomomorphism&lt;/code&gt; class and its functions with the assumption that rewriting systems and other things I might need are already implemented (which I will actually do later on). I&amp;#8217;ll also start writing my evaluation at the end of this period.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/05/04/Google-Summer-of-Code-with-SymPy</guid>
@@ -95,6 +109,20 @@ Here is a gist of the work I undertook till now:&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Looking forward to a great summer!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://ranjithkumar007.github.io/2017/04/01/gsoc-proposal</guid>
+      <author>Ranjith Kumar (ranjithkumar007)</author>
+      <title>Ranjith Kumar (ranjithkumar007): GSoC Proposal</title>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 GMT</pubDate>
+      <link>http://ranjithkumar007.github.io/2017/04/01/gsoc-proposal/</link>
+      <description>&lt;p&gt;This is my first blog post. I am applying for GSoC this year to work on &lt;code class="highlighter-rouge"&gt;Implementing Solvers for SymEngine&lt;/code&gt;.Here is my &lt;a href="https://docs.google.com/document/d/1yCicYJ0hfS8APcXIqoBOacx8n2HnjfSfR7q4OshLGYI/"&gt;proposal&lt;/a&gt;.Feel free to give it a read and suggestions on improving it would be highly welcome. This blog would serve as a way to track and document progress of my GSoC project.&lt;/p&gt;
+
+&lt;p&gt;Wish me Good Luck.&lt;/p&gt;
+
+&lt;p&gt;Thanks&lt;/p&gt;
+
+&lt;p&gt;Bye for now&amp;#8230;.See You Soon !!&lt;/p&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/03/15/Hello-Blogging!</guid>
@@ -2188,74 +2216,6 @@ Along with it I was working on the &lt;code class="highlighter-rouge"&gt;gf_fact
 We made one more design change, we changed the factor container from &lt;code class="highlighter-rouge"&gt;std::pair&amp;lt;GaloisFieldDict, integer_class&amp;gt;&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;std::pair&amp;lt;GaloisFieldDict, unsigned&amp;gt;&lt;/code&gt; because we didn&amp;#8217;t need large numbers as power.
 &lt;br /&gt;&lt;br /&gt;
 Then I started working on change of base class of &lt;code class="highlighter-rouge"&gt;GaloisField&lt;/code&gt; class from &lt;code class="highlighter-rouge"&gt;UPolyBase&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;UIntPolyBase&lt;/code&gt;, this needed implementation of &lt;code class="highlighter-rouge"&gt;eval&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;multi_eval&lt;/code&gt; method, then I implemented the iterator for &lt;code class="highlighter-rouge"&gt;GaloisField&lt;/code&gt; class and the &lt;code class="highlighter-rouge"&gt;pow&lt;/code&gt; method. The &lt;a href="https://github.com/symengine/symengine/pull/1047/files"&gt;PR&lt;/a&gt; is under review.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://shubhamtibra.wordpress.com/?p=663</guid>
-      <author>Subham Tibra (shubhamtibra)</author>
-      <title>Subham Tibra (shubhamtibra): GSoC Week 8 and 9</title>
-      <pubDate>Sun, 24 Jul 2016 18:28:08 GMT</pubDate>
-      <link>https://shubhamtibra.wordpress.com/2016/07/24/gsoc-week-8-and-9/</link>
-      <description>&lt;p&gt;I couldn&amp;#8217;t write a blog post last week so including progress of week 8 and 9 both here.&lt;/p&gt;
-&lt;h1&gt;&lt;strong&gt;Week 8&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;I continued working on the PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11360"&gt;#11360&lt;/a&gt;. We added functionality to store a different type of initial condition for regular singular points other than the usual &lt;code&gt;[y(0), y'(0), ...]&lt;/code&gt;. The exact format is described &lt;a href="https://github.com/sympy/sympy/blob/master/sympy/holonomic/holonomic.py#L354"&gt;here&lt;/a&gt;&amp;#160;in master, though it is changed to a more elegant form in&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11422"&gt;#11422&lt;/a&gt;.&amp;#160;This type of initial condition provides more information at regular singular points and is helpful in converting to expressions. Examples on how to use it:&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [22]: expr_to_holonomic(sin(x)/x**2, singular_ics={-1: [1, 0, -1]}).to_expr()
-Out[22]:
-sin(x)
-&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;
-   2
-  x
-&lt;/pre&gt;
-&lt;p&gt;I also added method to compute this type of initial condition for algebraic functions of the form &lt;code&gt;P^r&lt;/code&gt;, for some Polynomial &lt;code&gt;P&lt;/code&gt;&amp;#160;and a Rational Number &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [25]: expr_to_holonomic(sqrt(x**2+x))
-Out[25]: HolonomicFunction((-x - 1/2) + (x**2 + x)Dx, x), {1/2: [1]}
-
-In [26]: _25.to_expr()
-Out[26]:
-     _______
-&amp;#8730;x&amp;#8901;&amp;#9586;&amp;#9585; x + 1
-&lt;/pre&gt;
-&lt;p&gt;After that I made some changes in `to_meijerg()` to return the polynomial itself if the `meijerg` function represents a polynomial instead of raising `NotImplementedError`.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [40]: expr_to_holonomic(4*x**3 + 2*x**2, lenics=3).to_meijerg().expand()
-Out[40]:
-   3      2
-4&amp;#8901;x  + 2&amp;#8901;x
-&lt;/pre&gt;
-&lt;p&gt;I also added code to return the general solution in `_frobenius()` if none of the roots of indicial equation differ by an integer.&lt;/p&gt;
-&lt;h1&gt;Week 9&lt;/h1&gt;
-&lt;p&gt;I wasn&amp;#8217;t able to do much this week because my college started. I travelled back and had some college related stuff to do.&lt;/p&gt;
-&lt;p&gt;I opened &lt;a href="https://github.com/sympy/sympy/pull/11422"&gt;#11422&lt;/a&gt;&amp;#160;and&amp;#160;first added a basic method to determine the domain for polynomial coefficients in the differential equation.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [77]: expr_to_holonomic(sqrt(y*x+z), x=x, lenics=2).to_expr()
-Out[77]:
-  _________
-&amp;#9586;&amp;#9585; x&amp;#8901;y + z 
-
-In [78]: expr_to_holonomic(1.1329138213*x)
-Out[78]: HolonomicFunction((-1.1329138213) + (1.1329138213*x)Dx, x), f(0) = 0
-&lt;/pre&gt;
-&lt;p&gt;Then I added support for the new type of initial condition on regular singular points in &lt;code&gt;.integrate()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [83]: expr_to_holonomic(sin(x)/x**3, singular_ics={-2: [1, 0, -1]}).integrate(x).to_expr()
-Out[83]:
- &amp;#9115; 2                          &amp;#9118;
--&amp;#9117;x &amp;#8901;Si(x) + x&amp;#8901;cos(x) + sin(x)&amp;#9120;
-&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;
-                 2
-              2&amp;#8901;x               
-
-&lt;/pre&gt;
-&lt;p&gt;Also added support for the same in addition.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [6]: expr_to_holonomic(sqrt(x)) + expr_to_holonomic(sqrt(2*x))
-Out[6]: HolonomicFunction((-1/2) + (x)Dx, x), {1/2: [1 + sqrt(2)]}
-
-In [7]: _6.to_expr()
-Out[7]: &amp;#8730;x&amp;#8901;(1 + &amp;#8730;2)
-&lt;/pre&gt;
-&lt;p&gt;I plan to continue my work on this PR and add more support for this initial condition.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/shubhamtibra.wordpress.com/663/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/shubhamtibra.wordpress.com/663/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=shubhamtibra.wordpress.com&amp;#038;blog=106149936&amp;#038;post=663&amp;#038;subd=shubhamtibra&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
     </item>
   </channel>
 </rss>
