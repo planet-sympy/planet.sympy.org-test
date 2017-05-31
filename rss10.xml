@@ -7,6 +7,77 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://shikharj.github.io//2017/05/30/Community-Bonding-End-Report</guid>
+      <author>Shikhar Jaiswal (ShikharJ)</author>
+      <title>Shikhar Jaiswal (ShikharJ): Community Bonding - End Report</title>
+      <pubDate>Tue, 30 May 2017 00:00:00 GMT</pubDate>
+      <link>https://shikharj.github.io//2017/05/30/Community-Bonding-End-Report/</link>
+      <description>&lt;p&gt;Greetings!&lt;/p&gt;
+
+&lt;p&gt;The Community Bonding period is officially closed and its time for the official coding period to begin. I had a great time reaching out to other fellow GSoCers in the community as well as conversing with my mentors over the project plans.&lt;/p&gt;
+
+&lt;h3 id="the-tasks"&gt;The Tasks&lt;/h3&gt;
+&lt;p&gt;Last week, I had mentioned that I&amp;#8217;d be working on porting over &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt; for &lt;code class="highlighter-rouge"&gt;Parsing&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Physics&lt;/code&gt; modules. However, as pointed out by &lt;a href="https://ShikharJ.github.io/github.com/isuruf"&gt;Isuru&lt;/a&gt;, there was no real gain in working on &lt;code class="highlighter-rouge"&gt;Parsing&lt;/code&gt;, as we already had a parser in &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt;. Hence, my focus shifted on &lt;code class="highlighter-rouge"&gt;Physics&lt;/code&gt; and its sub-modules. As such, I&amp;#8217;ve pushed in two PRs, covering &lt;code class="highlighter-rouge"&gt;ContinuumMechanics&lt;/code&gt;(&lt;a href="https://github.com/sympy/sympy/pull/12660"&gt;#12660&lt;/a&gt;) and &lt;code class="highlighter-rouge"&gt;Hep&lt;/code&gt;(&lt;a href="https://github.com/sympy/sympy/pull/12655"&gt;#12655&lt;/a&gt;) sub-modules to keep a track of the work. I&amp;#8217;ve also been able to weed out most of the compatibility issues in the standalone files of &lt;code class="highlighter-rouge"&gt;Physics&lt;/code&gt; module.&lt;/p&gt;
+
+&lt;p&gt;Though I had planned on finishing these tasks within the Community Bonding period itself, I realised that the &lt;code class="highlighter-rouge"&gt;Quantum&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Optics&lt;/code&gt; sub-modules require a bit more work than what I had originally planned for the time. Nevertheless, I started off implementing &lt;code class="highlighter-rouge"&gt;Relationals&lt;/code&gt; in &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt;, which was a task originally planned for the first week of the coding period. The PR(&lt;a href="https://github.com/symengine/symengine/pull/1276"&gt;#1276&lt;/a&gt;) is currently under review, and would be ready to merge within a day or two. The time gained thus will be devoted to the previously mentioned work, apart from what was originally planned in my proposal.&lt;/p&gt;
+
+&lt;p&gt;Besides, I also sent a PR(&lt;a href="https://github.com/symengine/symengine/pull/1277"&gt;#1277&lt;/a&gt;) fixing some minor grammatical errors which I stumbled upon in the codebase.&lt;/p&gt;
+
+&lt;p&gt;See you next week! Goodbye!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://valglad.github.io/2017/05/29/start</guid>
+      <author>Valeriia Gladkova (valglad)</author>
+      <title>Valeriia Gladkova (valglad): The start</title>
+      <pubDate>Mon, 29 May 2017 00:00:00 GMT</pubDate>
+      <link>http://valglad.github.io/2017/05/29/start/</link>
+      <description>&lt;p&gt;GSoC officially starts tomorrow but I&amp;#8217;ve already begun working on my project because of exams later in June. So far everything is going according to plan. I&amp;#8217;ve implemented the &lt;code class="highlighter-rouge"&gt;subgroup()&lt;/code&gt; method for &lt;code class="highlighter-rouge"&gt;PermutationGroup&lt;/code&gt;s and &lt;code class="highlighter-rouge"&gt;FpGroup&lt;/code&gt;s as well as &lt;code class="highlighter-rouge"&gt;is_subgroup()&lt;/code&gt; for &lt;code class="highlighter-rouge"&gt;FpGroup&lt;/code&gt;s. That was straight-forward except this one moment where I wanted to avoid creating a new instance of &lt;code class="highlighter-rouge"&gt;FreeGroup&lt;/code&gt; and rewriting the relators returned by &lt;code class="highlighter-rouge"&gt;reidemeister_presentation()&lt;/code&gt; in terms of this new instance because it seemed inelegant. I spend quite a while trying to come up with a better way and even started thinking of reimplementing the &lt;code class="highlighter-rouge"&gt;FreeGroup&lt;/code&gt; class but after a discussion with one of my mentors on SymPy&amp;#8217;s &lt;a href="https://gitter.im/sympy/GroupTheory"&gt;Group Theory channel&lt;/a&gt; decided to create a new instance after all. It shouldn&amp;#8217;t affect the performance too much anyway and reimplementing a whole class would be quite extreme.&lt;/p&gt;
+
+&lt;p&gt;Then I looked into improving the techniques for simplifying the presentation of subgroups. I hadn&amp;#8217;t been sure about whether there would be much to do but actually I found that the code had quite a few redundant bits and there were some more serious potential problems with it, like a loop that deleted elements of the list over which it iterated. I ended up rewriting it to be more readable and making sure the list of relators is traversed properly. Additionally, the &lt;code class="highlighter-rouge"&gt;reidemeister_presentation()&lt;/code&gt; code used to apply the simplification techniques 20 times in a for loop which in some cases would be excessive and in others not enough - I replaced it with a while loop so that the representaion is simplified until no further improvement is achieved.&lt;/p&gt;
+
+&lt;p&gt;While I was at it, I found myself modifying some of the &lt;code class="highlighter-rouge"&gt;FreeGroupElement&lt;/code&gt; methods either to extend their functionality or because I noticed that their implementation would lead to bugs in some special cases. I also added a couple of new methods for manipulation of group words. Intuitively, &lt;code class="highlighter-rouge"&gt;FreeGroupElement&lt;/code&gt; words are just symbolic expressions on non-commutative (in the general case) symbols that only admit integer powers. But their implementation in SymPy is different from the regular symbolic expressions which are instances of the &lt;code class="highlighter-rouge"&gt;Expr&lt;/code&gt; class. As a result, the &lt;code class="highlighter-rouge"&gt;Expr&lt;/code&gt; methods, e.g. &lt;code class="highlighter-rouge"&gt;subs()&lt;/code&gt; or &lt;code class="highlighter-rouge"&gt;simplify()&lt;/code&gt; can&amp;#8217;t be used with them directly (though of course, theoretically, one could build an equivalent symbolic expression out of a &lt;code class="highlighter-rouge"&gt;FreeGroupElement&lt;/code&gt;, apply the desired &lt;code class="highlighter-rouge"&gt;Expr&lt;/code&gt; method, make sure no fractional powers appear and go back) so equivalent methods have to be written separately. I have extended the group word substitution to probably all (or at least most) cases one might need. Simplification, on the other hand, is still missing. That said, the &lt;code class="highlighter-rouge"&gt;simplify()&lt;/code&gt; method of the &lt;code class="highlighter-rouge"&gt;Exrp&lt;/code&gt; class doesn&amp;#8217;t currently do much in terms of simplification of non-commutative expressions so it couldn&amp;#8217;t be used anyway (perhaps, some other method would be appropriate but I&amp;#8217;m not sure which). However, unlike instances of &lt;code class="highlighter-rouge"&gt;Expr&lt;/code&gt;, group elements only involve one binary operation so the problem is somewhat easier (conceptually). The only real simplification one can make is finding powers of subwords and collecting them into one thing. Say, if we have the word &lt;code class="highlighter-rouge"&gt;x*y*x*y*x*y&lt;/code&gt;, a simpler way to write it would be &lt;code class="highlighter-rouge"&gt;(x*y)**3&lt;/code&gt; and it would be good to have that done automatically. I might work on implementing that sort of thing somewhere along the way because then simplifications for &lt;code class="highlighter-rouge"&gt;reidemeister_presentation()&lt;/code&gt; can be improved even further, and the output relators will be more readable. Plus it&amp;#8217;s just a nice feature to have, though at present I&amp;#8217;m not sure about how exactly I would go about that efficiently and how to best store the simplification so that it doesn&amp;#8217;t need to be done again.&lt;/p&gt;
+
+&lt;p&gt;The PRs I&amp;#8217;ve sent so far are &lt;a href="https://github.com/sympy/sympy/pull/12658"&gt;here&lt;/a&gt; and &lt;a href="https://github.com/sympy/sympy/pull/12681"&gt;here&lt;/a&gt; and are currently still being reviewed.&lt;/p&gt;
+
+&lt;p&gt;The next thing I&amp;#8217;m going to work on are a couple of methods that could be used to determine if a given &lt;code class="highlighter-rouge"&gt;FpGroup&lt;/code&gt; is infinite. The one I plan to do first is considering the abelianisation of the group, writing the relators in the form of an integer matrix and essentially finding its Smith Normal form. This will probably occupy me for the next week.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://arif7blog.wordpress.com/?p=30</guid>
+      <author>Arif Ahmed (ArifAhmed1995)</author>
+      <title>Arif Ahmed (ArifAhmed1995): Week 1 : The Beginning</title>
+      <pubDate>Thu, 25 May 2017 21:10:32 GMT</pubDate>
+      <link>https://arif7blog.wordpress.com/2017/05/25/week-1-the-beginning/</link>
+      <description>&lt;p style="text-align: justify;"&gt;After reaching home on May 18, I decided not to waste any more time and contacted my mentor(&lt;span style="color: #99cc00;"&gt;&lt;a href="http://www.lanl.gov/expertise/profiles/view/ondrej-certik" rel="noopener noreferrer" style="color: #99cc00;" target="_blank"&gt;Ondrej Certik&lt;/a&gt;&lt;/span&gt;). He suggested that we should have a discussion with &lt;span style="color: #3366ff;"&gt;&lt;a href="http://dilbert.engr.ucdavis.edu/~suku/" style="color: #3366ff;"&gt;Prof.N.Sukumar&lt;/a&gt;&lt;/span&gt; about the project and develop a plan for the summer.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;After the Skype call, a basic timeline was made by Ondrej. It was decided that firstly a basic working prototype to handle the 2D use case (i.e. the capability to integrate a bivariate polynomial over a 2-Polytope) should be written. It would be fine to make some assumptions about the input data initially so as to have some working code as soon as possible. Eventually the implementation for the 2D case should be made robust before moving onto the 3D case.&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;I began by implementing some of the helper functions required for the main algorithm. You can see the current status of the implementation &lt;span style="color: #ffcc00;"&gt;&lt;a href="https://github.com/sympy/sympy/pull/12673/files" rel="noopener noreferrer" style="color: #ffcc00;" target="_blank"&gt;here.&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;It&amp;#8217;s been 2 days since the discussion and I feel that I should pick up the pace now and get the basic 2D prototype working soon.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/arif7blog.wordpress.com/30/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/arif7blog.wordpress.com/30/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=arif7blog.wordpress.com&amp;#038;blog=126429718&amp;#038;post=30&amp;#038;subd=arif7blog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://ranjithkumar007.github.io/2017/05/25/Community-Bonding-Period</guid>
+      <author>Ranjith Kumar (ranjithkumar007)</author>
+      <title>Ranjith Kumar (ranjithkumar007): Community Bonding Period</title>
+      <pubDate>Thu, 25 May 2017 00:00:00 GMT</pubDate>
+      <link>http://ranjithkumar007.github.io/2017/05/25/Community-Bonding-Period/</link>
+      <description>&lt;p&gt;I am selected for GSoC&amp;#8217;17 with SymPy. I have been alotted &lt;a href="https://github.com/sumith1896"&gt;Sumith Kulal&lt;/a&gt;, &lt;a href="https://github.com/srajangarg"&gt;Srajan Garg&lt;/a&gt;, &lt;a href="https://github.com/shivamvats"&gt;Shivam Vats&lt;/a&gt;, &lt;a href="https://github.com/nishnik"&gt;Nishant Nikhil&lt;/a&gt; and &lt;a href="https://github.com/aktech"&gt;Amit Kumar&lt;/a&gt; as my official mentors. My &lt;a href="https://ranjithkumar007.github.io/docs.google.com/document/d/1yCicYJ0hfS8APcXIqoBOacx8n2HnjfSfR7q4OshLGYI/"&gt;Project&lt;/a&gt; is to implement Solvers for SymEngine.&lt;/p&gt;
+
+&lt;p&gt;Time-line as mentioned in the proposal upto First Evaluations:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Week-1 : Flint wrappers for factorisation.&lt;/li&gt;
+  &lt;li&gt;Week-2 and 3: Improve Sets Module.&lt;/li&gt;
+  &lt;li&gt;Week-4: Implement lower degree polynomial solvers and helper function for cyclotomic polynomials.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After my summer vacation ends, progress of the project might get slow; So, I will try to be ahead of the proposed timeline by atleast one week.&lt;/p&gt;
+
+&lt;p&gt;During the Community Bonding period, I went through the &lt;a href="http://www.flintlib.org/flint-2.5.pdf"&gt;documentation&lt;/a&gt; of FLINT library, precisely the required functions for wrapping factorisation of polynomials. The Major Problem I came across is the lack of &lt;a href="https://github.com/wbhart/flint2/blob/trunk/fmpz_poly_factor.h#L86"&gt;fmpz_poly_factor()&lt;/a&gt; function in FLINT&amp;#8217;s latest release 2.5.2. Going by the Suggestion made by &lt;a href="https://github.com/isuruf"&gt;isuruf&lt;/a&gt;, I updated Travis to use the development branch of FLINT along with its latest release. This work is done in &lt;a href="https://github.com/symengine/symengine/pull/1275"&gt;#1275&lt;/a&gt;. This &lt;a href="https://github.com/symengine/symengine/pull/1274"&gt;#1274&lt;/a&gt; PR wraps up the FLINT factorisation. Before 31st May, I will try to get this &lt;a href="https://github.com/symengine/symengine/pull/1274"&gt;PR&lt;/a&gt; merged in.&lt;/p&gt;
+
+&lt;p&gt;Apart from the this, I worked on this &lt;a href="https://github.com/symengine/symengine/pull/1258"&gt;PR&lt;/a&gt; to implement JuliaStrPrinter for nan and infs.&lt;/p&gt;
+
+&lt;p&gt;After Coding period starts(from 31st May), I will start working on Improving Sets module.&lt;/p&gt;
+
+&lt;p&gt;See you soon .&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/05/16/Community-Bonding-Progress-Report</guid>
       <author>Shikhar Jaiswal (ShikharJ)</author>
       <title>Shikhar Jaiswal (ShikharJ): Community Bonding - Progress Report</title>
@@ -123,6 +194,17 @@ Here is a gist of the work I undertook till now:&lt;/p&gt;
 &lt;p&gt;Thanks&lt;/p&gt;
 
 &lt;p&gt;Bye for now&amp;#8230;.See You Soon !!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://arif7blog.wordpress.com/?p=4</guid>
+      <author>Arif Ahmed (ArifAhmed1995)</author>
+      <title>Arif Ahmed (ArifAhmed1995): Google Summer of Code 2017 : SymPy</title>
+      <pubDate>Mon, 27 Mar 2017 14:32:29 GMT</pubDate>
+      <link>https://arif7blog.wordpress.com/2017/03/27/summer-project/</link>
+      <description>&lt;p&gt;I have been accepted to work on an open source summer project under the flag of GSoC&amp;#8217;17. My work will be implementing a module in &lt;span style="color: #00ff00;"&gt;&lt;a href="http://www.sympy.org/en/index.html" rel="noopener noreferrer" style="color: #00ff00;" target="_blank"&gt;SymPy&lt;/a&gt;&lt;/span&gt; capable of efficient integration of functions over arbitrary (i.e. both convex and non-convex) polytopes.&lt;/p&gt;
+&lt;p&gt;Various techniques of solving this problem of numerical integration have been discovered, but most of them are either computationally expensive, or difficult to implement or incapable of exact integration &lt;span style="color: #00ff00;"&gt;&lt;a href="https://docs.google.com/viewer?a=v&amp;amp;pid=forums&amp;amp;srcid=MTc0ODA5NjEwNzE3MDA0NDQzODEBMTgyNjA3NzE1NzE4MzczOTc1MDEBenFfWmRWZlBCZ0FKATAuMQEBdjI" rel="noopener noreferrer" style="color: #00ff00;" target="_blank"&gt;[1]&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The algorithm is mentioned in &lt;span style="color: #00ff00;"&gt;&lt;a href="http://dilbert.engr.ucdavis.edu/~suku/quadrature/cls-integration.pdf" rel="noopener noreferrer" style="color: #00ff00;" target="_blank"&gt;this paper&lt;/a&gt;&lt;/span&gt; and &lt;span style="color: #00ff00;"&gt;&lt;a href="https://docs.google.com/document/d/1pIH-HXoAesl34_Qs41Mfmwxa8-2ExYvhVHh9bfS4ijQ/edit" rel="noopener noreferrer" style="color: #00ff00;" target="_blank"&gt;here&lt;/a&gt;&lt;/span&gt; is my proposal to implement the module.&lt;/p&gt;
+&lt;p&gt;My final exams just got over and I still have to ask my &lt;span style="color: #00ff00;"&gt;&lt;a href="http://www.ondrejcertik.com/" rel="noopener noreferrer" style="color: #00ff00;" target="_blank"&gt;mentor&lt;/a&gt;&lt;/span&gt; how to communicate over the summer. Most probably it will be via a gitter chat room such as &lt;span style="color: #00ff00;"&gt;&lt;a href="https://gitter.im/sympy/Rubi-GSoC17" rel="noopener noreferrer" style="color: #00ff00;" target="_blank"&gt;this one&lt;/a&gt;&lt;/span&gt; which is for another SymPy GSoC&amp;#8217;17 project.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/arif7blog.wordpress.com/4/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/arif7blog.wordpress.com/4/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=arif7blog.wordpress.com&amp;#038;blog=126429718&amp;#038;post=4&amp;#038;subd=arif7blog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/03/15/Hello-Blogging!</guid>
@@ -674,240 +756,6 @@ And a lot of implementation changes were incorporated in &lt;code class="highlig
 &lt;p&gt;I also wrote documentation on &lt;code class="highlighter-rouge"&gt;Fields&lt;/code&gt; module &lt;a href="https://github.com/symengine/symengine/wiki/Fields-in-SymEngine"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">https://gxyd.github.io/GSoC GSoC 2016 Project with SymPy(wrap up): Computational Group Theory</guid>
-      <author>Gaurav Dhingra (gxyd)</author>
-      <title>Gaurav Dhingra (gxyd): GSoC 2016 Project with SymPy(wrap up): Computational Group Theory</title>
-      <pubDate>Sun, 21 Aug 2016 18:30:00 GMT</pubDate>
-      <link>https://gxyd.github.io/gsoc2016/gsoc2016_project.html</link>
-      <description>&lt;p&gt;
-                    Hi, I'm Gaurav Dhingra (&lt;a href="https://github.com/gxyd"&gt;@gxyd&lt;/a&gt;) and this post is a report of my work for SymPy under &lt;a href="https://summerofcode.withgoogle.com"&gt;Google Summer of Code 2016&lt;/a&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-This is also intended to be a description of my work for submission to &lt;b&gt;GSoC's Final Evaluation&lt;/b&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;h3&gt;
-    &lt;u&gt;Work Product Submission&lt;/u&gt;
-&lt;/h3&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a href="https://github.com/gxyd/sympy/pull/6"&gt;PR for GSoC 2016 product submission: Gaurav Dhingra&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;
-&lt;a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory"&gt;GSoC proposal&lt;/a&gt;
-&lt;h4&gt;Pull Requests&lt;/h4&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;ul&gt;
-    &lt;font color="green"&gt;[Completed]&lt;/font&gt;
-
-    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;#10350 &lt;i&gt;FreeGroup&lt;/i&gt; implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11140"&gt;#11140 &lt;i&gt;FpGroup&lt;/i&gt; implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11231"&gt;#11231 &lt;i&gt;Low Index Subgroups&lt;/i&gt; algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11295"&gt;#11295 &lt;i&gt;Reidemeister Schreier&lt;/i&gt; algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;#11460 Add documentation for FpGroup file and fix separate bug&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;ul&gt;
-    &lt;font color="red"&gt;[Work-in-progress]&lt;/font&gt;
-    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;#11361 &lt;i&gt;Modified Todd Coxeter&lt;/i&gt; algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
-
-&lt;/p&gt;
-&lt;p&gt;
-&lt;h4&gt;Bugs reported&lt;/h4&gt;
-&lt;font color="green"&gt;[closed]&lt;/font&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;#11449 &lt;i&gt;TypeError&lt;/i&gt; on compressing a Coset Table generated by coset table method&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-
-&lt;h3&gt;Brief Information&lt;/h3&gt;
-
-&lt;/p&gt;
-
-&lt;p&gt;
-
-&lt;b&gt;Project&lt;/b&gt;: &lt;a href="https://summerofcode.withgoogle.com/projects/#5798586428162048"&gt;Group Theory&lt;/a&gt;
-&lt;br /&gt;&lt;br /&gt;
-
-&lt;b&gt;Blog&lt;/b&gt;: &lt;a href="https://gxyd.github.io/gsoc.html"&gt;https://gxyd.github.io/gsoc.html&lt;/a&gt;
-&lt;br /&gt;&lt;br /&gt;
-
-&lt;b&gt;My Website&lt;/b&gt;: https://gxyd.github.io
-&lt;br /&gt;&lt;br /&gt;
-
-&lt;b&gt;e-mail&lt;/b&gt;: axyd0000[at]gmail.com, igauravdhingra[at]protonmail.com
-&lt;br /&gt;&lt;br /&gt;
-
-I am a pre-final year undergraduate student of Applied Mathematics at IIT Roorkee.
-&lt;/p&gt;
-
-&lt;p&gt;
-
-&lt;h3&gt;Before GSoC&lt;/h3&gt;
-
-&lt;/p&gt;
-&lt;p&gt;
-I heard about the GSoC program and about SymPy org. since of one of my college mate, Prasoon Shukla (he also participated in GSoC with SymPy). I was quite amazed by how mathematics and computer science could intersect and help in solving math problems.
-&lt;/p&gt;
-
-&lt;p&gt;
-I have been contributing to SymPy from May last year. In the beginning I tended often to work on issues that were more often related to my then on-going courses in my college. In December I completed a basic course on Group Theory, so I thought of choosing to work on Group Theory and I saw quite a few things in CGT were missing from SymPy and those functionalities were already there in GAP and Magma. So I asked them from Kalevi, regarding things that could be taken up for a gsoc project. So finally with some discussions with him and Aaron, I was sure by December end that I was going to work on implementing Finitely Presented Group in SymPy. I looked upto the last GSoC project on CGT by Alexandar Makelov, for reference material that could be used for the implementation and it turned out that the book by Derek Holt, Handbook of Computational Group Theory (will mention as shortly &lt;i&gt;the Handbook&lt;/i&gt;).
-&lt;p&gt;
-
-&lt;p&gt;
-
-Though I already started working on &lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;PR #10350&lt;/a&gt; for implementation of free groups in beginning January though I started working on the proposal from February beginning.
-
-&lt;/p&gt;
-&lt;p&gt;
-
-So what I should do? Since I was quite sure of the project. Well at that moment I thought, since I am a mathematics major, choosing this project would also help me. So I reached out to Kalevi, said to him what I was thinking to do, what could be good for the project. So we worked upon making a good gsoc proposal.
-&lt;/p&gt;
-
-&lt;p&gt;
-Here is my &lt;a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory"&gt;GSoC proposal&lt;/a&gt;. Now that the summer is over and I've tackled a lot more with computational group theory, it seems that the main points in my GSoC proposal were:
-
-&lt;ul&gt;
-
-    &lt;li&gt;Implementation of different algebraic structures monoid, free monoid, free group, semi group, free semi group, magma, etc.
-    &lt;li&gt;Rewriting System for reducing the elements of finitely presented groups.
-    &lt;li&gt;The Todd-Coxeter algorithm for coset enumeration, used to find the index of a subgroup of a finitely presented group.
-    &lt;li&gt;Reidemeister Schreier algorithm.
-    &lt;li&gt;Implementation of main &lt;code&gt;Group&lt;/code&gt; class.
-
-&lt;/ul&gt;
-
-&lt;/p&gt;
-&lt;p&gt;
-
-Well, I submitted my proposal and needed to wait until April 22 to the result, and then...
-&lt;/p&gt;
-
-&lt;img height="200" src="https://gxyd.github.io/images/gsoc_selection.png" width="650" /&gt;
-&lt;br /&gt;&lt;br /&gt;
-
-&lt;i&gt;I was selected _/\_&lt;/i&gt;
-&lt;p&gt;
-I got lucky to have Kalevi Suominen like mentor too. Aaron Meurer, the project leader of SymPy was to be co-mentor, and I felt honored to be alloted my preferred mentors.
-&lt;/p&gt;
-
-&lt;p&gt;
-
-&lt;h3&gt;During GSoC&lt;/h3&gt;
-&lt;/p&gt;
-&lt;p&gt;
-A more detailed account of my progress can be found on my blog &lt;a href="https://gxyd.gitub.io/gsoc.html"&gt;here&lt;/a&gt;
-
-&lt;ul&gt;
-
-    &lt;li&gt;We started working on 7th May, we first started with working on completing the Free Group &lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;PR#10350&lt;/a&gt; and we discussed things on our channel &lt;a href="https://gitter.im/sympy/GroupTheory"&gt;sympy/GroupTheory&lt;/a&gt;. We had some discussion on whether &lt;code&gt;Basic&lt;/code&gt; should be a &lt;i&gt;super-class&lt;/i&gt; of &lt;code&gt;FreeGroup&lt;/code&gt; or not. In the end we decied not to derive &lt;code&gt;FreeGroup&lt;/code&gt; from &lt;code&gt;Basic&lt;/code&gt;. Its basic methods had already been written, most of them inspired from GAP software.&lt;/li&gt;
-
-    &lt;li&gt;For the first point in my proposal (i.e implementation of algebraic structures), we didn't started with them (infact we never worked on them). We then moved onto the Coset Enumeration which covered 5 weeks of work in my timeline, but we didn't spend that much time, atleast on the first go at that moment, that did took alomost 3 weeks including the implementation of two strategies of enumeration &lt;i&gt;Felsch&lt;/i&gt; and &lt;i&gt;HLT&lt;/i&gt;. It was the very heart of our GSoC project. There were quite a few bugs that were there in algorithm, especially the bug #11449, to which the Kalevi found the solution.&lt;/li&gt;
-
-    &lt;li&gt;For the second point we never reached it, there wasn't sufficient time for that. Then we decided to rather implement the &lt;i&gt;Low Index Subgroups&lt;/i&gt; algortithm. It was quite fun to implement the algorithm, since it gave some good insight into CGT. More on this on &lt;a href="https://gxyd.github.io/feeds/gsoc_week_5.html"&gt;blog for week 5&lt;/a&gt;.&lt;/li&gt;
-
-    &lt;li&gt;From here I had passed my mid-term evaluations. Then we started with work on &lt;i&gt;Reidemeister Schreier&lt;/i&gt; algorithm. The algorithm was mainly implemeted using the &lt;a href="http://staff.itee.uq.edu.au/havas/1974h.pdf"&gt;Havas paper&lt;/a&gt;, though the current implementation in SymPy doesn't produce the best simplifed presentation. No good pseudocode is available for the algorithm, the major difficulty being the &lt;i&gt;sequence&lt;/i&gt; of applying the operation. More on this on &lt;a href="https://gxyd.github.io/gsoc_week_6.html"&gt;blog for week 6&lt;/a&gt;.&lt;/li&gt;
-
-    &lt;li&gt;After we thought that the result returned by Reidemeister Schreier algorithm we moved onto &lt;i&gt;modified todd coxeter&lt;/i&gt; algorithm. The main difficulty in it was defining the $\tau$ which can be read on the our channel for comments by Kalevi, I belive it can help in solving that problem.&lt;/li&gt;
-
-    &lt;li&gt;As to the fifth point (i.e making &lt;code&gt;Group&lt;/code&gt; class), we never worked upon it. Also the topic of &lt;i&gt;Presenation of Finite Groups&lt;/i&gt; , could not get much attention, since of my busy college schedule.&lt;/li&gt;
-
-&lt;/ul&gt;
-
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;h5&gt;&lt;u&gt;Commits/Code written during GSoC&lt;/u&gt;&lt;/h5&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-Since I have commited quite a few commits un-related to my project. So I decided to &lt;i&gt;cherry-pick&lt;/i&gt; the commits made for my GSoC project. So the combined commits makes the things quite clear. &lt;a href="https://github.com/sympy/sympy/commits/master?author=gxyd"&gt;commits in GSoC 2016 product submission: Gaurav Dhingra&lt;/a&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;h5&gt;&lt;u&gt;Most annoying issue&lt;/u&gt;&lt;/h5&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;issue #11449&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-
-&lt;h3&gt;After GSoC&lt;/h3&gt;
-&lt;/p&gt;
-&lt;p&gt;
-There is still much to be done regarding the finitely presented groups. As during the program my efforts were directed mainly towards getting the fundamental algorithms for finitely presented groups in, the overall structure of the module hasn't received much attention.
-&lt;/p&gt;
-&lt;p&gt;
-The algorithms are in, but the methods in sympy/combinatorics/fp_groups.py are not that much user-friendly. The code organization is not terrible, I think. Some suggestions (both for me and anyone else interested) for future work are:
-
-&lt;ul&gt;
-
-    &lt;li&gt;&lt;b&gt;Cosets in permutation groups&lt;/b&gt;: [verbatim-copy of Kalevi's mail - &lt;i&gt;"next thing to do"&lt;/i&gt;] Finding cosets in permutation groups is more challenging to implement since there seems to be no ready-made pseudocode. However, there is a description of the procedure with an example in section 4.6.7. It can be based on the existing implementation of the &lt;i&gt;Screier-Sims algorithm&lt;/i&gt;.&lt;/li&gt;
-
-
-    &lt;li&gt;&lt;b&gt;Finitely generated abelian groups&lt;/b&gt;: [verbatim-copy of Kalevi's mail - &lt;i&gt;"next thing to do"&lt;/i&gt;] There is useful pseudocode in chapter 9 of the book by Holt that should make it fairly easy to implement the basic methods of abelian groups. We should probably try to base the implementation on the code in &lt;code&gt;polys.agca&lt;/code&gt; as abelian groups are the same as Z-modules. It is all essentially about linear algebra over the integers.&lt;/li&gt;
-
-    &lt;li&gt;&lt;b&gt;Complete modified Todd Coxeter algorithm&lt;/b&gt;: &lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;PR #11361&lt;/a&gt; One bug is currently there in the algorithm, which can be fixed since we have to make assignments to $\tau$. Also currently no tests have been added, which can be added.&lt;/li&gt;
-
-    &lt;li&gt;&lt;b&gt;Rewriting System&lt;/b&gt;: This can be a good candidate for a major work, I included this topic in my proposal though was left untouched. Perhaps &lt;i&gt;GAP&lt;/i&gt; could be first seen in this regard. Like always&lt;/li&gt;
-
-    &lt;li&gt;&lt;b&gt;Groups folder&lt;/b&gt;: After a few of the above mentioned things have been done, I believe it could be a good time to make a folder named &lt;code&gt;groups&lt;/code&gt;, since finitely presented groups should not be a part of combinatorics module which would contain the all algebraic structures including the permutation groups.&lt;/li&gt;
-
-    &lt;li&gt;&lt;b&gt;Non-associative algebra&lt;/b&gt;: (Perhaps I got the spelling of &lt;i&gt;associative&lt;/i&gt; this time right!) Albert CAS could be used to understand the workings related to non-associative algebra, it contains quite good functionalities.&lt;/li&gt;
-
-&lt;/ul&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-
-&lt;h3&gt;Things I did right/wrong&lt;/h3&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;I often lagged in writing blogs.&lt;/li&gt;
-    &lt;li&gt;I worked more than expected hours before 15 July (before college started) but much less in the last one month of GSoC because of a little busy schedule.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/p&gt;
-
-&lt;p&gt;
-
-&lt;h3&gt;Conclusion&lt;/h3&gt;
-
-&lt;/p&gt;
-&lt;p&gt;
-
-I had say that I did about 70% of the work I promised to do in my proposal, considering that I also did two non-included task of Low Index subgroups algorithm and Modified Todd Coxeter algorithm, so I can say I swapped my work. It is good enough, and I hope to get back to extending the things that I have started. There's still some revision to be made, some code to be clean up. And I'm doing that.
-&lt;/p&gt;
-
-&lt;p&gt;
-I don't really know if I'll pass final evaluations by Google, but, regardless, I'm really glad for all the coding and development experience I got during these weeks. I'll probably use for personal projects, may be in Dissertation in last year, and try to contribute more to SymPy.
-&lt;/p&gt;
-&lt;p&gt;
-I appreciate the help of my mentor &lt;a href="https://github.com/jksuom"&gt;Kalevi Suominen&lt;/a&gt; who was always there for any query that I had regarding Group Theory in project, and I appreciate his ability to reply back within 1 hour for any message I left any time of day and every day of the week including weekend (I call it 1-hour rule). I think he was a wonderful mentor and I learnt a lot from him, and my co-mentor &lt;a href="https://github.com/asmeurer"&gt;Aaron Meurer&lt;/a&gt;, the current project leader of SymPy, and the entire SymPy community for helping me out and reviewing my work!
-&lt;/p&gt;
-&lt;p&gt;
-Also thank you &lt;font color="#4885ed"&gt;G&lt;/font&gt;&lt;font color="#db3236"&gt;o&lt;/font&gt;&lt;font color="#f4c20d"&gt;o&lt;/font&gt;&lt;font color="#4885ed"&gt;g&lt;/font&gt;&lt;font color="#3cba54"&gt;l&lt;/font&gt;&lt;font color="#db3236"&gt;e&lt;/font&gt;.
-&lt;/p&gt;
-          &lt;/p&gt;
-
-&lt;p&gt;
-&lt;p&gt;
-&amp;#2309;&amp;#2354;&amp;#2357;&amp;#2367;&amp;#2342;&amp;#2366; !
-&lt;/p&gt;</description>
-    </item>
-    <item>
       <guid isPermaLink="false">http://nishnik.github.io/GSoC-Twelfth-Week</guid>
       <author>Nishant Nikhil (nishnik)</author>
       <title>Nishant Nikhil (nishnik): GSoC Twelfth Week</title>
@@ -940,11 +788,11 @@ out_f = f-&amp;gt;zz_factor_sqf();
 The PR is &lt;a href="https://github.com/symengine/symengine/pull/1066"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-13</guid>
+      <guid isPermaLink="false">http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-13</guid>
       <author>Shekhar Prasad Rajak (shekharrajak)</author>
       <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 13 - Last week and conclusion</title>
       <pubDate>Sat, 20 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://shekharrajak.github.io/Coding-Period-week-13/</link>
+      <link>http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-13</link>
       <description>&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;Documentation nonlinsolve:&lt;/strong&gt;&lt;/p&gt;
@@ -1286,11 +1134,11 @@ of learning and experiences possible.&lt;/p&gt;</description>
 &lt;p&gt;Bye!&lt;/p&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-12</guid>
+      <guid isPermaLink="false">http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-12</guid>
       <author>Shekhar Prasad Rajak (shekharrajak)</author>
       <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 12</title>
       <pubDate>Mon, 15 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://shekharrajak.github.io/Coding-Period-week-12/</link>
+      <link>http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-12</link>
       <description>&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;nonlinsolve continue:&lt;/strong&gt;&lt;/p&gt;
@@ -1487,91 +1335,6 @@ RCP&amp;lt;const Boolean&amp;gt; logical_or(const set_boolean &amp;amp;s)
 After &lt;a href="https://github.com/symengine/symengine/pull/1061/"&gt;this&lt;/a&gt; PR gets merged, I would start working on &lt;code class="highlighter-rouge"&gt;Intersection&lt;/code&gt; class.&lt;/p&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">https://gxyd.github.io/GSoC Week 12</guid>
-      <author>Gaurav Dhingra (gxyd)</author>
-      <title>Gaurav Dhingra (gxyd): GSoC Week 12</title>
-      <pubDate>Tue, 09 Aug 2016 18:30:00 GMT</pubDate>
-      <link>https://gxyd.github.io/gsoc2016/gsoc_week_12.html</link>
-      <description>&lt;p&gt;
-Hi all, here's a brief summary of the 12th week of my GSoC:
-&lt;br /&gt;
-Last week I uploaded the &lt;a href="https://gxyd.github.io/gsoc2016/covhtml/index.html"&gt;test-coverage files&lt;/a&gt; on my website, that revealed some interesting places where a few versions of &lt;code&gt;scan&lt;/code&gt; routine in coset enumeration have un-tested &lt;code&gt;if-elif-else&lt;/code&gt; case.
-&lt;/p&gt;
-
-&lt;p&gt;
-As we are now approaching the end of GSoC time period, we decided to do some testing with some of the examples from 1973cdhw paper [2]. Coset Enumeration got my attention again since:
-&lt;/p&gt;
-
-&lt;p&gt;
-There seemed to be one bug raising &lt;code&gt;TypeError&lt;/code&gt; so opened issue &lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;sympy/sympy/#11449&lt;/a&gt;, resulting from coset enumeration by the coset-table based method. From beginning it was clear that the issue was not in &lt;code&gt;compress()&lt;/code&gt; method. It was quite difficult for me get onto the main source of problem. But then Kalevi had a closer look on the pseudo-code in Derek Holt and also in Sims Finitely Presented Groups.
-&lt;/p&gt;
-
-&lt;p&gt;
-I wrote docstrings for a few of methods and fixed the issue &lt;a href="https://github.com/sympy/sympy/issue/11449"&gt;#11449&lt;/a&gt; in PR &lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;#11460&lt;/a&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-The problem there in code is explained briefly below
-&lt;/p&gt;
-
-&lt;b&gt;Previous code-snippet&lt;/b&gt;
-&lt;p&gt;
-&lt;pre&gt;
-1    i = 0
-2    while i &lt; len(C.omega):
-3        alpha = C.omega[i]
-4        i += 1
-5        for x in C.A:
-6            if C.table[alpha][C.A_dict[x]] is None:
-7                C.define_f(alpha, x)
-8                C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
-
-&lt;/pre&gt;
-&lt;/p&gt;
-
-&lt;b&gt;After code-snippet&lt;/b&gt;
-&lt;p&gt;
-&lt;pre&gt;
-1     while alpha &lt; len(C.table):
-2         if C.p[alpha] == alpha:
-3             for x in C.A:
-4                 if C.p[alpha] != alpha:
-5                     break
-6                 if C.table[alpha][C.A_dict[x]] is None:
-7                    C.define_c(alpha, x)
-8                     C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
-
-&lt;/pre&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-Here $\alpha$ looks over in till $\lt$ &lt;code&gt;C.table&lt;/code&gt;. This way all elements of $C.\Omega$ are tested even in case that the set becomes very small. The inner for $x$ loop should also tests $p[i]$ at each round and break if that becomes different from $i$.
-&lt;/p&gt;
-
-&lt;p&gt;
-The changes that have been addressed in &lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;PR #11460&lt;/a&gt; also include chaging the file name &lt;code&gt;free_group.py&lt;/code&gt; to &lt;code&gt;free_groups.py&lt;/code&gt;, similar to what we have.
-&lt;/p&gt;
-
-&lt;p&gt;
-It seems that Presentation of Permutation Groups won't happen during GSoC since there's just one more week; instead, I plan to focus on improving and completing the current PR's &lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;#11361&lt;/a&gt; on Modified Todd-Coxeter algorithm and &lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;PR #11460&lt;/a&gt; on addition of docstrings and better user methods.
-&lt;/p&gt;
-
-&lt;p&gt;
-One more thing, that I would start in this week though may not be completed this week will be the sphinx documentation of finitely presented groups. I found the documentation of Poly's module by Kalevi very much readable and interesting, may be I can seek to follow that.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;h4&gt;References&lt;/h4&gt;
-&lt;i&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1. Derek F. Holt, Bettina Eick, Bettina, Eamonn A. O'Brien, "Handbook of computational group theory", Discrete Mathematics and its Applications (Boca Raton). Chapman &amp; Hall/CRC, Boca Raton, FL, 2005. ISBN 1-5848-372-3 .&lt;/li&gt;
-  &lt;li&gt;2. &lt;a href="http://staff.itee.uq.edu.au/havas/1973cdhw.pdf"&gt;John J. Cannon; Lucien A. Dimino; George Havas; Jane M. Watson, "Implementation and Analysis of the Todd-Coxeter Algorithm" , Mathematics of Computation, Vol. 27, No. 123. (Jul., 1973), pp. 463-490&lt;/a&gt;&lt;/li&gt;
-  &lt;/i&gt;
-&lt;br /&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
       <guid isPermaLink="false">http://shubhamtibra.wordpress.com/?p=854</guid>
       <author>Subham Tibra (shubhamtibra)</author>
       <title>Subham Tibra (shubhamtibra): GSoC Week 11</title>
@@ -1603,11 +1366,11 @@ x&amp;#8901;&amp;#8495;
 &lt;p&gt;Right now we are trying to find a way to include convergence conditions in the result while converting Holonomic Functions to expressions.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/shubhamtibra.wordpress.com/854/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/shubhamtibra.wordpress.com/854/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=shubhamtibra.wordpress.com&amp;#038;blog=106149936&amp;#038;post=854&amp;#038;subd=shubhamtibra&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-11</guid>
+      <guid isPermaLink="false">http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-11</guid>
       <author>Shekhar Prasad Rajak (shekharrajak)</author>
       <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 11</title>
       <pubDate>Sun, 07 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://shekharrajak.github.io/Coding-Period-week-11/</link>
+      <link>http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-11</link>
       <description>&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;eliminate() continue:&lt;/strong&gt;&lt;/p&gt;
@@ -1989,11 +1752,11 @@ x &amp;#8901;y
 &lt;p&gt;Off to work!&lt;/p&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">http://shekharrajak.github.io/Coding-Period-week-10</guid>
+      <guid isPermaLink="false">http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-10</guid>
       <author>Shekhar Prasad Rajak (shekharrajak)</author>
       <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 10</title>
       <pubDate>Sat, 30 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://shekharrajak.github.io/Coding-Period-week-10/</link>
+      <link>http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-10</link>
       <description>&lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;eliminate() continue:&lt;/strong&gt;&lt;/p&gt;
@@ -2052,170 +1815,6 @@ returning more simplified solution( &lt;a href="https://github.com/sympy/sympy/p
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;continue&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://sampadblog.wordpress.com/?p=985</guid>
-      <author>Sampad Saha (sampadsaha5)</author>
-      <title>Sampad Saha (sampadsaha5): GSoC Week 10</title>
-      <pubDate>Fri, 29 Jul 2016 11:20:44 GMT</pubDate>
-      <link>https://sampadblog.wordpress.com/2016/07/29/gsoc-week-10/</link>
-      <description>&lt;p&gt;Hello, guys. Welcome back.&amp;#160;It&amp;#8217;s been ten weeks into the coding period. I had a meeting with Jason on 25th of this month. We discussed many new changed on the API that I had implemented before this week. Now, the beam bending module is almost ready to solve beam bending problems.&lt;/p&gt;
-&lt;p&gt;Let us see how to solve a beam bending problem using this module.&lt;/p&gt;
-&lt;p&gt;Problem Statement :&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Loaded beam.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Loaded_beam.svg/650px-Loaded_beam.svg.png" /&gt;&lt;/p&gt;
-&lt;p&gt;The deflection is restricted at the end of the beam.&lt;/p&gt;
-&lt;p&gt;Solution :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.physics.continuum_mechanics.beam import Beam
-
-&amp;gt;&amp;gt;&amp;gt; from sympy import Symbol, Piecewise
- 
-&amp;gt;&amp;gt;&amp;gt; x = Symbol('x')
-
-&amp;gt;&amp;gt;&amp;gt; E = Symbol('E')
-
-&amp;gt;&amp;gt;&amp;gt; I = Symbol('I')
-
-&amp;gt;&amp;gt;&amp;gt; b = Beam(4, E, I)
-
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(value=-9, start=4, order=-1)
-
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(value=-3, start=0, order=-1)
-
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(order=0, start=2, value=6)
-
-&amp;gt;&amp;gt;&amp;gt; b.bc_deflection = [(4, 0)]
-
-&amp;gt;&amp;gt;&amp;gt; b.boundary_conditions
- {'deflection': [(4, 0)], 'moment': [], 'slope': []}
-
-&amp;gt;&amp;gt;&amp;gt; b.load
- -3*SingularityFunction(x, 0, -1) + 6*SingularityFunction(x, 2, 0) - 9*SingularityFunction(x, 4, -1)
-
-&amp;gt;&amp;gt;&amp;gt; b.shear_force()
- -3*SingularityFunction(x, 0, 0) + 6*SingularityFunction(x, 2, 1) - 9*SingularityFunction(x, 4, 0)
-
-&amp;gt;&amp;gt;&amp;gt; b.bending_moment()
- 3*SingularityFunction(x, 0, 1) - 3*SingularityFunction(x, 2, 2) + 9*SingularityFunction(x, 4, 1)
-
-&amp;gt;&amp;gt;&amp;gt; b.slope()
- (3*SingularityFunction(x, 0, 2)/2 - SingularityFunction(x, 2, 3) + 9*SingularityFunction(x, 4, 2)/2 - 7)/(E*I)
-
-&amp;gt;&amp;gt;&amp;gt; b.deflection()
- (-7*x + SingularityFunction(x, 0, 3)/2 - SingularityFunction(x, 2, 4)/4 + 3*SingularityFunction(x, 4, 3)/2)/(E*I)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If the user wants to represent the deflection in the piecewise form, then:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; b.deflection().rewrite(Piecewise)
- (-7*x + Piecewise((x**3, x &amp;gt; 0), (0, True))/2
- + 3*Piecewise(((x - 4)**3, x - 4 &amp;gt; 0), (0, True))/2
- - Piecewise(((x - 2)**4, x - 2 &amp;gt; 0), (0, True))/4)/(E*I)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;h4&gt;&lt;em&gt;&lt;strong&gt;Next week&amp;#160;&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Add the end argument in the apply_load method.&lt;/li&gt;
-&lt;li&gt;Add Sphinx documentations.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;That&amp;#8217;s all for this week. Cheers !!&lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/sampadblog.wordpress.com/985/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/sampadblog.wordpress.com/985/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=sampadblog.wordpress.com&amp;#038;blog=102728326&amp;#038;post=985&amp;#038;subd=sampadblog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://jbm950.github.io//2016/07/29/GSoC-week-11.html</guid>
-      <author>James Milam (jbm950)</author>
-      <title>James Milam (jbm950): GSoC Week 11</title>
-      <pubDate>Fri, 29 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://jbm950.github.io//2016/07/29/GSoC-week-11.html</link>
-      <description>&lt;p&gt;Somehow I think I was off by a week. I think last week&amp;#8217;s blog post covers week
-9 and 10 and this week&amp;#8217;s covers week 11. This week I created a full draft for
-all components of the &lt;code class="highlighter-rouge"&gt;SymbolicSystem&lt;/code&gt; class that will take the place of a
-equations of motion generator &amp;#8220;base class&amp;#8221; that was discussed in my project
-proposal. I began by creating all of the docstrings for the class followed by
-the test code. With the documentation and test code written it was a simple
-matter to finish off the code for the class itself. Lastly I added
-documentation to two places in sympy, one place contains the autogenerated
-documentation from the docstrings and the other place I adapted an example from
-pydy to show how to use the new class.&lt;/p&gt;
-
-&lt;p&gt;After working on &lt;code class="highlighter-rouge"&gt;SymbolicSystem&lt;/code&gt; I decided to try to finish off an old PR of
-mine regarding the init_printing code that Jason and I had discussed at Scipy.
-The idea was to build separate dictionaries to pass to the different printers
-in ipython based on the parameters that the specific printers take. The idea
-was to find this information using inspect.getargs(). The problem arose when
-trying to implement this solution because each separate printer has an expr
-argument and a **settings argument and the different possible paramters are
-processed internally by the printer. This means that there would not be an
-elegant way to build dictionaries for each printer.&lt;/p&gt;
-
-&lt;p&gt;The next thing I worked on this week was looking into Jain&amp;#8217;s version of the
-order(N) method as suggested last week. When I started looking over his book,
-however, I found that uses a rather different set of notion than Featherstone
-and had some additional terms. I have decided to move forward with
-Featherstone&amp;#8217;s method due to the summer coming to an end and I am already
-familiar with his version of the method. To that end I reread the first part of
-chapter 7 in Featherstone&amp;#8217;s book where he discusses the articulated body
-method.&lt;/p&gt;
-
-&lt;p&gt;I reviewed two PR&amp;#8217;s this week. This work was rather quick as they were simply
-documentation additions. I verified the method docstrings matched what the
-mehtod actually does and that the modual docstring included the different
-functions present in the file. Determining that they were correct I gave the +1
-to merge and they have both since been merged.&lt;/p&gt;
-
-&lt;h3 id="future-directions"&gt;Future Directions&lt;/h3&gt;
-
-&lt;p&gt;The plan for next week is to focus entirely on the order(N) articulated body
-method of forming the equations of motion. I plan on writing the three passes
-for the method as if I have all of the information and methods I need in order
-to make it work. I expect this to be the best way to determine what additional
-code I will need in addition to finding my weak points in how well I understand
-the method. Once I have a skeleton of the of how the algorithm is supposed to
-work I will stop working directly on the algorithm itself and start working on
-the peripheral code such as the joints and body code or spatial vector
-processing methods.&lt;/p&gt;
-
-&lt;h3 id="prs-and-issues"&gt;PR&amp;#8217;s and Issues&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;ul&gt;
-    &lt;li&gt;(Open) [WIP] Added system.py to physics/mechanics &lt;a href="https://github.com/sympy/sympy/pull/11431"&gt;PR
-  #11431&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;(Merged) Added docstrings to delta and mid property methods &lt;a href="https://github.com/sympy/sympy/pull/11432"&gt;PR
-  #11432&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;(Merged) Added top-level docstring for singularities.py &lt;a href="https://github.com/sympy/sympy/pull/11440"&gt;PR
-  #11440&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://nishnik.github.io/GSoC-Ninth-Week</guid>
-      <author>Nishant Nikhil (nishnik)</author>
-      <title>Nishant Nikhil (nishnik): GSoC Ninth Week</title>
-      <pubDate>Thu, 28 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://nishnik.github.io/GSoC-Ninth-Week/</link>
-      <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Previous week I had implemented the &lt;strong&gt;Shoup&amp;#8217;s Algorithm&lt;/strong&gt; in &lt;a href="https://github.com/symengine/symengine/pull/1045"&gt;this&lt;/a&gt; PR. During the review we came to realise that it is better to use &lt;code class="highlighter-rouge"&gt;unsigned int&lt;/code&gt; instead of &lt;code class="highlighter-rouge"&gt;integer_class&lt;/code&gt; because we didn&amp;#8217;t need big numbers. 
-&lt;br /&gt;&lt;br /&gt;
-Working on the same PR, I found a bug in &lt;code class="highlighter-rouge"&gt;negate&lt;/code&gt; and similar function where we were doing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;for (auto &amp;amp;a : dict_) {
-  a *= -1;
-  a += modulo_;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here: if the &lt;code class="highlighter-rouge"&gt;dict_&lt;/code&gt; is &lt;code class="highlighter-rouge"&gt;[0, 0, 10]&lt;/code&gt;, it will negate to &lt;code class="highlighter-rouge"&gt;[11, 11, 1]&lt;/code&gt; in &lt;code class="highlighter-rouge"&gt;GF(11)&lt;/code&gt;. So, it was needed to add a check when the value is &lt;code class="highlighter-rouge"&gt;0&lt;/code&gt;. So, the method was changed to:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;for (auto &amp;amp;a : dict_) {
-  a *= -1;
-  if (a != 0_z)
-    a += modulo_;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-Along with it I was working on the &lt;code class="highlighter-rouge"&gt;gf_factor&lt;/code&gt; &lt;a href="https://github.com/symengine/symengine/pull/1036"&gt;PR&lt;/a&gt; and it eventually got merged. It introduced &lt;strong&gt;Zassenhaus&amp;#8217;s algorithm&lt;/strong&gt; and &lt;code class="highlighter-rouge"&gt;gf_factor()&lt;/code&gt; function. In coming days, we will have to change &lt;code class="highlighter-rouge"&gt;gf_factor&lt;/code&gt; to switch between &lt;code class="highlighter-rouge"&gt;gf_zassenhaus&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;gf_shoup&lt;/code&gt; according to the degree of polynomial.
-&lt;br /&gt;&lt;br /&gt;
-We made one more design change, we changed the factor container from &lt;code class="highlighter-rouge"&gt;std::pair&amp;lt;GaloisFieldDict, integer_class&amp;gt;&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;std::pair&amp;lt;GaloisFieldDict, unsigned&amp;gt;&lt;/code&gt; because we didn&amp;#8217;t need large numbers as power.
-&lt;br /&gt;&lt;br /&gt;
-Then I started working on change of base class of &lt;code class="highlighter-rouge"&gt;GaloisField&lt;/code&gt; class from &lt;code class="highlighter-rouge"&gt;UPolyBase&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;UIntPolyBase&lt;/code&gt;, this needed implementation of &lt;code class="highlighter-rouge"&gt;eval&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;multi_eval&lt;/code&gt; method, then I implemented the iterator for &lt;code class="highlighter-rouge"&gt;GaloisField&lt;/code&gt; class and the &lt;code class="highlighter-rouge"&gt;pow&lt;/code&gt; method. The &lt;a href="https://github.com/symengine/symengine/pull/1047/files"&gt;PR&lt;/a&gt; is under review.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
