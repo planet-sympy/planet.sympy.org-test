@@ -161,6 +161,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Arihant Parsoya (parsoyaarihant)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://parsoyaarihant.github.io/blog/">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://parsoyaarihant.github.io/blog/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Rajith Vidanaarachchi (rajithv)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://rajithsays.wordpress.com">

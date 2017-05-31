@@ -622,6 +622,37 @@ Here is a gist of the work I undertook till now:&lt;/p&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
+      <guid isPermaLink="false">https://parsoyaarihant.github.io/blog/gsoc/2017/05/08/Selected-for-GSoC</guid>
+      <author>Arihant Parsoya (parsoyaarihant)</author>
+      <title>Arihant Parsoya (parsoyaarihant): Selected for GSoC 2017</title>
+      <pubDate>Mon, 08 May 2017 17:28:05 GMT</pubDate>
+      <link>https://parsoyaarihant.github.io/blog/gsoc/2017/05/08/Selected-for-GSoC.html</link>
+      <description>&lt;p&gt;I got selected for GSoC 2017 under &lt;a href="https://github.com/sympy"&gt;SymPy&lt;/a&gt;. My mentors are &lt;a href="https://github.com/Upabjojr"&gt;Francesco Bonazzi&lt;/a&gt; and
+&lt;a href="https://github.com/certik"&gt;Ond&amp;#345;ej &amp;#268;ert&amp;#237;k&lt;/a&gt;. I am thankful to SymPy community for giving me this opportunity.&lt;/p&gt;
+
+&lt;p&gt;My project is to implement Rule based intergation(RUBI) in SymPy. RUBI consists of ~10,000 transformation rules which
+have been tabulated since last two centuries. Computer Algebra System(CAS) can
+match the integrand with the right rule to directly solve the integration
+without using general integration algorithms.&lt;/p&gt;
+
+&lt;p&gt;Adding Rubi to SymPy can be very helpful to SymPy&amp;#8217;s integration module since it
+frees developers of algorithms from having to worry about the annoying and
+trivial problems and the special cases, and instead focus on the genuinely hard
+and interesting problems.&lt;/p&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://www.apmaths.uwo.ca/%7Earich/A%20Rule-based%20Knowledge%20Repository.pdf"&gt;A Knowledge Repository for Indefinite Integration Based on Transformation
+Rules by D.J. Jeffrey and A.D.
+Rich&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://www.apmaths.uwo.ca/%7Earich/"&gt;Albert D. Rich website for Rubi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://people.eecs.berkeley.edu/~fateman/papers/partition-new2.pdf"&gt;Partitioning of algebraic subexpressions in computer algebra systems: an
+alternative to matching with an application to symbolic integration by
+Richard
+Fateman&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/05/04/Google-Summer-of-Code-with-SymPy</guid>
       <author>Shikhar Jaiswal (ShikharJ)</author>
       <title>Shikhar Jaiswal (ShikharJ): Google Summer of Code with SymPy</title>
@@ -2240,75 +2271,6 @@ ConditionSet(x, -Abs(re(y)) &amp;lt;= re(x) and re(x) &amp;lt;= Abs(re(y)) and r
 &lt;/ul&gt;
 &lt;p&gt;That&amp;#8217;s all for now, looking forward for week 12.&lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/sampadblog.wordpress.com/1005/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/sampadblog.wordpress.com/1005/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=sampadblog.wordpress.com&amp;#038;blog=102728326&amp;#038;post=1005&amp;#038;subd=sampadblog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://jbm950.github.io//2016/08/05/GSoC-week-12.html</guid>
-      <author>James Milam (jbm950)</author>
-      <title>James Milam (jbm950): GSoC Week 12</title>
-      <pubDate>Fri, 05 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://jbm950.github.io//2016/08/05/GSoC-week-12.html</link>
-      <description>&lt;p&gt;This week my main work was on Featherstone&amp;#8217;s articulated body algorithm. I
-started by prototyping what I thought his algorith might look like in python
-code (the algorithm was pulled from chapter 7 of his book). With the passes
-prototyped it was apparent that I would need a full description of the
-kinematic tree and so I prototyped the building of the kinematic tree from a
-single &amp;#8220;base&amp;#8221; body. I then went on to see what it would look like if the
-kinematic tree was built during the first pass of his articulated body
-algorithm and decided that keeping the two separate would result in cleaner
-code.&lt;/p&gt;
-
-&lt;p&gt;With the three passes prototyped and the kinematic tree built I started digging
-into Featherstone&amp;#8217;s book to better determine the definition of each of the
-variables in the algorithm. While doing this I ended up reading a second source
-where Featherstone describes the articulated body algorithm and it was helpful
-in furthering my understanding of the algorithm as it was a condensed summary.
-I then compared the written version of the algorith in his book and this
-article with the two matlab versions he has posted online and the python
-version her provides a link for online. This helped me see where some terms he
-includes in his book he doesn&amp;#8217;t include in his code. It also helped me to see
-what code for the algorithm might look like.&lt;/p&gt;
-
-&lt;p&gt;After working on the mock up of the passes and trying to better understand
-them, I switched focus to the joint code that needs to be finished so that it
-can be used in my implementation of the articulated body algorithm. This has
-lead to some confusion about the design decisions that were made in the past
-when putting together the joint code and this is the current stage I am sitting
-at as I await feedback on some of my questions.&lt;/p&gt;
-
-&lt;p&gt;This week I also looked over a couple of documentation PR&amp;#8217;s. One was a simple
-matter of fixing some indentation and seems mostly ready to merge but the
-second turned some docstrings into raw strings so they could add latex math
-code. I don&amp;#8217;t know what the general stance is on the latter but I&amp;#8217;m of the
-opinion that the docstrings should be human readable since people may actually
-look through the code for them or hope that help(function) provides something
-useful. In this case the latex math code is cluttered and would be better off
-in .rst files where people are only going to be reading the rendered version.
-On that PR I am awaiting response from someone with sympy to see if this is
-indeed prefered.&lt;/p&gt;
-
-&lt;h3 id="future-directions"&gt;Future Directions&lt;/h3&gt;
-
-&lt;p&gt;Hopefully I&amp;#8217;ll recieve some feedback about the joints and Featherstone&amp;#8217;s method
-so I can keep moving forward with these. In the mean time there are a few other
-bits of code I will need to complete that the algorithm uses that is not
-directly related to my questions. If I finish these tasks before recieving
-feedback I will move forward with changing the joint code as I think would be
-best.&lt;/p&gt;
-
-&lt;h3 id="prs-and-issues"&gt;PR&amp;#8217;s and Issues&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;ul&gt;
-    &lt;li&gt;(Open) [WIP] Added system.py to physics/mechanics &lt;a href="https://github.com/sympy/sympy/pull/11431"&gt;PR
-  #11431&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;(Open) Intendation fixes &amp;#8211; sympy/concrete/summations.py &lt;a href="https://github.com/sympy/sympy/pull/11473"&gt;PR
-  #11473&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;(Open) Adjustments to Legendre, Jacobi symbols docstrings &lt;a href="https://github.com/sympy/sympy/pull/11474"&gt;PR
-  #11474&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;(Open) [WIP] FeatherstonesMethod &lt;a href="https://github.com/sympy/sympy/pull/11415"&gt;PR
-  #11415&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;</description>
     </item>
   </channel>
 </rss>
