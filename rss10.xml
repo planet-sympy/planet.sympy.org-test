@@ -78,6 +78,480 @@
 &lt;p&gt;See you soon .&lt;/p&gt;</description>
     </item>
     <item>
+      <guid isPermaLink="false">https://gxyd.github.io/blogs/Gsoc2017-with-sympy</guid>
+      <author>Gaurav Dhingra (gxyd)</author>
+      <title>Gaurav Dhingra (gxyd): GSoC 2017: Symbolic Integration</title>
+      <pubDate>Wed, 24 May 2017 00:00:00 GMT</pubDate>
+      <link>https://gxyd.github.io/blogs/Gsoc2017-with-sympy/</link>
+      <description>&lt;p&gt;GSoC 2017: Symbolic Integration&lt;/p&gt;
+
+&lt;p&gt;I applied for Google Summer of Code again this year, and my project on symbolic integration has been accepted. Like last year, my mentors are &lt;a href="https://github.com/asmeurer"&gt;Aaron Meurer&lt;/a&gt;(SymPy lead developer) and &lt;a href="https://github.com/jksuom"&gt;Kalevi Suominen&lt;/a&gt;. The proposal I submitted can be found here &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Gaurav-Dhingra:-Risch-algorithm-for-symbolic-integration"&gt;GSoC 2017 proposal: Symbolic Integration&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aaron himself worked on Symbolic Integration in GSoC 2010, and he started the implementation of transcendental functions integration and a good part of transcendental function integration was done (main resource being &lt;em&gt;Symbolic Integration I: Transcendental Function by Manuel Bronstein&lt;/em&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Then in the year 2013, Chetna Gupta continued work on transcendental function integration as a part of her GSoC project. And still some part of transcendental function integration remains.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I have liked to mention one of &amp;#8216;things&amp;#8217; with the current integration module is sometime people get deceived with the results. Consider the integration of function &lt;em&gt;1/(x&lt;strong&gt;2 + a&lt;/strong&gt;2)&lt;/em&gt;. Most of would expect the output to be &lt;em&gt;atan(x/a)/a&lt;/em&gt;. But with SymPy we get:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;In [11]: integrate(1/(x**2 + a**2), x)
+Out[11]: (-I*log(-I*a + x)/2 + I*log(I*a + x)/2)/a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;which for a moment looks wrong, but actually the answer returned by SymPy is
+not wrong (or is actually right mathematically). Since the answer returned by
+SymPy is logarithmic form of &lt;em&gt;atan&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class="highlighter-rouge"&gt;$atan(x) = I*log((-I*x + 1)/(I*x + 1))/2$&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the comes the main part, what would I be working on? The first main thing on
+which I will be working on is:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Completing the work on transcendental function integration: which includes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;writing a lot of tests for functions present in prde.py (Parametric Risch
+ Differential Equation), rde.py (Risch differential equation).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;working on trigonometric extensions.
+ example:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="language-python highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy.integrals.risch&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;risch_integrate&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;risch_integrate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s"&gt;"&amp;lt;stdin&amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;module&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s"&gt;"/home/gxyd/foss/sympy/sympy/integrals/risch.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1677&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;risch_integrate&lt;/span&gt;
+    &lt;span class="n"&gt;dummy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rewrite_complex&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;rewrite_complex&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s"&gt;"/home/gxyd/foss/sympy/sympy/integrals/risch.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;234&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;
+    &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="nb"&gt;NotImplementedError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Trigonometric extensions are not "&lt;/span&gt;
+&lt;span class="nb"&gt;NotImplementedError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Trigonometric&lt;/span&gt; &lt;span class="n"&gt;extensions&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;supported&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;yet&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;as you can see it raises the &lt;strong&gt;NotImplementedError&lt;/strong&gt;. It doesn&amp;#8217;t mean
+that SymPy can&amp;#8217;t evaluate the integral of simple function like &lt;em&gt;sin(x)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt; ```
+ In 1: from sympy import *
+ In [2]: integrate(sin(x), x)
+ Out[2]: -cos(x)
+ ```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Since I have started using PDb as a debugger (thanks to Kalevi) instead
+of the primitive &lt;strong&gt;print&lt;/strong&gt; command. I will now explain how a function like
+ &lt;em&gt;sin(x)&lt;/em&gt; is currently integrated.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id="pdb-working-with-integration"&gt;Pdb working with integration&lt;/h3&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First go into SymPy&amp;#8217;s root directory and start the IPython or bin/isympy session.&lt;/li&gt;
+  &lt;li&gt;Then import pdb module into your session with &lt;em&gt;import pdb&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Import the function from the tests file which you want to debug/analyse with
+command for example in my I will be importing test case from the integral module&amp;#8217;s
+test directory with &lt;em&gt;from sympy.integrals.tests.test_integrals import test_halo&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;PDb important commands: You can use as command the word outside the bracket or
+including the one outside bracket with word inside it.&lt;/p&gt;
+
+&lt;p&gt;s(tep): You can either type &lt;em&gt;s&lt;/em&gt; or &lt;em&gt;step&lt;/em&gt; on PDb command prompt (i.e. (Pdb)),
+        this command is often used to look into its execution. Whenever you find
+        something interesting (function or class) use this command.&lt;/p&gt;
+
+&lt;p&gt;b(reak): setting a break point. Often executed in conjunction with &lt;em&gt;continue&lt;/em&gt;, it
+          sets a breakpoint (see wiki article for it). An example would be its usage
+          in seeing the execution of &lt;i&gt;DifferentialExtension&lt;/i&gt; object.
+          Example: (Pdb) b sympy/integrals/risch.py:196
+                   Breakpoint 1 at /home/gxyd/foss/sympy/sympy/integrals/risch.py:19&lt;/p&gt;
+
+&lt;p&gt;c(ont(inue)): Often used in conjunction with &lt;i&gt;break&lt;/i&gt; command. It continues the
+              execution i.e. doesn&amp;#8217;t show any command(or code) on Pdb until the Pdb
+              hits the set breakpoint or the function returns something to the main
+              IPython session as output.&lt;/p&gt;
+
+&lt;p&gt;n(ext): continue to the next line.
+l(ist): shows a limited source code of current line execution.
+p: prints the object. Used in printing of variable/object value.&lt;/p&gt;
+
+&lt;p&gt;There are many more commands like &lt;i&gt;j&lt;/i&gt;, &lt;i&gt;w&lt;/i&gt;, which I haven&amp;#8217;t used often.
+(For broader and good understanding of these commands use the trivial ?x where &lt;i&gt;x&lt;/i&gt;
+is the command under consideration).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id="an-example-session"&gt;An example session:&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;gxyd@stallman:~/foss/sympy$ bin/isympy
+IPython console for SymPy 1.0.1.dev (Python 3.6.0-64-bit) (ground types: python)
+
+These commands were executed:
+&amp;gt;&amp;gt;&amp;gt; from __future__ import division
+&amp;gt;&amp;gt;&amp;gt; from sympy import *
+&amp;gt;&amp;gt;&amp;gt; x, y, z, t = symbols('x y z t')
+&amp;gt;&amp;gt;&amp;gt; k, m, n = symbols('k m n', integer=True)
+&amp;gt;&amp;gt;&amp;gt; f, g, h = symbols('f g h', cls=Function)
+&amp;gt;&amp;gt;&amp;gt; init_printing()
+
+Documentation can be found at http://docs.sympy.org/dev
+
+In [1]: import pdb
+
+In [2]: from sympy.integrals.tests.test_integrals import test_halo
+
+In [3]: pdb.run('test_halo()')
+&amp;gt; &amp;lt;string&amp;gt;(1)&amp;lt;module&amp;gt;()
+(Pdb) s
+--Call--
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/tests/test_integrals.py(1182)test_halo()
+-&amp;gt; def test_halo():
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/tests/test_integrals.py(1183)test_halo()
+-&amp;gt; from sympy.abc import x
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/tests/test_integrals.py(1184)test_halo()
+-&amp;gt; assert integrate(sin(x), x) == -cos(x)
+(Pdb) s
+--Call--
+&amp;gt; /home/gxyd/foss/sympy/sympy/core/basic.py(105)__hash__()
+-&amp;gt; def __hash__(self):
+(Pdb) b sympy/integrals/integrals.py:1287
+Breakpoint 1 at /home/gxyd/foss/sympy/sympy/integrals/integrals.py:1287
+(Pdb) c
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1287)integrate()
+-&amp;gt; meijerg = kwargs.pop('meijerg', None)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1288)integrate()
+-&amp;gt; conds = kwargs.pop('conds', 'piecewise')
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1289)integrate()
+-&amp;gt; risch = kwargs.pop('risch', None)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1290)integrate()
+-&amp;gt; manual = kwargs.pop('manual', None)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1291)integrate()
+-&amp;gt; integral = Integral(*args, **kwargs)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1293)integrate()
+-&amp;gt; if isinstance(integral, Integral):
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1294)integrate()
+-&amp;gt; return integral.doit(deep=False, meijerg=meijerg, conds=conds,
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1295)integrate()
+-&amp;gt; risch=risch, manual=manual)
+(Pdb) s
+--Call--
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(354)doit()
+-&amp;gt; def doit(self, **hints):
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(374)doit()
+-&amp;gt; if not hints.get('integrals', True):
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(377)doit()
+-&amp;gt; deep = hints.get('deep', True)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(378)doit()
+-&amp;gt; meijerg = hints.get('meijerg', None)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(379)doit()
+-&amp;gt; conds = hints.get('conds', 'piecewise')
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(380)doit()
+-&amp;gt; risch = hints.get('risch', None)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(381)doit()
+-&amp;gt; manual = hints.get('manual', None)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(383)doit()
+-&amp;gt; if conds not in ['separate', 'piecewise', 'none']:
+(Pdb) p conds
+'piecewise'
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(387)doit()
+-&amp;gt; if risch and any(len(xab) &amp;gt; 1 for xab in self.limits):
+(Pdb) p risch
+None
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(391)doit()
+-&amp;gt; if self.is_zero:
+(Pdb) p self
+Integral(sin(x), x)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(395)doit()
+-&amp;gt; function = self.function
+(Pdb) p self.function
+sin(x)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(396)doit()
+-&amp;gt; if deep:
+(Pdb) p deep
+False
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(398)doit()
+-&amp;gt; if function.is_zero:
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(401)doit()
+-&amp;gt; if isinstance(function, MatrixBase):
+(Pdb) p function
+sin(x)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(406)doit()
+-&amp;gt; undone_limits = []
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(408)doit()
+-&amp;gt; ulj = set()
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(409)doit()
+-&amp;gt; for xab in self.limits:
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(412)doit()
+-&amp;gt; if len(xab) == 1:
+(Pdb) p self.limits
+((x,),)
+(Pdb) p xab
+(x,)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(413)doit()
+-&amp;gt; uli = set(xab[:1])
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(422)doit()
+-&amp;gt; if xab[0] in ulj or any(v[0] in uli for v in undone_limits):
+(Pdb) p uli
+{x}
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(438)doit()
+-&amp;gt; def try_meijerg(function, xab):
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(462)doit()
+-&amp;gt; meijerg1 = meijerg
+(Pdb) p meijerg
+None
+(Pdb) p xab
+(x,)
+(Pdb) l
+457  	                            ret = f, cond
+458  	                        else:
+459  	                            ret = f
+460  	                return ret
+461  	
+462  -&amp;gt;	            meijerg1 = meijerg
+463  	            if len(xab) == 3 and xab[1].is_real and xab[2].is_real \
+464  	                and not function.is_Poly and \
+465  	                    (xab[1].has(oo, -oo) or xab[2].has(oo, -oo)):
+466  	                ret = try_meijerg(function, xab)
+467  	                if ret is not None:
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(463)doit()
+-&amp;gt; if len(xab) == 3 and xab[1].is_real and xab[2].is_real \
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(480)doit()
+-&amp;gt; if meijerg1 is False and meijerg is True:
+(Pdb) p meijerg1
+None
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(483)doit()
+-&amp;gt; antideriv = self._eval_integral(
+(Pdb) p self.
+*** SyntaxError: unexpected EOF while parsing
+(Pdb) p self
+Integral(sin(x), x)
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(484)doit()
+-&amp;gt; function, xab[0],
+(Pdb) s
+--Call--
+&amp;gt; /home/gxyd/foss/sympy/sympy/core/containers.py(40)__getitem__()
+-&amp;gt; def __getitem__(self, i):
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/core/containers.py(41)__getitem__()
+-&amp;gt; if isinstance(i, slice):
+(Pdb) r
+--Return--
+&amp;gt; /home/gxyd/foss/sympy/sympy/core/containers.py(44)__getitem__()-&amp;gt;x
+-&amp;gt; return self.args[i]
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(485)doit()
+-&amp;gt; meijerg=meijerg1, risch=risch, manual=manual,
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(486)doit()
+-&amp;gt; conds=conds)
+(Pdb) s
+--Call--
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(651)_eval_integral()
+-&amp;gt; def _eval_integral(self, f, x, meijerg=None, risch=None, manual=None,
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(735)_eval_integral()
+-&amp;gt; from sympy.integrals.deltafunctions import deltaintegrate
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(736)_eval_integral()
+-&amp;gt; from sympy.integrals.singularityfunctions import singularityintegrate
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(737)_eval_integral()
+-&amp;gt; from sympy.integrals.heurisch import heurisch, heurisch_wrapper
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(738)_eval_integral()
+-&amp;gt; from sympy.integrals.rationaltools import ratint
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(739)_eval_integral()
+-&amp;gt; from sympy.integrals.risch import risch_integrate
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(741)_eval_integral()
+-&amp;gt; if risch:
+(Pdb) p risch
+None
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(747)_eval_integral()
+-&amp;gt; if manual:
+(Pdb) p manual
+None
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(762)_eval_integral()
+-&amp;gt; if isinstance(f, Poly) and not meijerg:
+(Pdb) p f
+sin(x)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(766)_eval_integral()
+-&amp;gt; if f.func is Piecewise:
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(770)_eval_integral()
+-&amp;gt; if not f.has(x):
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(774)_eval_integral()
+-&amp;gt; poly = f.as_poly(x)
+(Pdb) p sin(x).as_poly(x)
+*** NameError: name 'sin' is not defined
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(775)_eval_integral()
+-&amp;gt; if poly is not None and not meijerg:
+(Pdb) p poly
+None
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(778)_eval_integral()
+-&amp;gt; if risch is not False:
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(779)_eval_integral()
+-&amp;gt; try:
+(Pdb) p risch
+None
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(780)_eval_integral()
+-&amp;gt; result, i = risch_integrate(f, x, separate_integral=True, conds=conds)
+(Pdb) s
+--Call--
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1569)risch_integrate()
+-&amp;gt; def risch_integrate(f, x, extension=None, handle_first='log',
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1674)risch_integrate()
+-&amp;gt; f = S(f)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1676)risch_integrate()
+-&amp;gt; DE = extension or DifferentialExtension(f, x, handle_first=handle_first,
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1677)risch_integrate()
+-&amp;gt; dummy=True, rewrite_complex=rewrite_complex)
+(Pdb) s
+--Call--
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(165)__init__()
+-&amp;gt; def __init__(self, f=None, x=None, handle_first='log', dummy=False, extension=None, rewrite_complex=False):
+(Pdb) s
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(196)__init__()
+-&amp;gt; if extension:
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(206)__init__()
+-&amp;gt; elif f is None or x is None:
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(210)__init__()
+-&amp;gt; from sympy.integrals.prde import is_deriv_k
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(212)__init__()
+-&amp;gt; if handle_first not in ['log', 'exp']:
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(218)__init__()
+-&amp;gt; self.f = f
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(219)__init__()
+-&amp;gt; self.x = x
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(221)__init__()
+-&amp;gt; self.dummy = dummy
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(222)__init__()
+-&amp;gt; self.reset()
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(223)__init__()
+-&amp;gt; exp_new_extension, log_new_extension = True, True
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(224)__init__()
+-&amp;gt; if rewrite_complex:
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(233)__init__()
+-&amp;gt; if any(i.has(x) for i in self.f.atoms(sin, cos, tan, atan, asin, acos)):
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(234)__init__()
+-&amp;gt; raise NotImplementedError("Trigonometric extensions are not "
+(Pdb) n
+NotImplementedError: Trigonometric extensions are not supported (yet!)
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(234)__init__()
+-&amp;gt; raise NotImplementedError("Trigonometric extensions are not "
+(Pdb) n
+--Return--
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(234)__init__()-&amp;gt;None
+-&amp;gt; raise NotImplementedError("Trigonometric extensions are not "
+(Pdb) n
+NotImplementedError: Trigonometric extensions are not supported (yet!)
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1677)risch_integrate()
+-&amp;gt; dummy=True, rewrite_complex=rewrite_complex)
+(Pdb) n
+--Return--
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1677)risch_integrate()-&amp;gt;None
+-&amp;gt; dummy=True, rewrite_complex=rewrite_complex)
+(Pdb) n
+NotImplementedError: Trigonometric extensions are not supported (yet!)
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(780)_eval_integral()
+-&amp;gt; result, i = risch_integrate(f, x, separate_integral=True, conds=conds)
+(Pdb) n
+&amp;gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(781)_eval_integral()
+-&amp;gt; except NotImplementedError:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;  As you can see it raise *NotImplemenedError* for forming the *DifferentialExtension*
+  object for function f = *sin(x)*.
+
+  I will leave it here, I think it wouldn't be an issue to continue from here.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id="todo"&gt;TODO&lt;/h3&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I am still trying to make a call to &lt;em&gt;param_rischDE&lt;/em&gt; in the function &lt;em&gt;limited_integration&lt;/em&gt;. I will write more about this in my next blog, hopefully(a big hope here from me, I have been stuck here for quite sometime and frustrated about it) will have completed this task by then.&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/05/16/Community-Bonding-Progress-Report</guid>
       <author>Shikhar Jaiswal (ShikharJ)</author>
       <title>Shikhar Jaiswal (ShikharJ): Community Bonding - Progress Report</title>
@@ -215,6 +689,22 @@ Here is a gist of the work I undertook till now:&lt;/p&gt;
       <description>&lt;p&gt;My very first blog post. This blog&amp;#8217;s purpose is primarily to track the progress of my GSoC project and get feedback from my mentors, if my proposal gets selected. I propose to improve upon the Python wrappers for &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt;, and work on rooting it as a symbolic backend for &lt;code class="highlighter-rouge"&gt;SymPy&lt;/code&gt; CAS, the purpose for which it has been in development for a number of years. My proposal can be found &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Shikhar-Jaiswal:-Improving-SymEngine's-Python-Wrappers-and-SymPy-SymEngine-Integration"&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Till Next Time!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://gxyd.github.io/blogs/Gsoc2016-summary</guid>
+      <author>Gaurav Dhingra (gxyd)</author>
+      <title>Gaurav Dhingra (gxyd): GSoC 2016 Summary</title>
+      <pubDate>Wed, 30 Nov 2016 00:00:00 GMT</pubDate>
+      <link>https://gxyd.github.io/blogs/Gsoc2016-summary/</link>
+      <description>&lt;p&gt;Below is the summary:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/gxyd"&gt;Gaurav Dhingra&lt;/a&gt; - &lt;a href="https://summerofcode.withgoogle.com/archive/2016/projects/6593494743252992/"&gt;Computational Group Theory in SymPy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This project aimed to implement free groups, finitely presented groups and various algorithms like &lt;a href="https://en.wikipedia.org/wiki/Coset_enumeration"&gt;Coset Enumeration&lt;/a&gt; using Todd Coxeter method, Low index subgroup and Reidemeister schreier.
+Computation of order, index and other properties of the finitely presented
+groups is now present. The functionality is added in the combinatorics module
+of SymPy. He laid the groundwork for further addition of other algorithms
+and integrate it with the permutation groups.&lt;/p&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">https://asmeurer.github.io/blog/posts/github-reviews-gripes/</guid>
@@ -1055,6 +1545,182 @@ to apply again. I would like to thank those who chose me and made this summer
 of learning and experiences possible.&lt;/p&gt;</description>
     </item>
     <item>
+      <guid isPermaLink="false">https://gxyd.github.io/blogs/Gsoc2016-project</guid>
+      <author>Gaurav Dhingra (gxyd)</author>
+      <title>Gaurav Dhingra (gxyd): GSoC 2016 wrap-up</title>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 GMT</pubDate>
+      <link>https://gxyd.github.io/blogs/Gsoc2016-project/</link>
+      <description>&lt;p&gt;GSoC 2016 Project with SymPy(&lt;em&gt;wrap up&lt;/em&gt;): Computational Group Theory
+Hi, I&amp;#8217;m Gaurav Dhingra (&lt;a href="https://github.com/gxyd"&gt;@gxyd&lt;/a&gt;) and this post is a report of my work for SymPy under &lt;a href="https://summerofcode.withgoogle.com"&gt;Google Summer of Code 2016&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is also intended to be a description of my work for submission to &lt;b&gt;GSoC&amp;#8217;s Final Evaluation&lt;/b&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="work-product-submission"&gt;Work Product Submission&lt;/h2&gt;
+  &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/commits/master?author=gxyd"&gt;commits in GSoC 2016 product submission: Gaurav Dhingra&lt;/a&gt;.
+&lt;a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory"&gt;GSoC proposal&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="pull-requests"&gt;Pull Requests&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;#10350 FreeGroup implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11140"&gt;#11140 FpGroup implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11231"&gt;#11231 Low Index Subgroups algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11295"&gt;#11295 Reidemeister Schreier algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;#11460 Add documentation for FpGroup file and fix separate bug&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;#11361 &lt;em&gt;Modified Todd Coxeter&lt;/em&gt; algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="bugs-reported"&gt;Bugs reported&lt;/h2&gt;
+  &lt;p&gt;[closed]&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;#11449 &lt;em&gt;TypeError&lt;/em&gt; on compressing a Coset Table generated by coset table method&lt;/a&gt;.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="brief-information"&gt;Brief Information&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Project&lt;/strong&gt;: &lt;a href="https://summerofcode.withgoogle.com/projects/#5798586428162048"&gt;Group Theory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blog&lt;/strong&gt;: &lt;a href="https://gxyd.github.io/gsoc.html"&gt;https://gxyd.github.io/gsoc.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;My Website&lt;/strong&gt;: https://gxyd.github.io&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;e-mail&lt;/strong&gt;: gauravdhingra.gxyd[at]gmail.com, igauravdhingra[at]protonmail.com&lt;/p&gt;
+
+&lt;p&gt;I am a pre-final year undergraduate student of Applied Mathematics at IIT Roorkee.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="before-gsoc"&gt;Before GSoC&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I heard about the GSoC program and about SymPy org. since of one of my college mate, Prasoon Shukla (he also participated in GSoC with SymPy). I was quite amazed by how mathematics and computer science could intersect and help in solving math problems.&lt;/p&gt;
+
+&lt;p&gt;I have been contributing to SymPy from May last year. In the beginning I tended often to work on issues that were more often related to my then on-going courses in my college. In December I completed a basic course on Group Theory, so I thought of choosing to work on Group Theory and I saw quite a few things in CGT were missing from SymPy and those functionalities were already there in GAP and Magma. So I asked them from Kalevi, regarding things that could be taken up for a gsoc project. So finally with some discussions with him and Aaron, I was sure by December end that I was going to work on implementing Finitely Presented Group in SymPy. I looked upto the last GSoC project on CGT by Alexandar Makelov, for reference material that could be used for the implementation and it turned out that the book by Derek Holt, Handbook of Computational Group Theory (will mention as shortly &lt;em&gt;the Handbook&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Though I already started working on &lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;PR #10350&lt;/a&gt; for implementation of free groups in beginning January though I started working on the proposal from February beginning.&lt;/p&gt;
+
+&lt;p&gt;So what I should do? Since I was quite sure of the project. Well at that moment I thought, since I am a mathematics major, choosing this project would also help me. So I reached out to Kalevi, said to him what I was thinking to do, what could be good for the project. So we worked upon making a good gsoc proposal.&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory"&gt;GSoC proposal&lt;/a&gt;. Now that the summer is over and I&amp;#8217;ve tackled a lot more with computational group theory, it seems that the main points in my GSoC proposal were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Implementation of different algebraic structures monoid, free monoid, free group, semi group, free semi group, magma, etc.&lt;/li&gt;
+  &lt;li&gt;Rewriting System for reducing the elements of finitely presented groups.&lt;/li&gt;
+  &lt;li&gt;The Todd-Coxeter algorithm for coset enumeration, used to find the index of a subgroup of a finitely presented group.&lt;/li&gt;
+  &lt;li&gt;Reidemeister Schreier algorithm.&lt;/li&gt;
+  &lt;li&gt;Implementation of main &lt;code class="highlighter-rouge"&gt;Group&lt;/code&gt; class.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Well, I submitted my proposal and needed to wait until April 22 to the result, and then&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;&lt;img height="200" src="https://gxyd.github.io/../images/gsoc_selection.png" width="650" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I was selected _/_&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I got lucky to have Kalevi Suominen like mentor too. Aaron Meurer, the project leader of SymPy was to be co-mentor, and I felt honored to be alloted my preferred mentors.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="during-gsoc"&gt;During GSoC&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A more detailed account of my progress can be found on my blog &lt;a href="https://gxyd.gitub.io/gsoc.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;We started working on 7th May, we first started with working on completing the Free Group &lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;PR#10350&lt;/a&gt; and we discussed things on our channel &lt;a href="https://gitter.im/sympy/GroupTheory"&gt;sympy/GroupTheory&lt;/a&gt;. We had some discussion on whether &lt;code class="highlighter-rouge"&gt;Basic&lt;/code&gt; should be a &lt;em&gt;super-class&lt;/em&gt; of &lt;code class="highlighter-rouge"&gt;FreeGroup&lt;/code&gt; or not. In the end we decied not to derive &lt;code class="highlighter-rouge"&gt;FreeGroup&lt;/code&gt; from &lt;code class="highlighter-rouge"&gt;Basic&lt;/code&gt;. Its basic methods had already been written, most of them inspired from GAP software.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For the first point in my proposal (i.e implementation of algebraic structures), we didn&amp;#8217;t started with them (infact we never worked on them). We then moved onto the Coset Enumeration which covered 5 weeks of work in my timeline, but we didn&amp;#8217;t spend that much time, atleast on the first go at that moment, that did took alomost 3 weeks including the implementation of two strategies of enumeration &lt;em&gt;Felsch&lt;/em&gt; and &lt;em&gt;HLT&lt;/em&gt;. It was the very heart of our GSoC project. There were quite a few bugs that were there in algorithm, especially the bug #11449, to which the Kalevi found the solution.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For the second point we never reached it, there wasn&amp;#8217;t sufficient time for that. Then we decided to rather implement the &lt;em&gt;Low Index Subgroups&lt;/em&gt; algortithm. It was quite fun to implement the algorithm, since it gave some good insight into CGT. More on this on &lt;a href="https://gxyd.github.io/gsoc_week_5.html"&gt;blog for week 5&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;From here I had passed my mid-term evaluations. Then we started with work on &lt;em&gt;Reidemeister Schreier&lt;/em&gt; algorithm. The algorithm was mainly implemeted using the &lt;a href="http://staff.itee.uq.edu.au/havas/1974h.pdf"&gt;Havas paper&lt;/a&gt;, though the current implementation in SymPy doesn&amp;#8217;t produce the best simplifed presentation. No good pseudocode is available for the algorithm, the major difficulty being the &lt;em&gt;sequence&lt;/em&gt; of applying the operation. More on this on &lt;a href="https://gxyd.github.io/gsoc_week_6.html"&gt;blog for week 6&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After we thought that the result returned by Reidemeister Schreier algorithm we moved onto &lt;em&gt;modified todd coxeter&lt;/em&gt; algorithm. The main difficulty in it was defining the $\tau$ which can be read on the our channel for comments by Kalevi, I belive it can help in solving that problem.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;As to the fifth point (i.e making &lt;code class="highlighter-rouge"&gt;Group&lt;/code&gt; class), we never worked upon it. Also the topic of &lt;em&gt;Presenation of Finite Groups&lt;/em&gt; , could not get much attention, since of my busy college schedule.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id="commitscode-written-during-gsoc"&gt;Commits/Code written during GSoC&lt;/h3&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Since I have commited quite a few commits un-related to my project. So I decided to &lt;em&gt;cherry-pick&lt;/em&gt; the commits made for my GSoC project. So the combined commits makes the things quite clear. &lt;a href="https://github.com/gxyd/sympy/pull/6"&gt;PR for GSoC 2016 product submission: Gaurav Dhingra&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id="most-annoying-issue"&gt;Most annoying issue&lt;/h3&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;issue #11449&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="after-gsoc"&gt;After GSoC&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There is still much to be done regarding the finitely presented groups. As during the program my efforts were directed mainly towards getting the fundamental algorithms for finitely presented groups in, the overall structure of the module hasn&amp;#8217;t received much attention.&lt;/p&gt;
+
+&lt;p&gt;The algorithms are in, but the methods in sympy/combinatorics/fp_groups.py are not that much user-friendly. The code organization is not terrible, I think. Some suggestions (both for me and anyone else interested) for future work are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Cosets in permutation groups&lt;/strong&gt;: [verbatim-copy of Kalevi&amp;#8217;s mail - &lt;em&gt;&amp;#8220;next thing to do&amp;#8221;&lt;/em&gt;] Finding cosets in permutation groups is more challenging to implement since there seems to be no ready-made pseudocode. However, there is a description of the procedure with an example in section 4.6.7. It can be based on the existing implementation of the &lt;em&gt;Screier-Sims algorithm&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Finitely generated abelian groups&lt;/strong&gt;: [verbatim-copy of Kalevi&amp;#8217;s mail - &lt;em&gt;&amp;#8220;next thing to do&amp;#8221;&lt;/em&gt;] There is useful pseudocode in chapter 9 of the book by Holt that should make it fairly easy to implement the basic methods of abelian groups. We should probably try to base the implementation on the code in &lt;code class="highlighter-rouge"&gt;polys.agca&lt;/code&gt; as abelian groups are the same as Z-modules. It is all essentially about linear algebra over the integers.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Complete modified Todd Coxeter algorithm&lt;/strong&gt;: &lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;PR #11361&lt;/a&gt; One bug is currently there in the algorithm, which can be fixed since we have to make assignments to $\tau$. Also currently no tests have been added, which can be added.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Rewriting System&lt;/strong&gt;: This can be a good candidate for a major work, I included this topic in my proposal though was left untouched. Perhaps &lt;em&gt;GAP&lt;/em&gt; could be first seen in this regard. Like always.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Groups folder&lt;/strong&gt;: After a few of the above mentioned things have been done, I believe it could be a good time to make a folder named &lt;code class="highlighter-rouge"&gt;groups&lt;/code&gt;, since finitely presented groups should not be a part of combinatorics module which would contain the all algebraic structures including the permutation groups.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Non-associative algebra&lt;/strong&gt;: (Perhaps I got the spelling of &lt;em&gt;associative&lt;/em&gt; this time right!) Albert CAS could be used to understand the workings related to non-associative algebra, it contains quite good functionalities.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="things-i-did-rightwrong"&gt;Things I did right/wrong&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I often lagged in writing blogs.&lt;/li&gt;
+  &lt;li&gt;I worked more than expected hours before 15 July (before college started) but much less in the last one month of GSoC because of a little busy schedule.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I had say that I did about 70% of the work I promised to do in my proposal, considering that I also did two non-included task of Low Index subgroups algorithm and Modified Todd Coxeter algorithm, so I can say I swapped my work. It is good enough, and I hope to get back to extending the things that I have started. There&amp;#8217;s still some revision to be made, some code to be clean up. And I&amp;#8217;m doing that.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#8217;t really know if I&amp;#8217;ll pass final evaluations by Google, but, regardless, I&amp;#8217;m really glad for all the coding and development experience I got during these weeks. I&amp;#8217;ll probably use for personal projects, may be in Dissertation in last year, and try to contribute more to SymPy.&lt;/p&gt;
+
+&lt;p&gt;I appreciate the help of my mentor &lt;a href="https://github.com/jksuom"&gt;Kalevi Suominen&lt;/a&gt; who was always there for any query that I had regarding Group Theory in project, and I appreciate his ability to reply back within 1 hour for any message I left any time of day and every day of the week including weekend (I call it 1-hour rule). I think he was a wonderful mentor and I learnt a lot from him, and my co-mentor &lt;a href="https://github.com/asmeurer"&gt;Aaron Meurer&lt;/a&gt;, the current project leader of SymPy, and the entire SymPy community for helping me out and reviewing my work!&lt;/p&gt;
+
+&lt;p&gt;Also thank you &lt;font color="#4885ed"&gt;G&lt;/font&gt;&lt;font color="#db3236"&gt;o&lt;/font&gt;&lt;font color="#f4c20d"&gt;o&lt;/font&gt;&lt;font color="#4885ed"&gt;g&lt;/font&gt;&lt;font color="#3cba54"&gt;l&lt;/font&gt;&lt;font color="#db3236"&gt;e&lt;/font&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;#2309;&amp;#2354;&amp;#2357;&amp;#2367;&amp;#2342;&amp;#2366; !&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">http://srajangarg.github.io//2016/08/16/Containers-for-MPoly</guid>
       <author>Srajan Garg (srajangarg)</author>
       <title>Srajan Garg (srajangarg): Containers for Multivariate Polynomials</title>
@@ -1335,6 +2001,71 @@ RCP&amp;lt;const Boolean&amp;gt; logical_or(const set_boolean &amp;amp;s)
 After &lt;a href="https://github.com/symengine/symengine/pull/1061/"&gt;this&lt;/a&gt; PR gets merged, I would start working on &lt;code class="highlighter-rouge"&gt;Intersection&lt;/code&gt; class.&lt;/p&gt;</description>
     </item>
     <item>
+      <guid isPermaLink="false">https://gxyd.github.io/blogs/Gsoc2016-week-12</guid>
+      <author>Gaurav Dhingra (gxyd)</author>
+      <title>Gaurav Dhingra (gxyd): GSoC Week 12</title>
+      <pubDate>Tue, 09 Aug 2016 00:00:00 GMT</pubDate>
+      <link>https://gxyd.github.io/blogs/Gsoc2016-week-12/</link>
+      <description>&lt;p&gt;Hi all, here&amp;#8217;s a brief summary of the 12th week of my GSoC:&lt;/p&gt;
+
+&lt;p&gt;Last week I uploaded the &lt;a href="https://gxyd.github.io/gsoc2016/covhtml/index.html"&gt;test-coverage files&lt;/a&gt; on my website, that revealed some interesting places where a few versions of &lt;code class="highlighter-rouge"&gt;scan&lt;/code&gt; routine in coset enumeration have un-tested &lt;code class="highlighter-rouge"&gt;if-elif-else&lt;/code&gt; case.&lt;/p&gt;
+
+&lt;p&gt;As we are now approaching the end of GSoC time period, we decided to do some testing with some of the examples from 1973cdhw paper [2]. Coset Enumeration got my attention again since:&lt;/p&gt;
+
+&lt;p&gt;There seemed to be one bug raising &lt;code class="highlighter-rouge"&gt;TypeError&lt;/code&gt; so opened issue &lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;sympy/sympy/#11449&lt;/a&gt;, resulting from coset enumeration by the coset-table based method. From beginning it was clear that the issue was not in &lt;code class="highlighter-rouge"&gt;compress()&lt;/code&gt; method. It was quite difficult for me get onto the main source of problem. But then Kalevi had a closer look on the pseudo-code in Derek Holt and also in Sims Finitely Presented Groups.&lt;/p&gt;
+
+&lt;p&gt;I wrote docstrings for a few of methods and fixed the issue &lt;a href="https://github.com/sympy/sympy/issue/11449"&gt;#11449&lt;/a&gt; in PR &lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;#11460&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The problem there in code is explained briefly below&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Previous code-snippet&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;1    i = 0
+2    while i &amp;lt; len(C.omega):
+3        alpha = C.omega[i]
+4        i += 1
+5        for x in C.A:
+6            if C.table[alpha][C.A_dict[x]] is None:
+7                C.define_f(alpha, x)
+8                C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;After code-snippet&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;1     while alpha &amp;lt; len(C.table):
+2         if C.p[alpha] == alpha:
+3             for x in C.A:
+4                 if C.p[alpha] != alpha:
+5                     break
+6                 if C.table[alpha][C.A_dict[x]] is None:
+7                    C.define_c(alpha, x)
+8                     C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here $\alpha$ looks over in till $\lt$ &lt;code class="highlighter-rouge"&gt;C.table&lt;/code&gt;. This way all elements of $C.\Omega$ are tested even in case that the set becomes very small. The inner for $x$ loop should also tests $p[i]$ at each round and break if that becomes different from $i$.&lt;/p&gt;
+
+&lt;p&gt;The changes that have been addressed in &lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;PR #11460&lt;/a&gt; also include chaging the file name &lt;code class="highlighter-rouge"&gt;free_group.py&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;free_groups.py&lt;/code&gt;, similar to what we have.&lt;/p&gt;
+
+&lt;p&gt;It seems that Presentation of Permutation Groups won&amp;#8217;t happen during GSoC since there&amp;#8217;s just one more week; instead, I plan to focus on improving and completing the current PR&amp;#8217;s &lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;#11361&lt;/a&gt; on Modified Todd-Coxeter algorithm and &lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;PR #11460&lt;/a&gt; on addition of docstrings and better user methods.&lt;/p&gt;
+
+&lt;p&gt;One more thing, that I would start in this week though may not be completed this week will be the sphinx documentation of finitely presented groups. I found the documentation of Poly&amp;#8217;s module by Kalevi very much readable and interesting, may be I can seek to follow that.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id="references"&gt;References&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Derek F. Holt, Bettina Eick, Bettina, Eamonn A. O&amp;#8217;Brien, &amp;#8220;Handbook of computational group theory&amp;#8221;, Discrete Mathematics and its Applications (Boca Raton). Chapman &amp;amp; Hall/CRC, Boca Raton, FL, 2005. ISBN 1-5848-372-3 .&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href="http://staff.itee.uq.edu.au/havas/1973cdhw.pdf"&gt;John J. Cannon; Lucien A. Dimino; George Havas; Jane M. Watson, &amp;#8220;Implementation and Analysis of the Todd-Coxeter Algorithm&amp;#8221; , Mathematics of Computation, Vol. 27, No. 123. (Jul., 1973), pp. 463-490&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">http://shubhamtibra.wordpress.com/?p=854</guid>
       <author>Subham Tibra (shubhamtibra)</author>
       <title>Subham Tibra (shubhamtibra): GSoC Week 11</title>
@@ -1578,243 +2309,6 @@ best.&lt;/p&gt;
   #11415&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://nishnik.github.io/GSoC-Tenth-Week</guid>
-      <author>Nishant Nikhil (nishnik)</author>
-      <title>Nishant Nikhil (nishnik): GSoC Tenth Week</title>
-      <pubDate>Fri, 05 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://nishnik.github.io/GSoC-Tenth-Week/</link>
-      <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This week, I had been working on implementaion of &lt;code class="highlighter-rouge"&gt;Union&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Contains&lt;/code&gt; in &lt;a href="https://github.com/symengine/symengine/pull/1053"&gt;this&lt;/a&gt; PR. &lt;br /&gt;
-Our &lt;code class="highlighter-rouge"&gt;Set::contains&lt;/code&gt; function has been changed from :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;virtual bool contains(const RCP&amp;lt;const Basic&amp;gt; &amp;amp;a) const = 0;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;virtual RCP&amp;lt;const Boolean&amp;gt; contains(const RCP&amp;lt;const Basic&amp;gt; &amp;amp;a) const = 0;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And these functions:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;virtual bool is_subset(const RCP&amp;lt;const Set&amp;gt; &amp;amp;o) const = 0;
-virtual bool is_proper_subset(const RCP&amp;lt;const Set&amp;gt; &amp;amp;o) const = 0;
-virtual bool is_superset(const RCP&amp;lt;const Set&amp;gt; &amp;amp;o) const = 0;
-virtual bool is_proper_superset(const RCP&amp;lt;const Set&amp;gt; &amp;amp;o) const = 0;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;have been changed to:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;bool is_subset(const RCP&amp;lt;const Set&amp;gt; &amp;amp;o) const
-{
-    return eq(*this-&amp;gt;set_intersection(o), *this);
-}
-bool is_proper_subset(const RCP&amp;lt;const Set&amp;gt; &amp;amp;o) const
-{
-    return not eq(*this, *o) and this-&amp;gt;is_subset(o);
-}
-bool is_superset(const RCP&amp;lt;const Set&amp;gt; &amp;amp;o) const
-{
-    return o-&amp;gt;is_subset(rcp_from_this_cast&amp;lt;const Set&amp;gt;());
-}
-bool is_proper_superset(const RCP&amp;lt;const Set&amp;gt; &amp;amp;o) const
-{
-    return not eq(*this, *o) and this-&amp;gt;is_superset(o);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;depending solely on &lt;code class="highlighter-rouge"&gt;set_intersection&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then the &lt;code class="highlighter-rouge"&gt;SymEngine::set_union(const set_set &amp;amp;in, bool solve = true)&lt;/code&gt; has been defined which will create a &lt;code class="highlighter-rouge"&gt;Union&lt;/code&gt; object with &lt;code class="highlighter-rouge"&gt;in&lt;/code&gt; if it is not solvable, or will do union operation on all of them.
-&lt;br /&gt;
-Our &lt;code class="highlighter-rouge"&gt;Union&lt;/code&gt; class has &lt;code class="highlighter-rouge"&gt;std::set&lt;/code&gt; of &lt;code class="highlighter-rouge"&gt;Set&lt;/code&gt; to store the different Set containers which can&amp;#8217;t be unified into one single container.
-&lt;br /&gt;
-Apart from it, the &lt;code class="highlighter-rouge"&gt;set_intersection&lt;/code&gt; ans &lt;code class="highlighter-rouge"&gt;set_union&lt;/code&gt; virtual functions have been restructured to handle other &lt;code class="highlighter-rouge"&gt;Set&lt;/code&gt; types case by case.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://shubhamtibra.wordpress.com/?p=780</guid>
-      <author>Subham Tibra (shubhamtibra)</author>
-      <title>Subham Tibra (shubhamtibra): GSoC Week 10</title>
-      <pubDate>Mon, 01 Aug 2016 07:31:06 GMT</pubDate>
-      <link>https://shubhamtibra.wordpress.com/2016/08/01/gsoc-week-10/</link>
-      <description>&lt;p&gt;Started off this week by continuing my work on &lt;a href="https://github.com/sympy/sympy/pull/11422"&gt;#11422&lt;/a&gt;. I added support for singular initial conditions in multiplication and made some amendments in addition too. They now can return a Holonomic function with singular initial condition. The input functions can have singular initial condition both or one of them can have singular one and the other one with ordinary initial condition.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-# one function have singular initial condition and the other have ordinary.
-In [4]: expr_to_holonomic(x) + expr_to_holonomic(sqrt(x))
-Out[4]: HolonomicFunction((1/2) + (-x/2)Dx + (x**2)Dx**2, x), {1/2: [1], 1: [1]}
-
-In [5]: _4.to_expr()
-Out[5]: &amp;#8730;x + x
-
-In [6]: expr_to_holonomic(x) * expr_to_holonomic(sqrt(x))
-Out[6]: HolonomicFunction((-3/2) + (x)Dx, x), {3/2: [1]}
-
-In [7]: _6.to_expr()
-Out[7]:
- 3/2
-x
-
-# both have singular initial conditions.
-In [9]: expr_to_holonomic((x)**(S(1)/3)) + expr_to_holonomic(sqrt(x))
-Out[9]: HolonomicFunction((1/6) + (x/6)Dx + (x**2)Dx**2, x), {1/3: [1], 1/2: [1]}
-
-In [10]: _9.to_expr()
-Out[10]:
-3 ___
-&amp;#9586;&amp;#9585; x  + &amp;#8730;x
-In [11]: expr_to_holonomic((x)**(S(1)/3))*expr_to_holonomic(sqrt(x))
-Out[11]: HolonomicFunction((-5/6) + (x)Dx, x), {5/6: [1]}
-
-In [12]: _11.to_expr()
-Out[12]:
- 5/6
-x
-&lt;/pre&gt;
-&lt;p&gt;I found some problems in coding because of storing these initial conditions in two different attributes. So I merged them to a single attribute and instead added methods to check which one is stored and refactored the existing code using it.&lt;/p&gt;
-&lt;p&gt;I opened a new PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11451"&gt;#11451&lt;/a&gt;&amp;#160;majorly focused on adding singular initial conditions to the result of &lt;code&gt;.expr_to_holonomic()&lt;/code&gt;&amp;#160;when necessary. At first I added it in converting polynomials. Here are some examples:&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [14]: expr_to_holonomic(3*x**3+4*x**2)
-Out[14]: HolonomicFunction((-9*x - 8) + (3*x**2 + 4*x)Dx, x), {2: [4, 3]}
-
-In [15]: _14.to_expr()
-Out[15]:
- 2
-x &amp;#8901;(3&amp;#8901;x + 4)
-
-In [16]: expr_to_holonomic(x)
-Out[16]: HolonomicFunction((-1) + (x)Dx, x), {1: [1]}
-
-In [17]: _16.to_expr()
-Out[17]: x
-&lt;/pre&gt;
-&lt;p&gt;I also a found a bug in &lt;code&gt;.to_hyper()&lt;/code&gt;&amp;#160;when the recurrence relation has order &lt;code&gt;0&lt;/code&gt;. Added its fix too. Earlier the output also considered negative exponents which weren&amp;#8217;t needed.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-# previously
-In [18]: expr_to_holonomic(y*x, x).integrate(x).to_expr()
-Out[18]:
- 2
-x &amp;#8901;y
-&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472; + C&amp;#8321;
- 2
-# after fix
-In [19]: expr_to_holonomic(y*x, x).integrate(x).to_expr()
-Out[19]:
- 2
-x &amp;#8901;y
-&amp;#9472;&amp;#9472;&amp;#9472;&amp;#9472;
- 2  
-
-&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;What Next:&lt;/p&gt;
-&lt;p&gt;&lt;/strong&gt;I hope to add singular initial conditions to more types of functions in &lt;code&gt;.expr_to_holonomic()&lt;/code&gt;.&lt;br /&gt;
-&amp;nbsp;&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/shubhamtibra.wordpress.com/780/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/shubhamtibra.wordpress.com/780/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=shubhamtibra.wordpress.com&amp;#038;blog=106149936&amp;#038;post=780&amp;#038;subd=shubhamtibra&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://srajangarg.github.io//2016/08/01/Multivariate-Polynomails</guid>
-      <author>Srajan Garg (srajangarg)</author>
-      <title>Srajan Garg (srajangarg): Multivariate Polynomials</title>
-      <pubDate>Mon, 01 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://srajangarg.github.io//2016/08/01/Multivariate-Polynomails/</link>
-      <description>&lt;h3 id="overview"&gt;Overview&lt;/h3&gt;
-
-&lt;p&gt;After college has started, work has been slower than usual. Last week I finally wound up Rational Polynomials in &lt;a href="https://github.com/symengine/symengine/pull/1028"&gt;#1028&lt;/a&gt;. Some minor changes still remain in some parts of the code. Most of the changes left are mainly related to code duplication, and will be fixed by writing their templated versions.&lt;/p&gt;
-
-&lt;h3 id="multivariate-polynomials"&gt;Multivariate Polynomials&lt;/h3&gt;
-
-&lt;p&gt;I started off by reading and understanding how the multivariate class is implemented currently in SymEngine. It was developed by the UC Davis team as a part of their course project. The basic idea is pretty simple. It still is a sparse representation and maps from a vector (representing the powers of each generator in the monomial) to the non-zero coefficient multiplied to it. We use an unordered map instead of the ordered map used in the univariate counterpart. The choice does make some sense, as deciding order between two monomials is subjective and does not make sense (for eg. which is larger &lt;code class="highlighter-rouge"&gt;x**2*y&lt;/code&gt; or &lt;code class="highlighter-rouge"&gt;x*y**2&lt;/code&gt;) Even if we define a custom ordering, there are no real benefits I could think of that it would provide.&lt;/p&gt;
-
-&lt;p&gt;On a side note, it kind of makes me think why we have stuck to the ordered map implementation for our univariate polynomials. The places it offers benefits are &lt;code class="highlighter-rouge"&gt;eval&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;mul&lt;/code&gt; (in some ways) I worked with ordered maps, as that was the implementation the initial polynomial class was built on. I&amp;#8217;m also wondering if it is healthy to use two different implementations for both the polynomial types, univariate and multivariate. This needs to be discussed.&lt;/p&gt;
-
-&lt;p&gt;Right now, I&amp;#8217;m basically refactoring most of the code written in the multivariate class, so that it matches the API more or less from the univariate case. Some functions have been re-written and some unnecessary storage within the polynomials have been removed. Initially, I thought I will stick with the same container based approach I used in the univariate case. This proves to be non trivial for the multivariate case. So, after some discussion with Isuru, we decided to stick with different implementations for SymEngine polynomials and Piranha polynomials, as combining code was not easy. The current work is in &lt;a href="https://github.com/symengine/symengine/pull/1049"&gt;#1049&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id="future-work"&gt;Future Work&lt;/h3&gt;
-
-&lt;p&gt;A lot is on my plate right now. Some of the work I plan to finish by the end of the next two weeks are&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Finish up the refactoring of multivariate polynomials, and make their interaction with univariate polynomials as seamless as possible&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Introduce wrappers for piranha polynomials to be used as multivariate polynomials within SymEngine&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Fix up the remainder of rational polynomials, and template code wherever possible to remove code duplicates&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Write conversions from &lt;code class="highlighter-rouge"&gt;Basic&lt;/code&gt; to multivariate polynomials, which will finish up one part of the coercion framework as proposed by Isuru&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Off to work!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-10</guid>
-      <author>Shekhar Prasad Rajak (shekharrajak)</author>
-      <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 10</title>
-      <pubDate>Sat, 30 Jul 2016 00:00:00 GMT</pubDate>
-      <link>http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-10</link>
-      <description>&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;eliminate() continue:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;issue &lt;a href="https://github.com/sympy/sympy/issues/2720"&gt;#2720&lt;/a&gt; : We need some kind of eliminate function, like &lt;a href="http://reference.wolfram.com/mathematica/ref/Eliminate.html"&gt;http://reference.wolfram.com/mathematica/ref/Eliminate.html&lt;/a&gt;. See also &lt;a href="http://stackoverflow.com/q/20826969/161801"&gt;http://stackoverflow.com/q/20826969/161801 &lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I am trying to use &lt;code class="highlighter-rouge"&gt;subs&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;_invert&lt;/code&gt; to get answer. May be one can use &lt;code class="highlighter-rouge"&gt;replace&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;xreplace&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;match&lt;/code&gt; to eliminate some kind of same sub expression.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;There can be ans in &lt;code class="highlighter-rouge"&gt;Imageset&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;Finiteset&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;Complement&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;Intersection&lt;/code&gt; when we use &lt;code class="highlighter-rouge"&gt;_invert&lt;/code&gt;. So there should be a technique to handle it.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Still need some good idea and technique. WIP.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Output of solveset should be of one type:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Amit discussed about it. Solution we see in &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; should be in one type of set. Right now we may have solution in &lt;code class="highlighter-rouge"&gt;Imageset&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;Finiteset&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;Complement&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;Intersection&lt;/code&gt; or &lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt;. So there would be problem for user to handle these many solution type.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I think there should be something that separate &lt;code class="highlighter-rouge"&gt;Complements&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;Intersections&lt;/code&gt;,&lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt; and main solution in &lt;code class="highlighter-rouge"&gt;Finiteset&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;E.g. if solveset solution is &lt;code class="highlighter-rouge"&gt;Intersection(Complement(FiniteSet(x), {y}), {z})&lt;/code&gt; then
-soln : &lt;code class="highlighter-rouge"&gt;FiniteSet(x)&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;x != {y}&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="err"&gt;x&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;intersect&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="err"&gt;z&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Continue Simplified Trig soln&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;PR &lt;a href="https://github.com/sympy/sympy/pull/11188"&gt;#11188&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;According to the &lt;a href="https://github.com/sympy/sympy/pull/11188#issuecomment-234789616"&gt;Harsh comments/review&lt;/a&gt; I modified the PR. Now it seems it is
-returning more simplified solution( &lt;a href="https://github.com/sympy/sympy/pull/11188/commits/beaac312f03819bd7221887eb2b4cbe5d49bed5e#diff-85baa04bbf4e1dfd9128782738e45424R1141"&gt;one case is here&lt;/a&gt;) .&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;To understand the changes I did in the &lt;code class="highlighter-rouge"&gt;_solve_trig&lt;/code&gt; method, one should check &lt;a href="https://gist.github.com/Shekharrajak/17fdcd2320f572fc9fc8674823137e20"&gt;this gist&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;To see the advantage of imageset union, One good example is in &lt;a href="https://gist.github.com/Shekharrajak/a5efc840d9a7d3062289f2d9c5f20b16"&gt;this gist&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;continue&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

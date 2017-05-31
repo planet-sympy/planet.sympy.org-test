@@ -385,6 +385,537 @@
 	</div>
 </div></div>
 <div class="day">
+<h2 class="dayform">May 24, 2017</h2>
+<div class="channelgroup ">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		    <div class="box" class="item feed-5a972359 feed-" id="item-808e277d">
+			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
+			    	<table class="table borderless table-condensed">
+			    		<tr>
+			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
+			    				<div style="margin-right:5px;">
+				    				 <img src="hackergotchi/gxyd.jpg"/> 
+				    				
+				    			</div>
+			    			</td>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row" style="margin-top:15px;">
+					    			<div class="col-md-8">
+							    		<a href="">Gaurav Dhingra (gxyd) </a>
+							    	</div>
+							    	<div class="col-md-4 dtdate">
+							    		<a href="https://gxyd.github.io/blogs/Gsoc2017-with-sympy/">00:00, Wednesday, 24 May UTC</a>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    		<tr>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row">
+							    	<div class="col-md-12 col-xs-12">
+							    		<h4><a class="boxh2" href="https://gxyd.github.io/blogs/Gsoc2017-with-sympy/">Gaurav Dhingra (gxyd): GSoC 2017: Symbolic Integration</a></h4>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    	</table>
+			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
+			    		 <img src="hackergotchi/gxyd.jpg"/> 
+			    		
+			    	</div>
+			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
+			    		<div class="row">
+			    			<div class="col-md-8">
+					    		<a href="">Gaurav Dhingra (gxyd) </a>
+					    	</div>
+					    	<div class="col-md-4 dtdate">
+					    		<a href="https://gxyd.github.io/blogs/Gsoc2017-with-sympy/">00:00, Wednesday, 24 May UTC</a>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12 col-xs-12">
+					    		<h4><a class="boxh2" href="https://gxyd.github.io/blogs/Gsoc2017-with-sympy/">GSoC 2017: Symbolic Integration</a></h4>
+					    	</div>
+					    </div>
+				    </div-->
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 descript">
+						<p>GSoC 2017: Symbolic Integration</p>
+
+<p>I applied for Google Summer of Code again this year, and my project on symbolic integration has been accepted. Like last year, my mentors are <a href="https://github.com/asmeurer">Aaron Meurer</a>(SymPy lead developer) and <a href="https://github.com/jksuom">Kalevi Suominen</a>. The proposal I submitted can be found here <a href="https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Gaurav-Dhingra:-Risch-algorithm-for-symbolic-integration">GSoC 2017 proposal: Symbolic Integration</a>.</p>
+
+<ul>
+  <li>
+    <p>Aaron himself worked on Symbolic Integration in GSoC 2010, and he started the implementation of transcendental functions integration and a good part of transcendental function integration was done (main resource being <em>Symbolic Integration I: Transcendental Function by Manuel Bronstein</em>).</p>
+  </li>
+  <li>
+    <p>Then in the year 2013, Chetna Gupta continued work on transcendental function integration as a part of her GSoC project. And still some part of transcendental function integration remains.</p>
+  </li>
+  <li>
+    <p>I have liked to mention one of &#8216;things&#8217; with the current integration module is sometime people get deceived with the results. Consider the integration of function <em>1/(x<strong>2 + a</strong>2)</em>. Most of would expect the output to be <em>atan(x/a)/a</em>. But with SymPy we get:</p>
+  </li>
+</ul>
+
+<p>Example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>In [11]: integrate(1/(x**2 + a**2), x)
+Out[11]: (-I*log(-I*a + x)/2 + I*log(I*a + x)/2)/a
+</code></pre>
+</div>
+
+<p>which for a moment looks wrong, but actually the answer returned by SymPy is
+not wrong (or is actually right mathematically). Since the answer returned by
+SymPy is logarithmic form of <em>atan</em>.</p>
+
+<p><code class="highlighter-rouge">$atan(x) = I*log((-I*x + 1)/(I*x + 1))/2$</code></p>
+
+<p>Now the comes the main part, what would I be working on? The first main thing on
+which I will be working on is:</p>
+
+<ol>
+  <li>Completing the work on transcendental function integration: which includes</li>
+</ol>
+
+<ul>
+  <li>
+    <p>writing a lot of tests for functions present in prde.py (Parametric Risch
+ Differential Equation), rde.py (Risch differential equation).</p>
+  </li>
+  <li>
+    <p>working on trigonometric extensions.
+ example:</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">sympy.integrals.risch</span> <span class="kn">import</span> <span class="n">risch_integrate</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">risch_integrate</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s">"/home/gxyd/foss/sympy/sympy/integrals/risch.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1677</span><span class="p">,</span> <span class="ow">in</span> <span class="n">risch_integrate</span>
+    <span class="n">dummy</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rewrite_complex</span><span class="o">=</span><span class="n">rewrite_complex</span><span class="p">)</span>
+  <span class="n">File</span> <span class="s">"/home/gxyd/foss/sympy/sympy/integrals/risch.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">234</span><span class="p">,</span> <span class="ow">in</span> <span class="n">__init__</span>
+    <span class="k">raise</span> <span class="nb">NotImplementedError</span><span class="p">(</span><span class="s">"Trigonometric extensions are not "</span>
+<span class="nb">NotImplementedError</span><span class="p">:</span> <span class="n">Trigonometric</span> <span class="n">extensions</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">supported</span> <span class="p">(</span><span class="n">yet</span><span class="err">!</span><span class="p">)</span>
+
+</code></pre>
+</div>
+
+<p>as you can see it raises the <strong>NotImplementedError</strong>. It doesn&#8217;t mean
+that SymPy can&#8217;t evaluate the integral of simple function like <em>sin(x)</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> ```
+ In 1: from sympy import *
+ In [2]: integrate(sin(x), x)
+ Out[2]: -cos(x)
+ ```
+</code></pre>
+</div>
+
+<p>Since I have started using PDb as a debugger (thanks to Kalevi) instead
+of the primitive <strong>print</strong> command. I will now explain how a function like
+ <em>sin(x)</em> is currently integrated.</p>
+
+<blockquote>
+  <h3 id="pdb-working-with-integration">Pdb working with integration</h3>
+</blockquote>
+
+<ul>
+  <li>First go into SymPy&#8217;s root directory and start the IPython or bin/isympy session.</li>
+  <li>Then import pdb module into your session with <em>import pdb</em>.</li>
+  <li>Import the function from the tests file which you want to debug/analyse with
+command for example in my I will be importing test case from the integral module&#8217;s
+test directory with <em>from sympy.integrals.tests.test_integrals import test_halo</em></li>
+</ul>
+
+<p>PDb important commands: You can use as command the word outside the bracket or
+including the one outside bracket with word inside it.</p>
+
+<p>s(tep): You can either type <em>s</em> or <em>step</em> on PDb command prompt (i.e. (Pdb)),
+        this command is often used to look into its execution. Whenever you find
+        something interesting (function or class) use this command.</p>
+
+<p>b(reak): setting a break point. Often executed in conjunction with <em>continue</em>, it
+          sets a breakpoint (see wiki article for it). An example would be its usage
+          in seeing the execution of <i>DifferentialExtension</i> object.
+          Example: (Pdb) b sympy/integrals/risch.py:196
+                   Breakpoint 1 at /home/gxyd/foss/sympy/sympy/integrals/risch.py:19</p>
+
+<p>c(ont(inue)): Often used in conjunction with <i>break</i> command. It continues the
+              execution i.e. doesn&#8217;t show any command(or code) on Pdb until the Pdb
+              hits the set breakpoint or the function returns something to the main
+              IPython session as output.</p>
+
+<p>n(ext): continue to the next line.
+l(ist): shows a limited source code of current line execution.
+p: prints the object. Used in printing of variable/object value.</p>
+
+<p>There are many more commands like <i>j</i>, <i>w</i>, which I haven&#8217;t used often.
+(For broader and good understanding of these commands use the trivial ?x where <i>x</i>
+is the command under consideration).</p>
+
+<blockquote>
+  <h4 id="an-example-session">An example session:</h4>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gxyd@stallman:~/foss/sympy$ bin/isympy
+IPython console for SymPy 1.0.1.dev (Python 3.6.0-64-bit) (ground types: python)
+
+These commands were executed:
+&gt;&gt;&gt; from __future__ import division
+&gt;&gt;&gt; from sympy import *
+&gt;&gt;&gt; x, y, z, t = symbols('x y z t')
+&gt;&gt;&gt; k, m, n = symbols('k m n', integer=True)
+&gt;&gt;&gt; f, g, h = symbols('f g h', cls=Function)
+&gt;&gt;&gt; init_printing()
+
+Documentation can be found at http://docs.sympy.org/dev
+
+In [1]: import pdb
+
+In [2]: from sympy.integrals.tests.test_integrals import test_halo
+
+In [3]: pdb.run('test_halo()')
+&gt; &lt;string&gt;(1)&lt;module&gt;()
+(Pdb) s
+--Call--
+&gt; /home/gxyd/foss/sympy/sympy/integrals/tests/test_integrals.py(1182)test_halo()
+-&gt; def test_halo():
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/tests/test_integrals.py(1183)test_halo()
+-&gt; from sympy.abc import x
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/tests/test_integrals.py(1184)test_halo()
+-&gt; assert integrate(sin(x), x) == -cos(x)
+(Pdb) s
+--Call--
+&gt; /home/gxyd/foss/sympy/sympy/core/basic.py(105)__hash__()
+-&gt; def __hash__(self):
+(Pdb) b sympy/integrals/integrals.py:1287
+Breakpoint 1 at /home/gxyd/foss/sympy/sympy/integrals/integrals.py:1287
+(Pdb) c
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1287)integrate()
+-&gt; meijerg = kwargs.pop('meijerg', None)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1288)integrate()
+-&gt; conds = kwargs.pop('conds', 'piecewise')
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1289)integrate()
+-&gt; risch = kwargs.pop('risch', None)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1290)integrate()
+-&gt; manual = kwargs.pop('manual', None)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1291)integrate()
+-&gt; integral = Integral(*args, **kwargs)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1293)integrate()
+-&gt; if isinstance(integral, Integral):
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1294)integrate()
+-&gt; return integral.doit(deep=False, meijerg=meijerg, conds=conds,
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(1295)integrate()
+-&gt; risch=risch, manual=manual)
+(Pdb) s
+--Call--
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(354)doit()
+-&gt; def doit(self, **hints):
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(374)doit()
+-&gt; if not hints.get('integrals', True):
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(377)doit()
+-&gt; deep = hints.get('deep', True)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(378)doit()
+-&gt; meijerg = hints.get('meijerg', None)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(379)doit()
+-&gt; conds = hints.get('conds', 'piecewise')
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(380)doit()
+-&gt; risch = hints.get('risch', None)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(381)doit()
+-&gt; manual = hints.get('manual', None)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(383)doit()
+-&gt; if conds not in ['separate', 'piecewise', 'none']:
+(Pdb) p conds
+'piecewise'
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(387)doit()
+-&gt; if risch and any(len(xab) &gt; 1 for xab in self.limits):
+(Pdb) p risch
+None
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(391)doit()
+-&gt; if self.is_zero:
+(Pdb) p self
+Integral(sin(x), x)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(395)doit()
+-&gt; function = self.function
+(Pdb) p self.function
+sin(x)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(396)doit()
+-&gt; if deep:
+(Pdb) p deep
+False
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(398)doit()
+-&gt; if function.is_zero:
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(401)doit()
+-&gt; if isinstance(function, MatrixBase):
+(Pdb) p function
+sin(x)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(406)doit()
+-&gt; undone_limits = []
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(408)doit()
+-&gt; ulj = set()
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(409)doit()
+-&gt; for xab in self.limits:
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(412)doit()
+-&gt; if len(xab) == 1:
+(Pdb) p self.limits
+((x,),)
+(Pdb) p xab
+(x,)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(413)doit()
+-&gt; uli = set(xab[:1])
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(422)doit()
+-&gt; if xab[0] in ulj or any(v[0] in uli for v in undone_limits):
+(Pdb) p uli
+{x}
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(438)doit()
+-&gt; def try_meijerg(function, xab):
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(462)doit()
+-&gt; meijerg1 = meijerg
+(Pdb) p meijerg
+None
+(Pdb) p xab
+(x,)
+(Pdb) l
+457  	                            ret = f, cond
+458  	                        else:
+459  	                            ret = f
+460  	                return ret
+461  	
+462  -&gt;	            meijerg1 = meijerg
+463  	            if len(xab) == 3 and xab[1].is_real and xab[2].is_real \
+464  	                and not function.is_Poly and \
+465  	                    (xab[1].has(oo, -oo) or xab[2].has(oo, -oo)):
+466  	                ret = try_meijerg(function, xab)
+467  	                if ret is not None:
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(463)doit()
+-&gt; if len(xab) == 3 and xab[1].is_real and xab[2].is_real \
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(480)doit()
+-&gt; if meijerg1 is False and meijerg is True:
+(Pdb) p meijerg1
+None
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(483)doit()
+-&gt; antideriv = self._eval_integral(
+(Pdb) p self.
+*** SyntaxError: unexpected EOF while parsing
+(Pdb) p self
+Integral(sin(x), x)
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(484)doit()
+-&gt; function, xab[0],
+(Pdb) s
+--Call--
+&gt; /home/gxyd/foss/sympy/sympy/core/containers.py(40)__getitem__()
+-&gt; def __getitem__(self, i):
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/core/containers.py(41)__getitem__()
+-&gt; if isinstance(i, slice):
+(Pdb) r
+--Return--
+&gt; /home/gxyd/foss/sympy/sympy/core/containers.py(44)__getitem__()-&gt;x
+-&gt; return self.args[i]
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(485)doit()
+-&gt; meijerg=meijerg1, risch=risch, manual=manual,
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(486)doit()
+-&gt; conds=conds)
+(Pdb) s
+--Call--
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(651)_eval_integral()
+-&gt; def _eval_integral(self, f, x, meijerg=None, risch=None, manual=None,
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(735)_eval_integral()
+-&gt; from sympy.integrals.deltafunctions import deltaintegrate
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(736)_eval_integral()
+-&gt; from sympy.integrals.singularityfunctions import singularityintegrate
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(737)_eval_integral()
+-&gt; from sympy.integrals.heurisch import heurisch, heurisch_wrapper
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(738)_eval_integral()
+-&gt; from sympy.integrals.rationaltools import ratint
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(739)_eval_integral()
+-&gt; from sympy.integrals.risch import risch_integrate
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(741)_eval_integral()
+-&gt; if risch:
+(Pdb) p risch
+None
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(747)_eval_integral()
+-&gt; if manual:
+(Pdb) p manual
+None
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(762)_eval_integral()
+-&gt; if isinstance(f, Poly) and not meijerg:
+(Pdb) p f
+sin(x)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(766)_eval_integral()
+-&gt; if f.func is Piecewise:
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(770)_eval_integral()
+-&gt; if not f.has(x):
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(774)_eval_integral()
+-&gt; poly = f.as_poly(x)
+(Pdb) p sin(x).as_poly(x)
+*** NameError: name 'sin' is not defined
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(775)_eval_integral()
+-&gt; if poly is not None and not meijerg:
+(Pdb) p poly
+None
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(778)_eval_integral()
+-&gt; if risch is not False:
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(779)_eval_integral()
+-&gt; try:
+(Pdb) p risch
+None
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(780)_eval_integral()
+-&gt; result, i = risch_integrate(f, x, separate_integral=True, conds=conds)
+(Pdb) s
+--Call--
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1569)risch_integrate()
+-&gt; def risch_integrate(f, x, extension=None, handle_first='log',
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1674)risch_integrate()
+-&gt; f = S(f)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1676)risch_integrate()
+-&gt; DE = extension or DifferentialExtension(f, x, handle_first=handle_first,
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1677)risch_integrate()
+-&gt; dummy=True, rewrite_complex=rewrite_complex)
+(Pdb) s
+--Call--
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(165)__init__()
+-&gt; def __init__(self, f=None, x=None, handle_first='log', dummy=False, extension=None, rewrite_complex=False):
+(Pdb) s
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(196)__init__()
+-&gt; if extension:
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(206)__init__()
+-&gt; elif f is None or x is None:
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(210)__init__()
+-&gt; from sympy.integrals.prde import is_deriv_k
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(212)__init__()
+-&gt; if handle_first not in ['log', 'exp']:
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(218)__init__()
+-&gt; self.f = f
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(219)__init__()
+-&gt; self.x = x
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(221)__init__()
+-&gt; self.dummy = dummy
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(222)__init__()
+-&gt; self.reset()
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(223)__init__()
+-&gt; exp_new_extension, log_new_extension = True, True
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(224)__init__()
+-&gt; if rewrite_complex:
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(233)__init__()
+-&gt; if any(i.has(x) for i in self.f.atoms(sin, cos, tan, atan, asin, acos)):
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(234)__init__()
+-&gt; raise NotImplementedError("Trigonometric extensions are not "
+(Pdb) n
+NotImplementedError: Trigonometric extensions are not supported (yet!)
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(234)__init__()
+-&gt; raise NotImplementedError("Trigonometric extensions are not "
+(Pdb) n
+--Return--
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(234)__init__()-&gt;None
+-&gt; raise NotImplementedError("Trigonometric extensions are not "
+(Pdb) n
+NotImplementedError: Trigonometric extensions are not supported (yet!)
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1677)risch_integrate()
+-&gt; dummy=True, rewrite_complex=rewrite_complex)
+(Pdb) n
+--Return--
+&gt; /home/gxyd/foss/sympy/sympy/integrals/risch.py(1677)risch_integrate()-&gt;None
+-&gt; dummy=True, rewrite_complex=rewrite_complex)
+(Pdb) n
+NotImplementedError: Trigonometric extensions are not supported (yet!)
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(780)_eval_integral()
+-&gt; result, i = risch_integrate(f, x, separate_integral=True, conds=conds)
+(Pdb) n
+&gt; /home/gxyd/foss/sympy/sympy/integrals/integrals.py(781)_eval_integral()
+-&gt; except NotImplementedError:
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  As you can see it raise *NotImplemenedError* for forming the *DifferentialExtension*
+  object for function f = *sin(x)*.
+
+  I will leave it here, I think it wouldn't be an issue to continue from here.
+</code></pre>
+</div>
+
+<blockquote>
+  <h3 id="todo">TODO</h3>
+</blockquote>
+
+<p>I am still trying to make a call to <em>param_rischDE</em> in the function <em>limited_integration</em>. I will write more about this in my next blog, hopefully(a big hope here from me, I have been stuck here for quite sometime and frustrated about it) will have completed this task by then.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="day">
 <h2 class="dayform">May 16, 2017</h2>
 <div class="channelgroup ">
 	<div class="row">
@@ -859,6 +1390,79 @@ Here is a gist of the work I undertook till now:</p>
 						<p>My very first blog post. This blog&#8217;s purpose is primarily to track the progress of my GSoC project and get feedback from my mentors, if my proposal gets selected. I propose to improve upon the Python wrappers for <code class="highlighter-rouge">SymEngine</code>, and work on rooting it as a symbolic backend for <code class="highlighter-rouge">SymPy</code> CAS, the purpose for which it has been in development for a number of years. My proposal can be found <a href="https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Shikhar-Jaiswal:-Improving-SymEngine's-Python-Wrappers-and-SymPy-SymEngine-Integration">here</a>.</p>
 
 <p>Till Next Time!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="day">
+<h2 class="dayform">November 30, 2016</h2>
+<div class="channelgroup ">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		    <div class="box" class="item feed-5a972359 feed-" id="item-519ebca3">
+			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
+			    	<table class="table borderless table-condensed">
+			    		<tr>
+			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
+			    				<div style="margin-right:5px;">
+				    				 <img src="hackergotchi/gxyd.jpg"/> 
+				    				
+				    			</div>
+			    			</td>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row" style="margin-top:15px;">
+					    			<div class="col-md-8">
+							    		<a href="">Gaurav Dhingra (gxyd) </a>
+							    	</div>
+							    	<div class="col-md-4 dtdate">
+							    		<a href="https://gxyd.github.io/blogs/Gsoc2016-summary/">00:00, Wednesday, 30 November UTC</a>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    		<tr>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row">
+							    	<div class="col-md-12 col-xs-12">
+							    		<h4><a class="boxh2" href="https://gxyd.github.io/blogs/Gsoc2016-summary/">Gaurav Dhingra (gxyd): GSoC 2016 Summary</a></h4>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    	</table>
+			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
+			    		 <img src="hackergotchi/gxyd.jpg"/> 
+			    		
+			    	</div>
+			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
+			    		<div class="row">
+			    			<div class="col-md-8">
+					    		<a href="">Gaurav Dhingra (gxyd) </a>
+					    	</div>
+					    	<div class="col-md-4 dtdate">
+					    		<a href="https://gxyd.github.io/blogs/Gsoc2016-summary/">00:00, Wednesday, 30 November UTC</a>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12 col-xs-12">
+					    		<h4><a class="boxh2" href="https://gxyd.github.io/blogs/Gsoc2016-summary/">GSoC 2016 Summary</a></h4>
+					    	</div>
+					    </div>
+				    </div-->
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 descript">
+						<p>Below is the summary:</p>
+
+<p><a href="https://github.com/gxyd">Gaurav Dhingra</a> - <a href="https://summerofcode.withgoogle.com/archive/2016/projects/6593494743252992/">Computational Group Theory in SymPy</a></p>
+
+<p>This project aimed to implement free groups, finitely presented groups and various algorithms like <a href="https://en.wikipedia.org/wiki/Coset_enumeration">Coset Enumeration</a> using Todd Coxeter method, Low index subgroup and Reidemeister schreier.
+Computation of order, index and other properties of the finitely presented
+groups is now present. The functionality is added in the combinatorics module
+of SymPy. He laid the groundwork for further addition of other algorithms
+and integrate it with the permutation groups.</p>
 					</div>
 				</div>
 			</div>
@@ -2149,6 +2753,236 @@ of learning and experiences possible.</p>
 			</div>
 		</div>
 	</div>
+</div><div class="channelgroup ">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		    <div class="box" class="item feed-5a972359 feed-" id="item-cdae0138">
+			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
+			    	<table class="table borderless table-condensed">
+			    		<tr>
+			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
+			    				<div style="margin-right:5px;">
+				    				 <img src="hackergotchi/gxyd.jpg"/> 
+				    				
+				    			</div>
+			    			</td>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row" style="margin-top:15px;">
+					    			<div class="col-md-8">
+							    		<a href="">Gaurav Dhingra (gxyd) </a>
+							    	</div>
+							    	<div class="col-md-4 dtdate">
+							    		<a href="https://gxyd.github.io/blogs/Gsoc2016-project/">00:00, Friday, 19 August UTC</a>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    		<tr>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row">
+							    	<div class="col-md-12 col-xs-12">
+							    		<h4><a class="boxh2" href="https://gxyd.github.io/blogs/Gsoc2016-project/">Gaurav Dhingra (gxyd): GSoC 2016 wrap-up</a></h4>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    	</table>
+			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
+			    		 <img src="hackergotchi/gxyd.jpg"/> 
+			    		
+			    	</div>
+			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
+			    		<div class="row">
+			    			<div class="col-md-8">
+					    		<a href="">Gaurav Dhingra (gxyd) </a>
+					    	</div>
+					    	<div class="col-md-4 dtdate">
+					    		<a href="https://gxyd.github.io/blogs/Gsoc2016-project/">00:00, Friday, 19 August UTC</a>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12 col-xs-12">
+					    		<h4><a class="boxh2" href="https://gxyd.github.io/blogs/Gsoc2016-project/">GSoC 2016 wrap-up</a></h4>
+					    	</div>
+					    </div>
+				    </div-->
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 descript">
+						<p>GSoC 2016 Project with SymPy(<em>wrap up</em>): Computational Group Theory
+Hi, I&#8217;m Gaurav Dhingra (<a href="https://github.com/gxyd">@gxyd</a>) and this post is a report of my work for SymPy under <a href="https://summerofcode.withgoogle.com">Google Summer of Code 2016</a>.</p>
+
+<p>This is also intended to be a description of my work for submission to <b>GSoC&#8217;s Final Evaluation</b>.</p>
+
+<blockquote>
+  <h2 id="work-product-submission">Work Product Submission</h2>
+  <p><a href="https://github.com/sympy/sympy/commits/master?author=gxyd">commits in GSoC 2016 product submission: Gaurav Dhingra</a>.
+<a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory">GSoC proposal</a></p>
+</blockquote>
+
+<blockquote>
+  <h2 id="pull-requests">Pull Requests</h2>
+</blockquote>
+
+<ol>
+  <li><a href="https://github.com/sympy/sympy/pull/10350">#10350 FreeGroup implementation in SymPy</a></li>
+  <li><a href="https://github.com/sympy/sympy/pull/11140">#11140 FpGroup implementation in SymPy</a></li>
+  <li><a href="https://github.com/sympy/sympy/pull/11231">#11231 Low Index Subgroups algorithm implementation in SymPy</a></li>
+  <li><a href="https://github.com/sympy/sympy/pull/11295">#11295 Reidemeister Schreier algorithm implementation in SymPy</a></li>
+  <li><a href="https://github.com/sympy/sympy/pull/11460">#11460 Add documentation for FpGroup file and fix separate bug</a></li>
+</ol>
+
+<ul>
+  <li><a href="https://github.com/sympy/sympy/pull/11361">#11361 <em>Modified Todd Coxeter</em> algorithm implementation in SymPy</a></li>
+</ul>
+
+<blockquote>
+  <h2 id="bugs-reported">Bugs reported</h2>
+  <p>[closed]</p>
+  <ul>
+    <li><a href="https://github.com/sympy/sympy/issues/11449">#11449 <em>TypeError</em> on compressing a Coset Table generated by coset table method</a>.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <h2 id="brief-information">Brief Information</h2>
+</blockquote>
+
+<p><strong>Project</strong>: <a href="https://summerofcode.withgoogle.com/projects/#5798586428162048">Group Theory</a></p>
+
+<p><strong>Blog</strong>: <a href="https://gxyd.github.io/gsoc.html">https://gxyd.github.io/gsoc.html</a></p>
+
+<p><strong>My Website</strong>: https://gxyd.github.io</p>
+
+<p><strong>e-mail</strong>: gauravdhingra.gxyd[at]gmail.com, igauravdhingra[at]protonmail.com</p>
+
+<p>I am a pre-final year undergraduate student of Applied Mathematics at IIT Roorkee.</p>
+
+<blockquote>
+  <h2 id="before-gsoc">Before GSoC</h2>
+</blockquote>
+
+<p>I heard about the GSoC program and about SymPy org. since of one of my college mate, Prasoon Shukla (he also participated in GSoC with SymPy). I was quite amazed by how mathematics and computer science could intersect and help in solving math problems.</p>
+
+<p>I have been contributing to SymPy from May last year. In the beginning I tended often to work on issues that were more often related to my then on-going courses in my college. In December I completed a basic course on Group Theory, so I thought of choosing to work on Group Theory and I saw quite a few things in CGT were missing from SymPy and those functionalities were already there in GAP and Magma. So I asked them from Kalevi, regarding things that could be taken up for a gsoc project. So finally with some discussions with him and Aaron, I was sure by December end that I was going to work on implementing Finitely Presented Group in SymPy. I looked upto the last GSoC project on CGT by Alexandar Makelov, for reference material that could be used for the implementation and it turned out that the book by Derek Holt, Handbook of Computational Group Theory (will mention as shortly <em>the Handbook</em>).</p>
+
+<p>Though I already started working on <a href="https://github.com/sympy/sympy/pull/10350">PR #10350</a> for implementation of free groups in beginning January though I started working on the proposal from February beginning.</p>
+
+<p>So what I should do? Since I was quite sure of the project. Well at that moment I thought, since I am a mathematics major, choosing this project would also help me. So I reached out to Kalevi, said to him what I was thinking to do, what could be good for the project. So we worked upon making a good gsoc proposal.</p>
+
+<p>Here is my <a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory">GSoC proposal</a>. Now that the summer is over and I&#8217;ve tackled a lot more with computational group theory, it seems that the main points in my GSoC proposal were:</p>
+
+<ul>
+  <li>Implementation of different algebraic structures monoid, free monoid, free group, semi group, free semi group, magma, etc.</li>
+  <li>Rewriting System for reducing the elements of finitely presented groups.</li>
+  <li>The Todd-Coxeter algorithm for coset enumeration, used to find the index of a subgroup of a finitely presented group.</li>
+  <li>Reidemeister Schreier algorithm.</li>
+  <li>Implementation of main <code class="highlighter-rouge">Group</code> class.</li>
+</ul>
+
+<p>Well, I submitted my proposal and needed to wait until April 22 to the result, and then&#8230;</p>
+
+<p><img height="200" src="https://gxyd.github.io/../images/gsoc_selection.png" width="650" /></p>
+
+<p><em>I was selected _/_</em></p>
+
+<p>I got lucky to have Kalevi Suominen like mentor too. Aaron Meurer, the project leader of SymPy was to be co-mentor, and I felt honored to be alloted my preferred mentors.</p>
+
+<blockquote>
+  <h2 id="during-gsoc">During GSoC</h2>
+</blockquote>
+
+<p>A more detailed account of my progress can be found on my blog <a href="https://gxyd.gitub.io/gsoc.html">here</a>.</p>
+
+<ul>
+  <li>
+    <p>We started working on 7th May, we first started with working on completing the Free Group <a href="https://github.com/sympy/sympy/pull/10350">PR#10350</a> and we discussed things on our channel <a href="https://gitter.im/sympy/GroupTheory">sympy/GroupTheory</a>. We had some discussion on whether <code class="highlighter-rouge">Basic</code> should be a <em>super-class</em> of <code class="highlighter-rouge">FreeGroup</code> or not. In the end we decied not to derive <code class="highlighter-rouge">FreeGroup</code> from <code class="highlighter-rouge">Basic</code>. Its basic methods had already been written, most of them inspired from GAP software.</p>
+  </li>
+  <li>
+    <p>For the first point in my proposal (i.e implementation of algebraic structures), we didn&#8217;t started with them (infact we never worked on them). We then moved onto the Coset Enumeration which covered 5 weeks of work in my timeline, but we didn&#8217;t spend that much time, atleast on the first go at that moment, that did took alomost 3 weeks including the implementation of two strategies of enumeration <em>Felsch</em> and <em>HLT</em>. It was the very heart of our GSoC project. There were quite a few bugs that were there in algorithm, especially the bug #11449, to which the Kalevi found the solution.</p>
+  </li>
+  <li>
+    <p>For the second point we never reached it, there wasn&#8217;t sufficient time for that. Then we decided to rather implement the <em>Low Index Subgroups</em> algortithm. It was quite fun to implement the algorithm, since it gave some good insight into CGT. More on this on <a href="https://gxyd.github.io/gsoc_week_5.html">blog for week 5</a>.</p>
+  </li>
+  <li>
+    <p>From here I had passed my mid-term evaluations. Then we started with work on <em>Reidemeister Schreier</em> algorithm. The algorithm was mainly implemeted using the <a href="http://staff.itee.uq.edu.au/havas/1974h.pdf">Havas paper</a>, though the current implementation in SymPy doesn&#8217;t produce the best simplifed presentation. No good pseudocode is available for the algorithm, the major difficulty being the <em>sequence</em> of applying the operation. More on this on <a href="https://gxyd.github.io/gsoc_week_6.html">blog for week 6</a>.</p>
+  </li>
+  <li>
+    <p>After we thought that the result returned by Reidemeister Schreier algorithm we moved onto <em>modified todd coxeter</em> algorithm. The main difficulty in it was defining the $\tau$ which can be read on the our channel for comments by Kalevi, I belive it can help in solving that problem.</p>
+  </li>
+  <li>
+    <p>As to the fifth point (i.e making <code class="highlighter-rouge">Group</code> class), we never worked upon it. Also the topic of <em>Presenation of Finite Groups</em> , could not get much attention, since of my busy college schedule.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <h3 id="commitscode-written-during-gsoc">Commits/Code written during GSoC</h3>
+</blockquote>
+
+<p>Since I have commited quite a few commits un-related to my project. So I decided to <em>cherry-pick</em> the commits made for my GSoC project. So the combined commits makes the things quite clear. <a href="https://github.com/gxyd/sympy/pull/6">PR for GSoC 2016 product submission: Gaurav Dhingra</a>.</p>
+
+<blockquote>
+  <h3 id="most-annoying-issue">Most annoying issue</h3>
+</blockquote>
+
+<p><a href="https://github.com/sympy/sympy/issues/11449">issue #11449</a></p>
+
+<blockquote>
+  <h2 id="after-gsoc">After GSoC</h2>
+</blockquote>
+
+<p>There is still much to be done regarding the finitely presented groups. As during the program my efforts were directed mainly towards getting the fundamental algorithms for finitely presented groups in, the overall structure of the module hasn&#8217;t received much attention.</p>
+
+<p>The algorithms are in, but the methods in sympy/combinatorics/fp_groups.py are not that much user-friendly. The code organization is not terrible, I think. Some suggestions (both for me and anyone else interested) for future work are:</p>
+
+<ul>
+  <li>
+    <p><strong>Cosets in permutation groups</strong>: [verbatim-copy of Kalevi&#8217;s mail - <em>&#8220;next thing to do&#8221;</em>] Finding cosets in permutation groups is more challenging to implement since there seems to be no ready-made pseudocode. However, there is a description of the procedure with an example in section 4.6.7. It can be based on the existing implementation of the <em>Screier-Sims algorithm</em>.</p>
+  </li>
+  <li>
+    <p><strong>Finitely generated abelian groups</strong>: [verbatim-copy of Kalevi&#8217;s mail - <em>&#8220;next thing to do&#8221;</em>] There is useful pseudocode in chapter 9 of the book by Holt that should make it fairly easy to implement the basic methods of abelian groups. We should probably try to base the implementation on the code in <code class="highlighter-rouge">polys.agca</code> as abelian groups are the same as Z-modules. It is all essentially about linear algebra over the integers.</p>
+  </li>
+  <li>
+    <p><strong>Complete modified Todd Coxeter algorithm</strong>: <a href="https://github.com/sympy/sympy/pull/11361">PR #11361</a> One bug is currently there in the algorithm, which can be fixed since we have to make assignments to $\tau$. Also currently no tests have been added, which can be added.</p>
+  </li>
+  <li>
+    <p><strong>Rewriting System</strong>: This can be a good candidate for a major work, I included this topic in my proposal though was left untouched. Perhaps <em>GAP</em> could be first seen in this regard. Like always.</p>
+  </li>
+  <li>
+    <p><strong>Groups folder</strong>: After a few of the above mentioned things have been done, I believe it could be a good time to make a folder named <code class="highlighter-rouge">groups</code>, since finitely presented groups should not be a part of combinatorics module which would contain the all algebraic structures including the permutation groups.</p>
+  </li>
+  <li>
+    <p><strong>Non-associative algebra</strong>: (Perhaps I got the spelling of <em>associative</em> this time right!) Albert CAS could be used to understand the workings related to non-associative algebra, it contains quite good functionalities.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <h2 id="things-i-did-rightwrong">Things I did right/wrong</h2>
+</blockquote>
+
+<ul>
+  <li>I often lagged in writing blogs.</li>
+  <li>I worked more than expected hours before 15 July (before college started) but much less in the last one month of GSoC because of a little busy schedule.</li>
+</ul>
+
+<blockquote>
+  <h2 id="conclusion">Conclusion</h2>
+</blockquote>
+
+<p>I had say that I did about 70% of the work I promised to do in my proposal, considering that I also did two non-included task of Low Index subgroups algorithm and Modified Todd Coxeter algorithm, so I can say I swapped my work. It is good enough, and I hope to get back to extending the things that I have started. There&#8217;s still some revision to be made, some code to be clean up. And I&#8217;m doing that.</p>
+
+<p>I don&#8217;t really know if I&#8217;ll pass final evaluations by Google, but, regardless, I&#8217;m really glad for all the coding and development experience I got during these weeks. I&#8217;ll probably use for personal projects, may be in Dissertation in last year, and try to contribute more to SymPy.</p>
+
+<p>I appreciate the help of my mentor <a href="https://github.com/jksuom">Kalevi Suominen</a> who was always there for any query that I had regarding Group Theory in project, and I appreciate his ability to reply back within 1 hour for any message I left any time of day and every day of the week including weekend (I call it 1-hour rule). I think he was a wonderful mentor and I learnt a lot from him, and my co-mentor <a href="https://github.com/asmeurer">Aaron Meurer</a>, the current project leader of SymPy, and the entire SymPy community for helping me out and reviewing my work!</p>
+
+<p>Also thank you <font color="#4885ed">G</font><font color="#db3236">o</font><font color="#f4c20d">o</font><font color="#4885ed">g</font><font color="#3cba54">l</font><font color="#db3236">e</font>.</p>
+
+<p>&#2309;&#2354;&#2357;&#2367;&#2342;&#2366; !</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div></div>
 <div class="day">
 <h2 class="dayform">August 16, 2016</h2>
@@ -2659,6 +3493,128 @@ After <a href="https://github.com/symengine/symengine/pull/1061/">this</a> PR ge
 	</div>
 </div></div>
 <div class="day">
+<h2 class="dayform">August 09, 2016</h2>
+<div class="channelgroup ">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+		    <div class="box" class="item feed-5a972359 feed-" id="item-f908cb7a">
+			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
+			    	<table class="table borderless table-condensed">
+			    		<tr>
+			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
+			    				<div style="margin-right:5px;">
+				    				 <img src="hackergotchi/gxyd.jpg"/> 
+				    				
+				    			</div>
+			    			</td>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row" style="margin-top:15px;">
+					    			<div class="col-md-8">
+							    		<a href="">Gaurav Dhingra (gxyd) </a>
+							    	</div>
+							    	<div class="col-md-4 dtdate">
+							    		<a href="https://gxyd.github.io/blogs/Gsoc2016-week-12/">00:00, Tuesday, 09 August UTC</a>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    		<tr>
+			    			<td style="vertical-align:bottom;">
+			    				<div class="row">
+							    	<div class="col-md-12 col-xs-12">
+							    		<h4><a class="boxh2" href="https://gxyd.github.io/blogs/Gsoc2016-week-12/">Gaurav Dhingra (gxyd): GSoC Week 12</a></h4>
+							    	</div>
+							    </div>
+			    			</td>
+			    		</tr>
+			    	</table>
+			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
+			    		 <img src="hackergotchi/gxyd.jpg"/> 
+			    		
+			    	</div>
+			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
+			    		<div class="row">
+			    			<div class="col-md-8">
+					    		<a href="">Gaurav Dhingra (gxyd) </a>
+					    	</div>
+					    	<div class="col-md-4 dtdate">
+					    		<a href="https://gxyd.github.io/blogs/Gsoc2016-week-12/">00:00, Tuesday, 09 August UTC</a>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12 col-xs-12">
+					    		<h4><a class="boxh2" href="https://gxyd.github.io/blogs/Gsoc2016-week-12/">GSoC Week 12</a></h4>
+					    	</div>
+					    </div>
+				    </div-->
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12 descript">
+						<p>Hi all, here&#8217;s a brief summary of the 12th week of my GSoC:</p>
+
+<p>Last week I uploaded the <a href="https://gxyd.github.io/gsoc2016/covhtml/index.html">test-coverage files</a> on my website, that revealed some interesting places where a few versions of <code class="highlighter-rouge">scan</code> routine in coset enumeration have un-tested <code class="highlighter-rouge">if-elif-else</code> case.</p>
+
+<p>As we are now approaching the end of GSoC time period, we decided to do some testing with some of the examples from 1973cdhw paper [2]. Coset Enumeration got my attention again since:</p>
+
+<p>There seemed to be one bug raising <code class="highlighter-rouge">TypeError</code> so opened issue <a href="https://github.com/sympy/sympy/issues/11449">sympy/sympy/#11449</a>, resulting from coset enumeration by the coset-table based method. From beginning it was clear that the issue was not in <code class="highlighter-rouge">compress()</code> method. It was quite difficult for me get onto the main source of problem. But then Kalevi had a closer look on the pseudo-code in Derek Holt and also in Sims Finitely Presented Groups.</p>
+
+<p>I wrote docstrings for a few of methods and fixed the issue <a href="https://github.com/sympy/sympy/issue/11449">#11449</a> in PR <a href="https://github.com/sympy/sympy/pull/11460">#11460</a>.</p>
+
+<p>The problem there in code is explained briefly below</p>
+
+<p><strong>Previous code-snippet</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1    i = 0
+2    while i &lt; len(C.omega):
+3        alpha = C.omega[i]
+4        i += 1
+5        for x in C.A:
+6            if C.table[alpha][C.A_dict[x]] is None:
+7                C.define_f(alpha, x)
+8                C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
+</code></pre>
+</div>
+
+<p><strong>After code-snippet</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1     while alpha &lt; len(C.table):
+2         if C.p[alpha] == alpha:
+3             for x in C.A:
+4                 if C.p[alpha] != alpha:
+5                     break
+6                 if C.table[alpha][C.A_dict[x]] is None:
+7                    C.define_c(alpha, x)
+8                     C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
+</code></pre>
+</div>
+
+<p>Here $\alpha$ looks over in till $\lt$ <code class="highlighter-rouge">C.table</code>. This way all elements of $C.\Omega$ are tested even in case that the set becomes very small. The inner for $x$ loop should also tests $p[i]$ at each round and break if that becomes different from $i$.</p>
+
+<p>The changes that have been addressed in <a href="https://github.com/sympy/sympy/pull/11460">PR #11460</a> also include chaging the file name <code class="highlighter-rouge">free_group.py</code> to <code class="highlighter-rouge">free_groups.py</code>, similar to what we have.</p>
+
+<p>It seems that Presentation of Permutation Groups won&#8217;t happen during GSoC since there&#8217;s just one more week; instead, I plan to focus on improving and completing the current PR&#8217;s <a href="https://github.com/sympy/sympy/pull/11361">#11361</a> on Modified Todd-Coxeter algorithm and <a href="https://github.com/sympy/sympy/pull/11460">PR #11460</a> on addition of docstrings and better user methods.</p>
+
+<p>One more thing, that I would start in this week though may not be completed this week will be the sphinx documentation of finitely presented groups. I found the documentation of Poly&#8217;s module by Kalevi very much readable and interesting, may be I can seek to follow that.</p>
+
+<blockquote>
+  <h2 id="references">References</h2>
+</blockquote>
+
+<ol>
+  <li>
+    <p>Derek F. Holt, Bettina Eick, Bettina, Eamonn A. O&#8217;Brien, &#8220;Handbook of computational group theory&#8221;, Discrete Mathematics and its Applications (Boca Raton). Chapman &amp; Hall/CRC, Boca Raton, FL, 2005. ISBN 1-5848-372-3 .</p>
+  </li>
+  <li>
+    <p><a href="http://staff.itee.uq.edu.au/havas/1973cdhw.pdf">John J. Cannon; Lucien A. Dimino; George Havas; Jane M. Watson, &#8220;Implementation and Analysis of the Todd-Coxeter Algorithm&#8221; , Mathematics of Computation, Vol. 27, No. 123. (Jul., 1973), pp. 463-490</a>.</p>
+  </li>
+</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="day">
 <h2 class="dayform">August 08, 2016</h2>
 <div class="channelgroup ">
 	<div class="row">
@@ -3130,465 +4086,6 @@ best.</p>
 			</div>
 		</div>
 	</div>
-</div><div class="channelgroup ">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-89ae9fcb feed-" id="item-a225dff9">
-			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
-			    	<table class="table borderless table-condensed">
-			    		<tr>
-			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
-			    				<div style="margin-right:5px;">
-				    				 <img src="hackergotchi/nishnik.jpg"/> 
-				    				
-				    			</div>
-			    			</td>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row" style="margin-top:15px;">
-					    			<div class="col-md-8">
-							    		<a href="">Nishant Nikhil (nishnik) </a>
-							    	</div>
-							    	<div class="col-md-4 dtdate">
-							    		<a href="http://nishnik.github.io/GSoC-Tenth-Week/">00:00, Friday, 05 August UTC</a>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    		<tr>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row">
-							    	<div class="col-md-12 col-xs-12">
-							    		<h4><a class="boxh2" href="http://nishnik.github.io/GSoC-Tenth-Week/">Nishant Nikhil (nishnik): GSoC Tenth Week</a></h4>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    	</table>
-			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
-			    		 <img src="hackergotchi/nishnik.jpg"/> 
-			    		
-			    	</div>
-			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
-			    		<div class="row">
-			    			<div class="col-md-8">
-					    		<a href="">Nishant Nikhil (nishnik) </a>
-					    	</div>
-					    	<div class="col-md-4 dtdate">
-					    		<a href="http://nishnik.github.io/GSoC-Tenth-Week/">00:00, Friday, 05 August UTC</a>
-					    	</div>
-					    </div>
-					    <div class="row">
-					    	<div class="col-md-12 col-xs-12">
-					    		<h4><a class="boxh2" href="http://nishnik.github.io/GSoC-Tenth-Week/">GSoC Tenth Week</a></h4>
-					    	</div>
-					    </div>
-				    </div-->
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 descript">
-						<p><img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /></p>
-
-<p>This week, I had been working on implementaion of <code class="highlighter-rouge">Union</code> and <code class="highlighter-rouge">Contains</code> in <a href="https://github.com/symengine/symengine/pull/1053">this</a> PR. <br />
-Our <code class="highlighter-rouge">Set::contains</code> function has been changed from :</p>
-
-<pre><code class="language-C++">virtual bool contains(const RCP&lt;const Basic&gt; &amp;a) const = 0;
-</code></pre>
-
-<p>to</p>
-
-<pre><code class="language-C++">virtual RCP&lt;const Boolean&gt; contains(const RCP&lt;const Basic&gt; &amp;a) const = 0;
-</code></pre>
-
-<p>And these functions:</p>
-
-<pre><code class="language-C++">virtual bool is_subset(const RCP&lt;const Set&gt; &amp;o) const = 0;
-virtual bool is_proper_subset(const RCP&lt;const Set&gt; &amp;o) const = 0;
-virtual bool is_superset(const RCP&lt;const Set&gt; &amp;o) const = 0;
-virtual bool is_proper_superset(const RCP&lt;const Set&gt; &amp;o) const = 0;
-</code></pre>
-
-<p>have been changed to:</p>
-
-<pre><code class="language-C++">bool is_subset(const RCP&lt;const Set&gt; &amp;o) const
-{
-    return eq(*this-&gt;set_intersection(o), *this);
-}
-bool is_proper_subset(const RCP&lt;const Set&gt; &amp;o) const
-{
-    return not eq(*this, *o) and this-&gt;is_subset(o);
-}
-bool is_superset(const RCP&lt;const Set&gt; &amp;o) const
-{
-    return o-&gt;is_subset(rcp_from_this_cast&lt;const Set&gt;());
-}
-bool is_proper_superset(const RCP&lt;const Set&gt; &amp;o) const
-{
-    return not eq(*this, *o) and this-&gt;is_superset(o);
-}
-</code></pre>
-
-<p>depending solely on <code class="highlighter-rouge">set_intersection</code>.</p>
-
-<p>Then the <code class="highlighter-rouge">SymEngine::set_union(const set_set &amp;in, bool solve = true)</code> has been defined which will create a <code class="highlighter-rouge">Union</code> object with <code class="highlighter-rouge">in</code> if it is not solvable, or will do union operation on all of them.
-<br />
-Our <code class="highlighter-rouge">Union</code> class has <code class="highlighter-rouge">std::set</code> of <code class="highlighter-rouge">Set</code> to store the different Set containers which can&#8217;t be unified into one single container.
-<br />
-Apart from it, the <code class="highlighter-rouge">set_intersection</code> ans <code class="highlighter-rouge">set_union</code> virtual functions have been restructured to handle other <code class="highlighter-rouge">Set</code> types case by case.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div></div>
-<div class="day">
-<h2 class="dayform">August 01, 2016</h2>
-<div class="channelgroup ">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-3ebbee70 feed-" id="item-9431b3b6">
-			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
-			    	<table class="table borderless table-condensed">
-			    		<tr>
-			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
-			    				<div style="margin-right:5px;">
-				    				 <img src="hackergotchi/shubham.jpg"/> 
-				    				
-				    			</div>
-			    			</td>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row" style="margin-top:15px;">
-					    			<div class="col-md-8">
-							    		<a href="">Subham Tibra (shubhamtibra) </a>
-							    	</div>
-							    	<div class="col-md-4 dtdate">
-							    		<a href="https://shubhamtibra.wordpress.com/2016/08/01/gsoc-week-10/">07:31, Monday, 01 August UTC</a>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    		<tr>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row">
-							    	<div class="col-md-12 col-xs-12">
-							    		<h4><a class="boxh2" href="https://shubhamtibra.wordpress.com/2016/08/01/gsoc-week-10/">Subham Tibra (shubhamtibra): GSoC Week 10</a></h4>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    	</table>
-			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
-			    		 <img src="hackergotchi/shubham.jpg"/> 
-			    		
-			    	</div>
-			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
-			    		<div class="row">
-			    			<div class="col-md-8">
-					    		<a href="">Subham Tibra (shubhamtibra) </a>
-					    	</div>
-					    	<div class="col-md-4 dtdate">
-					    		<a href="https://shubhamtibra.wordpress.com/2016/08/01/gsoc-week-10/">07:31, Monday, 01 August UTC</a>
-					    	</div>
-					    </div>
-					    <div class="row">
-					    	<div class="col-md-12 col-xs-12">
-					    		<h4><a class="boxh2" href="https://shubhamtibra.wordpress.com/2016/08/01/gsoc-week-10/">GSoC Week 10</a></h4>
-					    	</div>
-					    </div>
-				    </div-->
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 descript">
-						<p>Started off this week by continuing my work on <a href="https://github.com/sympy/sympy/pull/11422">#11422</a>. I added support for singular initial conditions in multiplication and made some amendments in addition too. They now can return a Holonomic function with singular initial condition. The input functions can have singular initial condition both or one of them can have singular one and the other one with ordinary initial condition.</p>
-<pre class="brush: python; title: ; notranslate">
-# one function have singular initial condition and the other have ordinary.
-In [4]: expr_to_holonomic(x) + expr_to_holonomic(sqrt(x))
-Out[4]: HolonomicFunction((1/2) + (-x/2)Dx + (x**2)Dx**2, x), {1/2: [1], 1: [1]}
-
-In [5]: _4.to_expr()
-Out[5]: &#8730;x + x
-
-In [6]: expr_to_holonomic(x) * expr_to_holonomic(sqrt(x))
-Out[6]: HolonomicFunction((-3/2) + (x)Dx, x), {3/2: [1]}
-
-In [7]: _6.to_expr()
-Out[7]:
- 3/2
-x
-
-# both have singular initial conditions.
-In [9]: expr_to_holonomic((x)**(S(1)/3)) + expr_to_holonomic(sqrt(x))
-Out[9]: HolonomicFunction((1/6) + (x/6)Dx + (x**2)Dx**2, x), {1/3: [1], 1/2: [1]}
-
-In [10]: _9.to_expr()
-Out[10]:
-3 ___
-&#9586;&#9585; x  + &#8730;x
-In [11]: expr_to_holonomic((x)**(S(1)/3))*expr_to_holonomic(sqrt(x))
-Out[11]: HolonomicFunction((-5/6) + (x)Dx, x), {5/6: [1]}
-
-In [12]: _11.to_expr()
-Out[12]:
- 5/6
-x
-</pre>
-<p>I found some problems in coding because of storing these initial conditions in two different attributes. So I merged them to a single attribute and instead added methods to check which one is stored and refactored the existing code using it.</p>
-<p>I opened a new PR&#160;<a href="https://github.com/sympy/sympy/pull/11451">#11451</a>&#160;majorly focused on adding singular initial conditions to the result of <code>.expr_to_holonomic()</code>&#160;when necessary. At first I added it in converting polynomials. Here are some examples:</p>
-<pre class="brush: python; title: ; notranslate">
-In [14]: expr_to_holonomic(3*x**3+4*x**2)
-Out[14]: HolonomicFunction((-9*x - 8) + (3*x**2 + 4*x)Dx, x), {2: [4, 3]}
-
-In [15]: _14.to_expr()
-Out[15]:
- 2
-x &#8901;(3&#8901;x + 4)
-
-In [16]: expr_to_holonomic(x)
-Out[16]: HolonomicFunction((-1) + (x)Dx, x), {1: [1]}
-
-In [17]: _16.to_expr()
-Out[17]: x
-</pre>
-<p>I also a found a bug in <code>.to_hyper()</code>&#160;when the recurrence relation has order <code>0</code>. Added its fix too. Earlier the output also considered negative exponents which weren&#8217;t needed.</p>
-<pre class="brush: python; title: ; notranslate">
-# previously
-In [18]: expr_to_holonomic(y*x, x).integrate(x).to_expr()
-Out[18]:
- 2
-x &#8901;y
-&#9472;&#9472;&#9472;&#9472; + C&#8321;
- 2
-# after fix
-In [19]: expr_to_holonomic(y*x, x).integrate(x).to_expr()
-Out[19]:
- 2
-x &#8901;y
-&#9472;&#9472;&#9472;&#9472;
- 2  
-
-</pre>
-<p><strong>What Next:</p>
-<p></strong>I hope to add singular initial conditions to more types of functions in <code>.expr_to_holonomic()</code>.<br />
-&nbsp;</p><br />  <a href="http://feeds.wordpress.com/1.0/gocomments/shubhamtibra.wordpress.com/780/" rel="nofollow"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/shubhamtibra.wordpress.com/780/" /></a> <img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=shubhamtibra.wordpress.com&#038;blog=106149936&#038;post=780&#038;subd=shubhamtibra&#038;ref=&#038;feed=1" width="1" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div><div class="channelgroup ">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-aa06d76d feed-" id="item-4f15c42a">
-			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
-			    	<table class="table borderless table-condensed">
-			    		<tr>
-			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
-			    				<div style="margin-right:5px;">
-				    				 <img src="hackergotchi/srajangarg.jpg"/> 
-				    				
-				    			</div>
-			    			</td>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row" style="margin-top:15px;">
-					    			<div class="col-md-8">
-							    		<a href="">Srajan Garg (srajangarg) </a>
-							    	</div>
-							    	<div class="col-md-4 dtdate">
-							    		<a href="http://srajangarg.github.io//2016/08/01/Multivariate-Polynomails/">00:00, Monday, 01 August UTC</a>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    		<tr>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row">
-							    	<div class="col-md-12 col-xs-12">
-							    		<h4><a class="boxh2" href="http://srajangarg.github.io//2016/08/01/Multivariate-Polynomails/">Srajan Garg (srajangarg): Multivariate Polynomials</a></h4>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    	</table>
-			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
-			    		 <img src="hackergotchi/srajangarg.jpg"/> 
-			    		
-			    	</div>
-			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
-			    		<div class="row">
-			    			<div class="col-md-8">
-					    		<a href="">Srajan Garg (srajangarg) </a>
-					    	</div>
-					    	<div class="col-md-4 dtdate">
-					    		<a href="http://srajangarg.github.io//2016/08/01/Multivariate-Polynomails/">00:00, Monday, 01 August UTC</a>
-					    	</div>
-					    </div>
-					    <div class="row">
-					    	<div class="col-md-12 col-xs-12">
-					    		<h4><a class="boxh2" href="http://srajangarg.github.io//2016/08/01/Multivariate-Polynomails/">Multivariate Polynomials</a></h4>
-					    	</div>
-					    </div>
-				    </div-->
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 descript">
-						<h3 id="overview">Overview</h3>
-
-<p>After college has started, work has been slower than usual. Last week I finally wound up Rational Polynomials in <a href="https://github.com/symengine/symengine/pull/1028">#1028</a>. Some minor changes still remain in some parts of the code. Most of the changes left are mainly related to code duplication, and will be fixed by writing their templated versions.</p>
-
-<h3 id="multivariate-polynomials">Multivariate Polynomials</h3>
-
-<p>I started off by reading and understanding how the multivariate class is implemented currently in SymEngine. It was developed by the UC Davis team as a part of their course project. The basic idea is pretty simple. It still is a sparse representation and maps from a vector (representing the powers of each generator in the monomial) to the non-zero coefficient multiplied to it. We use an unordered map instead of the ordered map used in the univariate counterpart. The choice does make some sense, as deciding order between two monomials is subjective and does not make sense (for eg. which is larger <code class="highlighter-rouge">x**2*y</code> or <code class="highlighter-rouge">x*y**2</code>) Even if we define a custom ordering, there are no real benefits I could think of that it would provide.</p>
-
-<p>On a side note, it kind of makes me think why we have stuck to the ordered map implementation for our univariate polynomials. The places it offers benefits are <code class="highlighter-rouge">eval</code> and <code class="highlighter-rouge">mul</code> (in some ways) I worked with ordered maps, as that was the implementation the initial polynomial class was built on. I&#8217;m also wondering if it is healthy to use two different implementations for both the polynomial types, univariate and multivariate. This needs to be discussed.</p>
-
-<p>Right now, I&#8217;m basically refactoring most of the code written in the multivariate class, so that it matches the API more or less from the univariate case. Some functions have been re-written and some unnecessary storage within the polynomials have been removed. Initially, I thought I will stick with the same container based approach I used in the univariate case. This proves to be non trivial for the multivariate case. So, after some discussion with Isuru, we decided to stick with different implementations for SymEngine polynomials and Piranha polynomials, as combining code was not easy. The current work is in <a href="https://github.com/symengine/symengine/pull/1049">#1049</a></p>
-
-<h3 id="future-work">Future Work</h3>
-
-<p>A lot is on my plate right now. Some of the work I plan to finish by the end of the next two weeks are</p>
-
-<ul>
-  <li>
-    <p>Finish up the refactoring of multivariate polynomials, and make their interaction with univariate polynomials as seamless as possible</p>
-  </li>
-  <li>
-    <p>Introduce wrappers for piranha polynomials to be used as multivariate polynomials within SymEngine</p>
-  </li>
-  <li>
-    <p>Fix up the remainder of rational polynomials, and template code wherever possible to remove code duplicates</p>
-  </li>
-  <li>
-    <p>Write conversions from <code class="highlighter-rouge">Basic</code> to multivariate polynomials, which will finish up one part of the coercion framework as proposed by Isuru</p>
-  </li>
-</ul>
-
-<p>Off to work!</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div></div>
-<div class="day">
-<h2 class="dayform">July 30, 2016</h2>
-<div class="channelgroup ">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-		    <div class="box" class="item feed-7cbb8e7e feed-" id="item-1943a287">
-			    <div class="row" style="border-bottom:1px solid #BDC3C7; margin-bottom:1%;">
-			    	<table class="table borderless table-condensed">
-			    		<tr>
-			    			<td rowspan="2" class="consizeit" style="vertical-align:middle;">
-			    				<div style="margin-right:5px;">
-				    				 <img src="hackergotchi/shekharrajak.jpg"/> 
-				    				
-				    			</div>
-			    			</td>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row" style="margin-top:15px;">
-					    			<div class="col-md-8">
-							    		<a href="">Shekhar Prasad Rajak (shekharrajak) </a>
-							    	</div>
-							    	<div class="col-md-4 dtdate">
-							    		<a href="http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-10">00:00, Saturday, 30 July UTC</a>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    		<tr>
-			    			<td style="vertical-align:bottom;">
-			    				<div class="row">
-							    	<div class="col-md-12 col-xs-12">
-							    		<h4><a class="boxh2" href="http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-10">Shekhar Prasad Rajak (shekharrajak): Coding Period Week 10</a></h4>
-							    	</div>
-							    </div>
-			    			</td>
-			    		</tr>
-			    	</table>
-			    	<!--div class="col-md-1 col-xs-3" style="margin-bottom:1%;">
-			    		 <img src="hackergotchi/shekharrajak.jpg"/> 
-			    		
-			    	</div>
-			    	<div class="col-md-11 col-xs-9" style="margin-top:1%;">
-			    		<div class="row">
-			    			<div class="col-md-8">
-					    		<a href="">Shekhar Prasad Rajak (shekharrajak) </a>
-					    	</div>
-					    	<div class="col-md-4 dtdate">
-					    		<a href="http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-10">00:00, Saturday, 30 July UTC</a>
-					    	</div>
-					    </div>
-					    <div class="row">
-					    	<div class="col-md-12 col-xs-12">
-					    		<h4><a class="boxh2" href="http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-10">Coding Period Week 10</a></h4>
-					    	</div>
-					    </div>
-				    </div-->
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 descript">
-						<hr />
-
-<p><strong>eliminate() continue:</strong></p>
-
-<ul>
-  <li>
-    <p>issue <a href="https://github.com/sympy/sympy/issues/2720">#2720</a> : We need some kind of eliminate function, like <a href="http://reference.wolfram.com/mathematica/ref/Eliminate.html">http://reference.wolfram.com/mathematica/ref/Eliminate.html</a>. See also <a href="http://stackoverflow.com/q/20826969/161801">http://stackoverflow.com/q/20826969/161801 </a></p>
-  </li>
-  <li>
-    <p>I am trying to use <code class="highlighter-rouge">subs</code> and <code class="highlighter-rouge">_invert</code> to get answer. May be one can use <code class="highlighter-rouge">replace</code>, <code class="highlighter-rouge">xreplace</code>, <code class="highlighter-rouge">match</code> to eliminate some kind of same sub expression.</p>
-  </li>
-  <li>
-    <p>There can be ans in <code class="highlighter-rouge">Imageset</code>, <code class="highlighter-rouge">Finiteset</code>, <code class="highlighter-rouge">Complement</code>, <code class="highlighter-rouge">Intersection</code> when we use <code class="highlighter-rouge">_invert</code>. So there should be a technique to handle it.</p>
-  </li>
-  <li>
-    <p>Still need some good idea and technique. WIP.</p>
-  </li>
-</ul>
-
-<hr />
-
-<p><strong>Output of solveset should be of one type:</strong></p>
-
-<ul>
-  <li>
-    <p>Amit discussed about it. Solution we see in <code class="highlighter-rouge">solveset</code> should be in one type of set. Right now we may have solution in <code class="highlighter-rouge">Imageset</code>, <code class="highlighter-rouge">Finiteset</code>, <code class="highlighter-rouge">Complement</code>, <code class="highlighter-rouge">Intersection</code> or <code class="highlighter-rouge">ConditionSet</code>. So there would be problem for user to handle these many solution type.</p>
-  </li>
-  <li>
-    <p>I think there should be something that separate <code class="highlighter-rouge">Complements</code>, <code class="highlighter-rouge">Intersections</code>,<code class="highlighter-rouge">ConditionSet</code> and main solution in <code class="highlighter-rouge">Finiteset</code>.</p>
-  </li>
-  <li>
-    <p>E.g. if solveset solution is <code class="highlighter-rouge">Intersection(Complement(FiniteSet(x), {y}), {z})</code> then
-soln : <code class="highlighter-rouge">FiniteSet(x)</code>, <code class="highlighter-rouge">x != {y}</code>, <code class="highlighter-rouge"><span class="p">{</span><span class="err">x</span><span class="p">}</span><span class="w"> </span><span class="err">intersect</span><span class="w"> </span><span class="p">{</span><span class="err">z</span><span class="p">}</span></code>.</p>
-  </li>
-</ul>
-
-<hr />
-
-<p><strong>Continue Simplified Trig soln</strong></p>
-
-<p>PR <a href="https://github.com/sympy/sympy/pull/11188">#11188</a></p>
-
-<ul>
-  <li>
-    <p>According to the <a href="https://github.com/sympy/sympy/pull/11188#issuecomment-234789616">Harsh comments/review</a> I modified the PR. Now it seems it is
-returning more simplified solution( <a href="https://github.com/sympy/sympy/pull/11188/commits/beaac312f03819bd7221887eb2b4cbe5d49bed5e#diff-85baa04bbf4e1dfd9128782738e45424R1141">one case is here</a>) .</p>
-  </li>
-  <li>
-    <p>To understand the changes I did in the <code class="highlighter-rouge">_solve_trig</code> method, one should check <a href="https://gist.github.com/Shekharrajak/17fdcd2320f572fc9fc8674823137e20">this gist</a></p>
-  </li>
-  <li>
-    <p>To see the advantage of imageset union, One good example is in <a href="https://gist.github.com/Shekharrajak/a5efc840d9a7d3062289f2d9c5f20b16">this gist</a></p>
-  </li>
-</ul>
-
-<hr />
-
-<p><strong><em>continue</em></strong></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </div></div>
 <br><p><a href="index1.html" class="btn btn-mat"><span class="icon-kdeArrowLeft"></span> Older blog entries</a></p>
 
@@ -3617,110 +4114,110 @@ returning more simplified solution( <a href="https://github.com/sympy/sympy/pull
 <tr class="feedsrow">
 <td><a href="https://asmeurer.github.io/blog/">Aaron Meurer's Blog</a></td>
 <td><a class="xmlbutton" href="http://www.asmeurer.com/blog/rss.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://aktech.github.io/blog">Amit Kumar</a></td>
 <td><a class="xmlbutton" href="http://iamit.in/blog/feeds/sympy.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://arif7blog.wordpress.com">Arif's Blog</a></td>
 <td><a class="xmlbutton" href="https://arif7blog.wordpress.com/feed/">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td>http://kshitij10496.github.io/feed.xml</td>
 <td><a class="xmlbutton" href="http://kshitij10496.github.io/feed.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td>http://sartajsingh.me/feeds/sympy.xml</td>
 <td><a class="xmlbutton" href="http://sartajsingh.me/feeds/sympy.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
-</tr>
-<tr class="feedsrow">
-<td>https://gxyd.github.io/feeds/atom.xml</td>
-<td><a class="xmlbutton" href="https://gxyd.github.io/feeds/atom.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://isuruf.blogspot.com/">Isuru Fernando's blog</a></td>
 <td><a class="xmlbutton" href="http://isuruf.blogspot.com/feeds/posts/default">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://jbm950.github.io">James Milam</a></td>
 <td><a class="xmlbutton" href="http://jbm950.github.io/feed.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://nishnik.github.io/">Nishant Nikhil</a></td>
 <td><a class="xmlbutton" href="http://nishnik.github.io/feed.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://ranjithkumar007.github.io/">Ranjith Kumar</a></td>
 <td><a class="xmlbutton" href="https://ranjithkumar007.github.io/feed.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://sampadblog.wordpress.com">Sampad Saha</a></td>
 <td><a class="xmlbutton" href="https://sampadblog.wordpress.com/feed/">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://shekharrajak.github.io">Shekhar Prasad Rajak</a></td>
 <td><a class="xmlbutton" href="http://shekharrajak.github.io/feed.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://shikharj.github.io//">Shikhar Jaiswal</a></td>
 <td><a class="xmlbutton" href="https://ShikharJ.github.io/feed.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://srajangarg.github.io//">Srajan Garg</a></td>
 <td><a class="xmlbutton" href="http://srajangarg.github.io/feed.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://shubhamtibra.wordpress.com">Subham Tibra</a></td>
 <td><a class="xmlbutton" href="https://shubhamtibra.wordpress.com/feed/">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://sumith1896.github.io//">Sumith</a></td>
 <td><a class="xmlbutton" href="http://sumith1896.github.io/feeds/feed.sympy.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="https://rajithsays.wordpress.com">SymEngine &#8211; Rajith says&#8230;</a></td>
 <td><a class="xmlbutton" href="https://rajithsays.wordpress.com/category/symengine/feed/">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 <tr class="feedsrow">
 <td><a href="http://valglad.github.io/">SymPy Group Theory (GSoC 2017)</a></td>
 <td><a class="xmlbutton" href="https://valglad.github.io/feed.xml">XML</a></td>
-<td>14:48, Wednesday, 31 May</td>
-<td>15:03, Wednesday, 31 May</td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
+</tr>
+<tr class="feedsrow">
+<td><a href="https://gxyd.github.io/">XY (solving the x's and y's of math, programming and life )</a></td>
+<td><a class="xmlbutton" href="https://gxyd.github.io/atom.xml">XML</a></td>
+<td>15:54, Wednesday, 31 May</td>
+<td>16:09, Wednesday, 31 May</td>
 </tr>
 </table>
 
