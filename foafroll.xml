@@ -149,6 +149,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Bjoern Dahlgren (bjodah)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="http://bjodah.github.io/blog/">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://bjodah.github.io/blog/rss.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Gaurav Dhingra (gxyd)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://gxyd.github.io/">
