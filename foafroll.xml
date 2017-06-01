@@ -149,7 +149,7 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Bjoern Dahlgren (bjodah)</foaf:name>
+        <foaf:name>Bj&#xF6;rn Dahlgren (bjodah)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="http://bjodah.github.io/blog/">
             <rdfs:seeAlso>
