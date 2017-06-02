@@ -7,6 +7,14 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">http://nesar2017.wordpress.com/?p=44</guid>
+      <author>Abdullah Javed Nesar (Abdullahjavednesar)</author>
+      <title>Abdullah Javed Nesar (Abdullahjavednesar): Week 1</title>
+      <pubDate>Thu, 01 Jun 2017 17:45:56 GMT</pubDate>
+      <link>https://nesar2017.wordpress.com/2017/06/01/week-1/</link>
+      <description>&lt;p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/nesar2017.wordpress.com/44/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/nesar2017.wordpress.com/44/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=nesar2017.wordpress.com&amp;#038;blog=126779945&amp;#038;post=44&amp;#038;subd=nesar2017&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/05/30/Community-Bonding-End-Report</guid>
       <author>Shikhar Jaiswal (ShikharJ)</author>
       <title>Shikhar Jaiswal (ShikharJ): Community Bonding - End Report</title>
@@ -685,6 +693,14 @@ Fateman&lt;/a&gt;&lt;/li&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Looking forward to a great summer!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://nesar2017.wordpress.com/?p=4</guid>
+      <author>Abdullah Javed Nesar (Abdullahjavednesar)</author>
+      <title>Abdullah Javed Nesar (Abdullahjavednesar): Week 0: community bonding period</title>
+      <pubDate>Sun, 02 Apr 2017 16:36:31 GMT</pubDate>
+      <link>https://nesar2017.wordpress.com/2017/04/02/first-blog-post/</link>
+      <description>&lt;p&gt;Community bonding period comes to an end. We have roughly discussed on the plan and splitted our work.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/nesar2017.wordpress.com/4/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/nesar2017.wordpress.com/4/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=nesar2017.wordpress.com&amp;#038;blog=126779945&amp;#038;post=4&amp;#038;subd=nesar2017&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">http://ranjithkumar007.github.io/2017/04/01/gsoc-proposal</guid>
@@ -3717,102 +3733,6 @@ RCP&amp;lt;const Boolean&amp;gt; logical_or(const set_boolean &amp;amp;s)
 &lt;p&gt;And the function &lt;code class="highlighter-rouge"&gt;and_or&lt;/code&gt; do the required operations.
 &lt;br /&gt;
 After &lt;a href="https://github.com/symengine/symengine/pull/1061/"&gt;this&lt;/a&gt; PR gets merged, I would start working on &lt;code class="highlighter-rouge"&gt;Intersection&lt;/code&gt; class.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://gxyd.github.io/blogs/Gsoc2016-week-12</guid>
-      <author>Gaurav Dhingra (gxyd)</author>
-      <title>Gaurav Dhingra (gxyd): GSoC Week 12</title>
-      <pubDate>Tue, 09 Aug 2016 00:00:00 GMT</pubDate>
-      <link>https://gxyd.github.io/blogs/Gsoc2016-week-12/</link>
-      <description>&lt;p&gt;Hi all, here&amp;#8217;s a brief summary of the 12th week of my GSoC:&lt;/p&gt;
-
-&lt;p&gt;Last week I uploaded the &lt;a href="https://gxyd.github.io/gsoc2016/covhtml/index.html"&gt;test-coverage files&lt;/a&gt; on my website, that revealed some interesting places where a few versions of &lt;code class="highlighter-rouge"&gt;scan&lt;/code&gt; routine in coset enumeration have un-tested &lt;code class="highlighter-rouge"&gt;if-elif-else&lt;/code&gt; case.&lt;/p&gt;
-
-&lt;p&gt;As we are now approaching the end of GSoC time period, we decided to do some testing with some of the examples from 1973cdhw paper [2]. Coset Enumeration got my attention again since:&lt;/p&gt;
-
-&lt;p&gt;There seemed to be one bug raising &lt;code class="highlighter-rouge"&gt;TypeError&lt;/code&gt; so opened issue &lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;sympy/sympy/#11449&lt;/a&gt;, resulting from coset enumeration by the coset-table based method. From beginning it was clear that the issue was not in &lt;code class="highlighter-rouge"&gt;compress()&lt;/code&gt; method. It was quite difficult for me get onto the main source of problem. But then Kalevi had a closer look on the pseudo-code in Derek Holt and also in Sims Finitely Presented Groups.&lt;/p&gt;
-
-&lt;p&gt;I wrote docstrings for a few of methods and fixed the issue &lt;a href="https://github.com/sympy/sympy/issue/11449"&gt;#11449&lt;/a&gt; in PR &lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;#11460&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The problem there in code is explained briefly below&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Previous code-snippet&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;1    i = 0
-2    while i &amp;lt; len(C.omega):
-3        alpha = C.omega[i]
-4        i += 1
-5        for x in C.A:
-6            if C.table[alpha][C.A_dict[x]] is None:
-7                C.define_f(alpha, x)
-8                C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;After code-snippet&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;1     while alpha &amp;lt; len(C.table):
-2         if C.p[alpha] == alpha:
-3             for x in C.A:
-4                 if C.p[alpha] != alpha:
-5                     break
-6                 if C.table[alpha][C.A_dict[x]] is None:
-7                    C.define_c(alpha, x)
-8                     C.process_deductions(R_c_list[C.A_dict[x]], R_c_list[C.A_dict_inv[x]])
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Here $\alpha$ looks over in till $\lt$ &lt;code class="highlighter-rouge"&gt;C.table&lt;/code&gt;. This way all elements of $C.\Omega$ are tested even in case that the set becomes very small. The inner for $x$ loop should also tests $p[i]$ at each round and break if that becomes different from $i$.&lt;/p&gt;
-
-&lt;p&gt;The changes that have been addressed in &lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;PR #11460&lt;/a&gt; also include chaging the file name &lt;code class="highlighter-rouge"&gt;free_group.py&lt;/code&gt; to &lt;code class="highlighter-rouge"&gt;free_groups.py&lt;/code&gt;, similar to what we have.&lt;/p&gt;
-
-&lt;p&gt;It seems that Presentation of Permutation Groups won&amp;#8217;t happen during GSoC since there&amp;#8217;s just one more week; instead, I plan to focus on improving and completing the current PR&amp;#8217;s &lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;#11361&lt;/a&gt; on Modified Todd-Coxeter algorithm and &lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;PR #11460&lt;/a&gt; on addition of docstrings and better user methods.&lt;/p&gt;
-
-&lt;p&gt;One more thing, that I would start in this week though may not be completed this week will be the sphinx documentation of finitely presented groups. I found the documentation of Poly&amp;#8217;s module by Kalevi very much readable and interesting, may be I can seek to follow that.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="references"&gt;References&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Derek F. Holt, Bettina Eick, Bettina, Eamonn A. O&amp;#8217;Brien, &amp;#8220;Handbook of computational group theory&amp;#8221;, Discrete Mathematics and its Applications (Boca Raton). Chapman &amp;amp; Hall/CRC, Boca Raton, FL, 2005. ISBN 1-5848-372-3 .&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="http://staff.itee.uq.edu.au/havas/1973cdhw.pdf"&gt;John J. Cannon; Lucien A. Dimino; George Havas; Jane M. Watson, &amp;#8220;Implementation and Analysis of the Todd-Coxeter Algorithm&amp;#8221; , Mathematics of Computation, Vol. 27, No. 123. (Jul., 1973), pp. 463-490&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://shubhamtibra.wordpress.com/?p=854</guid>
-      <author>Subham Tibra (shubhamtibra)</author>
-      <title>Subham Tibra (shubhamtibra): GSoC Week 11</title>
-      <pubDate>Mon, 08 Aug 2016 10:55:52 GMT</pubDate>
-      <link>https://shubhamtibra.wordpress.com/2016/08/08/gsoc-week-11/</link>
-      <description>&lt;p&gt;This week I primarily worked on some bugs and added singular initial conditions to the result of &lt;code&gt;expr_to_holonomic()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Firstly I fixed a bug in &lt;code&gt;.unify()&lt;/code&gt;. There were some errors being raised in it&amp;#160;when one of the Holonomic Function had ground domain&amp;#160;&lt;code&gt;RR&lt;/code&gt;&amp;#160;or an extension of it. This now works fine.&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [9]: expr_to_holonomic(1.4*x)*expr_to_holonomic(a*x, x)
-Out[9]: HolonomicFunction((-2.0) + (1.0*x)*Dx, x, 0, {2: [1.4*a]})
-
-In [10]: _9.to_expr()
-Out[10]:
-       2
-1.4&amp;#8901;a&amp;#8901;x
-&lt;/pre&gt;
-&lt;p&gt;Later I fixed a bug in converting the two types of initial condition into one another. Apparently I forgot to add the &lt;code&gt;factorial&lt;/code&gt;&amp;#160;term while converting.&lt;/p&gt;
-&lt;p&gt;After that I added singular initial conditions to the result of &lt;code&gt;expr_to_holonomic()&lt;/code&gt;&amp;#160; whenever the Indicial equation have one root. For example:&lt;/p&gt;
-&lt;pre class="brush: python; title: ; notranslate"&gt;
-In [14]: expr_to_holonomic(x*exp(x))
-Out[14]: HolonomicFunction((-x - 1) + (x)*Dx, x, 0, {1: [1]})
-
-In [15]: _.to_expr()
-Out[15]:
-   x
-x&amp;#8901;&amp;#8495;
-&lt;/pre&gt;
-&lt;p&gt;I also changed printing of the class &lt;code&gt;HolonomicFunction&lt;/code&gt; to include the initial conditions inside the call, so as to make it proper python. These are implemented in&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11480"&gt;#11480&lt;/a&gt;&amp;#160;and&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/11451"&gt;#11451&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Right now we are trying to find a way to include convergence conditions in the result while converting Holonomic Functions to expressions.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/shubhamtibra.wordpress.com/854/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/shubhamtibra.wordpress.com/854/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=shubhamtibra.wordpress.com&amp;#038;blog=106149936&amp;#038;post=854&amp;#038;subd=shubhamtibra&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
     </item>
   </channel>
 </rss>
