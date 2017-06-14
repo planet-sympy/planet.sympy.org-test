@@ -245,6 +245,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Szymon Mieszczak (szymag)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document>
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://szymag.github.io/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Valeriia Gladkova (valglad)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="http://valglad.github.io/">

@@ -7,6 +7,262 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">http://ranjithkumar007.github.io/2017/06/13/Improve Sets Module Part II</guid>
+      <author>Ranjith Kumar (ranjithkumar007)</author>
+      <title>Ranjith Kumar (ranjithkumar007): Improve Sets Module Part II</title>
+      <pubDate>Tue, 13 Jun 2017 00:00:00 GMT</pubDate>
+      <link>http://ranjithkumar007.github.io/2017/06/13/Improve-Sets-Module-Part-II/</link>
+      <description>&lt;p&gt;Last week&amp;#8217;s PR &lt;a href="https://github.com/symengine/symengine/pull/1281"&gt;#1281&lt;/a&gt; on &lt;code class="highlighter-rouge"&gt;Complement&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;set_intersection&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;set_complement&lt;/code&gt; got merged in. This week, I implemented &lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;ImageSet&lt;/code&gt;. This work is done in &lt;a href="https://github.com/symengine/symengine/pull/1291"&gt;#1291&lt;/a&gt; for &lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt; and &lt;a href="https://github.com/symengine/symengine/pull/1293"&gt;#1293&lt;/a&gt; for &lt;code class="highlighter-rouge"&gt;ImageSet&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt; : &lt;br /&gt;
+It is useful to represent unsolved equations or a partially solved equation.&lt;/p&gt;
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;class ConditionSet : public Set
+{
+private:
+    vec_sym syms_;
+    RCP&amp;lt;const Boolean&amp;gt; condition_;
+...
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Earlier, I used another data member for storing the base set. Thanks to &lt;a href="https://github.com/isuruf"&gt;isuruf&lt;/a&gt;, I was able to merge it within &lt;code class="highlighter-rouge"&gt;condition_&lt;/code&gt;. &lt;br /&gt;
+For implementing &lt;code class="highlighter-rouge"&gt;contains&lt;/code&gt; method for &lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt;, I added Subs Visitor for &lt;code class="highlighter-rouge"&gt;Contains&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;And&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class="highlighter-rouge"&gt;ImageSet&lt;/code&gt; : &lt;br /&gt;
+It is a Set representation of a mathematical function defined on symbols over some set.
+For example, &lt;code class="highlighter-rouge"&gt;x**2 for all x in [0,2]&lt;/code&gt; is represented as &lt;code class="highlighter-rouge"&gt;imageset({x},x**2,[0,2])&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;When is ImageSet useful ? &lt;br /&gt;
+Say, I need to solve a trignometric equation &lt;code class="highlighter-rouge"&gt;sin(x) = 1&lt;/code&gt;. Solution is &lt;code class="highlighter-rouge"&gt;2*n*pi+pi/2, n belongs to [0,oo)&lt;/code&gt;. for such solutions imageset is a useful representation to have.&lt;/p&gt;
+
+&lt;p&gt;I will try to get these two PRs merged in ASAP. &lt;br /&gt;
+Next week, I will be working on implementing solvers for lower degree(&amp;lt;=4) polynomials.&lt;/p&gt;
+
+&lt;p&gt;See you next time. Bye for now !&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://shikharj.github.io//2017/06/12/GSoC-Progress-Week-2</guid>
+      <author>Shikhar Jaiswal (ShikharJ)</author>
+      <title>Shikhar Jaiswal (ShikharJ): GSoC Progress - Week 2</title>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 GMT</pubDate>
+      <link>https://shikharj.github.io//2017/06/12/GSoC-Progress-Week-2/</link>
+      <description>&lt;p&gt;Hello, this post contains the second report of my GSoC progress.&lt;/p&gt;
+
+&lt;h2 id="report"&gt;Report&lt;/h2&gt;
+
+&lt;h3 id="symengine"&gt;SymEngine&lt;/h3&gt;
+&lt;p&gt;This week I mostly worked on implementing specific classes in &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt;, namely &lt;code class="highlighter-rouge"&gt;Sign&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;Float&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Ceiling&lt;/code&gt;, through PRs &lt;a href="https://github.com/symengine/symengine/pull/1287"&gt;#1287&lt;/a&gt; and &lt;a href="https://github.com/symengine/symengine/pull/1290"&gt;#1290&lt;/a&gt;. The work is currently under review, but again, mostly complete.&lt;/p&gt;
+
+&lt;p&gt;Though I had originally planned to implement more classes in my proposal, after a thorough look, I realised that a number of the mentioned classes could easily be implemented in &lt;code class="highlighter-rouge"&gt;SymEngine.py&lt;/code&gt; side only. As such, there was no hard requirement for them to be implemented in &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt;.
+Also, a number of them had been pre-implemented, but rather as &lt;code class="highlighter-rouge"&gt;virtual&lt;/code&gt; methods, and not standalone classes. There are still a couple of classes that I&amp;#8217;d be working on in the coming week, which would effectively finish up a huge part of the planned Phase I of my proposal.&lt;/p&gt;
+
+&lt;h3 id="symenginepy"&gt;SymEngine.py&lt;/h3&gt;
+&lt;p&gt;Isuru and I conversed a bit on whether I&amp;#8217;d be interested in working on providing &lt;code class="highlighter-rouge"&gt;SymEngine&lt;/code&gt; support for &lt;a href="https://github.com/pydy/pydy"&gt;PyDy&lt;/a&gt; (a multi-body dynamics toolkit), as a part of GSoC. I agreed happily, and Isuru opened a couple of issues in &lt;code class="highlighter-rouge"&gt;SymEngine.py&lt;/code&gt; for me to work on, as I was completely new to &lt;code class="highlighter-rouge"&gt;PyDy&lt;/code&gt;.
+I started off wrapping up &lt;code class="highlighter-rouge"&gt;Infinity&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;NegInfinity&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;ComplexInfinity&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;NaN&lt;/code&gt; classes through PR &lt;a href="https://github.com/symengine/symengine.py/pull/151"&gt;#151&lt;/a&gt;. I also worked on finishing Isuru&amp;#8217;s code, wrapping &lt;code class="highlighter-rouge"&gt;ccode&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;CodePrinter&lt;/code&gt; class with an improvised &lt;code class="highlighter-rouge"&gt;doprint&lt;/code&gt; function through PR &lt;a href="https://github.com/symengine/symengine.py/pull/152"&gt;#152&lt;/a&gt;.
+I also opened &lt;a href="https://github.com/symengine/symengine.py/pull/153"&gt;#153&lt;/a&gt;, working on acquisition and release of &lt;code class="highlighter-rouge"&gt;Global Interpreter Lock&lt;/code&gt; or &lt;code class="highlighter-rouge"&gt;GIL&lt;/code&gt; in &lt;code class="highlighter-rouge"&gt;pywrapper.cpp&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;See you again!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Au Revoir&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://bjodah.github.io/blog/posts/gsoc-week2.html</guid>
+      <author>Bj&#xF6;rn Dahlgren (bjodah)</author>
+      <title>Bj&#xF6;rn Dahlgren (bjodah): Status update week 2 GSoC</title>
+      <pubDate>Sun, 11 Jun 2017 21:37:00 GMT</pubDate>
+      <link>http://bjodah.github.io/blog/posts/gsoc-week2.html</link>
+      <description>&lt;div&gt;&lt;p&gt;I have spent the second week of Google Summer of Code on essentially two things:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Continued work on type awareness in the code printers (&lt;tt class="docutils literal"&gt;CCodePrinter&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;FCodePrinter&lt;/tt&gt;). The work is ongoing in &lt;a class="reference external" href="https://github.com/sympy/sympy/pull/12693"&gt;gh-12693&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Writing tutorial &lt;a class="reference external" href="https://github.com/sympy/scipy-2017-codegen-tutorial"&gt;code&lt;/a&gt; on code-generation in the form of jupyter notebooks for the
+upcoming SciPy 2017 &lt;a class="reference external" href="https://scipy2017.scipy.org/ehome/220975/493418/"&gt;conference&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="section" id="precision-aware-code-printers"&gt;
+&lt;h2&gt;Precision aware code printers&lt;/h2&gt;
+&lt;p&gt;After my weekly mentor meeting, we decided to take another approach to
+how we are going to represent &lt;tt class="docutils literal"&gt;Variable&lt;/tt&gt; instances in the
+&lt;tt class="docutils literal"&gt;.codegen.ast&lt;/tt&gt; module. Previously I had proposed to use quite a
+number of arguments (stored in &lt;tt class="docutils literal"&gt;.args&lt;/tt&gt; since it inherits
+&lt;tt class="docutils literal"&gt;Basic&lt;/tt&gt;). Aaron suggested we might want to represent that underlying
+information differently. After some discussion we came to the
+conclusion that we could introduce a &lt;tt class="docutils literal"&gt;Attribute&lt;/tt&gt; class (inhereting
+from &lt;tt class="docutils literal"&gt;Symbol&lt;/tt&gt;) to describe things such as value const-ness, and
+pointer const-ness (those two are available as &lt;tt class="docutils literal"&gt;value_const&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;pointer_const&lt;/tt&gt;). Attributes will be stored in a &lt;tt class="docutils literal"&gt;FiniteSet&lt;/tt&gt;
+(essentially SymPy version of &lt;tt class="docutils literal"&gt;set&lt;/tt&gt;) and the instances we provide as
+"pre-made" in the &lt;tt class="docutils literal"&gt;.codegen.ast&lt;/tt&gt; module will be supported by the
+printers by default. Here is some example code showing what the
+current proposed API looks like (for C99):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;gt;&amp;gt;&amp;gt; u = symbols('u', real=True)
+&amp;gt;&amp;gt;&amp;gt; ptr = Pointer.deduced(u, {pointer_const, restrict})
+&amp;gt;&amp;gt;&amp;gt; ccode(Declaration(ptr))
+'double * const restrict u;'
+&lt;/pre&gt;
+&lt;p&gt;and for Fortran:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;gt;&amp;gt;&amp;gt; vx = Variable(Symbol('x'), {value_const}, float32)
+&amp;gt;&amp;gt;&amp;gt; fcode(Declaration(vx, 42))
+'real(4), parameter :: x = 42'
+&lt;/pre&gt;
+&lt;p&gt;The C code printer can now also print code using different math functions depending
+on the targeted precision (functions guaranteed to be present in the C99 stanard):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;gt;&amp;gt;&amp;gt; ccode(x**3.7, standard='c99', precision=float32)
+'powf(x, 3.7F)'
+&amp;gt;&amp;gt;&amp;gt; ccode(exp(x/2), standard='c99', precision=float80)
+'expl((1.0L/2.0L)*x)'
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tutorial-material-for-code-generation"&gt;
+&lt;h2&gt;Tutorial material for code generation&lt;/h2&gt;
+&lt;p&gt;Aaron, Jason and I have been discussing what examples to use for the
+tutorial on code generation with SymPy. Right now we are aiming to use
+quite a few examples from chemistry actually, and more specifically
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Chemical_kinetics"&gt;chemical kinetics&lt;/a&gt;. This is the
+precise application which got me started using SymPy for
+code-generation, so it lies close to my heart (I do extensive modeling
+of chemical kinetics in my PhD studies).&lt;/p&gt;
+&lt;p&gt;Working on the tutorial material has already been really helpful for
+getting insight in development needs for the exisiting classes and
+functions used for code-generation. I was hoping to use &lt;tt class="docutils literal"&gt;autowrap&lt;/tt&gt;
+from the &lt;tt class="docutils literal"&gt;.utilities&lt;/tt&gt; module. Unfortunately I found that it was not
+flexible enough to be useful for integration of systems of ODEs (where
+we need to evaluate a vector-valued function taking a vector as
+input). I did attempt to subclass the &lt;tt class="docutils literal"&gt;CodeWrapper&lt;/tt&gt; class to allow
+me to do this. But personally I found those classes to be quite hard to
+extend (much unlike the printers which I've often found to be
+intuitive).&lt;/p&gt;
+&lt;p&gt;My current plan for the chemical kinetics case is to first solve it
+using &lt;tt class="docutils literal"&gt;sympy.lambdify&lt;/tt&gt;.  That allows for quick prototyping, and
+unless one has very high demands with respect to performance, it is
+usually good enough.&lt;/p&gt;
+&lt;p&gt;The next step is to generate a native callback (it was here I was
+hoping to use &lt;tt class="docutils literal"&gt;autowrap&lt;/tt&gt; with the Cython backend). The current
+approach is to write the expressions as Cython code using a template.
+Cython conveniently follows Python syntax, and hence the string
+printer can be used for the code generation. Doing this speeds up the
+integration considerably. At this point the bottleneck is going back and
+forth through the Python layer.&lt;/p&gt;
+&lt;p&gt;So in order to speed up the integration further, we need to bypass
+Python during integration (and let the solver call the user
+provided callbacks without going through the interpreter). I did
+this by providing a C-code template which relies on &lt;tt class="docutils literal"&gt;CVode&lt;/tt&gt; from the
+&lt;a class="reference external" href="https://computation.llnl.gov/projects/sundials"&gt;Sundials&lt;/a&gt; suite of
+non-linear solvers. It is a well established solver and is already
+available for Linux, Mac &amp;amp; Windows under conda from the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;conda-forge&lt;/span&gt;&lt;/tt&gt; channel. I then provide a thin Cython wrapper, calling
+into the C-function, which:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;sets up the CVode solver&lt;/li&gt;
+&lt;li&gt;runs the integration&lt;/li&gt;
+&lt;li&gt;records some statistics&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Using native code does come at a cost. One of the strengths of Python
+is that it is cross-platform. It (usually) does not matter if your
+Python application runs on Linux, OSX or Windows (or any other
+supported operating system). However, since we are doing
+code-generation, we are relying on compilers provided by the
+respective platform. Since we want to support both Python 2 &amp;amp; Python 3
+on said three platforms, there are quite a few combinations to cover.
+That meant quite a few surprises (I now know for example that MS
+Visual C++ 2008 does not support C99), but thanks to the kind &lt;a class="reference external" href="https://github.com/sympy/scipy-2017-codegen-tutorial/issues/2#issuecomment-307538308"&gt;help&lt;/a&gt; of
+&lt;a class="reference external" href="https://github.com/isuruf"&gt;Isuru Fernando&lt;/a&gt; I think I will manage to
+have all platform/version combinations working during next week.&lt;/p&gt;
+&lt;p&gt;Also planned for next week:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Use &lt;tt class="docutils literal"&gt;numba&lt;/tt&gt; together with &lt;tt class="docutils literal"&gt;lambdify&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;tt class="docutils literal"&gt;Lambdify&lt;/tt&gt; from &lt;a class="reference external" href="https://github.com/symengine"&gt;SymEngine&lt;/a&gt;
+(preferably with the LLVM backend).&lt;/li&gt;
+&lt;li&gt;Make the notebooks more tutorial like (right now they are more of a
+show-case).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and of course: continued work on the code printers. That's all for now
+feel free to get in touch with any feedback or questions.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://arif7blog.wordpress.com/?p=247</guid>
+      <author>Arif Ahmed (ArifAhmed1995)</author>
+      <title>Arif Ahmed (ArifAhmed1995): Week 2 Report(June 3 &#x2013; June 10) : Working Prototype, Improving functionality.</title>
+      <pubDate>Sun, 11 Jun 2017 10:16:52 GMT</pubDate>
+      <link>https://arif7blog.wordpress.com/2017/06/11/week-2-reportjune-3-june-10-working-prototype-improving-functionality/</link>
+      <description>&lt;p&gt;Note : If you&amp;#8217;re viewing this on Planet SymPy and Latex looks weird, go to the &lt;a href="https://arif7blog.wordpress.com/" rel="noopener" target="_blank"&gt;&lt;span style="color: #00ff00;"&gt;WordPress site&lt;/span&gt;&lt;/a&gt; instead.&lt;/p&gt;
+&lt;p&gt;The 2D use case works perfectly although there are limitations. The current API and method-wise limitations are discussed &lt;a href="https://github.com/ArifAhmed1995/sympy/blob/857463fac558702def0af27d08a1afa01a14aff0/IntegrationOverPolytopes.ipynb" rel="noopener" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That lone failing test was caused due to typecasting a Python set object to a list. Sets in Python do not support indexing, so when they are coerced to list, indexing of the resulting object is arbitrary. Therefore, I had to change to an axes list of [x, y].&lt;/p&gt;
+&lt;p&gt;Some other coding improvements were suggested by Gaurav Dhingra (another GSoC student). One can view them as comments to the &lt;span style="color: #00ccff;"&gt;&lt;a href="https://github.com/sympy/sympy/pull/12673" rel="noopener" target="_blank"&gt;pull request&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span style="text-decoration: underline;"&gt;&lt;strong&gt;Clockwise Sort&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;
+I wanted to overcome some of the method-wise limitations. So, the first improvement I did was to implement a clockwise sorting algorithm for the points of the input polygon.&lt;br /&gt;
+Come to think of it, for the 3D use case the points belonging to a particular facet will have to be sorted anti-clockwise for the algorithm to work. Therefore, it would be better to include an extra argument &amp;#8220;&lt;span style="color: #00ff00;"&gt;&lt;span style="color: #808000;"&gt;orient&lt;/span&gt;&lt;/span&gt;&amp;#8221; with default value 1 (clockwise sort) and -1 when anti-clockwise sort.&lt;/p&gt;
+&lt;p&gt;First I tried to think of it myself, and naturally the first thing that came to my mind was sorting the points depending on their &lt;img alt="&amp;#92;arctan { &amp;#92;theta }" class="latex" src="https://s0.wp.com/latex.php?latex=%5Carctan+%7B+%5Ctheta+%7D&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="&amp;#92;arctan { &amp;#92;theta }" /&gt; value where &lt;img alt="&amp;#92;theta" class="latex" src="https://s0.wp.com/latex.php?latex=%5Ctheta&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="&amp;#92;theta" /&gt; is the angle that the line from that point to an arbitrary reference point (center) makes with the x-axis (more correctly, the independent variable axis). But obviously this is not efficient, because calculating the&amp;#160;&lt;img alt="&amp;#92;arctan { &amp;#92;theta }" class="latex" src="https://s0.wp.com/latex.php?latex=%5Carctan+%7B+%5Ctheta+%7D&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="&amp;#92;arctan { &amp;#92;theta }" /&gt; value is expensive.&lt;/p&gt;
+&lt;p&gt;Then I came across &lt;span style="color: #00ccff;"&gt;&lt;a href="https://stackoverflow.com/a/6989383" rel="noopener" target="_blank"&gt;&lt;span style="color: #00ccff;"&gt;this answer&lt;/span&gt;&lt;/a&gt;&lt;/span&gt; on StackOverflow. It was a much better technique because it did not use&amp;#160;&lt;img alt="&amp;#92;arctan { &amp;#92;theta }" class="latex" src="https://s0.wp.com/latex.php?latex=%5Carctan+%7B+%5Ctheta+%7D&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="&amp;#92;arctan { &amp;#92;theta }" /&gt; , no division operations and no distance computing using square root (as pointed out in the comments). Let us understand the reasoning.&lt;/p&gt;
+&lt;p&gt;Firstly, I&amp;#8217;m sure we all know that the distance of a point &lt;img alt="({ x }_{ 1 },{ y }_{ 1 })" class="latex" src="https://s0.wp.com/latex.php?latex=%28%7B+x+%7D_%7B+1+%7D%2C%7B+y+%7D_%7B+1+%7D%29&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="({ x }_{ 1 },{ y }_{ 1 })" /&gt; from the line &lt;img alt="(ax+by+c=0)" class="latex" src="https://s0.wp.com/latex.php?latex=%28ax%2Bby%2Bc%3D0%29&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="(ax+by+c=0)" /&gt; is &lt;img alt="(&amp;#92;frac { a{ x }_{ 1 }+b{ y }_{ 1 }+c }{ &amp;#92;sqrt { { a }^{ 2 }+{ b }^{ 2 } } })" class="latex" src="https://s0.wp.com/latex.php?latex=%28%5Cfrac+%7B+a%7B+x+%7D_%7B+1+%7D%2Bb%7B+y+%7D_%7B+1+%7D%2Bc+%7D%7B+%5Csqrt+%7B+%7B+a+%7D%5E%7B+2+%7D%2B%7B+b+%7D%5E%7B+2+%7D+%7D+%7D%29&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="(&amp;#92;frac { a{ x }_{ 1 }+b{ y }_{ 1 }+c }{ &amp;#92;sqrt { { a }^{ 2 }+{ b }^{ 2 } } })" /&gt;. Now, for clockwise sorting we need to decide the left or right orientation of a point given the other point and a constant reference(in this case, the center). Therefore, it is required to define a custom compare function.&lt;/p&gt;
+&lt;p&gt;Given three points : &lt;img alt="a, b, center" class="latex" src="https://s0.wp.com/latex.php?latex=a%2C+b%2C+center&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="a, b, center" /&gt;, consider the line made by points&amp;#160;&lt;img alt="b" class="latex" src="https://s0.wp.com/latex.php?latex=b&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="b" /&gt; and &lt;img alt="center" class="latex" src="https://s0.wp.com/latex.php?latex=center&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="center" /&gt;. The point &lt;img alt="a" class="latex" src="https://s0.wp.com/latex.php?latex=a&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="a" /&gt; will be on the left if numerator of of above formula is negative and right if positive. The cases where we need not consider this formula is when we are sure of :&lt;/p&gt;
+&lt;p&gt;Case 1 &amp;gt; The center lies in between &lt;img alt="a" class="latex" src="https://s0.wp.com/latex.php?latex=a&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="a" /&gt; and &lt;img alt="b" class="latex" src="https://s0.wp.com/latex.php?latex=b&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="b" /&gt;(Firstly check this by comparing x-coordinates).&lt;/p&gt;
+&lt;p&gt;Case 2 &amp;gt; If all the points are on a line parallel to y-axis :&lt;br /&gt;
+Sub-Case 1 &amp;gt; If any point is above center, that point is &amp;#8220;lesser&amp;#8221; than other one.&lt;br /&gt;
+Sub-Case 2 &amp;gt; If both below center, the point closer to center is &amp;#8220;lesser&amp;#8221; than&lt;br /&gt;
+other one.&lt;/p&gt;
+&lt;p&gt;Case 3 &amp;gt; This is when Case 1, 2 and the standard check fails.&lt;br /&gt;
+This can only happen if &lt;img alt="a" class="latex" src="https://s0.wp.com/latex.php?latex=a&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="a" /&gt;, &lt;img alt="b" class="latex" src="https://s0.wp.com/latex.php?latex=b&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="b" /&gt; and&amp;#160;&lt;img alt="center" class="latex" src="https://s0.wp.com/latex.php?latex=center&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="center" /&gt; are all collinear points and &lt;img alt="a" class="latex" src="https://s0.wp.com/latex.php?latex=a&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="a" /&gt;, &lt;img alt="b" class="latex" src="https://s0.wp.com/latex.php?latex=b&amp;#038;bg=ffffff&amp;#038;fg=444444&amp;#038;s=-1" title="b" /&gt; both lie on the same side of the line with respect to center. Then, the one farthest&amp;#160; from center is &amp;#8220;lesser&amp;#8221; than the other one.&lt;/p&gt;
+&lt;p&gt;Ondrej and Prof.Sukumar have looked at the notebook but will discuss in detail further and then inform me about the final 2D API.&lt;/p&gt;
+&lt;p&gt;Till then, I&amp;#8217;ll work on the existing limitations.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/arif7blog.wordpress.com/247/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/arif7blog.wordpress.com/247/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=arif7blog.wordpress.com&amp;#038;blog=126429718&amp;#038;post=247&amp;#038;subd=arif7blog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://parsoyaarihant.github.io/blog/gsoc/2017/06/09/Week1-Report</guid>
+      <author>Arihant Parsoya (parsoyaarihant)</author>
+      <title>Arihant Parsoya (parsoyaarihant): GSoC Week1 Report</title>
+      <pubDate>Fri, 09 Jun 2017 06:30:00 GMT</pubDate>
+      <link>https://parsoyaarihant.github.io/blog/gsoc/2017/06/09/Week1-Report.html</link>
+      <description>&lt;p&gt;Francesco was skeptical if MatchPy could support all Rubi rules. Hence we (I and Abdullah) are trying to implement first set of rules (Algebraic) into MatchPy as soon as possible. Major things involved in accomplishing this are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;[Completed]&lt;/strong&gt; Complete writing parser for Rubi rules form &lt;code class="highlighter-rouge"&gt;DownValues[]&lt;/code&gt; generated from Mathematica.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[Partially Completed]&lt;/strong&gt; Complete basic framework for MatchPy to support Rubi rules.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[Completed]&lt;/strong&gt; Parse Rubi tests.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[Incomplete]&lt;/strong&gt; Add utility functions for Rubi into SymPy syntax.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="generation-of-new-patterns-from-optional-arguments"&gt;Generation of new patterns from Optional Arguments&lt;/h4&gt;
+&lt;p&gt;Mathematica supports &lt;a href="https://reference.wolfram.com/language/tutorial/OptionalAndDefaultArguments.html"&gt;optional arguments&lt;/a&gt; for Wild symbols. Some common functions (such as &lt;code class="highlighter-rouge"&gt;Mul&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;Add&lt;/code&gt;, and &lt;code class="highlighter-rouge"&gt;Pow&lt;/code&gt;) of Mathematica have built&amp;#8208;in default values for their arguments.&lt;/p&gt;
+
+&lt;p&gt;MatchPy does not support optional arguments to its &lt;code class="highlighter-rouge"&gt;Wildcards&lt;/code&gt;. So, Manuel Krebber suggested to add two more rules for each optional argument that exist in the pattern. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-Mathematica"&gt;Int[x_^m_.,x_Symbol] :=
+  x^(m+1)/(m+1) /;
+FreeQ[m,x] &amp;amp;&amp;amp; NonzeroQ[m+1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above rule, the default value of &lt;code class="highlighter-rouge"&gt;m_&lt;/code&gt; is &lt;code class="highlighter-rouge"&gt;1&lt;/code&gt;. So I implemented these rules in MatchPy:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-Mathematica"&gt;Int[x_^m_.,x_Symbol] :=
+  x^(m+1)/(m+1) /;
+FreeQ[m,x] &amp;amp;&amp;amp; NonzeroQ[m+1]
+
+(* substituting m = 1*)
+Int[x_,x_Symbol] :=
+  x^(2)/(2) /;
+FreeQ[2,x] &amp;amp;&amp;amp; NonzeroQ[2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I have used &lt;a href="https://stackoverflow.com/questions/18035595/powersets-in-python-using-itertools"&gt;powerset&lt;/a&gt; to generate all combinations of default values to generate patterns. Code for parser can be found &lt;a href="https://github.com/parsoyaarihant/Rubi-Parse"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id="utility-functions"&gt;Utility functions&lt;/h4&gt;
+&lt;p&gt;There are many utility functions for Rubi written in Mathematica. We are currently focusing on implementing the functions which are being used in Algebraic rules. As soon we we complete our implementation (hopefully by this weekend), we can start running the test suit for Rubi.&lt;/p&gt;
+
+&lt;p&gt;I will work on implementing utility functions along with Abdullah in coming days. I will keep testing the module as we implement utility functions and add more rules into our matcher.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://nesar2017.wordpress.com/?p=49</guid>
+      <author>Abdullah Javed Nesar (Abdullahjavednesar)</author>
+      <title>Abdullah Javed Nesar (Abdullahjavednesar): Week 2 Begins</title>
+      <pubDate>Thu, 08 Jun 2017 18:40:20 GMT</pubDate>
+      <link>https://nesar2017.wordpress.com/2017/06/08/week-2-begins/</link>
+      <description>&lt;p&gt;Hello all!&lt;/p&gt;
+&lt;p&gt;The first week comes to an end and we (Arihant and me) have partially implemented Algebraic functions\ Linear products.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;THE PROGRESS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Most of my task was to translate Algebraic Integration tests from &lt;a href="http://www.apmaths.uwo.ca/~arich/IntegrationProblems/MapleSyntaxFiles/MapleSyntaxFiles.html"&gt;Maple Syntax&lt;/a&gt; to Python, write Utility Functions and writing tests for Utility Functions. I have already implemented &lt;a href="http://www.apmaths.uwo.ca/~arich/IntegrationProblems/MapleSyntaxFiles/1%20Algebraic%20functions/1%20Linear%20products/1.2%20(a+b%20x)%5Em%20(c+d%20x)%5En.txt"&gt;1 Algebraic functions\1 Linear products\1.2 (a+b x)**m (c+d x)**n&lt;/a&gt;,&amp;#160;&lt;a href="https://github.com/parsoyaarihant/sympy/blob/rubi4/sympy/rubi/tests/test_all_algebriac.py"&gt;here&lt;/a&gt;. And test sets for&amp;#160;&lt;a href="http://www.apmaths.uwo.ca/~arich/IntegrationProblems/MapleSyntaxFiles/1%20Algebraic%20functions/1%20Linear%20products/1.3%20(a+b%20x)%5Em%20(c+d%20x)%5En%20(e+f%20x)%5Ep.txt"&gt;1 Algebraic functions\1 Linear products\1.3 (a+b x)**m (c+d x)**n (e+f x)**p&lt;/a&gt;&amp;#160;and&amp;#160;&lt;a href="http://www.apmaths.uwo.ca/~arich/IntegrationProblems/MapleSyntaxFiles/1%20Algebraic%20functions/1%20Linear%20products/1.4%20(a+b%20x)%5Em%20(c+d%20x)%5En%20(e+f%20x)%5Ep%20(g+h%20x)%5Eq.txt"&gt;1 Algebraic functions\1 Linear products\1.4 (a+b x)^m (c+d x)^n (e+f x)^p (g+h x)^q&lt;/a&gt; are almost ready&amp;#160;&lt;a href="https://github.com/parsoyaarihant/sympy/pulls"&gt;here&lt;/a&gt;&amp;#160;along with most of the Utility Functions we require till now, after this we will be successfully covering the &lt;span style="color: #808080;"&gt;Algebraic\ Linear products &lt;/span&gt;portion.&lt;/p&gt;
+&lt;p&gt;Next what&amp;#8217;s delaying our progress is Utility Functions, I &amp;#160;have been taking help from &lt;a href="http://www.apmaths.uwo.ca/~arich/IntegrationRules/PortableDocumentFiles/Integration%20utility%20functions.pdf"&gt;this pdf&lt;/a&gt;&amp;#160;on Integration Utility Functions and looking for their definitions in Mathematica website but the major problem is the definitions provided are not very clear or no definition at all. Meanwhile Arihant was implementing RUBI rules, default values for variables and working on constraints .&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/nesar2017.wordpress.com/49/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/nesar2017.wordpress.com/49/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=nesar2017.wordpress.com&amp;#038;blog=126779945&amp;#038;post=49&amp;#038;subd=nesar2017&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://shikharj.github.io//2017/06/05/GSoC-Progress-Week-1</guid>
       <author>Shikhar Jaiswal (ShikharJ)</author>
       <title>Shikhar Jaiswal (ShikharJ): GSoC Progress - Week 1</title>
@@ -36,6 +292,71 @@
 &lt;p&gt;That&amp;#8217;s all for now.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Adi&amp;#243;s&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://ranjithkumar007.github.io/2017/06/05/Improve Sets Module - The Beginning</guid>
+      <author>Ranjith Kumar (ranjithkumar007)</author>
+      <title>Ranjith Kumar (ranjithkumar007): Improve Sets Module - The Beginning</title>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 GMT</pubDate>
+      <link>http://ranjithkumar007.github.io/2017/06/05/Improve-Sets-Module-The-Beginning/</link>
+      <description>&lt;p&gt;As discussed in the previous blog, this and the next week&amp;#8217;s task for me is to improve the Sets module.
+I started off by implementing the class for &lt;code class="highlighter-rouge"&gt;Complemsent&lt;/code&gt; and the functions &lt;code class="highlighter-rouge"&gt;set_complement&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;set_intersection&lt;/code&gt;.
+This work is done in &lt;a href="https://github.com/symengine/symengine/pull/1281"&gt;#1281&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class="highlighter-rouge"&gt;set_intersection&lt;/code&gt; :&lt;/p&gt;
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;RCP&amp;lt;const Set&amp;gt; set_intersection(const set_set &amp;amp;in);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code class="highlighter-rouge"&gt;set_intersection&lt;/code&gt; tries to simplify the set of sets input by applying various rules.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;trivial rules like if one of the input is &lt;code class="highlighter-rouge"&gt;emptyset()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;handles finitesets by checking all other sets in the input for all elements in finitesets.&lt;/li&gt;
+  &lt;li&gt;If any of the sets is union, then it tries to return a Union of Intersections&lt;/li&gt;
+  &lt;li&gt;If any of the sets is Complement, then this returns a simplified &lt;code class="highlighter-rouge"&gt;Complement&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;pair-wise rules checks every pair of sets and tries to merge them into one.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class="highlighter-rouge"&gt;set_complement&lt;/code&gt; :&lt;/p&gt;
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;RCP&amp;lt;const Set&amp;gt; set_complement(const RCP&amp;lt;const Set&amp;gt; &amp;amp;universe, const RCP&amp;lt;const Set&amp;gt; &amp;amp;container);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;For this function, i had to implement virtual functions &lt;code class="highlighter-rouge"&gt;set_complement&lt;/code&gt; for all the existing child classes of &lt;code class="highlighter-rouge"&gt;Set&lt;/code&gt;.
+and this function simply calls the container&amp;#8217;s &lt;code class="highlighter-rouge"&gt;set_complement()&lt;/code&gt; with the given universe.&lt;/p&gt;
+
+&lt;p&gt;Details of &lt;code class="highlighter-rouge"&gt;Complement&lt;/code&gt; class :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;similar to other classes in sets module, the class prototype for &lt;code class="highlighter-rouge"&gt;Complement&lt;/code&gt; is
+    &lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;class Complement : public Set
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;It stores two Sets. Universe and container, and Complement(a, b) represents a-b where a is universe and b is the container.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apart from this, I started maintaining a &lt;a href="https://github.com/symengine/symengine/wiki/GSoC-2017-Solvers-Progress-report"&gt;wiki page&lt;/a&gt; for GSoC&amp;#8217;s progress report as suggested by &lt;a href="https://github.com/aktech/"&gt;Amit Kumar&lt;/a&gt; in the first weekly meeting. I will post minutes of all meetings in this wiki page.&lt;/p&gt;
+
+&lt;p&gt;Next week, I will be working on &lt;code class="highlighter-rouge"&gt;ImageSet&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#8217;s it for now. See you next time. Until then, Goodbye !&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://valglad.github.io/2017/06/05/smith</guid>
+      <author>Valeriia Gladkova (valglad)</author>
+      <title>Valeriia Gladkova (valglad): The Smith Normal Form</title>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 GMT</pubDate>
+      <link>http://valglad.github.io/2017/06/05/smith/</link>
+      <description>&lt;p&gt;Last week I was working on implementing the Smith Normal Form for matrices over principal ideal domains. I&amp;#8217;m still making corrections as the &lt;a href="https://github.com/sympy/sympy/pull/12705"&gt;PR&lt;/a&gt; is being reviewed. I used the standard algorithm: use invertable (in the ring) row and column operations to make the matrix diagonal and make sure the diagonal entries have the property that an entry divides all of the entries that come after it (this is described in more detail on &lt;a href="https://en.wikipedia.org/wiki/Smith_normal_form#Algorithm"&gt;wikipedia&lt;/a&gt; for example). I ran into trouble when trying to determine the domain of the matrix entries if the user hadn&amp;#8217;t explicitly specified one. Matrices in SymPy don&amp;#8217;t have a &lt;code class="highlighter-rouge"&gt;.domain&lt;/code&gt; attribute or anything similar, and can contain objects of different types. So, if I did attempt to find some suitable principal ideal domain over which to consider all of them, the only way would be to try a few of the ones that are currently implemented until something fits, and that would have to be extended every time a new domain is implemented and generally sounds tedious to do. I&amp;#8217;ve asked on the &lt;a href="https://gitter.im/sympy/GroupTheory"&gt;Group Theory channel&lt;/a&gt; if there was a better way and that started a discussion about changing the &lt;code class="highlighter-rouge"&gt;Matrix&lt;/code&gt; class to have a &lt;code class="highlighter-rouge"&gt;.domain&lt;/code&gt; or a &lt;code class="highlighter-rouge"&gt;.ring&lt;/code&gt; attribute and have the entries checked at construction. In fact, this has been brought up by other people before as well. Unfortunately, adding this attribute would require going over the matrix methods implemented so far and making sure they don&amp;#8217;t assume anything that might not hold for general rings (especially non-commutative ones: like the determinant in its traditional form wouldn&amp;#8217;t even make sense; however, it turns out there are several generalisations of determinants to non-commutative rings like &lt;a href="https://en.wikipedia.org/wiki/Quasideterminant"&gt;quasideterminants&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/Dieudonn%C3%A9_determinant"&gt;Dieudonn&amp;#233; determinant&lt;/a&gt;). And this would probably take quite a while and is not directly related to my project. So in the end we decided to have the function work only for matrices for which a &lt;code class="highlighter-rouge"&gt;.ring&lt;/code&gt; attribute has been added manually by the user. For example,&lt;/p&gt;
+&lt;div class="highlighter-rouge"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.polys.solvers import RawMatrix as Matrix
+&amp;gt;&amp;gt;&amp;gt; from sympy.polys.domains import ZZ
+&amp;gt;&amp;gt;&amp;gt; m = Matrix([0,1,3],[2,4,1])
+&amp;gt;&amp;gt;&amp;gt; setattr(m, "ring", ZZ)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Hopefully, at some point in the future matrices will have this attribute by default.&lt;/p&gt;
+
+&lt;p&gt;The Smith Normal Form was necessary to analyse the structure of the abelianisation of a group: abelian groups are modules over integers which is a PID and so the Smith Normal form is applicable if the relators of the abelianisation are written in the form of a matrix. If 0 is one of the abelian invariants (the diagonal entries of the Smith Normal form), then the abelianisation is infinite and so must be the whole group. I&amp;#8217;ve added this test to the &lt;code class="highlighter-rouge"&gt;.order()&lt;/code&gt; method for &lt;code class="highlighter-rouge"&gt;FpGroup&lt;/code&gt;s and now it is able to terminate with the answer &lt;code class="highlighter-rouge"&gt;oo&lt;/code&gt; (infinity) for certain groups for which it wouldn&amp;#8217;t terminate previously. I hope to extend this further with another way to evaluate the order: trying to find a finite index cyclic subgroup (this can be achieved by generating a random word in the group and considering the coset table corresponging to it), and obtain the order of the group by multiplying the index with the order of the cyclic subgroup. The latter could be infinite, in which case the whole group is. Of course, this might not always terminate, but it will terminate in more cases than coset enumeration applied directly to the whole group. This is also what&amp;#8217;s done in &lt;a href="https://www.gap-system.org"&gt;GAP&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have begun working on it but this week is the last before my exams, and I feel that I should spend more time revising. For this reason, I probably wouldn&amp;#8217;t be able to send a PR with this new test by the end of the week. However, it would most likely be ready by the end of the next one, and considering that the only other thing I planned to do until the first evaluation period was to write (the main parts of) the &lt;code class="highlighter-rouge"&gt;GroupHomomorphism&lt;/code&gt; class assuming that the things it depends on (e.g. rewriting systems) are already implemented, I believe I am going to stay on schedule.&lt;/p&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">http://bjodah.github.io/blog/posts/gsoc-week1.html</guid>
@@ -2877,771 +3198,6 @@ their &lt;a href="https://en.wikipedia.org/wiki/Apple_USB_Mouse"&gt;hockey puck 
 actually hopeful that they can fix these issues, and implement a feature that
 makes real headway into helping me solve one of my biggest problems on GitHub
 right now, the reviewing of pull requests.&lt;/p&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://asmeurer.github.io/blog/posts/tuples/</guid>
-      <author>Aaron Meurer (asmeurer)</author>
-      <title>Aaron Meurer (asmeurer): Tuples</title>
-      <pubDate>Thu, 22 Sep 2016 02:33:14 GMT</pubDate>
-      <link>https://asmeurer.github.io/blog/posts/tuples/</link>
-      <description>&lt;div&gt;&lt;p&gt;Today, David Beazley made some tweets:&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;At the bookstore. I'll admit I judge Python books by their tuple description. "Read only list?"  Back on the shelf.  Nope.&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778634205395845120"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
-
-
-
-&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;Usually there's a sentence nearby "sometimes you need a read only list." No. No, I haven't. Not in 20 years. Not even once. Sorry.&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778635637457088512"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
-
-
-
-&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;My main objection is that "read only list" is a lazy description lacking thought. A red flag for every other topic that might be covered.&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778639979052498944"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;There are quite a few good responses to these tweets, both from David and from
-others (and from yours truly). I recommend reading the the thread (click on
-the &lt;a href="https://twitter.com/dabeaz/status/778634205395845120"&gt;first tweet&lt;/a&gt; above).&lt;/p&gt;
-&lt;p&gt;Now to start off, I want to say that I respect the hell out of David Beazley.
-The guy literally &lt;a href="http://www.dabeaz.com/cookbook.html"&gt;wrote the book&lt;/a&gt; on
-Python, and he knows way more about Python than I ever will. He's also one of
-the most entertaining Python people you can
-&lt;a href="https://twitter.com/dabeaz"&gt;follow on Twitter&lt;/a&gt;. But hey, that doesn't mean I
-can't disagree sometimes.&lt;/p&gt;
-&lt;h2&gt;List vs. Tuple. Fight!&lt;/h2&gt;
-&lt;p&gt;As you probably know, there are two "array" datatypes in Python, &lt;code&gt;list&lt;/code&gt; and
-&lt;code&gt;tuple&lt;/code&gt;.&lt;sup id="fnref:list"&gt;&lt;a class="footnote-ref" href="https://asmeurer.github.io/blog/posts/tuples/#fn:list" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; The primary difference between the two is that lists are &lt;em&gt;mutable&lt;/em&gt;,
-that is you can change their entries and length after they are created, with
-methods like &lt;code&gt;.append&lt;/code&gt; or &lt;code&gt;+=&lt;/code&gt;. Tuples, on the other hand, are &lt;em&gt;immutable&lt;/em&gt;.
-Once you create one, you cannot change it. This makes the implementation
-simpler (and hence faster, although don't let anyone tell you you should use a
-tuple just because it's faster). This, as
-&lt;a href="http://nedbatchelder.com/blog/201608/lists_vs_tuples.html"&gt;Ned Batchelder&lt;/a&gt;
-points out, is the only technical difference between the two.&lt;/p&gt;
-&lt;p&gt;The the idea that particularly bugs me here is that tuples are primarily
-useful as "record" datatypes.&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;&lt;a href="https://twitter.com/AllenDowney"&gt;@AllenDowney&lt;/a&gt; Better than "read-only-list." ;-).   Mainly looking for the tuple-as-record description. That's often what's missing.&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778685294593716224"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;Tuples are awesome for records. This is both by design&amp;#8212;since they have a
-fixed shape, the positions in a tuple can be "fixed" values, and by convention&amp;#8212;if a
-Python programmer sees parentheses instead of square brackets, he is more
-likely to see the object as "record-like". The &lt;code&gt;namedtuple&lt;/code&gt; object in the standard library
-takes the record idea further by letting you actually name the fields:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;collections&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Person'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'name, age'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Aaron'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Person&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'Aaron'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;But is that really the &lt;em&gt;only&lt;/em&gt; place you'd want to use a tuple over a list?&lt;/p&gt;
-&lt;p&gt;Consider five other places you might encounter a tuple in Python, courtesy of
-Allen Downey:&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;&lt;a href="https://twitter.com/dabeaz"&gt;@dabeaz&lt;/a&gt; (1) tuple assignment (2) multiple return values (3) *args (4) output from zip, enumerate, etc (5) key in dictionary&lt;/p&gt;&amp;#8212; Allen Downey (@AllenDowney) &lt;a href="https://twitter.com/AllenDowney/status/778691102094176257"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;In code these look like:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Multiple assignments:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; (a, b) = 1, 2
-&lt;/pre&gt;
-
-
-&lt;p&gt;(yes, the parentheses are optional here, as they are in many places where a
-tuple can be used, but this is still a tuple, or at least it looks like one ;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Multiple return values:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;For example,
-&lt;a href="https://docs.python.org/3/library/os.html#os.walk"&gt;&lt;code&gt;os.walk&lt;/code&gt;&lt;/a&gt;. This is
-for the most part a special case of using tuples as records.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;*args&lt;/code&gt;:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; def f(*args):
-...     print(type(args), args)
-...
-&amp;gt;&amp;gt;&amp;gt; f(1, 2, 3)
-&amp;lt;class 'tuple'&amp;gt; (1, 2, 3)
-&lt;/pre&gt;
-
-
-&lt;p&gt;Arbitrary positional function arguments are always stored as a &lt;code&gt;tuple&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Return value from builtins &lt;code&gt;zip&lt;/code&gt;, &lt;code&gt;enumerate&lt;/code&gt;, etc.:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; for i in zip(range(3), 'abc'):
-...     print(i)
-...
-(0, 'a')
-(1, 'b')
-(2, 'c')
-&amp;gt;&amp;gt;&amp;gt; for i in enumerate('abc'):
-...     print(i)
-...
-(0, 'a')
-(1, 'b')
-(2, 'c')
-&lt;/pre&gt;
-
-
-&lt;p&gt;This also applies to the combinatoric generators in
-&lt;a href="https://docs.python.org/3.6/library/itertools.html"&gt;itertools&lt;/a&gt; (like
-&lt;code&gt;product&lt;/code&gt;, &lt;code&gt;combinations&lt;/code&gt;, etc.)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Dictionary keys:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; {
-...     (0, 0): '.',
-...     (0, 1): ' ',
-...     (1, 0): '.',
-...     (1, 1): ' ',
-... }
-{(0, 1): ' ', (1, 0): '.', (0, 0): '.', (1, 1): ' '}
-&lt;/pre&gt;
-
-
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This last one I find to be very important. You could arguably use a list for
-the first four of Allen Downey's points&lt;sup id="fnref:assign"&gt;&lt;a class="footnote-ref" href="https://asmeurer.github.io/blog/posts/tuples/#fn:assign" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt; (or Python could have, if it wanted to). But it
-is
-&lt;a href="https://asmeurer.github.io/blog/posts/what-happens-when-you-mess-with-hashing-in-python/"&gt;impossible&lt;/a&gt;
-to meaningfully hash a mutable data structure in Python, and hashability is a
-requirement for dictionary keys.&lt;/p&gt;
-&lt;p&gt;However, be careful. Not all tuples are hashable. Tuples can contain
-anything, but only tuples of immutable values are hashable. Consider&lt;sup id="fnref:TypeError"&gt;&lt;a class="footnote-ref" href="https://asmeurer.github.io/blog/posts/tuples/#fn:TypeError" rel="footnote"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;
-&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;Such tuples are not hashable, and cannot be used as dictionary keys.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;hash&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s"&gt;"&amp;lt;ipython-input-39-36822ba665ca&amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;module&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nb"&gt;hash&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ne"&gt;TypeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;unhashable&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;'list'&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;h2&gt;Why is &lt;code&gt;list&lt;/code&gt; the Default?&lt;/h2&gt;
-&lt;p&gt;My second gripe here is this notion that your default ordered collection
-object in Python should be &lt;code&gt;list&lt;/code&gt;. &lt;code&gt;tuples&lt;/code&gt; are only to be used as "records",
-or if you suspect &lt;em&gt;might&lt;/em&gt; want to use it as a dictionary key. First off, you
-never know when you'll want something to be hashable. Both dictionary keys and
-&lt;code&gt;sets&lt;/code&gt; require hashability. Suppose you want to de-duplicate a collection of
-sequences. If you represent the sequences with &lt;code&gt;list&lt;/code&gt;, you'll either have to
-write a custom loop that checks for duplicates, or manually convert them to
-&lt;code&gt;tuple&lt;/code&gt; and throw them in a &lt;code&gt;set&lt;/code&gt;. If you start with &lt;code&gt;tuple&lt;/code&gt;, you don't have
-to worry about it (again, assuming the entries of the tuples are all hashable
-as well).&lt;/p&gt;
-&lt;p&gt;Consider another usage of tuples, which I consider to be
-important, namely tree structures. Say you wanted a simple representation of a
-Python syntax tree. You might represent &lt;code&gt;1 - 2*(-3 + 4)&lt;/code&gt; as&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'-'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'*'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'+'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'-'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;This isn't really a record. The meaning of the entries in the tuples is
-determined by the first value of the tuple, not position. In this example, the length
-of the tuple also signifies meaning (binary vs. unary &lt;code&gt;-&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;If this looks familiar to you, it's because this is how the language Lisp
-represents all programs. This is a common pattern.
-&lt;a href="http://dask.pydata.org/en/latest/graphs.html"&gt;Dask graphs&lt;/a&gt; use tuples and
-dictionaries to represent computations.
-&lt;a href="http://docs.sympy.org/latest/tutorial/manipulation.html"&gt;SymPy expression trees&lt;/a&gt;
-use tuples and Python classes to represent symbolic mathematical expressions.&lt;/p&gt;
-&lt;p&gt;But why use tuples over lists here? Suppose you had an object like the one
-above, but using lists: &lt;code&gt;['-', 1, ['*', 2, ['+', ['-', 3], 4]]]&lt;/code&gt;. If you
-discover you need to use this as a dictionary key, or want to put it in a
-&lt;code&gt;set&lt;/code&gt;, you would need to convert this to a hashable object. To do this you
-need to write a function that recursively converts each &lt;code&gt;list&lt;/code&gt; to a &lt;code&gt;tuple&lt;/code&gt;.
-See how long it takes you to write that function correctly.&lt;/p&gt;
-&lt;h2&gt;Mutability is Bad&lt;/h2&gt;
-&lt;p&gt;More to the point, however, mutability is bad. I counted 12 distinct methods
-on &lt;code&gt;list&lt;/code&gt; that mutate it (how many can you remember off the top of your
-head?&lt;sup id="fnref:mutate"&gt;&lt;a class="footnote-ref" href="https://asmeurer.github.io/blog/posts/tuples/#fn:mutate" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;). &lt;em&gt;Any&lt;/em&gt; function that gets access to a list can mutate it,
-using any one of these methods. All it takes is for someone to forget that
-&lt;code&gt;+=&lt;/code&gt; mutates a list (and that they should copy it first) for code completely
-distant from the origin definition to cause issues. The hardest bug I ever
-debugged had a three character
-&lt;a href="https://github.com/inducer/pudb/commit/b979fc5909c8d731eb907fc25f4e97904fb7cbbd"&gt;fix&lt;/a&gt;,
-adding &lt;code&gt;[:]&lt;/code&gt; to copy a global list that I was (accidentally) mutating. It took
-me a several hour airplane ride and some deep dark magic that I'll leave for
-another blog post to discover the source of my problems (the problems I was
-having appeared to be quite distant from the actual source).&lt;/p&gt;
-&lt;h2&gt;A Better "Default"&lt;/h2&gt;
-&lt;p&gt;I propose that Python code in general would be vastly improved if people used
-&lt;code&gt;tuple&lt;/code&gt; as the default ordered collection, and only switched to &lt;code&gt;list&lt;/code&gt; if
-mutation was necessary (it's less necessary than you think; you can always
-copy a tuple instead of mutating it). I agree with David Beazley that you
-don't "sometimes need a read only list". Rather, you "sometimes need a
-writable tuple".&lt;/p&gt;
-&lt;p&gt;This makes more sense than defaulting to &lt;code&gt;list&lt;/code&gt;, and only switching to &lt;code&gt;tuple&lt;/code&gt;
-when hashability is needed, or when some weird "rule of thumb" applies that
-says that you should use &lt;code&gt;tuple&lt;/code&gt; if you have a "record". Maybe there's a good
-reason that &lt;code&gt;*args&lt;/code&gt; and almost all builtin and standard library functions
-return tuples instead of lists. It's harder to accidentally break someone
-else's code, or have someone else accidentally break your code, when your data
-structures are immutable.&lt;/p&gt;
-&lt;h2&gt;Footnotes&lt;/h2&gt;
-&lt;div class="footnote"&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id="fn:list"&gt;
-&lt;p&gt;I want to avoid saying "a tuple is an immutable list", since "list"
-can be interpreted in two ways, as an English word meaning "ordered
-collection" (in
-which case, the statement is true), or as the Python type &lt;code&gt;list&lt;/code&gt; (in which
-case, the statement is false&amp;#8212;&lt;code&gt;tuple&lt;/code&gt; is not a subclass of &lt;code&gt;list&lt;/code&gt;).&amp;#160;&lt;a class="footnote-backref" href="https://asmeurer.github.io/blog/posts/tuples/#fnref:list" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn:assign"&gt;
-&lt;p&gt;Yes,&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; [a, b] = 1, 2
-&lt;/pre&gt;
-
-
-&lt;p&gt;works.&amp;#160;&lt;a class="footnote-backref" href="https://asmeurer.github.io/blog/posts/tuples/#fnref:assign" rev="footnote" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn:mutate"&gt;
-&lt;p&gt;&lt;/p&gt;&lt;div id="spoiler" style="display: none;"&gt;
-&lt;code&gt;__delitem__&lt;/code&gt;, &lt;code&gt;__iadd__&lt;/code&gt;, &lt;code&gt;__imul__&lt;/code&gt;, &lt;code&gt;__setitem__&lt;/code&gt;, &lt;code&gt;append&lt;/code&gt;, &lt;code&gt;clear&lt;/code&gt;, &lt;code&gt;extend&lt;/code&gt;, &lt;code&gt;insert&lt;/code&gt;,
-&lt;code&gt;pop&lt;/code&gt;, &lt;code&gt;remove&lt;/code&gt;, &lt;code&gt;reverse&lt;/code&gt;, and &lt;code&gt;sort&lt;/code&gt;.
-&lt;/div&gt;
-&lt;button title="Click to show/hide content" type="button"&gt;Show/hide answer&lt;/button&gt;&amp;#160;&lt;a class="footnote-backref" href="https://asmeurer.github.io/blog/posts/tuples/#fnref:mutate" rev="footnote" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;
-&lt;/li&gt;
-&lt;li id="fn:TypeError"&gt;
-&lt;p&gt;One of the tweets from the conversation:&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;blockquote class="twitter-tweet"&gt;&lt;p dir="ltr" lang="en"&gt;&lt;a href="https://twitter.com/asmeurer"&gt;@asmeurer&lt;/a&gt; &lt;a href="https://twitter.com/AllenDowney"&gt;@AllenDowney&lt;/a&gt; As yes:&lt;br /&gt;&lt;br /&gt;t = (1,2, [3, 4])&lt;br /&gt;t[2] += [5,6]&lt;br /&gt;&lt;br /&gt;;-)&lt;/p&gt;&amp;#8212; David Beazley (@dabeaz) &lt;a href="https://twitter.com/dabeaz/status/778697399975813120"&gt;September 21, 2016&lt;/a&gt;&lt;/blockquote&gt; 
-&lt;p&gt;This is similar to this example. But
-it turns out this one doesn't work:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&amp;gt;&amp;gt;&amp;gt; t = (1,2, [3, 4])
-&amp;gt;&amp;gt;&amp;gt; t[2] += [5,6]
-Traceback (most recent call last):
-  File "&amp;lt;stdin&amp;gt;", line 1, in &amp;lt;module&amp;gt;
-TypeError: 'tuple' object does not support item assignment
-&lt;/pre&gt;
-
-
-&lt;p&gt;I have no idea why. It seems to me that it should work. &lt;code&gt;t[2]&lt;/code&gt; is a list
-and &lt;code&gt;list&lt;/code&gt; has &lt;code&gt;__iadd__&lt;/code&gt; defined. It seems that Python gets kind of weird
-about things on the left-hand side of an assignment. &lt;strong&gt;EDIT:
-&lt;a href="http://stackoverflow.com/a/29747466/161801"&gt;Here's&lt;/a&gt; why.&lt;/strong&gt;&amp;#160;&lt;a class="footnote-backref" href="https://asmeurer.github.io/blog/posts/tuples/#fnref:TypeError" rev="footnote" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://nishnik.github.io/GSoC-Thirteenth-Week</guid>
-      <author>Nishant Nikhil (nishnik)</author>
-      <title>Nishant Nikhil (nishnik): GSoC Thirteenth Week</title>
-      <pubDate>Fri, 02 Sep 2016 00:00:00 GMT</pubDate>
-      <link>http://nishnik.github.io/GSoC-Thirteenth-Week/</link>
-      <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This week I worked on the &lt;a href="https://github.com/symengine/symengine/pull/1066"&gt;PR&lt;/a&gt; of factoring square free polynomials.
-Adding many changes for size in base. Like changing this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;auto l = std::ceil(std::log(2 * B + 1) / std::log(mp_get_ui(fsqf.first)));
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;if (mp_fits_slong_p(B)) {
-    temp = 2 * B + 1;
-    l = std::ceil(std::log(mp_get_d(temp))
-                  / std::log(mp_get_ui(fsqf.first)));
-} else {
-    auto b_d = mp_get_d(mp_abs(b));
-    l = std::ceil(
-        (1 + std::log2(n + 1) / 2.0 + n + log2_d_A + std::log2(b_d))
-        / (std::log2(mp_get_ui(fsqf.first))));
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This prevented over-flow.
-And a lot of implementation changes were incorporated in &lt;code class="highlighter-rouge"&gt;gf_gcdex&lt;/code&gt; also.&lt;/p&gt;
-
-&lt;p&gt;I also wrote documentation on &lt;code class="highlighter-rouge"&gt;Fields&lt;/code&gt; module &lt;a href="https://github.com/symengine/symengine/wiki/Fields-in-SymEngine"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://nishnik.github.io/GSoC-Twelfth-Week</guid>
-      <author>Nishant Nikhil (nishnik)</author>
-      <title>Nishant Nikhil (nishnik): GSoC Twelfth Week</title>
-      <pubDate>Sat, 20 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://nishnik.github.io/GSoC-Twelfth-Week/</link>
-      <description>&lt;p&gt;&lt;img alt="Logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This week I started work on polynomial factorization in &lt;code class="highlighter-rouge"&gt;Z&lt;/code&gt;.
-I implemented the zassenhaus&amp;#8217;s algorithm, which factors a primitive square-free polynomial.&lt;br /&gt;
-The basic idea behind factoring a polynomial in &lt;code class="highlighter-rouge"&gt;Z&lt;/code&gt; is first to make it square free using &lt;code class="highlighter-rouge"&gt;Yun's&lt;/code&gt; algorithm or something similar and then choosing a prime number &lt;code class="highlighter-rouge"&gt;p&lt;/code&gt;, such that the polynomial mod &lt;code class="highlighter-rouge"&gt;p&lt;/code&gt; is square free, and &lt;code class="highlighter-rouge"&gt;p&lt;/code&gt; doesn&amp;#8217;t divide its leading coefficient.
-After that it is reduced to factoring polynomial in finite field. Which has already been implemented, then we lift all the factors from the finite field to &lt;code class="highlighter-rouge"&gt;Z&lt;/code&gt; using hensel lifting.
-&lt;br /&gt;
-The number of time Hensel Lifting has to be done is found using the &lt;a href="http://www.csd.uwo.ca/~moreno//CS424/Lectures/ResultantGcd.html/node5.html"&gt;Mignotte&amp;#8217;s bound&lt;/a&gt;.
-&lt;br /&gt;
-This wall required implementation of extended euclidean GCD in the finite fields.
-So, after the implementation of factorization of square free algorithms, we were able to perform:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="language-C++"&gt;f = UIntPoly::from_vec(x, {1_z, 0_z, -9_z});
-// f = -9x**2 + 1
-out = f-&amp;gt;zz_zassenhaus();
-// out is a set of RCP&amp;lt;const UIntPoly&amp;gt;
-// out = {-3x + 1, -3x - 1}
-out_f = f-&amp;gt;zz_factor_sqf();
-// out_f is a pair&amp;lt;integer_class, std::set&amp;lt;RCP&amp;lt;const UIntPoly&amp;gt;&amp;gt;
-// out_.f.first = 1
-// out_f. second = {3x + 1, 3x - 1}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After this I need to implement the algorithm for square free factorization and the trial division for finding the power of factor in the polynomial, this way we will be able to factor the polynomials.
-The PR is &lt;a href="https://github.com/symengine/symengine/pull/1066"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-13</guid>
-      <author>Shekhar Prasad Rajak (shekharrajak)</author>
-      <title>Shekhar Prasad Rajak (shekharrajak): Coding Period Week 13 - Last week and conclusion</title>
-      <pubDate>Sat, 20 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://shekharrajak.github.io/blog/GSoC-2016/Coding-Period-week-13</link>
-      <description>&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Documentation nonlinsolve:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;PR &lt;a href="https://github.com/sympy/sympy/pull/11532"&gt;#11532&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Conclusion :&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;So the GSoC coding period is going to end. Here I am writing what I did, my todo list and suggestions for future work.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;One can see the progress report of each week and minutes of meeting here :
-&lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2016-Solvers-Progress"&gt;GSoC-2016-Solvers-Progress&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;My all the PRs link is here : &lt;a href="https://github.com/sympy/sympy/pulls?utf8=%E2%9C%93&amp;amp;q=is%3Aopen%7Cclosed%20is%3Apr%20author%3AShekharrajak%20"&gt;sympy/pulls/shekharrajak&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I have created a vertical timeline to show all the work in chrononical order in this link : &lt;a href="http://shekharrajak.github.io/gsoc16_final.html"&gt;timeline&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Meanwhile :&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;I find one issue : &lt;a href="https://github.com/sympy/sympy/issues/11534"&gt;#11534&lt;/a&gt; in mailing list discussion. This shows that we need better
-&lt;code class="highlighter-rouge"&gt;invert&lt;/code&gt; method for inverting nested roots/powers equtions in &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; .&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;and this &lt;a href="https://github.com/sympy/sympy/issues/11528"&gt;#11528&lt;/a&gt;. &lt;code class="highlighter-rouge"&gt;factor_list&lt;/code&gt; will be helpful in factoring the equation in &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; and solve for it factors and union the solution(during the PR #11188 discussion with Harsh this idea came out). It will actually replace the &lt;a href="https://github.com/sympy/sympy/blob/master/sympy/solvers/solveset.py#L646"&gt;elif f.is_Mul and all(_is_finite_with_finite_vars(m, domain)&lt;/a&gt; statement in &lt;code class="highlighter-rouge"&gt;_solveset&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;factor_list&lt;/code&gt; will be used soon.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://sampadblog.wordpress.com/?p=1042</guid>
-      <author>Sampad Saha (sampadsaha5)</author>
-      <title>Sampad Saha (sampadsaha5): GSoC Week 12 and Wrap-up</title>
-      <pubDate>Fri, 19 Aug 2016 18:49:39 GMT</pubDate>
-      <link>https://sampadblog.wordpress.com/2016/08/19/gsoc-week-12-and-wrap-up/</link>
-      <description>&lt;p&gt;Hello all! This is officially the last week for Google Summer of Code 2016. The submission and final evaluation has already started. Last week I was busy with fixing bugs and preparing documentation for the beam module.&lt;/p&gt;
-&lt;h4&gt;&lt;em&gt;&lt;strong&gt;The things that I have implemented till now&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;DiracDelta can be represented in piecewise form.&lt;/li&gt;
-&lt;li&gt;DiracDelta and Heaviside have a detailed docstring.&lt;/li&gt;
-&lt;li&gt;DiracDelta can be pretty printed using &amp;#948;(x).&lt;/li&gt;
-&lt;li&gt;Singularity Function module which can perform all sort of mathematical operations on discontinuity functions.&lt;/li&gt;
-&lt;li&gt;Beam module which can solve 2D beam bending problems.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;&lt;em&gt;&lt;strong&gt;Future Plans&lt;/strong&gt;&lt;/em&gt;&lt;/h4&gt;
-&lt;p&gt;Jason has came up with some new ideas for beam module:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Plot the shear, bending, slope and deflection diagrams..&lt;/li&gt;
-&lt;li&gt;Compute the strain and stress at any location in the beam.&lt;/li&gt;
-&lt;li&gt;Improve the beam module for more complicated loads.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I have planed for a long term association with SymPy, I am taking the full responsibilty of my code and I will try to contribute as much as I can. I will help the new developers with the Sympy code paradigms and the development workflow.&lt;/p&gt;
-&lt;p&gt;I have been able to meet all the target that I had mentioned in my &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2016-Application-Sampad-Kumar-Saha:-Singularity-Functions"&gt;proposal&lt;/a&gt;&amp;#160;and all of my pull requests have got merged except PR &lt;a href="https://github.com/sympy/sympy/pull/11494"&gt;11494&lt;/a&gt;.&amp;#160;It was great working with Sympy. Jason, Sartaj, Aaron, Kalevi, Isuru and all other sympy members have helped me a lot. Many of the times, I used to get stuck with some implementation, testing or with the Travis CI build but, for everytime they have always tried to help me fix them. My mentors have always appreciated and motivated me. I got to learn many new thing about the software development workflow. Thank you Sympy for making this summer an awesome journey of learning and coding.&lt;/p&gt;
-&lt;p&gt;That&amp;#8217;s all folks.&lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/sampadblog.wordpress.com/1042/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/sampadblog.wordpress.com/1042/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=sampadblog.wordpress.com&amp;#038;blog=102728326&amp;#038;post=1042&amp;#038;subd=sampadblog&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://rajithsays.wordpress.com/?p=445</guid>
-      <author>Rajith Vidanaarachchi (rajithv)</author>
-      <title>Rajith Vidanaarachchi (rajithv): GSoC : Epilogue</title>
-      <pubDate>Fri, 19 Aug 2016 05:01:52 GMT</pubDate>
-      <link>https://rajithsays.wordpress.com/2016/08/19/gsoc-epilogue/</link>
-      <description>&lt;h2&gt;Overview:&lt;/h2&gt;
-&lt;p style="text-align: justify;"&gt;For the duration of GSoC, I have worked on the SymEngine project, with focus on writing the Cwrapper and specifically the Ruby Wrapper. Major work during the project timeline included wrapping already existing features such as MPC, MPFR, arbitrary precision evaluations, Matrices, expression parsing etc., and new features such as lambdifying expressions in Ruby and Exception Handling.&lt;/p&gt;
-&lt;h2&gt;Proposal:&lt;/h2&gt;
-&lt;p&gt;My proposal for GSoC 2016 can be viewed here &lt;a href="https://docs.google.com/document/d/1HKEzqpm3yk9ax5Fs7POQaBFZFxSOjy1MXNyeB7JXBxg/edit#heading=h.t8we2dfbtvd1"&gt;[1]&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Progress Report:&lt;/h2&gt;
-&lt;p style="text-align: justify;"&gt;After 13 weeks of GSoC, we&amp;#8217;re now at the end of the summer, and it is time for me to explain and report what I did with SymEngine and its Ruby Wrappers throughout the summer.&lt;/p&gt;
-&lt;p style="text-align: justify;"&gt;For reporting purposes, I will take each week&amp;#8217;s workload and indicate the status in a tabular manner, with links to the relevant PRs. Due to the nature of the project, each part usually consists of two PRs. One to the SymEngine repository &lt;a href="https://github.com/symengine/symengine/"&gt;[2]&lt;/a&gt;, and the other to the SymEngine.rb &lt;a href="https://github.com/symengine/symengine.rb/"&gt;[3]&lt;/a&gt; repository.&lt;/p&gt;
-&lt;table cellpadding="4" cellspacing="0" width="100%"&gt;
-&lt;colgroup&gt;
-&lt;col width="51*" /&gt;
-&lt;col width="51*" /&gt;
-&lt;col width="51*" /&gt;
-&lt;col width="51*" /&gt;
-&lt;col width="51*" /&gt; &lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;Week&lt;/td&gt;
-&lt;td width="20%"&gt;Work&lt;/td&gt;
-&lt;td width="20%"&gt;SymEngine&lt;/td&gt;
-&lt;td width="20%"&gt;SymEngine.RB&lt;/td&gt;
-&lt;td width="20%"&gt;Comments&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;1, 2&lt;/td&gt;
-&lt;td width="20%"&gt;Complex Numbers &amp;amp; Floating Points&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;Wrappers for Real Double: &lt;a href="https://github.com/symengine/symengine/pull/954"&gt;PR#954&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Implementing real_double_get_d method: &lt;a href="https://github.com/symengine/symengine/pull/966"&gt;PR#966&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wrappers for Real MPFR and Complex MPC: &lt;a href="https://github.com/symengine/symengine/pull/972"&gt;PR#972&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;fixes #974: &lt;a href="https://github.com/symengine/symengine/pull/975"&gt;PR#975&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;Real Double Class: &lt;a href="https://github.com/symengine/symengine.rb/pull/46"&gt;PR#46&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Ruby Wrappers for Real MPFR and Complex MPC: &lt;a href="https://github.com/symengine/symengine.rb/pull/49"&gt;PR#49&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;3&lt;/td&gt;
-&lt;td width="20%"&gt;Derivatives, Substitutions, Abs&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;Function symbol Cwrappers: &lt;a href="https://github.com/symengine/symengine/pull/982"&gt;PR#982&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;Abs: &lt;a href="https://github.com/symengine/symengine.rb/pull/50"&gt;PR#50&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Function symbol Ruby Wrappers: &lt;a href="https://github.com/symengine/symengine.rb/pull/51"&gt;PR#51&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;3&lt;/td&gt;
-&lt;td width="20%"&gt;Series &amp;amp; Polynomials&lt;/td&gt;
-&lt;td width="20%"&gt;&amp;#8211;&lt;/td&gt;
-&lt;td width="20%"&gt;&amp;#8211;&lt;/td&gt;
-&lt;td width="20%"&gt;The relevant parts in SymEngine&amp;#8217;s C++ code library was not ready, so I had to skip this part.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;3&lt;/td&gt;
-&lt;td width="20%"&gt;Evalf&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;Common evals method and its Cwrappers: &lt;a href="https://github.com/symengine/symengine/pull/987"&gt;PR#987&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Sign check for Numbers: &lt;a href="https://github.com/symengine/symengine/pull/1027"&gt;PR#1027&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;evalf ruby wrapper: &lt;a href="https://github.com/symengine/symengine.rb/pull/55"&gt;PR#55&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;This was not included in the original proposal. Completed to compensate for Series and Polynomials.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;4, 5, 6&lt;/td&gt;
-&lt;td width="20%"&gt;Matrices&lt;/td&gt;
-&lt;td width="20%"&gt;Completed.&lt;/p&gt;
-&lt;p&gt;Matrix Cwrappers: &lt;a href="https://github.com/symengine/symengine/pull/992"&gt;PR#992&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;PR Under Review.&lt;/p&gt;
-&lt;p&gt;Matrix Ruby Wrappers: &lt;a href="https://github.com/symengine/symengine.rb/pull/56"&gt;PR#56&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;7&lt;/td&gt;
-&lt;td width="20%"&gt;Parser&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;CWrapper for parser: &lt;a href="https://github.com/symengine/symengine/pull/1029"&gt;PR#1029&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;Completed.&lt;/p&gt;
-&lt;p&gt;Ruby wrapper for parser: &lt;a href="https://github.com/symengine/symengine.rb/pull/60"&gt;PR#60&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;Awaiting merging.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;8&lt;/td&gt;
-&lt;td width="20%"&gt;Lambdify&lt;/td&gt;
-&lt;td width="20%"&gt;N/A&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;Lambdify as a module level function: &lt;a href="https://github.com/symengine/symengine.rb/pull/61"&gt;PR#61&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;All work was performed on Ruby Wrappers directly.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;9, 10&lt;/td&gt;
-&lt;td width="20%"&gt;Exception Handling&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;Exception Handling: &lt;a href="https://github.com/symengine/symengine/pull/1044"&gt;PR#1044&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Fixing enum issue in Exceptions: &lt;a href="https://github.com/symengine/symengine/pull/1069"&gt;PR#1069&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;Completed&lt;/p&gt;
-&lt;p&gt;Exception Handling: &lt;a href="https://github.com/symengine/symengine.rb/pull/64"&gt;PR#64&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;Wiki on exception handling. &lt;a href="https://github.com/symengine/symengine/wiki/SymEngine-Exceptions"&gt;[4]&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;11&lt;/td&gt;
-&lt;td width="20%"&gt;Interfacing with GMP, MPFR, MPC gems&lt;/td&gt;
-&lt;td width="20%"&gt;Incomplete&lt;/td&gt;
-&lt;td width="20%"&gt;Incomplete&lt;/td&gt;
-&lt;td width="20%"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;12&lt;/td&gt;
-&lt;td width="20%"&gt;Buffer Period&lt;/td&gt;
-&lt;td width="20%"&gt;N/A&lt;/td&gt;
-&lt;td width="20%"&gt;N/A&lt;/td&gt;
-&lt;td width="20%"&gt;Allocated time to catch up with missed work.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr valign="top"&gt;
-&lt;td width="20%"&gt;13&lt;/td&gt;
-&lt;td width="20%"&gt;Iruby Notebooks&lt;/td&gt;
-&lt;td width="20%"&gt;N/A&lt;/td&gt;
-&lt;td width="20%"&gt;Awaiting Merging&lt;br /&gt;
-Changes to beginner notebook:&lt;br /&gt;
-&lt;a href="https://github.com/symengine/symengine.rb/pull/59"&gt;PR#59&lt;/a&gt;&lt;/td&gt;
-&lt;td width="20%"&gt;Although the examples are ready, and were included in SymEngine&amp;#8217;s presentation at SciPy &lt;a href="https://www.youtube.com/watch?v=03rBe2RdMt4"&gt;[5]&lt;/a&gt;, they were not merged, pending improvements to the formatting.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;Other PRs:&lt;/h3&gt;
-&lt;p&gt;The following PRs were made for minor contributions.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fixes several warnings : &lt;a href="https://github.com/symengine/symengine/pull/994"&gt;PR#994&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Adding symengine_config.h to Cwrapper: &lt;a href="https://github.com/symengine/symengine/pull/984"&gt;PR#984&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Formating Fix: &lt;a href="https://github.com/symengine/symengine.rb/pull/65"&gt;PR#65&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Create ruby_example.ipynb: &lt;a href="https://github.com/certik/scipy-2016-symengine-talk/pull/17"&gt;PR#17 2016-symengine-talk&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Summary of Merged Contributions:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;On SymEngine/SymEngine Repository:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://github.com/symengine/symengine/commits?author=rajithv"&gt;https://github.com/symengine/symengine/commits?author=rajithv&lt;br /&gt;
-&lt;/a&gt;106 commits / 4,316 ++ / 1,928 &amp;#8212;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;On SymEngine/SymEngine.RB Repository:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://github.com/symengine/symengine.rb/commits?author=rajithv"&gt;https://github.com/symengine/symengine.rb/commits?author=rajithv&lt;br /&gt;
-&lt;/a&gt;134 commits / 3,756 ++ / 1,319 &amp;#8212;&lt;/p&gt;
-&lt;p&gt;&amp;#8212;&lt;/p&gt;
-&lt;p&gt;[1] &lt;a href="https://docs.google.com/document/d/1HKEzqpm3yk9ax5Fs7POQaBFZFxSOjy1MXNyeB7JXBxg/edit#heading=h.t8we2dfbtvd1"&gt;https://docs.google.com/document/d/1HKEzqpm3yk9ax5Fs7POQaBFZFxSOjy1MXNyeB7JXBxg/edit#heading=h.t8we2dfbtvd1&lt;br /&gt;
-&lt;/a&gt;[2] &lt;a href="https://github.com/symengine/symengine/pull/994"&gt;https://github.com/symengine/symengine/&lt;br /&gt;
-&lt;/a&gt;[3] &lt;a href="https://github.com/symengine/symengine.rb/"&gt;https://github.com/symengine/symengine.rb/&lt;/a&gt;&lt;br /&gt;
-[4] &lt;a href="https://github.com/symengine/symengine/wiki/SymEngine-Exceptions"&gt;https://github.com/symengine/symengine/wiki/SymEngine-Exceptions&lt;/a&gt;&lt;br /&gt;
-[5] &lt;a href="https://www.youtube.com/watch?v=03rBe2RdMt4"&gt;https://www.youtube.com/watch?v=03rBe2RdMt4&lt;/a&gt;&lt;/p&gt;&lt;br /&gt;  &lt;a href="http://feeds.wordpress.com/1.0/gocomments/rajithsays.wordpress.com/445/" rel="nofollow"&gt;&lt;img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/rajithsays.wordpress.com/445/" /&gt;&lt;/a&gt; &lt;img alt="" border="0" height="1" src="https://pixel.wp.com/b.gif?host=rajithsays.wordpress.com&amp;#038;blog=110498904&amp;#038;post=445&amp;#038;subd=rajithsays&amp;#038;ref=&amp;#038;feed=1" width="1" /&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://jbm950.github.io//2016/08/19/GSoC-week-14.html</guid>
-      <author>James Milam (jbm950)</author>
-      <title>James Milam (jbm950): GSoC Week 14</title>
-      <pubDate>Fri, 19 Aug 2016 00:00:00 GMT</pubDate>
-      <link>http://jbm950.github.io//2016/08/19/GSoC-week-14.html</link>
-      <description>&lt;p&gt;This is the final week of GSoC! I have the write up of the work done on a
-different &lt;a href="http://jbm950.github.io/../../../GSoC-Final-Submission.html"&gt;page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This project has been a wonderful learning experience and I have met many
-wonderful people over the course of this summer. Before the summer began I had
-never written any test code. Now at the conclusion of the summer I have written
-benchmark tests and I try to make sure the code I write has complete unit
-coverage. I feel that this is one of my biggest areas of improvement over the
-past 3 months. I have also learned a considerable amount about the combination
-of programming and dynamics. Prior to GSoC my experience with dynamics
-consisted solely of finding the equations of motion by hand. With my time in
-GSoC I have been exposed to finding the equations of motion programatically and
-using the results with an ode integrator. I have also obtained a more in depth
-knowledge of different algorithms for creating the equations of motion.&lt;/p&gt;
-
-&lt;p&gt;Another thing that I have enjoyed in this experience is seeing how a large
-programming project works. I feel that this will make me more employable in the
-future as well as allow me to help any other new open source community get up
-and running.&lt;/p&gt;
-
-&lt;p&gt;Lastly, one of the big highlights of my summer was my trip to Austin, TX for
-Scipy 2016. Being a GSoC student I not only got to go to my first professional
-conference but I was able to help give one of the tutorials. Also I was able to
-meet many of the other people who work on sympy. This went a long way in making
-my contributions to sympy from being just contributions to some organization to
-working on a project with other people. It was also neat to meet the developers
-of other open source projects. Like my comment about sympy, I now see those
-projects less as being &amp;#8220;project name&amp;#8221; and more as the people actually working
-on them.&lt;/p&gt;
-
-&lt;p&gt;I have enjoyed my GSoC experience and if I were eligible I would not hesitate
-to apply again. I would like to thank those who chose me and made this summer
-of learning and experiences possible.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://gxyd.github.io/blogs/Gsoc2016-project</guid>
-      <author>Gaurav Dhingra (gxyd)</author>
-      <title>Gaurav Dhingra (gxyd): GSoC 2016 wrap-up</title>
-      <pubDate>Fri, 19 Aug 2016 00:00:00 GMT</pubDate>
-      <link>https://gxyd.github.io/blogs/Gsoc2016-project/</link>
-      <description>&lt;p&gt;GSoC 2016 Project with SymPy(&lt;em&gt;wrap up&lt;/em&gt;): Computational Group Theory
-Hi, I&amp;#8217;m Gaurav Dhingra (&lt;a href="https://github.com/gxyd"&gt;@gxyd&lt;/a&gt;) and this post is a report of my work for SymPy under &lt;a href="https://summerofcode.withgoogle.com"&gt;Google Summer of Code 2016&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is also intended to be a description of my work for submission to &lt;b&gt;GSoC&amp;#8217;s Final Evaluation&lt;/b&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="work-product-submission"&gt;Work Product Submission&lt;/h2&gt;
-  &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/commits/master?author=gxyd"&gt;commits in GSoC 2016 product submission: Gaurav Dhingra&lt;/a&gt;.
-&lt;a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory"&gt;GSoC proposal&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="pull-requests"&gt;Pull Requests&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;#10350 FreeGroup implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11140"&gt;#11140 FpGroup implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11231"&gt;#11231 Low Index Subgroups algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11295"&gt;#11295 Reidemeister Schreier algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11460"&gt;#11460 Add documentation for FpGroup file and fix separate bug&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;#11361 &lt;em&gt;Modified Todd Coxeter&lt;/em&gt; algorithm implementation in SymPy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="bugs-reported"&gt;Bugs reported&lt;/h2&gt;
-  &lt;p&gt;[closed]&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;#11449 &lt;em&gt;TypeError&lt;/em&gt; on compressing a Coset Table generated by coset table method&lt;/a&gt;.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="brief-information"&gt;Brief Information&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Project&lt;/strong&gt;: &lt;a href="https://summerofcode.withgoogle.com/projects/#5798586428162048"&gt;Group Theory&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Blog&lt;/strong&gt;: &lt;a href="https://gxyd.github.io/gsoc.html"&gt;https://gxyd.github.io/gsoc.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;My Website&lt;/strong&gt;: https://gxyd.github.io&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;e-mail&lt;/strong&gt;: gauravdhingra.gxyd[at]gmail.com, igauravdhingra[at]protonmail.com&lt;/p&gt;
-
-&lt;p&gt;I am a pre-final year undergraduate student of Applied Mathematics at IIT Roorkee.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="before-gsoc"&gt;Before GSoC&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I heard about the GSoC program and about SymPy org. since of one of my college mate, Prasoon Shukla (he also participated in GSoC with SymPy). I was quite amazed by how mathematics and computer science could intersect and help in solving math problems.&lt;/p&gt;
-
-&lt;p&gt;I have been contributing to SymPy from May last year. In the beginning I tended often to work on issues that were more often related to my then on-going courses in my college. In December I completed a basic course on Group Theory, so I thought of choosing to work on Group Theory and I saw quite a few things in CGT were missing from SymPy and those functionalities were already there in GAP and Magma. So I asked them from Kalevi, regarding things that could be taken up for a gsoc project. So finally with some discussions with him and Aaron, I was sure by December end that I was going to work on implementing Finitely Presented Group in SymPy. I looked upto the last GSoC project on CGT by Alexandar Makelov, for reference material that could be used for the implementation and it turned out that the book by Derek Holt, Handbook of Computational Group Theory (will mention as shortly &lt;em&gt;the Handbook&lt;/em&gt;).&lt;/p&gt;
-
-&lt;p&gt;Though I already started working on &lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;PR #10350&lt;/a&gt; for implementation of free groups in beginning January though I started working on the proposal from February beginning.&lt;/p&gt;
-
-&lt;p&gt;So what I should do? Since I was quite sure of the project. Well at that moment I thought, since I am a mathematics major, choosing this project would also help me. So I reached out to Kalevi, said to him what I was thinking to do, what could be good for the project. So we worked upon making a good gsoc proposal.&lt;/p&gt;
-
-&lt;p&gt;Here is my &lt;a href="https://github.com/gxyd/sympy/wiki/GSoC-2016-Application-Gaurav-Dhingra:-Group-Theory"&gt;GSoC proposal&lt;/a&gt;. Now that the summer is over and I&amp;#8217;ve tackled a lot more with computational group theory, it seems that the main points in my GSoC proposal were:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Implementation of different algebraic structures monoid, free monoid, free group, semi group, free semi group, magma, etc.&lt;/li&gt;
-  &lt;li&gt;Rewriting System for reducing the elements of finitely presented groups.&lt;/li&gt;
-  &lt;li&gt;The Todd-Coxeter algorithm for coset enumeration, used to find the index of a subgroup of a finitely presented group.&lt;/li&gt;
-  &lt;li&gt;Reidemeister Schreier algorithm.&lt;/li&gt;
-  &lt;li&gt;Implementation of main &lt;code class="highlighter-rouge"&gt;Group&lt;/code&gt; class.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Well, I submitted my proposal and needed to wait until April 22 to the result, and then&amp;#8230;&lt;/p&gt;
-
-&lt;p&gt;&lt;img height="200" src="https://gxyd.github.io/../images/gsoc_selection.png" width="650" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;I was selected _/_&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I got lucky to have Kalevi Suominen like mentor too. Aaron Meurer, the project leader of SymPy was to be co-mentor, and I felt honored to be alloted my preferred mentors.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="during-gsoc"&gt;During GSoC&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;A more detailed account of my progress can be found on my blog &lt;a href="https://gxyd.gitub.io/gsoc.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;We started working on 7th May, we first started with working on completing the Free Group &lt;a href="https://github.com/sympy/sympy/pull/10350"&gt;PR#10350&lt;/a&gt; and we discussed things on our channel &lt;a href="https://gitter.im/sympy/GroupTheory"&gt;sympy/GroupTheory&lt;/a&gt;. We had some discussion on whether &lt;code class="highlighter-rouge"&gt;Basic&lt;/code&gt; should be a &lt;em&gt;super-class&lt;/em&gt; of &lt;code class="highlighter-rouge"&gt;FreeGroup&lt;/code&gt; or not. In the end we decied not to derive &lt;code class="highlighter-rouge"&gt;FreeGroup&lt;/code&gt; from &lt;code class="highlighter-rouge"&gt;Basic&lt;/code&gt;. Its basic methods had already been written, most of them inspired from GAP software.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;For the first point in my proposal (i.e implementation of algebraic structures), we didn&amp;#8217;t started with them (infact we never worked on them). We then moved onto the Coset Enumeration which covered 5 weeks of work in my timeline, but we didn&amp;#8217;t spend that much time, atleast on the first go at that moment, that did took alomost 3 weeks including the implementation of two strategies of enumeration &lt;em&gt;Felsch&lt;/em&gt; and &lt;em&gt;HLT&lt;/em&gt;. It was the very heart of our GSoC project. There were quite a few bugs that were there in algorithm, especially the bug #11449, to which the Kalevi found the solution.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;For the second point we never reached it, there wasn&amp;#8217;t sufficient time for that. Then we decided to rather implement the &lt;em&gt;Low Index Subgroups&lt;/em&gt; algortithm. It was quite fun to implement the algorithm, since it gave some good insight into CGT. More on this on &lt;a href="https://gxyd.github.io/gsoc_week_5.html"&gt;blog for week 5&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;From here I had passed my mid-term evaluations. Then we started with work on &lt;em&gt;Reidemeister Schreier&lt;/em&gt; algorithm. The algorithm was mainly implemeted using the &lt;a href="http://staff.itee.uq.edu.au/havas/1974h.pdf"&gt;Havas paper&lt;/a&gt;, though the current implementation in SymPy doesn&amp;#8217;t produce the best simplifed presentation. No good pseudocode is available for the algorithm, the major difficulty being the &lt;em&gt;sequence&lt;/em&gt; of applying the operation. More on this on &lt;a href="https://gxyd.github.io/gsoc_week_6.html"&gt;blog for week 6&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;After we thought that the result returned by Reidemeister Schreier algorithm we moved onto &lt;em&gt;modified todd coxeter&lt;/em&gt; algorithm. The main difficulty in it was defining the $\tau$ which can be read on the our channel for comments by Kalevi, I belive it can help in solving that problem.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;As to the fifth point (i.e making &lt;code class="highlighter-rouge"&gt;Group&lt;/code&gt; class), we never worked upon it. Also the topic of &lt;em&gt;Presenation of Finite Groups&lt;/em&gt; , could not get much attention, since of my busy college schedule.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;h3 id="commitscode-written-during-gsoc"&gt;Commits/Code written during GSoC&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Since I have commited quite a few commits un-related to my project. So I decided to &lt;em&gt;cherry-pick&lt;/em&gt; the commits made for my GSoC project. So the combined commits makes the things quite clear. &lt;a href="https://github.com/gxyd/sympy/pull/6"&gt;PR for GSoC 2016 product submission: Gaurav Dhingra&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h3 id="most-annoying-issue"&gt;Most annoying issue&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/sympy/sympy/issues/11449"&gt;issue #11449&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="after-gsoc"&gt;After GSoC&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;There is still much to be done regarding the finitely presented groups. As during the program my efforts were directed mainly towards getting the fundamental algorithms for finitely presented groups in, the overall structure of the module hasn&amp;#8217;t received much attention.&lt;/p&gt;
-
-&lt;p&gt;The algorithms are in, but the methods in sympy/combinatorics/fp_groups.py are not that much user-friendly. The code organization is not terrible, I think. Some suggestions (both for me and anyone else interested) for future work are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Cosets in permutation groups&lt;/strong&gt;: [verbatim-copy of Kalevi&amp;#8217;s mail - &lt;em&gt;&amp;#8220;next thing to do&amp;#8221;&lt;/em&gt;] Finding cosets in permutation groups is more challenging to implement since there seems to be no ready-made pseudocode. However, there is a description of the procedure with an example in section 4.6.7. It can be based on the existing implementation of the &lt;em&gt;Screier-Sims algorithm&lt;/em&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Finitely generated abelian groups&lt;/strong&gt;: [verbatim-copy of Kalevi&amp;#8217;s mail - &lt;em&gt;&amp;#8220;next thing to do&amp;#8221;&lt;/em&gt;] There is useful pseudocode in chapter 9 of the book by Holt that should make it fairly easy to implement the basic methods of abelian groups. We should probably try to base the implementation on the code in &lt;code class="highlighter-rouge"&gt;polys.agca&lt;/code&gt; as abelian groups are the same as Z-modules. It is all essentially about linear algebra over the integers.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Complete modified Todd Coxeter algorithm&lt;/strong&gt;: &lt;a href="https://github.com/sympy/sympy/pull/11361"&gt;PR #11361&lt;/a&gt; One bug is currently there in the algorithm, which can be fixed since we have to make assignments to $\tau$. Also currently no tests have been added, which can be added.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Rewriting System&lt;/strong&gt;: This can be a good candidate for a major work, I included this topic in my proposal though was left untouched. Perhaps &lt;em&gt;GAP&lt;/em&gt; could be first seen in this regard. Like always.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Groups folder&lt;/strong&gt;: After a few of the above mentioned things have been done, I believe it could be a good time to make a folder named &lt;code class="highlighter-rouge"&gt;groups&lt;/code&gt;, since finitely presented groups should not be a part of combinatorics module which would contain the all algebraic structures including the permutation groups.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Non-associative algebra&lt;/strong&gt;: (Perhaps I got the spelling of &lt;em&gt;associative&lt;/em&gt; this time right!) Albert CAS could be used to understand the workings related to non-associative algebra, it contains quite good functionalities.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="things-i-did-rightwrong"&gt;Things I did right/wrong&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;I often lagged in writing blogs.&lt;/li&gt;
-  &lt;li&gt;I worked more than expected hours before 15 July (before college started) but much less in the last one month of GSoC because of a little busy schedule.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I had say that I did about 70% of the work I promised to do in my proposal, considering that I also did two non-included task of Low Index subgroups algorithm and Modified Todd Coxeter algorithm, so I can say I swapped my work. It is good enough, and I hope to get back to extending the things that I have started. There&amp;#8217;s still some revision to be made, some code to be clean up. And I&amp;#8217;m doing that.&lt;/p&gt;
-
-&lt;p&gt;I don&amp;#8217;t really know if I&amp;#8217;ll pass final evaluations by Google, but, regardless, I&amp;#8217;m really glad for all the coding and development experience I got during these weeks. I&amp;#8217;ll probably use for personal projects, may be in Dissertation in last year, and try to contribute more to SymPy.&lt;/p&gt;
-
-&lt;p&gt;I appreciate the help of my mentor &lt;a href="https://github.com/jksuom"&gt;Kalevi Suominen&lt;/a&gt; who was always there for any query that I had regarding Group Theory in project, and I appreciate his ability to reply back within 1 hour for any message I left any time of day and every day of the week including weekend (I call it 1-hour rule). I think he was a wonderful mentor and I learnt a lot from him, and my co-mentor &lt;a href="https://github.com/asmeurer"&gt;Aaron Meurer&lt;/a&gt;, the current project leader of SymPy, and the entire SymPy community for helping me out and reviewing my work!&lt;/p&gt;
-
-&lt;p&gt;Also thank you &lt;font color="#4885ed"&gt;G&lt;/font&gt;&lt;font color="#db3236"&gt;o&lt;/font&gt;&lt;font color="#f4c20d"&gt;o&lt;/font&gt;&lt;font color="#4885ed"&gt;g&lt;/font&gt;&lt;font color="#3cba54"&gt;l&lt;/font&gt;&lt;font color="#db3236"&gt;e&lt;/font&gt;.&lt;/p&gt;
-
-&lt;p&gt;&amp;#2309;&amp;#2354;&amp;#2357;&amp;#2367;&amp;#2342;&amp;#2366; !&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
