@@ -247,7 +247,7 @@
       <foaf:Agent>
         <foaf:name>Szymon Mieszczak (szymag)</foaf:name>
         <foaf:weblog>
-          <foaf:Document>
+          <foaf:Document rdf:about="https://szymag.github.io/">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://szymag.github.io/feed.xml"/>
             </rdfs:seeAlso>
