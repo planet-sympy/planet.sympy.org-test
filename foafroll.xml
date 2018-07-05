@@ -5,6 +5,18 @@
     <foaf:homepage>http://planet.sympy.org/</foaf:homepage>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Ashish Kumar Gaurav (ashishkg0022)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="http://ashishkg0022.blogspot.com/">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="http://ashishkg0022.blogspot.in/feeds/posts/default?alt=rss"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Amit Kumar (aktech)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="http://aktech.github.io/blog">
@@ -41,18 +53,6 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Kshitij Saraogi(kshitij10496)</foaf:name>
-        <foaf:weblog>
-          <foaf:Document>
-            <rdfs:seeAlso>
-              <rss:channel rdf:about="http://kshitij10496.github.io/feed.xml"/>
-            </rdfs:seeAlso>
-          </foaf:Document>
-        </foaf:weblog>
-      </foaf:Agent>
-    </foaf:member>
-    <foaf:member>
-      <foaf:Agent>
         <foaf:name>Nishant Nikhil (nishnik)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="http://nishnik.github.io/">
@@ -65,11 +65,11 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Sartaj Singh (leosartaj)</foaf:name>
+        <foaf:name>Ranjith Kumar (ranjithkumar007)</foaf:name>
         <foaf:weblog>
           <foaf:Document>
             <rdfs:seeAlso>
-              <rss:channel rdf:about="http://sartajsingh.me/feeds/sympy.xml"/>
+              <rss:channel rdf:about="http://ranjithkumar007.github.io/feed.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
@@ -113,30 +113,6 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Aaron Meurer (asmeurer)</foaf:name>
-        <foaf:weblog>
-          <foaf:Document rdf:about="https://asmeurer.github.io/blog/">
-            <rdfs:seeAlso>
-              <rss:channel rdf:about="http://www.asmeurer.com/blog/rss.xml"/>
-            </rdfs:seeAlso>
-          </foaf:Document>
-        </foaf:weblog>
-      </foaf:Agent>
-    </foaf:member>
-    <foaf:member>
-      <foaf:Agent>
-        <foaf:name>Shikhar Jaiswal (ShikharJ)</foaf:name>
-        <foaf:weblog>
-          <foaf:Document rdf:about="https://shikharj.github.io//">
-            <rdfs:seeAlso>
-              <rss:channel rdf:about="https://ShikharJ.github.io/feed.xml"/>
-            </rdfs:seeAlso>
-          </foaf:Document>
-        </foaf:weblog>
-      </foaf:Agent>
-    </foaf:member>
-    <foaf:member>
-      <foaf:Agent>
         <foaf:name>Arif Ahmed (ArifAhmed1995)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://arif7blog.wordpress.com">
@@ -173,11 +149,35 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Kshitij Saraogi(kshitij10496)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document>
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://kshitij10496.github.io/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Abdullah Javed Nesar (Abdullahjavednesar)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://nesar2017.wordpress.com">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://nesar2017.wordpress.com/feed/"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Nikhil Pappu (NikhilPappu)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://nkhlpappu.wordpress.com">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://nkhlpappu.wordpress.com/tag/sympy/feed/"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
@@ -209,11 +209,11 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Ranjith Kumar (ranjithkumar007)</foaf:name>
+        <foaf:name>Ravicharan (RavicharanN)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="http://ranjithkumar007.github.io/">
+          <foaf:Document rdf:about="https://ravicharann.github.io/blog/{{ site.url }}">
             <rdfs:seeAlso>
-              <rss:channel rdf:about="https://ranjithkumar007.github.io/feed.xml"/>
+              <rss:channel rdf:about="https://ravicharann.github.io/blog/feed.sympy.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
@@ -233,11 +233,47 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Shikhar Jaiswal (ShikharJ)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://shikharj.github.io//">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://shikharj.github.io/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Subham Tibra (shubhamtibra)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://shubhamtibra.wordpress.com">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://shubhamtibra.wordpress.com/feed/"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Sidhant Nagpal (sidhantnagpal)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document>
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://sidhantnagpal.github.io/rss-gsoc.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Jashanpreet Singh Sraw (jashan498)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://singhjashan.wordpress.com">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://singhjashan.wordpress.com/feed/"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
@@ -262,6 +298,30 @@
           <foaf:Document rdf:about="http://valglad.github.io/">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://valglad.github.io/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Aaron Meurer (asmeurer)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://asmeurer.github.io/blog/">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://www.asmeurer.com/blog/rss.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Yathartha Joshi (Yathartha22)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document>
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://yathartha22.github.io/feed.sympy.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
