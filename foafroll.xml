@@ -211,9 +211,9 @@
       <foaf:Agent>
         <foaf:name>Ravicharan (RavicharanN)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="https://ravicharann.github.io/blog/{{ site.url }}">
+          <foaf:Document rdf:about="https://ravicharann.github.io/blog/">
             <rdfs:seeAlso>
-              <rss:channel rdf:about="https://ravicharann.github.io/blog/feed.sympy.xml"/>
+              <rss:channel rdf:about="https://ravicharann.github.io/blog/feed.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
@@ -319,7 +319,7 @@
       <foaf:Agent>
         <foaf:name>Yathartha Joshi (Yathartha22)</foaf:name>
         <foaf:weblog>
-          <foaf:Document>
+          <foaf:Document rdf:about="https://Yathartha22.github.io//">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://yathartha22.github.io/feed.sympy.xml"/>
             </rdfs:seeAlso>
