@@ -259,9 +259,9 @@
       <foaf:Agent>
         <foaf:name>Sidhant Nagpal (sidhantnagpal)</foaf:name>
         <foaf:weblog>
-          <foaf:Document>
+          <foaf:Document rdf:about="https://sidhantnagpal.github.io">
             <rdfs:seeAlso>
-              <rss:channel rdf:about="https://sidhantnagpal.github.io/rss-gsoc.xml"/>
+              <rss:channel rdf:about="https://sidhantnagpal.com/rss-gsoc.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>

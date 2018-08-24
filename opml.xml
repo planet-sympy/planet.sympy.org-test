@@ -2,8 +2,8 @@
 <opml version="2.0">
   <head>
     <title>Planet SymPy</title>
-    <dateCreated>Mon, 09 Jul 2018 01:28:20 GMT</dateCreated>
-    <dateModified>Mon, 09 Jul 2018 01:28:20 GMT</dateModified>
+    <dateCreated>Fri, 24 Aug 2018 21:44:42 GMT</dateCreated>
+    <dateModified>Fri, 24 Aug 2018 21:44:42 GMT</dateModified>
     <ownerName>Sumith</ownerName>
     <ownerEmail>sumith1896@gmail.com</ownerEmail>
   </head>
@@ -29,7 +29,7 @@
     <outline text="Sampad Saha (sampadsaha5)" xmlUrl="https://sampadblog.wordpress.com/feed/"/>
     <outline text="Shikhar Jaiswal (ShikharJ)" xmlUrl="https://shikharj.github.io/feed.xml"/>
     <outline text="Subham Tibra (shubhamtibra)" xmlUrl="https://shubhamtibra.wordpress.com/feed/"/>
-    <outline text="Sidhant Nagpal (sidhantnagpal)" xmlUrl="https://sidhantnagpal.github.io/rss-gsoc.xml"/>
+    <outline text="Sidhant Nagpal (sidhantnagpal)" xmlUrl="https://sidhantnagpal.com/rss-gsoc.xml"/>
     <outline text="Jashanpreet Singh Sraw (jashan498)" xmlUrl="https://singhjashan.wordpress.com/feed/"/>
     <outline text="Szymon Mieszczak (szymag)" xmlUrl="https://szymag.github.io/feed.xml"/>
     <outline text="Valeriia Gladkova (valglad)" xmlUrl="https://valglad.github.io/feed.xml"/>

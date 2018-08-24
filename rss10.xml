@@ -7,6 +7,618 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-conclusion</guid>
+      <author>Yathartha Joshi (Yathartha22)</author>
+      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - A Great Summer with SymPy</title>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 GMT</pubDate>
+      <link>https://Yathartha22.github.io//gsoc-conclusion</link>
+      <description>&lt;p&gt;Today&amp;#8217;s day started with receiving an email from Google. Here is a snapshot:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://yathartha22.github.io/public/gsoc4.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This left a big smile on my face &amp;#128516;&lt;/p&gt;
+
+&lt;p&gt;The past 3-4 months have been amazing and I have learnt a lot during the course of time. I would like to thank &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt;, &lt;a href="https://github.com/certik"&gt;Ondrej&lt;/a&gt; and the &lt;a href="http://sympy.org"&gt;SymPy&lt;/a&gt; team for providing me with this opportunity, my mentor &lt;a href="https://github.com/aktech"&gt;Amit Kumar&lt;/a&gt; for guiding me all through the phases and a special thanks to &lt;a href="https://github.com/smichr"&gt;Chris&lt;/a&gt; who was not officially my mentor but was present all the time for reviweing my work and helping me complete the project successfully.&lt;/p&gt;
+
+&lt;p&gt;Here is what Amit has to say:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://yathartha22.github.io/public/gsoc5.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Though GSoC is completed I will be continuing my contribution in the developement of the software.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://ravicharann.github.io/blog//final-report/</guid>
+      <author>Ravicharan (RavicharanN)</author>
+      <title>Ravicharan (RavicharanN): GSoC 2018 Final Report</title>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 GMT</pubDate>
+      <link>https://ravicharann.github.io/blog//final-report/</link>
+      <description>&lt;p&gt;This post summarizes the work done on the Group Theory part of the combinatorics module during 2018 summers as a part of the GSoC programme</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/08/gsoc-conclusion</guid>
+      <author>Sidhant Nagpal (sidhantnagpal)</author>
+      <title>Sidhant Nagpal (sidhantnagpal): Concluding GSoC 2018: SymPy</title>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 GMT</pubDate>
+      <link>https://sidhantnagpal.github.io/2018/08/gsoc-conclusion</link>
+      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.com/files/gsoc-sympy.png" style="width: 75%; height: 75%; float: left; margin-left: 55px;" /&gt;
+&lt;br clear="all" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This post summarises the work that I have done during GSoC for SymPy. The links to the Pull Requests are in chronological order under each header. For following the progress made during GSoC, see my &lt;a href="https://sidhantnagpal.github.io/blog"&gt;weekly posts&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This summer has been a great learning experience and has helped me get a good exposure of test-driven development. I plan to actively review the work that has went into this project and continue contributing to SymPy. I am grateful to my mentors, &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; and &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; for reviewing my work, giving me valuable suggestions, and being readily available for discussions.&lt;/p&gt;
+
+&lt;h2 id="pull-requests"&gt;Pull Requests&lt;/h2&gt;
+
+&lt;p&gt;This is the &lt;a href="https://github.com/sympy/sympy/pulls?q=is%3Apr+author%3Asidhantnagpal+is%3Aclosed"&gt;list&lt;/a&gt; of merged Pull Requests.&lt;/p&gt;
+
+&lt;h4 id="major-additions"&gt;Major Additions&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14725"&gt;sympy/sympy#14725&lt;/a&gt;: Add discrete module, and transforms sub-module including Fast Fourier Transform, Number Theoretic Transform, and include docstring, doctests, unit-tests.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14745"&gt;sympy/sympy#14745&lt;/a&gt;: Add convolution sub-module including &lt;code class="highlighter-rouge"&gt;convolution_fft&lt;/code&gt;, &lt;code class="highlighter-rouge"&gt;convolution_ntt&lt;/code&gt; and a general method &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; for identifying the type of convolution and handling the cyclic convolution case, and include docstring, doctests, unit-tests.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14765"&gt;sympy/sympy#14765&lt;/a&gt;: Implement Walsh Hadamard Transform and include doctests, unit-tests, docstring for the same.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14783"&gt;sympy/sympy#14783&lt;/a&gt;: Implement &lt;code class="highlighter-rouge"&gt;convolution_fwht&lt;/code&gt; and add support for keyword &lt;code class="highlighter-rouge"&gt;dyadic&lt;/code&gt; in the general &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; method, and include docstring, doctests, unit-tests.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14816"&gt;sympy/sympy#14816&lt;/a&gt;: Add a method &lt;code class="highlighter-rouge"&gt;linrec&lt;/code&gt; which allows evaluation of linear recurrences without obtaining closed form expressions, and include tests for the same.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14853"&gt;sympy/sympy#14853&lt;/a&gt;: Implement M&amp;#246;bius Transform using Yate&amp;#8217;s Dynamic Programming method while having &lt;code class="highlighter-rouge"&gt;subset&lt;/code&gt; keyword for flexibility of the implementation, and include docstring, doctests, unit-tests.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14878"&gt;sympy/sympy#14878&lt;/a&gt;: Implement subset convolution and include docstring, doctests, unit-tests.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14928"&gt;sympy/sympy#14928&lt;/a&gt;: Add covering product in convolutions sub-module and include docstring, doctests, unit-tests.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14954"&gt;sympy/sympy#14954&lt;/a&gt;: Add intersecting product in convolutions sub-module and include docstring, doctests, unit-tests.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="documentation-and-code-refinements"&gt;Documentation and Code Refinements&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14969"&gt;sympy/sympy#14969&lt;/a&gt;: Improve Sphinx &lt;a href="http://docs.sympy.org/"&gt;docs&lt;/a&gt; for SymPy, use plural module names - &lt;code class="highlighter-rouge"&gt;convolutions&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;recurrences&lt;/code&gt;, refine the documentation for &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14994"&gt;sympy/sympy#14994&lt;/a&gt;: Add reStructuredText file for &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module for inclusion in Sphinx docs, which can be referred &lt;a href="http://docs.sympy.org/dev/modules/discrete.html"&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/15025"&gt;sympy/sympy#15025&lt;/a&gt;: Refine &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module to fix tests using floats instead of Rationals, adding warning about sequence size for &lt;code class="highlighter-rouge"&gt;fft&lt;/code&gt; and other improvements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="additional-improvements"&gt;Additional Improvements&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14712"&gt;sympy/sympy#14712&lt;/a&gt;: Add &lt;code class="highlighter-rouge"&gt;.rewrite(exp)&lt;/code&gt; capability for instances of &lt;code class="highlighter-rouge"&gt;Pow&lt;/code&gt; and fix bugs in &lt;code class="highlighter-rouge"&gt;solvers&lt;/code&gt; module.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14907"&gt;sympy/sympy#14907&lt;/a&gt;: Fix exception handling for factorial modulo and refine the signature for general &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; method.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy-bot/pull/18"&gt;sympy/sympy-bot#18&lt;/a&gt;: Fix the issue of incorrect links being referred in wiki by explicitly specifying the links instead of using relative paths.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="future-work"&gt;Future Work&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Adding a user-facing public method that internally calls &lt;code class="highlighter-rouge"&gt;discrete.recurrences.linrec&lt;/code&gt; and possibly extending it for different types of recurrences as well.&lt;/li&gt;
+  &lt;li&gt;Making methods &lt;code class="highlighter-rouge"&gt;fft&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;convolution_fft&lt;/code&gt; efficient for both symbolic and numeric variants, as some discussion and benchmarking has been done for it and there is some work done by &lt;a href="https://github.com/cbm755"&gt;Colin&lt;/a&gt; for implementing a &lt;code class="highlighter-rouge"&gt;ComplexFloat&lt;/code&gt; class in &lt;a href="https://github.com/sympy/sympy/pull/12192"&gt;sympy/sympy#12192&lt;/a&gt; which would be very helpful for the same.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://nkhlpappu.wordpress.com/?p=17</guid>
+      <author>Nikhil Pappu (NikhilPappu)</author>
+      <title>Nikhil Pappu (NikhilPappu): GSoC 2018: Autolev Parser (using ANTLRv4): Final Report</title>
+      <pubDate>Sat, 11 Aug 2018 21:28:45 GMT</pubDate>
+      <link>https://nkhlpappu.wordpress.com/2018/08/11/gsoc-2018-autolev-parser-using-antlrv4-final-report/</link>
+      <description>&lt;h2&gt;About Me:&lt;/h2&gt;
+&lt;p&gt;I am Nikhil Pappu, an undergraduate Computer Science student at the International Institute of Information Technology, Bangalore.&lt;/p&gt;
+&lt;h2&gt;About the Project:&lt;/h2&gt;
+&lt;p&gt;Autolev (now superseded by MotionGenesis) is a domain specific language used for symbolic multibody dynamics. The SymPy mechanics module now has enough power and functionality to be a fully featured symbolic dynamics module. The parser parses Autolev (version 4.1) code to SymPy code by making use of SymPy&amp;#8217;s math libraries and the mechanics module.&lt;/p&gt;
+&lt;p&gt;The parser has been built using the &lt;a href="http://www.antlr.org/"&gt;ANTLR&lt;/a&gt; framework and its main purpose is to help former users of Autolev to get familiarized with multibody dynamics in SymPy.&lt;/p&gt;
+&lt;h2&gt;The Plan:&lt;/h2&gt;
+&lt;p&gt;The plan was to build a parser using ANTLR that could parse Autolev code to SymPy code.&amp;#160; Overall,&amp;#160; I think I was able to achieve most of what I had hoped for. I had faced some difficulties in some areas of the parser due to the very different nature of Autolev and Python. The parser has some issues as a result. I have specified all the details in the documentation I have written.&lt;/p&gt;
+&lt;h2&gt;Work Done:&lt;/h2&gt;
+&lt;p&gt;I made a parser for the Autolev language which is now a part of SymPy in the parsing module. I have written the code for the parser using the ANTLR framework. I have also included a bunch of tests for testing the rules of the parser code.&lt;/p&gt;
+&lt;p&gt;The majority of the work was a part of PR &lt;a href="https://github.com/sympy/sympy/pull/14758"&gt;#14758&lt;/a&gt;. I made a second PR &lt;a href="https://github.com/sympy/sympy/pull/15006"&gt;#15006&lt;/a&gt; for the changes I had made after the main PR.&lt;/p&gt;
+&lt;p&gt;I have written documentation for the parser which is a part of these PRs: &lt;a href="https://github.com/sympy/sympy/pull/15046"&gt;#15046&lt;/a&gt;, &lt;a href="https://github.com/sympy/sympy/pull/15066"&gt;#15066&lt;/a&gt; and &lt;a href="https://github.com/sympy/sympy/pull/15067"&gt;#15067&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I have also written a PyDy for Autolev Users guide which is a part of PR &lt;a href="https://github.com/sympy/sympy/pull/15077"&gt;#15077&lt;/a&gt;. This guide is meant to be a quick reference for looking up Autolev-PyDy equivalents.&lt;/p&gt;
+&lt;h2&gt;Future Work:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;The parser has been built by referring to and parsing codes from the &lt;a class="reference external" href="http://web.mae.ufl.edu/~fregly/PDFs/autolev_tutorial.pdf"&gt;Autolev Tutorial&lt;/a&gt; and the book &lt;em&gt;Dynamics Online: Theory and Implementation Using Autolev&lt;/em&gt;. Basically, the process involved going through each of these codes, validating the parser results and improving the rules if required to make sure the codes parsed well.
+&lt;p&gt;As of now, a large number of codes of &lt;em&gt;Dynamics Online&lt;/em&gt; have been parsed. Completing all the remaining codes of the book would make the parser more complete.&lt;/li&gt;
+&lt;li&gt;There are some limitations and issues with the parser and these have been discussed in the documentation. The plan is to fix these in order of priority.&lt;/li&gt;
+&lt;li&gt;The parser is currently built using a kind of Concrete Syntax Tree (CST) using the &lt;a class="reference external" href="http://www.antlr.org/"&gt;ANTLR&lt;/a&gt; framework. It would be ideal to switch from a CST to an Abstract Syntax Tree (AST). This way, the parser code will be independent of the ANTLR grammar which makes it a lot more flexible. It would also be easier to make changes to the grammar and the rules of the parser.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I would like to keep contributing to SymPy. I would be doing a lot of math in college especially related to data science so I would love to contribute in areas like Probability and Algebra among others. I would also like to help newcomers feel comfortable with the environment.&lt;/p&gt;
+&lt;h2&gt;Conclusion:&lt;/h2&gt;
+&lt;p&gt;I would like to thank my mentors &lt;a href="https://github.com/certik"&gt;Ond&amp;#345;ej &amp;#268;ert&amp;#237;k&lt;/a&gt; and &lt;a href="https://github.com/moorepants"&gt;Jason Moore&lt;/a&gt; for believing in me and taking time out from their busy schedules to guide me throughout the project. I would also like to thank &lt;a href="https://github.com/asmeurer"&gt;Aaron Meurer&lt;/a&gt; for looking over GSoC as the org admin and making sure that we all had a great experience working with SymPy.&lt;/p&gt;
+&lt;h2&gt;Links:&lt;/h2&gt;
+&lt;p&gt;Main PR: &lt;a href="https://github.com/sympy/sympy/pull/14758"&gt;#14758&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Updated parser code PR: &lt;a href="https://github.com/sympy/sympy/pull/15006"&gt;#15006&lt;/a&gt; and&lt;a href="https://github.com/sympy/sympy/pull/15013"&gt; #15013&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Documentation PRs: &lt;a href="https://github.com/sympy/sympy/pull/15046"&gt;#15046&lt;/a&gt;, &lt;a href="https://github.com/sympy/sympy/pull/15066"&gt;#15066&lt;/a&gt; and &lt;a href="https://github.com/sympy/sympy/pull/15067"&gt;#15067&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyDy for Autolev Users guide PR: &lt;a href="https://github.com/sympy/sympy/pull/15077"&gt;#15077&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Weekly Blog link: &lt;a href="https://nkhlpappu.wordpress.com/"&gt;https://nkhlpappu.wordpress.com/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-12</guid>
+      <author>Yathartha Joshi (Yathartha22)</author>
+      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 12 - Continuing with logarithmic solver and implementing lambert solver Part-II</title>
+      <pubDate>Thu, 09 Aug 2018 00:00:00 GMT</pubDate>
+      <link>https://Yathartha22.github.io//gsoc-week-12</link>
+      <description>&lt;p&gt;This week I continued the work with log solver and lambert solver. The log solver implementation is almost done with just few check for assumptions. Symbolic logarithmic equations should be dealt with proper assumptions. Such equations would give unsolved instance of &lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt; otherwise.&lt;/p&gt;
+
+&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'a, b, x'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;solveset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Reals&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ConditionSet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Reals&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# because the bases (here, `a and b`) should have a positive value &amp;gt; 0)&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'a b'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;positive&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;solveset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Reals&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;))}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Discussions with Amit and Chris suggested that there should be some other way to handle vanilla symbols. There should be atleast a &lt;code class="highlighter-rouge"&gt;ValueError&lt;/code&gt; or something else that would tell the user why this cannot be solved. Chris suggested of returning a &lt;code class="highlighter-rouge"&gt;Piecewise&lt;/code&gt; as  object for this scenario. Something like:&lt;/p&gt;
+
+&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="n"&gt;cond&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;fuzzy_and&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;im&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;Eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;im&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="n"&gt;Piecewise&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;solutions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cond&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;ConditionSet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;........&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;  &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Using Piecewise was not the greatest of the option as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Though the assumptions were checked but it didn&amp;#8217;t provided information to the user that why did it not solved.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Also using &lt;code class="highlighter-rouge"&gt;Piecewise&lt;/code&gt; had some problem causing recursion error, though it could be solved but it would make things unncessarily complicated.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Also &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; is not made to return objects other than &lt;code class="highlighter-rouge"&gt;Sets&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So we switched to a completely different approach. We tried using a different type of &lt;code class="highlighter-rouge"&gt;ConditionSet&lt;/code&gt;: providing the information within it that is necessary for the equation to be solved. The approach was: &lt;em&gt;Force the equation to get solved but return a ConditionSet (a different than ususal) with the required assumptions, like:&lt;/em&gt;
+&lt;code class="highlighter-rouge"&gt;ConditionSet(x, And(a_base&amp;gt;0, b_base&amp;gt;0, Eq(im(a_exp), 0), Eq((im(b_exp), 0))), {solutions})&lt;/code&gt;. So now the above equation would return solutions something like:
+&lt;code class="highlighter-rouge"&gt;ConditionSet(x, (a &amp;gt; 0) &amp;amp; (b &amp;gt; 0), Intersection(Reals, {log(b)/(log(a) - log(b))}))&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;So this approach has been applied in the &lt;a href="https://github.com/sympy/sympy/pull/14792"&gt;PR&lt;/a&gt; as of now, only a few minor changes needs to be done. I will try to finish this by the end of the week.&lt;/p&gt;
+
+&lt;p&gt;Apart from this some work has been done in &lt;code class="highlighter-rouge"&gt;lambert solver&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Used &lt;code class="highlighter-rouge"&gt;_is_lambert&lt;/code&gt; to identify lambert type equations.&lt;/li&gt;
+  &lt;li&gt;Implemented bivariate solver (I will add a commit for this soon).&lt;/li&gt;
+  &lt;li&gt;Ran &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt;&amp;#8217;s tests, to get an idea of the extent to which &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; would handle such equations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;What&amp;#8217;s next:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I will try to wrap up the work of both the PR&amp;#8217;s. Lambert solver PR would need a bit more time for reviewing but nevertheless I will be continuing its work post GSoC. Implementing these two solvers will make &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; fully functional to handle transcendental equations which is a major part of my GSoC propsal. There will be a few minor things left that I will try to finish post GSoC. Also since this is the last week for the coding period, I will be needing to submit a final report of my work, I will complete and submit it before the deadline.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/08/gsoc-week12</guid>
+      <author>Sidhant Nagpal (sidhantnagpal)</author>
+      <title>Sidhant Nagpal (sidhantnagpal): GSoC 2018: SymPy - Week 12</title>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 GMT</pubDate>
+      <link>https://sidhantnagpal.github.io/2018/08/gsoc-week12</link>
+      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.com/files/gsoc-sympy.png" style="width: 75%; height: 75%; float: left; margin-left: 55px;" /&gt;
+&lt;br clear="all" /&gt;&lt;/p&gt;
+
+&lt;p&gt;The final week of Coding Period has completed.&lt;/p&gt;
+
+&lt;p&gt;This week, the work was mainly concerned with the documentation and refinements in the &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module.
+I started by opening PR &lt;a href="https://github.com/sympy/sympy/pull/14994"&gt;#14994&lt;/a&gt; to update Sphinx docs for SymPy.
+&lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; and &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; were kind enough to review the PR and help refine it for the final merge. The documentation for &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module is now part of the SymPy docs and can be referred &lt;a href="http://docs.sympy.org/dev/modules/discrete.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Late this week, I opened PR &lt;a href="https://github.com/sympy/sympy/pull/15025"&gt;#15025&lt;/a&gt; for improvements in the &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module.
+&lt;a href="https://github.com/cbm755"&gt;Colin&lt;/a&gt; helped fix accidental floats in unit tests (which should have been Rationals). After the review, the PR was merged successfully.&lt;/p&gt;
+
+&lt;p&gt;Future work would include - addition of a user-facing public method for &lt;code class="highlighter-rouge"&gt;linrec&lt;/code&gt; and making methods &lt;code class="highlighter-rouge"&gt;fft&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;convolution_fft&lt;/code&gt; efficient for both symbolic and numeric variants, as some discussion and benchmarking has been done for it and there is some work done by &lt;a href="https://github.com/cbm755"&gt;Colin&lt;/a&gt; for &lt;code class="highlighter-rouge"&gt;ComplexFloat&lt;/code&gt; class in PR &lt;a href="https://github.com/sympy/sympy/pull/12192"&gt;#12192&lt;/a&gt; which would be helpful for the same.&lt;/p&gt;
+
+&lt;p&gt;Looking forward to the concluding phase, where I will be wrapping up GSoC and preparing the report for the final evaluation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://nkhlpappu.wordpress.com/?p=15</guid>
+      <author>Nikhil Pappu (NikhilPappu)</author>
+      <title>Nikhil Pappu (NikhilPappu): Autolev Parser: Status Update</title>
+      <pubDate>Fri, 03 Aug 2018 20:36:26 GMT</pubDate>
+      <link>https://nkhlpappu.wordpress.com/2018/08/03/autolev-parser-status-update-4/</link>
+      <description>&lt;p&gt;I have made some changes to the parser code to parse more files since &lt;a href="https://github.com/sympy/sympy/pull/14758"&gt;#14758&lt;/a&gt; has been merged. I have also made the changes suggested in that PR after it had been merged. I have opened a new PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/15006/"&gt;#15006&lt;/a&gt;&amp;#160;for the updated parser code. I have also opened &lt;a href="https://github.com/sympy/sympy/pull/15013"&gt;#15013&lt;/a&gt;&amp;#160;to include tests for physics functions which I didn&amp;#8217;t do in the initial PR. The GitLab repo autolev-test-examples is in good shape now and is part of the sympy user.&lt;/p&gt;
+&lt;p&gt;I am currently writing the documentation in which I shall include how to use the parser, gotchas, limitations, issues and future improvements. I shall also include a rewritten version of the PyDy for Autolev Users guide in it.&lt;/p&gt;
+&lt;p&gt;I shall then write the output tests (Tests to compare the outputs of Autolev against those of SymPy) for most of the test examples in the GitLab repo (I shall include these in a directory called output-tests in the GitLab repo). I think its good to put them here as I don&amp;#8217;t see the need to test these on Travis as changing the parser code won&amp;#8217;t affect these. Plus, they will be in a place where the test examples are which are what they will be based on. We could still test these on Travis if required even from here I suppose.&lt;/p&gt;
+&lt;p&gt;Finally, I shall wrap things up with the Final Report and Submission.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=95</guid>
+      <author>Jashanpreet Singh Sraw (jashan498)</author>
+      <title>Jashanpreet Singh Sraw (jashan498): Week 11: unset_show bug and documentation</title>
+      <pubDate>Mon, 30 Jul 2018 17:45:07 GMT</pubDate>
+      <link>https://singhjashan.wordpress.com/2018/07/30/week-11-unset_show-bug-and-documentation/</link>
+      <description>&lt;p&gt;Last week, I created&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14967"&gt;#14967&lt;/a&gt;&amp;#160;for implementation of plotting methods.&amp;#160;Soon after pushing my commits, many of the jobs failed on Travis. It was strange as I was not able to reciprocate the errors locally.&lt;/p&gt;
+&lt;p&gt;After discussing it on Gitter, I got to know that it was due to the printing of plots using TextBackend in the doctest in absence of matplotlib. As matplotlib was present in my system,&amp;#160; doctest used matplotlib backend instead of TextBackend locally, hence passing all tests.&amp;#160;&lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt;&amp;#160;suggested using&amp;#160;&lt;em&gt;unset_show &lt;/em&gt;to stop the printing of plots during doctest but apparently,&amp;#160;&lt;em&gt;unset_show&amp;#160;&lt;/em&gt;didn&amp;#8217;t work for TextBackend. This was fixed by&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14984"&gt;#14984&lt;/a&gt;&amp;#160;later that day and&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14967"&gt;#14967&lt;/a&gt;&amp;#160;passed all the tests after former one was merged.&lt;/p&gt;
+&lt;p&gt;This week, I also started editing&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14453"&gt;#14453&lt;/a&gt;&amp;#160;for documentation. It included a few beam problems along with their ascii diagrams.&lt;/p&gt;
+&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14967"&gt;#14967&lt;/a&gt;&amp;#160;and&lt;a href="https://github.com/sympy/sympy/pull/14453"&gt;#14453&lt;/a&gt;&amp;#160;gets merged.&lt;/li&gt;
+&lt;li&gt;&amp;#160;Add more beam problems for documentation.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-5320864463564984752</guid>
+      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
+      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 11</title>
+      <pubDate>Sun, 29 Jul 2018 14:47:17 GMT</pubDate>
+      <link>http://ashishkg0022.blogspot.com/2018/07/gsoc-2018-week-11.html</link>
+      <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Hello everyone. Here is the brief progress of Rubi&amp;nbsp;module in the 11th week of GSoC period.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;The main PR, which contains the major changes of this GSoC period was merged this week. I had not run pyflakes on it. I ran pyflakes on the main PR and fixed undefined issues.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;This week was mainly spent to test code generation. Initially, there was some error in generating the code. An &lt;a href="https://github.com/HPAC/matchpy/issues/33"&gt;issue&lt;/a&gt; was opened in this regard. I tried various other structure of Rubi to get it working.&amp;nbsp; Currently, patterns are not matched correctly. I have opened a &lt;a href="https://github.com/sympy/sympy/pull/14988"&gt;PR&lt;/a&gt; for this. We are still trying to get the code generator working so that we can reduce the loading time of rules. Now, the loading time of all rules is around 10 minutes.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-11</guid>
+      <author>Yathartha Joshi (Yathartha22)</author>
+      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 11 - Continuing with logarithmic solver and implementing lambert solver</title>
+      <pubDate>Sun, 29 Jul 2018 00:00:00 GMT</pubDate>
+      <link>https://Yathartha22.github.io//gsoc-week-11</link>
+      <description>&lt;p&gt;So this week I started up with implementing and sending a PR for lambert solver &lt;a href="https://github.com/sympy/sympy/pull/14972"&gt;#14972&lt;/a&gt;. Solving these equations can be achieved by &lt;code class="highlighter-rouge"&gt;_solve_lambert&lt;/code&gt; routine of &lt;a href="https://github.com/sympy/sympy/blob/2b4afb6cd0a7cd5791d512b80fce493cda9b57e0/sympy/solvers/bivariate.py"&gt;bivariate.py&lt;/a&gt;. It is really powerful and can solve a varied type of equations having a general form. Another routine comes into action, the &lt;code class="highlighter-rouge"&gt;bivariate_type&lt;/code&gt; to solve majorly lambert type of equations when the former is unable to solve. These two routines can be handy for implementing such equations. As of now I have added &lt;code class="highlighter-rouge"&gt;_solve_lambert()&lt;/code&gt; in the PR. I will add &lt;code class="highlighter-rouge"&gt;bivariate_type&lt;/code&gt; once the log solver PR gets finalised. There are few equations that can be solved by posifying the variable that needs to be solved. A bit discussion is needed on this part.&lt;/p&gt;
+
+&lt;p&gt;Apart from this, a lot of work was done in the &lt;code class="highlighter-rouge"&gt;log solver&lt;/code&gt; PR&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class="highlighter-rouge"&gt;_term_factors()&lt;/code&gt; is used again.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Logic for exponential identifying is modified to not identify lambert type equations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Few mores tests were added.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href="https://github.com/smichr"&gt;Chris&lt;/a&gt; advised to make identification helpers such that they identify their class even if they won&amp;#8217;t get solved by their respective solvers, the equation should not be passed to any of the other helpers for further solving. This wasn&amp;#8217;t the case before, the identifying helpers were implemented only for equations that their helpers could solve. So now this idea is implemented for both the exponential and logarithmic solver.
+Equations that these identifiers can&amp;#8217;t identify will be further solved as lambert type.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Almost all the work of the log solver PR is done. I will be finishing the work on lambert solver PR and complete in coming week. I hope both the PR&amp;#8217;s gets merged before the GSoC period ends.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/07/gsoc-week11</guid>
+      <author>Sidhant Nagpal (sidhantnagpal)</author>
+      <title>Sidhant Nagpal (sidhantnagpal): GSoC 2018: SymPy - Week 11</title>
+      <pubDate>Sat, 28 Jul 2018 00:00:00 GMT</pubDate>
+      <link>https://sidhantnagpal.github.io/2018/07/gsoc-week11</link>
+      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.com/files/gsoc-sympy.png" style="width: 75%; height: 75%; float: left; margin-left: 55px;" /&gt;
+&lt;br clear="all" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This week, I started working on adding the final method to convolution module for Intersecting Product. PR &lt;a href="https://github.com/sympy/sympy/pull/14954"&gt;#14954&lt;/a&gt; dealt with the addition of &lt;code class="highlighter-rouge"&gt;intersection_product&lt;/code&gt; method. Intersecting Product was implemented using M&amp;#246;bius Transform with superset enumeration (&lt;code class="highlighter-rouge"&gt;mobius_transform(..., subset=False)&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;inverse_mobius_transform(..., subset=False)&lt;/code&gt;). After minor documentation improvements, the PR was merged successfully. The proposed transforms and convolutions are now part of &lt;code class="highlighter-rouge"&gt;sympy.discrete&lt;/code&gt;. The basic usage for the method is:&lt;/p&gt;
+
+&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;S&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;I&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;intersecting_product&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'u v x y z'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;intersecting_product&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;intersecting_product&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Late this week, I started working on improving the documentation for SymPy&amp;#8217;s Sphinx docs (&lt;a href="http://docs.sympy.org/dev/index.html"&gt;http://docs.sympy.org/dev/index.html&lt;/a&gt;) and other minor changes in the PR &lt;a href="https://github.com/sympy/sympy/pull/14969"&gt;#14969&lt;/a&gt;. Also, issue &lt;a href="https://github.com/sympy/sympy/issues/14964"&gt;#14964&lt;/a&gt; was opened to discuss the possibility of using LaTeX in docstrings for SymPy documentation. The following changes were part of the PR:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use LaTeX for docstrings in functions.combinatorial (reference to &lt;a href="https://github.com/sympy/sympy/issues/14964"&gt;#14964&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Include genocchi and partition numbers in sphinx docs&lt;/li&gt;
+  &lt;li&gt;Improve docstrings with single and double backticks for sphinx docs&lt;/li&gt;
+  &lt;li&gt;Use plural module names under discrete (discrete.convolutions and discrete.recurrences)&lt;/li&gt;
+  &lt;li&gt;Add graphviz as a prerequisite in sympy/doc/README.rst for Debian/Ubuntu&lt;/li&gt;
+  &lt;li&gt;Fix links in references containing rounded braces and unicode chars for sphinx docs&lt;/li&gt;
+  &lt;li&gt;Miscellaneous improvements to documentation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Successive reviews and discussions were helpful in finalizing the Pull Requests.&lt;/p&gt;
+
+&lt;p&gt;Looking forward to the final week of Coding Period.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://nkhlpappu.wordpress.com/?p=13</guid>
+      <author>Nikhil Pappu (NikhilPappu)</author>
+      <title>Nikhil Pappu (NikhilPappu): Autolev Parser: Status Update</title>
+      <pubDate>Fri, 27 Jul 2018 20:24:12 GMT</pubDate>
+      <link>https://nkhlpappu.wordpress.com/2018/07/27/autolev-parser-status-update-3/</link>
+      <description>&lt;p&gt;Hello Everyone. I have been working on getting the PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14758"&gt;#14758&lt;/a&gt;&amp;#160;into shape and now it is finally merged. I have written my own tests for the PR so as to not include copyrighted files that belong to the creators of Autolev.&lt;/p&gt;
+&lt;p&gt;I am now working on a &lt;a href="https://gitlab.com/NikhilPappu/test-examples/"&gt;test-examples repo&lt;/a&gt; which serves as a showcase of the parser and also as a source of additional tests. The repo is private on GitLab as it contains copyrighted files. You can request access at the repo link above. Files from this repo can be copied over to the test_examples folder of parsing/autolev to use them as tests. From now, I will be working on adding more examples from the PyDy example repo, Autolev Tutorial, and Dynamics Online to this repo while improving the code of the parser to parse all these codes. I am also making note of things like errors, inaccuracies etc to include them in the Documentation.&lt;/p&gt;
+&lt;p&gt;I will open another PR once I have made enough number of changes to the parser code.&lt;/p&gt;
+&lt;p&gt;Here is my plan for the future of this project:&lt;/p&gt;
+&lt;p&gt;Till the end of GSoC:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Work on getting the test-examples repo in good shape.&lt;/li&gt;
+&lt;li&gt;Write extensive Documentation (explaining what the parser can do, how to use it,&amp;#160; limitations, issues, future improvements etc).&lt;/li&gt;
+&lt;li&gt;Work on as many Dynamics Online codes (which I shall include in the repo) as possible (Wrap up Ch4 and hoping to get half of Ch5 done (as it is quite big)).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Post GSoC:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Finish the rest of the Dynamics Online Book (Whatever is left of Ch5 and also Ch6 which I think is less important).&lt;/li&gt;
+&lt;li&gt;Work on the issues that I will be listing down in the documentation one by one after discussing the possible fixes (Some of these might require changes in the parser while some others require changes in the SymPy code while I do not have much of an idea about the fixes of some other ones).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Thanks,&lt;/p&gt;
+&lt;p&gt;Nikhil&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=93</guid>
+      <author>Jashanpreet Singh Sraw (jashan498)</author>
+      <title>Jashanpreet Singh Sraw (jashan498): Week 10: Implementing plotting methods</title>
+      <pubDate>Tue, 24 Jul 2018 18:12:09 GMT</pubDate>
+      <link>https://singhjashan.wordpress.com/2018/07/24/week-10-implementing-plotting-methods/</link>
+      <description>&lt;p&gt;This week I started working on implementing methods to plot Shear force, bending moment, slope and deflection diagrams.&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14967"&gt;#14967&lt;/a&gt;&amp;#160;was created for it.&lt;/p&gt;
+&lt;p&gt;Mainly four methods were added to the Beam class:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;plot_shear_force: This method returns a plot for Shear force present in the Beam object.&lt;/li&gt;
+&lt;li&gt;plot_bending_moment: This method returns a plot for Bending moment present in the Beam object.&lt;/li&gt;
+&lt;li&gt;plot_slope: This method returns a plot for slope of the elastic curve of the Beam.&lt;/li&gt;
+&lt;li&gt;plot_delfection: This method returns a plot for the deflection curve of the Beam object.&lt;/li&gt;
+&lt;li&gt;plot_loading_results: This method returns&amp;#160;fig object containing subplots of Shear Force, Bending Moment,&amp;#160;Slope and Deflection of the Beam object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/jashan498/beam_examples/blob/master/beam_plots.ipynb"&gt;Here&lt;/a&gt;&amp;#160;is a sample notebook demonstrating how to use these plotting methods.&lt;/p&gt;
+&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14967"&gt;#14967&lt;/a&gt;&amp;#160;gets merged.&lt;/li&gt;
+&lt;li&gt;Add more beam problems to the documentation.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://ravicharann.github.io/blog//misc/</guid>
+      <author>Ravicharan (RavicharanN)</author>
+      <title>Ravicharan (RavicharanN): Subgroup quotients, Polycyclic groups and misc</title>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 GMT</pubDate>
+      <link>https://ravicharann.github.io/blog//misc/</link>
+      <description>&lt;p&gt;GSoC'18 Week 9 &amp; 10</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-4503634706614858581</guid>
+      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
+      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 10</title>
+      <pubDate>Sun, 22 Jul 2018 15:35:32 GMT</pubDate>
+      <link>http://ashishkg0022.blogspot.com/2018/07/gsoc-2018-week-10.html</link>
+      <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Hello everyone. Here is the brief progress of Rubi&amp;nbsp;module in the 10th week of GSoC period.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Last week, we were able to load all rules. Rubi has now come in a very stable and working condition. One Missing thing in the main &lt;a href="https://github.com/sympy/sympy/pull/14756"&gt;PR&lt;/a&gt; was missing instructions and documentation. This week I tried my best to write instructions, so that a new user can easily get familiar with it. I have kept it really simple.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Initially, I wrote a script in Mathematica to generate downvalues&amp;nbsp;in separate files. This was done till now manually, but now it's automated. Then I wrote a sympy&amp;nbsp;script to generate all rules and constraints in proper files directly just by running a function.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;For a more easier understanding of steps, I created&amp;nbsp;`rubi_parsing_guide.md` explaining all steps.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Next thing I realised that it would be good if we create a parsing script for the tests too. Till now I used maple format. But a lot of manual things were required. So I wrote a script which directly parses tests into sympy&amp;nbsp;format. All this are added properly in `rubi_parsing_guide.md`.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;`init` in Rubi&amp;nbsp;too was updated with proper explanation of basic structure of rules and constraints. I also updated docs of few important utility_functions.&lt;/span&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Now a new user can easily get familiar with Rubi and working with it will be simple.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;I have also opened a new &lt;a href="https://github.com/sympy/sympy/pull/14956"&gt;PR&lt;/a&gt; for new utility_functions. Once the old &lt;a href="https://github.com/sympy/sympy/pull/14756"&gt;PR&lt;/a&gt; gets merged, we can merge this.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-10</guid>
+      <author>Yathartha Joshi (Yathartha22)</author>
+      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 10 - Continuing with logarithmic solver</title>
+      <pubDate>Sun, 22 Jul 2018 00:00:00 GMT</pubDate>
+      <link>https://Yathartha22.github.io//gsoc-week-10</link>
+      <description>&lt;p&gt;This week started with the merge of the PR &lt;a href="https://github.com/sympy/sympy/pull/14736"&gt;#14736&lt;/a&gt;. Yehhhh!!!!!. So now &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; will be able to solve a varied type of exponential equations.  Next work is going on to build the logarithmic and lambert solver.&lt;/p&gt;
+
+&lt;p&gt;A lot of discussion has been taken place over the implementation of the logarithmic solver, there were mainly two points to consider:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How the logarithmic equation gets evaluated, i.e., should we consider solutions that would make the log term negative.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Take for instance a logarithmic equation &lt;code class="highlighter-rouge"&gt;log(x - 3) + log(x + 3) = 0&lt;/code&gt;, when solved the solutions would be &lt;code class="highlighter-rouge"&gt;-sqrt(10) and sqrt(10)&lt;/code&gt;, but &lt;code class="highlighter-rouge"&gt;-sqrt(10)&lt;/code&gt; make the log term negative. So the question was what should we do for such a scenario? Should we add a check to remove these solution or just accept. it.&lt;/p&gt;
+
+&lt;p&gt;As of now as suggested by &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; and &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; we should focus on the liberal interpratation for evaluating equations: if an expression can be written in its equivalent form and makes sense then we can consider solutions of this equivalent form. Therefore both the above solutions are acceptable.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How the identification of the logarithmic equations would take place.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The identification of logarithmic type is another question and is still yet to be agreed upon. At first the implementation was done by extracting each term of the expression and see if it has &lt;code class="highlighter-rouge"&gt;log&lt;/code&gt; terms in it, this wasn&amp;#8217;t the best of the method as we are trying to identify a large class of logarithmic equation while solving is done only for a subset of those equations (only those that can be reduced by &lt;code class="highlighter-rouge"&gt;logcombine&lt;/code&gt;). So Amit and Chris stressed upon making the logarithmic identification for equations that its solver would solve. So as of now I have made changes accordingly.&lt;/p&gt;
+
+&lt;p&gt;Another problem that this PR is facing is of the infinite recursion. The equations that both exponential and logarithmic can&amp;#8217;t solve but still their respective solver try to handle gets into infinite recursion. One way (though not appropriate) is to use &lt;code class="highlighter-rouge"&gt;flags&lt;/code&gt; like in &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt;, using this would remove the infinite recursion but is not the best way to  handle, therefore I am looking into ways on how to get this fixed.&lt;/p&gt;
+
+&lt;p&gt;Apart from the work on log solver, I did some work on lambert solver- how the implementation would go, ran all the tests of &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt;, differentiated the tests that &lt;code class="highlighter-rouge"&gt;_solve_lambert&lt;/code&gt; could solve and that &lt;code class="highlighter-rouge"&gt;bivariate_type&lt;/code&gt; would. I will be adding a PR for this in a day or so.&lt;/p&gt;
+
+&lt;p&gt;Next week goals:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Finish things with logarithmic solver&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sending a PR for lambert solver and try to finish its work as quickly as possible.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/07/gsoc-week10</guid>
+      <author>Sidhant Nagpal (sidhantnagpal)</author>
+      <title>Sidhant Nagpal (sidhantnagpal): GSoC 2018: SymPy - Week 10</title>
+      <pubDate>Sat, 21 Jul 2018 00:00:00 GMT</pubDate>
+      <link>https://sidhantnagpal.github.io/2018/07/gsoc-week10</link>
+      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.com/files/gsoc-sympy.png" style="width: 75%; height: 75%; float: left; margin-left: 55px;" /&gt;
+&lt;br clear="all" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This week SymPy 1.2 was released, which included the &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module. The complete changelog for the SymPy 1.2 is &lt;a href="https://github.com/sympy/sympy/wiki/Release-Notes-for-1.2"&gt;here&lt;/a&gt;. I started the week by cleaning up &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module, improving the API of public &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; method by attending to reviews by &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; and &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; and fixing issue &lt;a href="https://github.com/sympy/sympy/issues/14901"&gt;#14901&lt;/a&gt; reported by &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; in &lt;a href="https://github.com/sympy/sympy/pull/14907"&gt;PR #14907&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href="https://github.com/sympy/sympy/pull/14907"&gt;PR #14907&lt;/a&gt; has been merged successfully and will be part of SymPy 1.2.1.&lt;/p&gt;
+
+&lt;p&gt;Late this week, I started working on the convolution module for inclusion of &lt;code class="highlighter-rouge"&gt;covering_product&lt;/code&gt;.
+The &lt;a href="https://github.com/sympy/sympy/pull/14928"&gt;PR #14298&lt;/a&gt; included the same with documentation, doctests and unit tests.
+The implementation of &lt;code class="highlighter-rouge"&gt;covering_product&lt;/code&gt; uses M&amp;#246;bius Transform with subset enumeration (&lt;code class="highlighter-rouge"&gt;mobius_transform(..., subset=True)&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;inverse_mobius_transform(..., subset=True)&lt;/code&gt;). As included in the PR, the usage for the same is:&lt;/p&gt;
+
+&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;covering_product&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'u v x y z'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;covering_product&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;covering_product&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Looking forward to the next week, where I will be implementing &lt;code class="highlighter-rouge"&gt;intersecting_product&lt;/code&gt; as the final method for the convolution module.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://nkhlpappu.wordpress.com/?p=9</guid>
+      <author>Nikhil Pappu (NikhilPappu)</author>
+      <title>Nikhil Pappu (NikhilPappu): Autolev Parser: Status Update</title>
+      <pubDate>Fri, 20 Jul 2018 22:31:06 GMT</pubDate>
+      <link>https://nkhlpappu.wordpress.com/2018/07/20/autolev-parser-status-update-2/</link>
+      <description>&lt;p&gt;I have been working on improving the parser by parsing Dynamics online codes, planning out how to go about writing tests and other aspects of the project and getting the PR into shape.&lt;/p&gt;
+&lt;p&gt;I am currently working on writing tests to cover all the rules of the parser. I should be done with this in 2 days.&lt;/p&gt;
+&lt;p&gt;This is the plan I have for the third phase:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Make the PR merge ready:&lt;/span&gt;
+&lt;ol&gt;
+&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Finish the tests for the parser rules and get the PR merged.&lt;/span&gt;&lt;/li&gt;
+&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;open a new PR to work on further improvements.&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;additional_tests (will be added in a private BitBucket repo). Here I shall go through many codes from these sources and improve the parser to parse most of these. I shall take notes on little details and errors so that I can include them in the documentation.&lt;/span&gt;
+&lt;ol&gt;
+&lt;li&gt;PyDy example repo (mass spring damper, double pendulum, chaos pendulum examples)&lt;/li&gt;
+&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Dynamics Online Chapters 1 &amp;#8211; 4&lt;/span&gt;&lt;/li&gt;
+&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Autolev Tutorial Examples (5.1 &amp;#8211; 5.7)&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Documentation (What the parser can do, How it should be used, Limitations, Future improvements etc)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Make the parser parse Dynamics Online Chapter 5 codes and the Bicycle Model.&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-weight: 400;"&gt;Final Report&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=71</guid>
+      <author>Jashanpreet Singh Sraw (jashan498)</author>
+      <title>Jashanpreet Singh Sraw (jashan498): Week 8 &amp; 9: Beam_3d class</title>
+      <pubDate>Tue, 17 Jul 2018 16:42:54 GMT</pubDate>
+      <link>https://singhjashan.wordpress.com/2018/07/17/week-8-9-07-july-20-july/</link>
+      <description>&lt;p&gt;I started implementing Beam_3d class which can be used to find Shear force, Bending moment, Slope, Deflection and other few things for the Beam object.&amp;#160; PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14883"&gt;#14883&lt;/a&gt;&amp;#160;was created for this.&lt;/p&gt;
+&lt;p&gt;I implemented Beam_3d class using&amp;#160;&amp;#160;&lt;a href="http://homes.civil.aau.dk/jc/FemteSemester/Beams3D.pdf" rel="nofollow"&gt;this paper&lt;/a&gt;&amp;#160;as a reference. Actually, like Beam class, it uses a few sets of equations to find certain quantities:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To find&amp;#160;&lt;em&gt;Shear force&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;Bending moment&lt;/em&gt;&lt;br /&gt;
+&lt;a href="https://user-images.githubusercontent.com/31389737/42560335-0c45e50e-8514-11e8-9fb1-f9d27040b4d8.png" rel="noopener"&gt;&lt;img alt="shear" src="https://user-images.githubusercontent.com/31389737/42560335-0c45e50e-8514-11e8-9fb1-f9d27040b4d8.png" /&gt;&lt;/a&gt;&lt;br /&gt;
+where&amp;#160;&lt;em&gt;[N, Q&lt;sub&gt;y&lt;/sub&gt;, Q&lt;sub&gt;z&lt;/sub&gt;]&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;[M&lt;sub&gt;x&lt;/sub&gt;, M&lt;sub&gt;y&lt;/sub&gt;, M&lt;sub&gt;z&lt;/sub&gt;]&lt;/em&gt;&amp;#160;are the shear force and bending moment along x-y-z-axes respectively (&lt;em&gt;q&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;m&lt;/em&gt;&amp;#160;are applied load and moment).&lt;/li&gt;
+&lt;li&gt;To find&amp;#160;&lt;em&gt;Slope&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;Deflection&lt;/em&gt;:&lt;br /&gt;
+&lt;a href="https://user-images.githubusercontent.com/31389737/42560803-2e2ea592-8515-11e8-81cc-b511e1286ff5.png" rel="noopener"&gt;&lt;img alt="def_1" src="https://user-images.githubusercontent.com/31389737/42560803-2e2ea592-8515-11e8-81cc-b511e1286ff5.png" /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href="https://user-images.githubusercontent.com/31389737/42560832-466c2986-8515-11e8-9ac7-4a0939a41a52.png" rel="noopener"&gt;&lt;img alt="def_2" src="https://user-images.githubusercontent.com/31389737/42560832-466c2986-8515-11e8-9ac7-4a0939a41a52.png" /&gt;&lt;/a&gt;&lt;br /&gt;
+where&amp;#160;&lt;em&gt;[w&lt;sub&gt;x&lt;/sub&gt;, w&lt;sub&gt;y&lt;/sub&gt;, w&lt;sub&gt;z&lt;/sub&gt;]&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;[&amp;#952;&lt;sub&gt;x&lt;/sub&gt;, &amp;#952;&lt;sub&gt;y&lt;/sub&gt;, &amp;#952;&lt;sub&gt;z&lt;/sub&gt;]&lt;/em&gt;&amp;#160;are deflection and slope along three axes respectively.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example for the API:&lt;/p&gt;
+&lt;p&gt;There is a beam of l meters long. A constant distributed load of magnitude q&lt;br /&gt;
+is applied along the y-axis from start till the end of the beam. A constant distributed&lt;br /&gt;
+moment of magnitude m is also applied along the z-axis from start till the end of the beam. Beam is fixed at both of its end. So, deflection of the beam at the both ends&lt;br /&gt;
+is restricted.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.physics.continuum_mechanics.beam import Beam_3d
+&amp;gt;&amp;gt;&amp;gt; from sympy import symbols
+&amp;gt;&amp;gt;&amp;gt; l, E, G, I, A = symbols('l, E, G, I, A')
+&amp;gt;&amp;gt;&amp;gt; b = Beam_3d(l, E, G, I, A)
+&amp;gt;&amp;gt;&amp;gt; b.apply_support(0, "fixed")
+&amp;gt;&amp;gt;&amp;gt; b.apply_support(l, "fixed")
+&amp;gt;&amp;gt;&amp;gt; q, m = symbols('q, m')
+&amp;gt;&amp;gt;&amp;gt; b.apply_load(q, dir="y")
+&amp;gt;&amp;gt;&amp;gt; b.apply_moment_load(m, dir="z")
+&amp;gt;&amp;gt;&amp;gt; b.shear_force()
+[0, -q*x, 0]
+&amp;gt;&amp;gt;&amp;gt; b.bending_moment()
+[0, 0, -m*x + q*x**2/2]
+&amp;gt;&amp;gt;&amp;gt; b.solve_slope_deflection()
+&amp;gt;&amp;gt;&amp;gt; b.slope()
+[0, 0, l*x*(-l*q + 3*l*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(2*(A*G*l**2 + 12*E*I)) + 3*m)/(6*E*I)
++ q*x**3/(6*E*I) + x**2*(-l*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(2*(A*G*l**2 + 12*E*I))
+- m)/(2*E*I)]
+&amp;gt;&amp;gt;&amp;gt; b.deflection()
+[0, -l**2*q*x**2/(12*E*I) + l**2*x**2*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(8*E*I*(A*G*l**2 + 12*E*I))
++ l*m*x**2/(4*E*I) - l*x**3*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(12*E*I*(A*G*l**2 + 12*E*I)) - m*x**3/(6*E*I)
++ q*x**4/(24*E*I) + l*x*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(2*A*G*(A*G*l**2 + 12*E*I)) - q*x**2/(2*A*G), 0]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;As this class is relatively new, it would require a few improvements in the future:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As&amp;#160;&lt;code&gt;Beam_3d&lt;/code&gt;&amp;#160;doesn&amp;#8217;t use&amp;#160;&lt;code&gt;SingularityFunction&lt;/code&gt;, I was unable to find a way to represent point load/moments. So for now&amp;#160;&lt;code&gt;Beam_3d&lt;/code&gt;&amp;#160; only supports continous load (applied over the whole span length of beam).&lt;/li&gt;
+&lt;li&gt;Also,&amp;#160;This class assumes that any kind of distributed load/moment is&lt;br /&gt;
+applied throughout the span of a beam.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For now, after discussing it with Arihant, we decided to raise NotImplementedError in such cases.&lt;/p&gt;
+&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14883"&gt;#14883&lt;/a&gt;&amp;#160;gets merge by the end of next week.&lt;/li&gt;
+&lt;li&gt;Start implementing plotting methods for Beam class.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://arif7blog.wordpress.com/?p=809</guid>
+      <author>Arif Ahmed (ArifAhmed1995)</author>
+      <title>Arif Ahmed (ArifAhmed1995): GSoC 2018 : An abrupt end</title>
+      <pubDate>Mon, 16 Jul 2018 13:47:20 GMT</pubDate>
+      <link>https://arif7blog.wordpress.com/2018/07/16/gsoc-2018-an-abrupt-end/</link>
+      <description>&lt;p&gt;Having completed an applied Mathematics project last year, I wanted to explore a CS specific field. Hence I decided to apply for a &lt;a href="https://hepsoftwarefoundation.org/gsoc/2018/proposal_ROOTveccore.html"&gt;parallelization project&lt;/a&gt; under CERN-HSF.&lt;/p&gt;
+&lt;p&gt;On April 23 of this year, I was accepted into the project. However, I have failed the second evaluations due to my main &lt;a href="https://github.com/root-project/root/pull/2236"&gt;PR#2236&lt;/a&gt; not being able to get compiled till date. In retrospect, both me and my mentors were not able to resolve the &lt;a href="https://github.com/root-project/root/pull/2236#issuecomment-399959816"&gt;compilation issue&lt;/a&gt; so far. Strangely enough, the Jenkins build is able to compile the code I wrote and report errors which are not even visible on my machine.&lt;/p&gt;
+&lt;p&gt;Anyway, I think and have also advised juniors in the past that contributing to Open Source libraries is largely beneficial and teaches one a lot(with or without the GSoC certificate).&lt;/p&gt;
+&lt;p&gt;Hence, have decided to keep on contributing and get my project finished unofficially. My main aim was more inclined towards getting involved with CERN and getting to contribute to one of the most amazing science experiments of our century.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-5913583019178491882</guid>
+      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
+      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 9</title>
+      <pubDate>Sun, 15 Jul 2018 15:13:26 GMT</pubDate>
+      <link>http://ashishkg0022.blogspot.com/2018/07/gsoc-2018-week-9.html</link>
+      <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Hello everyone. Here is the progress of &lt;/span&gt;rubi&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt; module in the 9th week of GSoC period.&lt;/span&gt;&lt;/div&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;In the very beginning of the week, the PR for appelf1 was merged. My aim for this week was to load all rules and test at least&amp;nbsp;a small part for each type of rule. Due to the time factor, its not possible to test all. Moreover, rubi needs to be updated to the latest version, so the test suite too will be updated.&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;I started with trigo rules. They are huge in number. They were never tested before, so some utility_functions like `&lt;i&gt;TrigReduce&lt;/i&gt;`, `&lt;i&gt;KnownTrigIntegrandQ&lt;/i&gt;`, `&lt;i&gt;FunctionOfTrig&lt;/i&gt;` etc were wrong. They were corrected. Soon I realised a difference between sympy and Mathematica. In mathematica, `&lt;i&gt;1/Cot[x]`&lt;/i&gt; is automatically transformed to `&lt;i&gt;Tan[x]&lt;/i&gt;` and `&lt;i&gt;1/Tan[x]&lt;/i&gt;` too was transformed to `&lt;i&gt;Cot[x]`&lt;/i&gt;. But in sympy, these are different. So, `&lt;i&gt;tan(x)&lt;/i&gt;` didn't match to `&lt;i&gt;cot(x)&lt;/i&gt;` . Francesco suggested to replace all `&lt;i&gt;cot&lt;/i&gt;` with `&lt;i&gt;1/tan&lt;/i&gt;`&amp;nbsp; and similarly for `&lt;i&gt;sec&lt;/i&gt;` and `&lt;i&gt;csc`&lt;/i&gt; (in the code generator too).&amp;nbsp;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;Next, I moved to `&lt;i&gt;inverse_trigo&lt;/i&gt;`, `&lt;i&gt;hyperbolic&lt;/i&gt;` and `&lt;i&gt;inverse_hyperbolic&lt;/i&gt;`. I tested some test cases for all these rules. I also tested `&lt;i&gt;error_functions&lt;/i&gt;` completely to make sure `&lt;i&gt;special_functions&lt;/i&gt;` are working properly.&amp;nbsp;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;After all this, I feel rubi is in a stable and working condition. The loading time is around `&lt;i&gt;10 minutes`&lt;/i&gt;. Except for the loading time, the performance of rubi is good.&amp;nbsp;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;I have left `&lt;i&gt;DerivativeIntegration&lt;/i&gt;` and `&lt;i&gt;Piecewise&lt;/i&gt;` rules. We will be discussing it.&amp;nbsp;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/07/gsoc-week9</guid>
+      <author>Sidhant Nagpal (sidhantnagpal)</author>
+      <title>Sidhant Nagpal (sidhantnagpal): GSoC 2018: SymPy - Week 9</title>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 GMT</pubDate>
+      <link>https://sidhantnagpal.github.io/2018/07/gsoc-week9</link>
+      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.com/files/gsoc-sympy.png" style="width: 75%; height: 75%; float: left; margin-left: 55px;" /&gt;
+&lt;br clear="all" /&gt;&lt;/p&gt;
+
+&lt;p&gt;The second phase of Coding Period has concluded.&lt;/p&gt;
+
+&lt;p&gt;This week I worked on implementing Subset Convolution for &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module.
+PR &lt;a href="https://github.com/sympy/sympy/pull/14878"&gt;#14878&lt;/a&gt; was opened for the same. The PR included unit tests, documentation, and correspondingly &lt;code class="highlighter-rouge"&gt;subset&lt;/code&gt; keyword was added for public &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;p&gt;After discussing the implementation details and references with &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt;, the approach was finalized. The PR has been merged successfully. The usage for the same is:&lt;/p&gt;
+
+&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy.discrete.convolutions&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;convolution&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;convolution_subset&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'u v x y z'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;convolution_subset&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;convolution&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;convolution&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cycle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Plan for this phase has executed well, and the second evaluation has been successful.&lt;/p&gt;
+
+&lt;p&gt;Looking forward to the final phase of Coding Period.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-9</guid>
+      <author>Yathartha Joshi (Yathartha22)</author>
+      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 9 - Starting up with Lambert equations</title>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 GMT</pubDate>
+      <link>https://Yathartha22.github.io//gsoc-week-9</link>
+      <description>&lt;p&gt;At the start of the week I worked on the leftovers of week 8:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;added &lt;code class="highlighter-rouge"&gt;log_singularities()&lt;/code&gt; that will help in determining logarithmic singularities,&lt;/li&gt;
+  &lt;li&gt;improved documentation of all helpers as suggested by Amit to maintain consistency&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Status of the PR&amp;#8217;s:&lt;/p&gt;
+
+&lt;p&gt;PR &lt;a href="https://github.com/sympy/sympy/pull/14736"&gt;#14736&lt;/a&gt; is ready to be merged.&lt;/p&gt;
+
+&lt;p&gt;PR &lt;a href="https://github.com/sympy/sympy/pull/14792"&gt;#14792&lt;/a&gt; is being worked on. Major tasks has been completed, just review and refining has to be done.&lt;/p&gt;
+
+&lt;p&gt;Apart from this I started working on the way Lambert type equations can be solved through &lt;code class="highlighter-rouge"&gt;_transolve()&lt;/code&gt;. I looked into &lt;code class="highlighter-rouge"&gt;_tsolve's&lt;/code&gt; way of handling such equations.
+For solving Lambert type equations &lt;code class="highlighter-rouge"&gt;_tsolve()&lt;/code&gt; largely depends on &lt;code class="highlighter-rouge"&gt;bivariate.py&lt;/code&gt;. It takes help of the different utility functions implemented there.
+Of them two important are &lt;code class="highlighter-rouge"&gt;_solve_lambert()&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;bivariate_type()&lt;/code&gt;. These two helpers help in getting the equations evaluated.&lt;/p&gt;
+
+&lt;p&gt;Equations that can be written in the standard form as: &lt;code class="highlighter-rouge"&gt;A + B*x + C*log(D + E*x) = 0&lt;/code&gt; has the solutions in terms of &lt;code class="highlighter-rouge"&gt;Lambert&lt;/code&gt; function as:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class="highlighter-rouge"&gt;D/E + C*B*W(t) with (B/C*E)*exp((BD - AE)/CE)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This is what &lt;code class="highlighter-rouge"&gt;_solve_lambert()&lt;/code&gt; determines and accordingly returns the solutions, otherwise returns a &lt;code class="highlighter-rouge"&gt;NotImplementedError&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If &lt;code class="highlighter-rouge"&gt;_solve_lambert()&lt;/code&gt; is unable to handle &lt;code class="highlighter-rouge"&gt;bivariate_type()&lt;/code&gt; is tried. This function first tries to identify the type of composite bivariate and then substitutes &lt;code class="highlighter-rouge"&gt;Dummy&lt;/code&gt; in place of them. For eq: &lt;code class="highlighter-rouge"&gt;(x + y)**2 - 3&lt;/code&gt; would become &lt;code class="highlighter-rouge"&gt;_u**2 - 3&lt;/code&gt; where &lt;code class="highlighter-rouge"&gt;_u&lt;/code&gt; is the dummy variable. The idea is that solving the latter equation for &lt;code class="highlighter-rouge"&gt;u&lt;/code&gt; and then equating the solutions to the former equation is equivalent for solving the original one.&lt;/p&gt;
+
+&lt;p&gt;While implementing in &lt;code class="highlighter-rouge"&gt;_transolve&lt;/code&gt; this philosophy needs to be applied. As of now I have looked into different tests on how they behave. I will start implementing it next.&lt;/p&gt;
+
+&lt;p&gt;Next week&amp;#8217;s plan:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Finishing with the logsolver&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Implementing lambert solver.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://ravicharann.github.io/blog//polycylic-groups-part1/</guid>
+      <author>Ravicharan (RavicharanN)</author>
+      <title>Ravicharan (RavicharanN): Polycyclic groups - Part1</title>
+      <pubDate>Wed, 11 Jul 2018 00:00:00 GMT</pubDate>
+      <link>https://ravicharann.github.io/blog//polycylic-groups-part1/</link>
+      <description>&lt;p&gt;GSoC'18 Week 7 &amp; 8</description>
+    </item>
+    <item>
       <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-7572262454034848939</guid>
       <author>Ashish Kumar Gaurav (ashishkg0022)</author>
       <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 8</title>
@@ -87,12 +699,31 @@ The idea is based on the fact that natural log in undefined for negative and zer
 &lt;p&gt;Read this &lt;a href="http://localhost:4000/gsoc-week-5"&gt;blog&lt;/a&gt; for better understanding of logarithmic solving.&lt;/p&gt;</description>
     </item>
     <item>
+      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=65</guid>
+      <author>Jashanpreet Singh Sraw (jashan498)</author>
+      <title>Jashanpreet Singh Sraw (jashan498): Week 7: Using continuum_mechanics with units</title>
+      <pubDate>Sat, 07 Jul 2018 07:59:05 GMT</pubDate>
+      <link>https://singhjashan.wordpress.com/2018/07/07/week-7-30-june-06-july/</link>
+      <description>&lt;p&gt;This week I mainly focused on finding and solving a bug due to which continuum_mechanics gave&amp;#160;&lt;em&gt;ValueError&lt;/em&gt; on using units with the quantities passed. Initially, I created&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14856"&gt;#14856&lt;/a&gt;, which included a workaround in the Beam class itself to handle that error. But&amp;#160;&lt;a href="https://github.com/parsoyaarihant"&gt;Arihant&lt;/a&gt;&amp;#160;suggested opening a separate PR as the error was occurring due to a bug in the separate module.&lt;/p&gt;
+&lt;p&gt;So,&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14865"&gt;#14865&lt;/a&gt;&amp;#160;was created. &lt;em&gt;is_commutative&amp;#160;&lt;/em&gt;attribute was added in the&amp;#160;&lt;em&gt;Prefix&lt;/em&gt; class&amp;#160; (setting &lt;em&gt;Prefix&lt;/em&gt;.&lt;em&gt;is_commutative &lt;/em&gt;to&lt;em&gt; True&amp;#160;&lt;/em&gt;removed&amp;#160;&lt;em&gt;PolynomialError&lt;/em&gt;). While doing changes in the PR, another bug appeared:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.physics.units import meter, newton, kilo
+&amp;gt;&amp;gt;&amp;gt; from sympy.physics.units.util import quantity_simplify
+&lt;/code&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; quantity_simplify(x*(8*newton + y))
+x*(8*newton + y, 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This bug was solved with few changes. After&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14865"&gt;#14865&lt;/a&gt;&amp;#160;gets merged, continuum_mechanics should work with quantities involving units.&lt;/p&gt;
+&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14865"&gt;#14865&lt;/a&gt;&amp;#160;gets merged.&lt;/li&gt;
+&lt;li&gt;Open a Pull Request and start working on 3dbeam class.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/07/gsoc-week8</guid>
       <author>Sidhant Nagpal (sidhantnagpal)</author>
-      <title>Sidhant Nagpal (sidhantnagpal): GSoC: SymPy - Week 8</title>
+      <title>Sidhant Nagpal (sidhantnagpal): GSoC 2018: SymPy - Week 8</title>
       <pubDate>Fri, 06 Jul 2018 00:00:00 GMT</pubDate>
-      <link>https://sidhantnagpal.github.io/2018/07/gsoc-week8.html</link>
-      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.github.io/files/gsoc-sympy.png" style="width: 80%; height: 80%; float: left; margin-left: 50px;" /&gt;
+      <link>https://sidhantnagpal.github.io/2018/07/gsoc-week8</link>
+      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.com/files/gsoc-sympy.png" style="width: 75%; height: 75%; float: left; margin-left: 55px;" /&gt;
 &lt;br clear="all" /&gt;&lt;/p&gt;
 
 &lt;p&gt;This week I started working on adding M&amp;#246;bius Transform to the &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module using Yate&amp;#8217;s DP (Dynamic Programming) method for implementation as part of PR &lt;a href="https://github.com/sympy/sympy/pull/14853"&gt;#14853&lt;/a&gt;. The proposed transforms are part of &lt;code class="highlighter-rouge"&gt;sympy.discrete.transforms&lt;/code&gt; module.&lt;/p&gt;
@@ -136,695 +767,6 @@ The idea is based on the fact that natural log in undefined for negative and zer
       <pubDate>Sun, 01 Jul 2018 15:19:06 GMT</pubDate>
       <link>http://ashishkg0022.blogspot.com/2018/07/gsoc-2018-week-7.html</link>
       <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Hello everyone. Here is the brief summary of my work in the seventh week of GSoC period.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Last week, we found a solution for matching `exp` as `Pow`. This week major part was spent in testing exponential rules. Here are some problem faced.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;1. UnevaluatedExpr is quite untested and results in recursion errors in many places.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;like `u = UnevaluatedExpr(E)` now when we want to find imaginary and real part of `u`, using `im(u)`. It causes recursion error. There were other instances too. So in those functions, I replaced them back to `exp`.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;2. There was a lot of index error because length of args of a `Pow` object is 2. Whereas for `exp` it's 1. Utility functions used in lot of places `.args[1]`. I found all possible places where arguments of a `Pow` object was accessed using `.args[0] and .args[1]` . I replaced them with `.base` and `.exp`.&amp;nbsp;This solved the problem&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;There were more minor changes in many utility functions. Currently, I have finished the exponential testing and almost all are passing. I have pushed all changes in this &lt;/span&gt;&lt;a href="https://github.com/sympy/sympy/pull/14756" style="font-family: Arial, Helvetica, sans-serif;"&gt;PR&lt;/a&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;I have tested a small part of logarithmic tests. I will try to finish them in 2 days and next move on to either special functions on trigonometric rules.&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-7</guid>
-      <author>Yathartha Joshi (Yathartha22)</author>
-      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 7 - Continuing with transolve Part-IV</title>
-      <pubDate>Sun, 01 Jul 2018 00:00:00 GMT</pubDate>
-      <link>https://Yathartha22.github.io//gsoc-week-7</link>
-      <description>&lt;p&gt;This week I continued to work on finalising the design of the &lt;code class="highlighter-rouge"&gt;_transolve&lt;/code&gt;. Following were the things discussed and implemented:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The loop over the &lt;code class="highlighter-rouge"&gt;rhs_s&lt;/code&gt; was removed because &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; already has a loop and since &lt;code class="highlighter-rouge"&gt;_transolve&lt;/code&gt; is called within the loop therefore there won&amp;#8217;t be a case where there would be more than one argument in &lt;code class="highlighter-rouge"&gt;rhs_s&lt;/code&gt; inside &lt;code class="highlighter-rouge"&gt;_transolve&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class="highlighter-rouge"&gt;pow_type()&lt;/code&gt; was created to handle power type equations in &lt;code class="highlighter-rouge"&gt;_transolve&lt;/code&gt; but it turns out that power type equations will be handled in the &lt;code class="highlighter-rouge"&gt;_invert()&lt;/code&gt; itself, so it was repetitive to add again.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The names of the solving helpers were improved to &lt;code class="highlighter-rouge"&gt;_solve_class&lt;/code&gt; from the previous &lt;code class="highlighter-rouge"&gt;_class_solver&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Discussions with Amit and Chris led to the conclusion that &lt;code class="highlighter-rouge"&gt;_transolve&lt;/code&gt; should be completely made an internal function of &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;, i.e. it should not be used as an independent function. At first the thought was that it can be used as an independent function, but this created a problem of the code being repeated as that of &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;, so Chris suggested that &lt;code class="highlighter-rouge"&gt;_transolve&lt;/code&gt; should raise an error for equations that &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; can handle, but again this created problem, it would make unnnecessary complications in the code as we need to be very specific as to when and where raise an error.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We decided to have same arguments for all the helpers. Be it identification or solving helper, both will take the equation and the variable as their arguments, with the choice that the helper can ignore to use any of the argument if not needed.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;There were a lot of improvement in the documentation as the design changed.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Apart from these changes work in implementing &lt;code class="highlighter-rouge"&gt;log solver&lt;/code&gt; is going on in parallel.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=63</guid>
-      <author>Jashanpreet Singh Sraw (jashan498)</author>
-      <title>Jashanpreet Singh Sraw (jashan498): Week 6 (23 June &#x2013; 29 June)</title>
-      <pubDate>Fri, 29 Jun 2018 06:32:05 GMT</pubDate>
-      <link>https://singhjashan.wordpress.com/2018/06/29/week-6-23-june-29-june/</link>
-      <description>&lt;p&gt;Last week I created&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14826"&gt;#14826&lt;/a&gt;&amp;#160;to solve statically indeterminate beam systems using boundary conditions (bc_slope and bc_deflection). This week I mainly focussed on implementing a logic to find the maximum bending moment and maximum shear force in a beam.&lt;/p&gt;
-&lt;p&gt;Initially, I thought it would be as simple as differentiating the bending_moment and shear force and then solving those using solve. But solve couldn&amp;#8217;t represent Interval solutions and hence gave a NonImplemented error, as both of these quantities can occur in Intervals.&lt;/p&gt;
-&lt;p&gt;So instead of using solve over whole spam length, I found out points of discontinuity in the respective equations using&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;for term in terms:
-    if isinstance(term, Mul):
-         term = term.args[-1]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;where terms are all the Muls extracted from Add. and&amp;#160;&lt;code&gt;term.args[-1]&lt;/code&gt;&amp;#160;gives us the point of singularity.&lt;/p&gt;
-&lt;p&gt;Now between two singularity points, our function can be:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;A continuous and differentiable function (hence no Interval solution)&lt;/li&gt;
-&lt;li&gt;or a constant value&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;for the first scenario, you just use solve over that interval and see values at the endpoint. The higher one of both gives you maxima in that interval. For the second, the constant value is indeed maximum by itself. Then compare maxims of all intervals and return location and its value.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.physics.continuum_mechanics.beam import Beam
-&amp;gt;&amp;gt;&amp;gt; from sympy import symbols
-&amp;gt;&amp;gt;&amp;gt; E, I = symbols('E, I')
-&amp;gt;&amp;gt;&amp;gt; l, P = symbols('l, P', positive=True)
-&amp;gt;&amp;gt;&amp;gt; b = Beam(l, E, I)
-&amp;gt;&amp;gt;&amp;gt; R1, R2 = symbols('R1, R2')
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(R1, 0, -1)
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(R2, l, -1)
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(P, 0, 0, end=l)
-&amp;gt;&amp;gt;&amp;gt; b.solve_for_reaction_loads(R1, R2)
-&amp;gt;&amp;gt;&amp;gt; b.max_bmoment()
-(l/2, P*l**2/8)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Beam class gives ValueError if passed value contains unit. So I would focus on fixing it.&lt;/li&gt;
-&lt;li&gt;Read relevant theory for implementation of 3dBeam class.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/06/gsoc-week6and7</guid>
-      <author>Sidhant Nagpal (sidhantnagpal)</author>
-      <title>Sidhant Nagpal (sidhantnagpal): GSoC: SymPy - Week 6 &amp; 7</title>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://sidhantnagpal.github.io/2018/06/gsoc-week6and7.html</link>
-      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.github.io/files/gsoc-sympy.png" style="width: 80%; height: 80%; float: left; margin-left: 50px;" /&gt;
-&lt;br clear="all" /&gt;&lt;/p&gt;
-
-&lt;p&gt;The second phase of Coding Period has started.&lt;/p&gt;
-
-&lt;p&gt;I started this phase working on &lt;code class="highlighter-rouge"&gt;sympy.discrete.recurrence&lt;/code&gt; module. After having an initial discussion with &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; regarding the functionality to be implemented, I did the proof-of-concept for the same on a remote branch.&lt;/p&gt;
-
-&lt;p&gt;After the approach was finalized, the implementation was polished before opening the PR. The PR &lt;a href="https://github.com/sympy/sympy/pull/14816"&gt;#14816&lt;/a&gt; also included documentation, doctests, and unit tests for the module.&lt;/p&gt;
-
-&lt;p&gt;The method &lt;code class="highlighter-rouge"&gt;linrec(coeffs, init, n)&lt;/code&gt; takes coefficients, initial values and point of evaluation for the linear recurrence. Usage for a recurrence like &lt;code class="highlighter-rouge"&gt;f(n) = f(n - 7) + f(n - 13) + f(n - 17)&lt;/code&gt; (having order &lt;code class="highlighter-rouge"&gt;17&lt;/code&gt;) would be:&lt;/p&gt;
-&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="n"&gt;coeffs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;
-&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="n"&gt;coeffs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;coeffs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;coeffs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;linrec&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;coeffs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
-&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;41&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;41&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-  &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-  &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-  &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-
-&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
-&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[]:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;41&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;41&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;As suggested by &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt;, it will be good to have a user-facing method that calls &lt;code class="highlighter-rouge"&gt;linrec&lt;/code&gt; internally for performing the computation.&lt;/p&gt;
-
-&lt;p&gt;Looking forward to another exciting week.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-6731843843505254405</guid>
-      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
-      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 6</title>
-      <pubDate>Sun, 24 Jun 2018 15:53:19 GMT</pubDate>
-      <link>http://ashishkg0022.blogspot.com/2018/06/gsoc-2018-week-6.html</link>
-      <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;Here is the brief work done for rubi in the 6th week of GSoC period.&lt;/span&gt;&lt;/div&gt;&lt;span&gt;&lt;/span&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;span&gt; &lt;div style="text-align: justify;"&gt;Last week almost 70 % of the miscellaneous algebra was tested. In the start of the week, the miscellaneous algebra testing was completed. The miscellaneous algebra test cases have been pushed in this &lt;a href="https://github.com/sympy/sympy/pull/14756"&gt;PR&lt;/a&gt;.&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;/span&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;After this, I moved on to load exponential rules and test them. While loading the exponential rules, there were some parsing issues. Those were fixed. On start of the testing, it was found that some integrals depend upon the logarithmic and special_function rules. Those too needed to be loaded. There were some undefined or wrongly defined utility_functions like `CancelCommonFactors`, `Gamma (gammainc)`, `PolyGamma`, `ProductLog` and few more small functions. These didn't take much time. I fixed all these.&lt;/span&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;Soon I realised a major issue of `exp` and `Pow`. Sympy doesn't identify exp as Pow. The rubi rules are defined in such a way that exp needs to be realised as Pow. I tried to process an expression to replace exp with Pow. These are the major methods I tried :&lt;/span&gt;&lt;/div&gt;&lt;ul style="text-align: left;"&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;Pow(E, z, evaluate=False) . This does not&amp;nbsp;work well, an expression containing Mul is evaluated to exp. I tried to fix it. I found that `flatten` of Mul causes the evaluation. I found the code messy. These can be solved but requires more time.&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;Pow(Dummy('E', z, evaluate=False) .This was suggested by Aaron. The matching part has no issues in this. But functions which use&amp;nbsp;the property of `E` does not work properly. Like `Log(E)` should evaluate to 1.&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;Pow(UnevaluatedExpr(E), z) . In this the matching was as expected. I modified `Log` as `return log(z).doit()` . But then also there were some issues. I made a new subclass `rubi_unevaluated_expr`. To solve the commutative issue, I defined a property in this new subclass.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;I think the last one is the best solution for now. Another issue was some rules which caused recursion errors like one in the image&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div class="separator" style="clear: both; text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class="separator" style="clear: both; text-align: justify;"&gt;&lt;a href="https://4.bp.blogspot.com/-umUEO5F9ppw/Wy-7A03ET5I/AAAAAAAAHbM/FQNRIGwO4koCTc_Lb1aoJYCq3ZYYAcOeQCLcBGAs/s1600/blogrubi.png" style="margin-left: 1em; margin-right: 1em;"&gt;&lt;span&gt;&lt;img border="0" height="56" src="https://4.bp.blogspot.com/-umUEO5F9ppw/Wy-7A03ET5I/AAAAAAAAHbM/FQNRIGwO4koCTc_Lb1aoJYCq3ZYYAcOeQCLcBGAs/s640/blogrubi.png" width="640" /&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;To solve it I checked that if last 5 rules applied are same then return a Function `Integrate` and replace it at last while returning. This works fine.&lt;/span&gt;&lt;/div&gt;&lt;span&gt;&lt;/span&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;span&gt; &lt;div style="text-align: justify;"&gt;In this week, I was unable to do much testing. But I am sure the upcoming week will be better in this respect. I have tested a small part of exponential rules. In the upcoming week, I will try to finish exponential rules within 2-3 days and soon move to logarithmic rules.&amp;nbsp;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=61</guid>
-      <author>Jashanpreet Singh Sraw (jashan498)</author>
-      <title>Jashanpreet Singh Sraw (jashan498): Week 5 (16 June &#x2013; 22 June)</title>
-      <pubDate>Sat, 23 Jun 2018 11:54:25 GMT</pubDate>
-      <link>https://singhjashan.wordpress.com/2018/06/23/week-5-16-june-22-june/</link>
-      <description>&lt;p&gt;This week I worked on solving&amp;#160;statically indeterminate beam systems and created &lt;a href="https://github.com/sympy/sympy/pull/14826"&gt;#14826&lt;/a&gt;&amp;#160;for that. Some work was already done in&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14681"&gt;#14681&lt;/a&gt;, which me and Jason reviewed during community bonding period.&lt;/p&gt;
-&lt;p&gt;Now Beam class uses boundary conditions (bc_deflection and bc_slope) to solve for unknown reactions, hence making statically indeterminate systems solvable.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.physics.continuum_mechanics.beam import Beam
-&amp;gt;&amp;gt;&amp;gt; from sympy import symbols
-&amp;gt;&amp;gt;&amp;gt; E, I = symbols('E, I')
-&amp;gt;&amp;gt;&amp;gt; F = Symbol('F')
-&amp;gt;&amp;gt;&amp;gt; l = Symbol('l', positive=True)
-&amp;gt;&amp;gt;&amp;gt; b5 = Beam(l, E, I)
-&amp;gt;&amp;gt;&amp;gt; b5.bc_deflection = [(0, 0),(l, 0)]
-&amp;gt;&amp;gt;&amp;gt; b5.bc_slope = [(0, 0),(l, 0)]
-&amp;gt;&amp;gt;&amp;gt; R1, R2, M1, M2 = symbols('R1, R2, M1, M2')
-&amp;gt;&amp;gt;&amp;gt; b5.apply_load(R1, 0, -1)
-&amp;gt;&amp;gt;&amp;gt; b5.apply_load(M1, 0, -2)
-&amp;gt;&amp;gt;&amp;gt; b5.apply_load(R2, l, -1)
-&amp;gt;&amp;gt;&amp;gt; b5.apply_load(M2, l, -2)
-&amp;gt;&amp;gt;&amp;gt; b5.apply_load(-F, l/2, -1)
-&amp;gt;&amp;gt;&amp;gt; b5.solve_for_reaction_loads(R1, R2, M1, M2)
-&amp;gt;&amp;gt;&amp;gt; b5.reaction_loads
-{R1: F/2, R2: F/2, M1: -F*l/8, M2: F*l/8}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Add max_bmoment and mx_shear_force methods to&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14826"&gt;#14826&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-6</guid>
-      <author>Yathartha Joshi (Yathartha22)</author>
-      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 6 - Continuing with transolve Part-III</title>
-      <pubDate>Sat, 23 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://Yathartha22.github.io//gsoc-week-6</link>
-      <description>&lt;p&gt;For the sixth week, I started working on a few things as per the discussions with Amit:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Improving the API of &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt; grew over the past few weeks the API became a bit messy, which was against the plan. So Amit suggested on to work on it to make it look clean. For this I added two internal functions &lt;code class="highlighter-rouge"&gt;add_type()&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;pow_type()&lt;/code&gt;, to handle expressions having &lt;code class="highlighter-rouge"&gt;add&lt;/code&gt; or &lt;code class="highlighter-rouge"&gt;power&lt;/code&gt; terms respectively. This could help us in achieving what we planned of: making the API extensible without it getting affected from the changes done in the function itself. If new solvers are to be added the modifcation has to be done in either of the internal functions.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Improved the working of &lt;code class="highlighter-rouge"&gt;_check_expo&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The implementation of the &lt;code class="highlighter-rouge"&gt;check_expo&lt;/code&gt; had a probelm, of not being generalised, only equations having two terms were checked. So the task was to make it generalised, so I implemented it using &lt;a href="http://docs.sympy.org/latest/modules/core.html#atom"&gt;atoms&lt;/a&gt;, filtered the equations having &lt;code class="highlighter-rouge"&gt;Pow&lt;/code&gt; or &lt;code class="highlighter-rouge"&gt;exp&lt;/code&gt; with the help of &lt;code class="highlighter-rouge"&gt;.atoms()&lt;/code&gt; and then checked whether the variable that needs to be solved is present in the exponent or not but this too possesed a problem: asking for atoms was not a great choice as they can come from anywhere like &lt;code class="highlighter-rouge"&gt;cos(2**x).atoms(Pow, exp)&lt;/code&gt; would give &lt;code class="highlighter-rouge"&gt;2**x&lt;/code&gt; and consequently the helper would return &lt;code class="highlighter-rouge"&gt;True&lt;/code&gt;, which is wrong. For this &lt;a href="https://github.com/smichr"&gt;smichr&lt;/a&gt; suggested even better method of using &lt;a href="https://github.com/sympy/sympy/blob/master/sympy/core/operations.py#L344"&gt;.make_args()&lt;/a&gt;. We will seperate out all the &lt;code class="highlighter-rouge"&gt;Add&lt;/code&gt; arguments and then in each of them we will look for &lt;code class="highlighter-rouge"&gt;Mul&lt;/code&gt; arguments which will give us the atomic argument of the expression, now this term can be tested to have variable in the exponent.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Changes in the documentation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Also there were a few things that needed to fixed in the documentation. The docstring of &lt;code class="highlighter-rouge"&gt;expo_solver&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;check_expo&lt;/code&gt; were improved. Few changes were also done in &lt;code class="highlighter-rouge"&gt;transolve's&lt;/code&gt; documentation.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Worked on improvement of &lt;code class="highlighter-rouge"&gt;log solver&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Apart from this I did some improvement in &lt;code class="highlighter-rouge"&gt;check_log&lt;/code&gt; to handle corner cases. As per the current logic &lt;code class="highlighter-rouge"&gt;check_log&lt;/code&gt; would return a &amp;#8220;&lt;em&gt;logcombined&lt;/em&gt;&amp;#8221; equation to be further solved by &lt;code class="highlighter-rouge"&gt;log_solver&lt;/code&gt;, but this lead to a problem that the some equation (&lt;code class="highlighter-rouge"&gt;log(x**y) - y*log(x)&lt;/code&gt;) might get reduced to &lt;code class="highlighter-rouge"&gt;0&lt;/code&gt; and the check would fail, therefore this was handled by improving the condition as &lt;code class="highlighter-rouge"&gt;if condition not False&lt;/code&gt;. Apart from this single term expression needs to be properly handled.&lt;/p&gt;
-
-&lt;p&gt;Also I started getting familiar with &lt;code class="highlighter-rouge"&gt;lambert&lt;/code&gt; equations.&lt;/p&gt;
-
-&lt;p&gt;So these were the things that I worked on this week. The PR needs a bit more improvement to get merged, I will try to get it finished by mid of the coming week and start working on implementation of other solvers.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://ravicharann.github.io/blog//modif-todd-coxeter/</guid>
-      <author>Ravicharan (RavicharanN)</author>
-      <title>Ravicharan (RavicharanN): Modifeid todd Coxeter methods</title>
-      <pubDate>Thu, 21 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://ravicharann.github.io/blog//modif-todd-coxeter/</link>
-      <description>&lt;p&gt;GSoC'18 Week 5</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-5483137592484274057</guid>
-      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
-      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 5</title>
-      <pubDate>Sun, 17 Jun 2018 17:12:20 GMT</pubDate>
-      <link>http://ashishkg0022.blogspot.com/2018/06/gsoc-2018-week-5.html</link>
-      <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Hello everyone. Here is the brief summary of my work in the 5th week of GSoC period.&lt;/span&gt;&lt;/div&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;I started this week with testing miscellaneous algebraic test cases. Soon it was found that most test cases depend on rules of `Miscellaneous integration`. So I loaded those rules. There were few new structure in constraints. So parser too was updated for incorporating those.&amp;nbsp;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;While testing, `ExpandIntegrand` did not function well. Matcher used in ExpandIntegrand was of sympy. I changed ExpandIntegrand using replace_all of matchpy. In few more functions I changed the structure using matchpy. In this week, a major part of the time was spent in utility functions. There are many changes. Also some of the test cases of last year was wrong. It gave different result in mathematica. The test cases which I have updated matches with Mathematica's output. I have pushed all changes of utility function in this &lt;a href="https://github.com/sympy/sympy/pull/14756/files"&gt;PR&lt;/a&gt;.&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;Parallely I have also tested around 70 % of miscellaneous algebraic. I will complete the testing within one or two days. After this I will move on to exponential rules and exponential test cases.&lt;/div&gt;&lt;/span&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-5</guid>
-      <author>Yathartha Joshi (Yathartha22)</author>
-      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 5 - Implementing log solver</title>
-      <pubDate>Sun, 17 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://Yathartha22.github.io//gsoc-week-5</link>
-      <description>&lt;p&gt;So this is the last week of the first evaluation. I started with implementing log solver as part of &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt;. As per the documentation of the &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt; we will need two helpers for implementing log solver, &lt;code class="highlighter-rouge"&gt;check_log&lt;/code&gt; that will check whether the equation is logarithmic or not and &lt;code class="highlighter-rouge"&gt;log_solver&lt;/code&gt; that will solve the equation. Here&amp;#8217;s the &lt;a href="https://github.com/sympy/sympy/pull/14792"&gt;PR&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Idea behind &lt;code class="highlighter-rouge"&gt;check_log&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Heuristic is implemented to determine whether the equation is logarithmic or not. According to it the logarithmic equations can be reduced to simpler form using log identities. For this purpose we use SymPy&amp;#8217;s function &lt;a href="http://docs.sympy.org/latest/tutorial/simplification.html#logcombine"&gt;logcombine&lt;/a&gt;. If the equation is logarithmic it will be reduced and hence the number of log in the original and modified equation may differ. This will ensure that the equation is logarithmic.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Idea behind the log solver&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The idea is simple, the reduced form from the &lt;code class="highlighter-rouge"&gt;check_log&lt;/code&gt; is used as the new target equation and is sent to &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; to handle. Solutions are retuned from &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;, but it may contain values that won&amp;#8217;t satisfy the equation (log does not take negative values in real domain). Therfore to remove unwanted values we use &lt;a href="http://docs.sympy.org/latest/modules/solvers/solvers.html#sympy.solvers.solvers.checksol"&gt;checksol&lt;/a&gt; function of solve module which substitutes each solution in the equation and returns &lt;code class="highlighter-rouge"&gt;True&lt;/code&gt; if it satisfies otherwise &lt;code class="highlighter-rouge"&gt;False&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Apart from implementing helpers, I have added their documentation. Certain things needs to be done before the PR is ready for review: Tests needs to be added for the helpers and &lt;code class="highlighter-rouge"&gt;check_log&lt;/code&gt; needs to be improved a bit to handle corner cases.&lt;/p&gt;
-
-&lt;p&gt;In parallel I am also working on improving &lt;code class="highlighter-rouge"&gt;transolve's&lt;/code&gt; PR to make it merge as soon as possible. After these two gets completely fixed we will be focusing on implementing &lt;code class="highlighter-rouge"&gt;lambert equation solver&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;In the coming week I will be focussing on finishing off the work of these two PR.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=56</guid>
-      <author>Jashanpreet Singh Sraw (jashan498)</author>
-      <title>Jashanpreet Singh Sraw (jashan498): Week 4 (9 June &#x2013; 15 June)</title>
-      <pubDate>Fri, 15 Jun 2018 11:00:25 GMT</pubDate>
-      <link>https://singhjashan.wordpress.com/2018/06/15/week-4-9-june-15-june/</link>
-      <description>&lt;p&gt;This week I worked on adding support for beams connected via hinge in &lt;a href="https://github.com/sympy/sympy/pull/14773"&gt;#14773&lt;/a&gt;. Support for axially fixed beams and its API was implemented last week.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;_solve_hinge_beams&lt;/code&gt;&amp;#160;was added as a helper function to solve such Beams.&amp;#160;&lt;span class="pl-s"&gt;This method resolves the composite Beam into its sub-beams and then&amp;#160;equations of shear force, bending moment, slope and deflection are&amp;#160;evaluated for both of them separately. These equations are then solved&amp;#160;for unknown reactions and integration constants using the boundary&amp;#160;conditions applied on the Beam. Equal deflection of both sub-beams&amp;#160;at the hinge joint gives us another equation to solve the system.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;So the final API looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="hinge_hinge_blog" class=" size-full wp-image-57 aligncenter" src="https://singhjashan.files.wordpress.com/2018/06/hinge_hinge_blog.png?w=730" /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.physics.continuum_mechanics.beam import Beam
-&amp;gt;&amp;gt;&amp;gt; from sympy import symbols
-&amp;gt;&amp;gt;&amp;gt; l = symbols('l', positive=True)
-&amp;gt;&amp;gt;&amp;gt; R1, M1, R2, R3, P = symbols('R1 M1 R2 R3 P')
-&amp;gt;&amp;gt;&amp;gt; b1 = Beam(2*l, E, I)
-&amp;gt;&amp;gt;&amp;gt; b2 = Beam(2*l, E, I)
-&amp;gt;&amp;gt;&amp;gt; b = b1.join(b2,"hinge")
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(M1, 0, -2)
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(R1, 0, -1)
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(R2, l, -1)
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(R3, 4*l, -1
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(P, 3*l, -1)
-&amp;gt;&amp;gt;&amp;gt; b.bc_slope = [(0, 0)]
-&amp;gt;&amp;gt;&amp;gt; b.bc_deflection = [(0, 0), (l, 0), (4*l, 0)]
-&amp;gt;&amp;gt;&amp;gt; b.solve_for_reaction_loads(M1, R1, R2, R3)
-&amp;gt;&amp;gt;&amp;gt; b.reaction_loads
-{R3: -P/2, R2: -5*P/4, M1: -P*l/4, R1: 3*P/4}
-&amp;gt;&amp;gt;&amp;gt; b.slope().subs(x, 3*l)
--7*P*l**2/(48*E*I)
-&amp;gt;&amp;gt;&amp;gt; b.deflection().subs(x, 2*l)
-7*P*l**3/(24*E*I)&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;See for changes in&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14786"&gt;#14786&lt;/a&gt;&amp;#160;to get it merged.&lt;/li&gt;
-&lt;li&gt;Add support for non-horizontal beams.&lt;/li&gt;
-&lt;li&gt;See for any remaining implementation from first two stages of my proposal.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/06/gsoc-week5</guid>
-      <author>Sidhant Nagpal (sidhantnagpal)</author>
-      <title>Sidhant Nagpal (sidhantnagpal): GSoC: SymPy - Week 5</title>
-      <pubDate>Fri, 15 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://sidhantnagpal.github.io/2018/06/gsoc-week5.html</link>
-      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.github.io/files/gsoc-sympy.png" style="width: 80%; height: 80%; float: left; margin-left: 50px;" /&gt;
-&lt;br clear="all" /&gt;&lt;/p&gt;
-
-&lt;p&gt;The first phase of Coding Period has concluded.&lt;/p&gt;
-
-&lt;p&gt;This week, I started working on the convolution for &lt;img src="http://latex.codecogs.com/svg.latex?\dpi{300}&amp;space;\large&amp;space;2^n" title="\large 2^n" /&gt;&lt;code class="highlighter-rouge"&gt;-group&lt;/code&gt; using &lt;code class="highlighter-rouge"&gt;fwht&lt;/code&gt; - Dyadic (XOR) Convolution. The PR &lt;a href="https://github.com/sympy/sympy/pull/14783"&gt;#14783&lt;/a&gt; dealt with this addition to the module.&lt;/p&gt;
-
-&lt;p&gt;I had a useful discussion with &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; for clearing the API and naming convention. &lt;br /&gt;
-The &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; method uses &lt;code class="highlighter-rouge"&gt;dyadic=True&lt;/code&gt; as the hint which uses &lt;code class="highlighter-rouge"&gt;convolution_fwht&lt;/code&gt; for the implementation. Appropriate documentation, doctests and unit tests are also included.&lt;/p&gt;
-
-&lt;p&gt;Successive reviews helped in refining the PR, before the final merge later in the week.&lt;/p&gt;
-
-&lt;p&gt;The usage for the same is:&lt;/p&gt;
-&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy.discrete.convolution&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;convolution&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;convolution_fwht&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'u v x y'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;convolution&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dyadic&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;convolution_fwht&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;
-&lt;span class="bp"&gt;True&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Plan for this phase has executed according to the timeline, and the first evaluation has been successful.&lt;/p&gt;
-
-&lt;p&gt;Looking forward to the next phase of Coding Period.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://ravicharann.github.io/blog//Isomorphism/</guid>
-      <author>Ravicharan (RavicharanN)</author>
-      <title>Ravicharan (RavicharanN): Computation of Isomorpism between 2 groups</title>
-      <pubDate>Mon, 11 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://ravicharann.github.io/blog//Isomorphism/</link>
-      <description>&lt;p&gt;Week 3-4 and Week 6</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-2004986996788736575</guid>
-      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
-      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 4</title>
-      <pubDate>Sun, 10 Jun 2018 16:47:19 GMT</pubDate>
-      <link>http://ashishkg0022.blogspot.com/2018/06/gsoc-2018-week-4.html</link>
-      <description>&lt;div dir="ltr" style="text-align: left;"&gt;Hello everyone. Here is the brief work done in the 4th week.&lt;br /&gt;&lt;br /&gt;In this week I have completed the testing of &lt;i&gt;trinomial products. &lt;/i&gt;There are around 2700 test cases. I have tested them all in sympy. I have updated the &lt;a href="https://github.com/sympy/sympy/pull/14756"&gt;PR&amp;nbsp;&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;Currently, a few tests are failing because of 2 major issues :&lt;br /&gt;&lt;ol style="text-align: left;"&gt;&lt;li&gt;Apart - Some features are unimplemented in apart of sympy. So expressions are not simplified.&lt;/li&gt;&lt;li&gt;appellf1 - There is a missing implementation of appellf1 in sympy.&lt;/li&gt;&lt;/ol&gt;&lt;div&gt;If the above two issues are solved, almost all tests will pass.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Utility functions have been improved a lot this week. The &lt;i&gt;is_polynomial &lt;/i&gt;of sympy&amp;nbsp;has certain issues and so the constraints were affected. I have re-written PolynomialQ. It&amp;nbsp;is not full proof, but it handles most of the cases. There are many small changes in utility functions. They can be seen in the &lt;a href="https://github.com/sympy/sympy/pull/14756"&gt;PR&lt;/a&gt;.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;I am lagging behind my proposed timeline. But the work in rubi is time-consuming. When a test fails, finding the same rule in Mathematica, finding whether all constraints return the same result in Mathematica and sympy and finding whether utility functions are working in a different way takes time. I apologise for the same. I will try to speed up my work as much as possible.&lt;br /&gt;&lt;/div&gt;&lt;div&gt;In this week, I will be testing Miscellaneous algebra and Exponential tests.&lt;/div&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=53</guid>
-      <author>Jashanpreet Singh Sraw (jashan498)</author>
-      <title>Jashanpreet Singh Sraw (jashan498): Week 3 (2 June &#x2013; 8 June)</title>
-      <pubDate>Sat, 09 Jun 2018 23:40:11 GMT</pubDate>
-      <link>https://singhjashan.wordpress.com/2018/06/09/week-3-2-june-8-june/</link>
-      <description>&lt;p&gt;This week me, Arihant and Jason discussed the API for creating composite Beam objects. Initially, we used &lt;code&gt;Piecewise&lt;/code&gt;&amp;#160;and&amp;#160;&lt;code&gt;SingularityFunction&lt;/code&gt;&amp;#160;to represent our changing second_moment but then we agreed upon&amp;#160;&lt;code&gt;.join&lt;/code&gt; method to represent such beams. So the final API was like:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; b1 = Beam(2, E, 1.5*I)
-&amp;gt;&amp;gt;&amp;gt; b2 = Beam(2, E, I)
-&amp;gt;&amp;gt;&amp;gt; b = b1.join(b2, "fixed")
-&amp;gt;&amp;gt;&amp;gt; b.length
-&lt;span class="pl-c1"&gt;4&lt;/span&gt;
-&amp;gt;&amp;gt;&amp;gt; b.second_moment
-Piecewise((&lt;span class="pl-c1"&gt;1.5&lt;/span&gt;&lt;span class="pl-k"&gt;*&lt;/span&gt;I, x &lt;span class="pl-k"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="pl-c1"&gt;2&lt;/span&gt;), (I, x &lt;span class="pl-k"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="pl-c1"&gt;4&lt;/span&gt;))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here&amp;#160;&lt;code&gt;b1.join(b2, "fixed")&lt;/code&gt;&amp;#160;joins b2 at the right end of b1 via a fixed connection.All this was implemented in&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14773"&gt;#14773&lt;/a&gt;&amp;#160;and hopefully it would be merged in coming few days.&lt;/p&gt;
-&lt;p&gt;I also created&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14786"&gt;#14786&lt;/a&gt;&amp;#160;at the end of this week implementing&amp;#160;&lt;code&gt;apply_support&lt;/code&gt;&amp;#160;and&amp;#160;&lt;code&gt;max_deflection&lt;/code&gt;&amp;#160;methods.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;apply_support&lt;/code&gt;&amp;#160;is an easier way to apply support structures on our Beam object rather than adding all the reaction loads and moments and constraints on it by yourself. Its API is not finalised yet but for now it is something like:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;b.apply_support(position, type='hinge')&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;where &lt;code&gt;position&lt;/code&gt;&amp;#160;represents the position at which support was applied&lt;/p&gt;
-&lt;p&gt;and type is type of support structure. It can be either&amp;#160;&lt;code&gt;hinge&lt;/code&gt;, &lt;code&gt;roller&lt;/code&gt;&amp;#160;or &lt;code&gt;cantilever&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Add support for composite beams connected via hinge.&lt;/li&gt;
-&lt;li&gt;Add support for non-horizontal beams.&lt;/li&gt;
-&lt;li&gt;See for any remaining implementation from first two stages of my proposal.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/06/gsoc-week4</guid>
-      <author>Sidhant Nagpal (sidhantnagpal)</author>
-      <title>Sidhant Nagpal (sidhantnagpal): GSoC: SymPy - Week 4</title>
-      <pubDate>Sat, 09 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://sidhantnagpal.github.io/2018/06/gsoc-week4.html</link>
-      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.github.io/files/gsoc-sympy.png" style="width: 80%; height: 80%; float: left; margin-left: 50px;" /&gt;
-&lt;br clear="all" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Another week of Coding Period has concluded.&lt;/p&gt;
-
-&lt;p&gt;Starting this week, I worked on PR &lt;a href="https://github.com/sympy/sympy/pull/14765"&gt;#14765&lt;/a&gt; for implementing Fast Walsh Hadamard Transform (&lt;code class="highlighter-rouge"&gt;fwht&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;As pointed out by &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt;, symbolic coefficients could be supported by this transform as the general Kronecker matrix only contains &lt;code class="highlighter-rouge"&gt;+/-1&lt;/code&gt;, which means it essentialy requires only addition or subtraction to perform the transformation. Also, the PR review helped fix a minor issue related to string concatenation.&lt;/p&gt;
-
-&lt;p&gt;Usage for &lt;code class="highlighter-rouge"&gt;fwht&lt;/code&gt; looks like:&lt;/p&gt;
-&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;fwht&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ifwht&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;fwht&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ifwht&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'a b c d'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;fwht&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ifwht&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Documentation, doctests, and unit tests are also added for this transform.&lt;/p&gt;
-
-&lt;p&gt;Looking forward to next week, where I will be implementing XOR convolution using &lt;code class="highlighter-rouge"&gt;fwht&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-4</guid>
-      <author>Yathartha Joshi (Yathartha22)</author>
-      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 4 - Continuing with transolve Part-II</title>
-      <pubDate>Sat, 09 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://Yathartha22.github.io//gsoc-week-4</link>
-      <description>&lt;p&gt;By the end of the previous week I had completed majority of the TODO&amp;#8217;s of the &lt;a href="https://github.com/sympy/sympy/pull/14736/"&gt;PR #14736&lt;/a&gt;.
-This week I started on minor improvements suggested by Amit. This included:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Minor Documentation changes&lt;br /&gt;
-Included proof of correctness, typo fixes, rephrasing lines etc.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Removing &lt;code class="highlighter-rouge"&gt;flag&lt;/code&gt; variable from transolve.&lt;br /&gt;
-&lt;code class="highlighter-rouge"&gt;flag&lt;/code&gt; variable was passed as a function parameter in &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt; and was used to check on the recursive call. The thought was that there might be a case when equation could not be solved by any of the helpers but during the process the equation might get modified, so we wanted to double check whether the modified equation could be solved again, thats why we used &lt;code class="highlighter-rouge"&gt;flag&lt;/code&gt; but Amit suggested on removing it as there wasn&amp;#8217;t a case as of now and it will only make things unnecessarily complicated.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Also worked on XFAILS, mainly on solving equations containing only symbols. There was an exception raised in &lt;code class="highlighter-rouge"&gt;_invert_real&lt;/code&gt;, because of a relational comparison made with &lt;code class="highlighter-rouge"&gt;0&lt;/code&gt; which caused the faiure of the tests. It has been fixed by handling the exception.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Imported tests of log and lambert.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Another thing we discussed was about log solver. The helpers for solving logarithmic equations will be implemented in a seperated PR, to make the review and implementing task easy and independent.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;After this I started a working on solving exponential equations in complex domain, though it turns out that we will be focussing on only the real domain as of now. But I have added tests for it as XFAIL.&lt;br /&gt;
-To make exponents work in complex domain, we require the &lt;a href="https://en.wikipedia.org/wiki/Complex_logarithm"&gt;complex logarithm&lt;/a&gt;.
-If we have equation as&lt;/p&gt;
-
-&lt;div class="highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;	z = e**w,
-	where w is complex number and z is non-zero complex number,
-	then 
-	Ln(z) = ln|z| + I*(Arg(z) + 2*n*pi)
-	where Ln(z) is the complex logarithm and ln|z| is the
-        logarithm evaluated with real number argument.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Apart from this we also had a meeting yesterday in which we discussed about how we will be wrapping up things before the first evaluation.&lt;br /&gt;
-I will be completing few leftovers of the current PR to make it merge and start working on implementing log solver (making a commit probably by tomorrow).&lt;/p&gt;
-
-&lt;p&gt;Amit also suggested on creating a coverage report so as to get an idea about the amount of tests covered by the code. The current coverage report can be found &lt;a href="https://yathartha22.github.io/covhtml/sympy_solvers_solveset_py.html"&gt;here&lt;/a&gt;. Other than this he also advised on reading &lt;a href="https://www.investigatii.md/uploads/resurse/Clean_Code.pdf"&gt;Clean Code&lt;/a&gt; by &lt;code class="highlighter-rouge"&gt;Robert C. Martin&lt;/code&gt; which will help me improve in writing clean and efficient code.&lt;/p&gt;
-
-&lt;p&gt;The main target for the coming week will be merging &lt;code class="highlighter-rouge"&gt;PR #14736&lt;/code&gt;, implementing &lt;code class="highlighter-rouge"&gt;log solver&lt;/code&gt; (will try to merge this as well), starting with implementing &lt;code class="highlighter-rouge"&gt;lambert solver&lt;/code&gt; (try to add atleast a WIP PR) and reading the book.&lt;/p&gt;
-
-&lt;p&gt;Hope things go as planned!!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-6327049288703125321</guid>
-      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
-      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 3</title>
-      <pubDate>Sun, 03 Jun 2018 12:02:48 GMT</pubDate>
-      <link>http://ashishkg0022.blogspot.com/2018/06/gsoc-2018-week-3.html</link>
-      <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;Hello everyone. Here is the update of my work in the third week of GSoC.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;Unlike last week, this week clarified some of the real problems of our implementation of rubi.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;I began to freshly test trinomial products after getting the older test-suite.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;Initially, I came across the problem of &lt;i&gt;Coeff &lt;/i&gt;and &lt;i&gt;Sum&lt;/i&gt;. I solved this by redefining &lt;i&gt;Coeff&lt;/i&gt; and introducing a function &lt;i&gt;Sum_doit&lt;/i&gt;. After this, I realised &lt;i&gt;With&lt;/i&gt; statement was not being parsed correctly for many cases. Parsetools was improved to take care of the &lt;i&gt;with&lt;/i&gt; statements.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;After this, I encountered with some utility functions where the output was not as expected. This is the major cause of the failing tests. Constraints too are affected by this. I tried to find and solve as much as possible. I have to trace all functions in cases of failing tests and compare the output with Mathematica. I improved few utility functions and updated in the &lt;/span&gt;&lt;a href="https://github.com/sympy/sympy/pull/14756" style="font-family: arial, helvetica, sans-serif;"&gt;PR&lt;/a&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;. Also, there were some exceptions in &lt;/span&gt;Matchpy&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;, where constraints were being checked taking x as a numerical value. It resulted in TypeErrors. So I updated the constraints in such a way that it avoids such exceptions.&lt;/span&gt;&lt;/div&gt;&lt;span&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;After all this and some small changes, I almost have tested half of the trinomial products in the test-suite. Some issues are not solved yet, like :&amp;nbsp;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul style="text-align: left;"&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;Sorting of variables.&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;Not implemented error in apart of sympy.&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;And few rules, which are not well defined.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;span&gt;&lt;div style="text-align: justify;"&gt;Here is the brief work of this week:&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul style="text-align: left;"&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;Solved the issue of Sum and Coeff.&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;improved parsetools for with statements.&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;little modification to constraints definition.&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;improved utility functions&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;minor changes in parsetools.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;I was supposed to completely test trinomial products within this week. I tried hard, but the debugging part is time taking. Finding the real issue for failing &lt;/span&gt;test&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;, takes time. Also, it needs to be compared with Mathematica. But the good thing is that, after finding the issue and fixing it, tests are&amp;nbsp;passing. So after this week, I can say that if we are good with our utility functions, we will be able to test more than 90% of the original &lt;/span&gt;rubi&lt;span style="font-family: arial, helvetica, sans-serif;"&gt; test suite.&lt;/span&gt;&lt;/div&gt;&lt;span&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;In the upcoming week, I will do more testing and complete trinomial products.&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/06/gsoc-week3</guid>
-      <author>Sidhant Nagpal (sidhantnagpal)</author>
-      <title>Sidhant Nagpal (sidhantnagpal): GSoC: SymPy - Week 3</title>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://sidhantnagpal.github.io/2018/06/gsoc-week3.html</link>
-      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.github.io/files/gsoc-sympy.png" style="width: 80%; height: 80%; float: left; margin-left: 50px;" /&gt;
-&lt;br clear="all" /&gt;&lt;/p&gt;
-
-&lt;p&gt;The third week of Coding Period has concluded.&lt;/p&gt;
-
-&lt;p&gt;I started the week by finalizing the PR &lt;a href="https://github.com/sympy/sympy/pull/14745"&gt;#14745&lt;/a&gt;. The PR has been merged successfully. The master branch of &lt;code class="highlighter-rouge"&gt;sympy&lt;/code&gt; now contains &lt;code class="highlighter-rouge"&gt;sympy.discrete.transforms&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;sympy.discrete.convolution&lt;/code&gt;. I have tested corner cases as well. Documentation and Doctests are complete for the transforms and types of convolution that are currently part of master.&lt;/p&gt;
-
-&lt;p&gt;Late this week, I pushed commits to &lt;a href="https://github.com/sympy/sympy/pull/14712"&gt;PR #14712&lt;/a&gt; with the aim of fixing failing tests in &lt;code class="highlighter-rouge"&gt;test_util.py&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;test_inequalities.py&lt;/code&gt; due to &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;. The remaining tests are failing as &lt;code class="highlighter-rouge"&gt;solvers&lt;/code&gt; can not currently solve the transcendental equations when rewritten in exponential form.&lt;/p&gt;
-
-&lt;p&gt;Looking forward to next week, where I will be working on the Fast Walsh Hadamard Transform (&lt;code class="highlighter-rouge"&gt;fwht&lt;/code&gt;).&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-3</guid>
-      <author>Yathartha Joshi (Yathartha22)</author>
-      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 3 - Continuing with transolve</title>
-      <pubDate>Sat, 02 Jun 2018 00:00:00 GMT</pubDate>
-      <link>https://Yathartha22.github.io//gsoc-week-3</link>
-      <description>&lt;p&gt;I continued my work of week 2 in this week as well. Though I was travelling for 2-3 days, I was able to give most of the hours to the work dedicated for this week. I had to add a detailed descriptive documentation for &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt;, for this I read documentation of the &lt;code class="highlighter-rouge"&gt;ode&lt;/code&gt; module as Amit and Harsh suggested, apart from this I read several other documentation of sympy modules. Made a commit regarding this in the &lt;a href="https://github.com/sympy/sympy/pull/14736/"&gt;PR&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As of now transolve supports solving majority of exponential equations.
-I have also imported exponential tests of solve and added a few of mine. Some of them needs another look, I have added them to &lt;code class="highlighter-rouge"&gt;XFAIL&lt;/code&gt; as of now. I am working on these tests to pass. Also done minor changes in the function, like removed &lt;code class="highlighter-rouge"&gt;force=True&lt;/code&gt; option from &lt;code class="highlighter-rouge"&gt;expand_log&lt;/code&gt; because using this option is not a healthy choice as the function expands logarithm without considering the assumptions (for exponents the variable should be real) which may sometime get a wrong result.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Idea behind &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The idea is simple, we are mainly focusing on making it modular and extensible. So to achieve this different identifying and solving helpers will be implemented that will identify the type of equation and then solve it. For detailed information refer to the &lt;a href="https://github.com/sympy/sympy/pull/14736/"&gt;PR&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Idea behind &lt;code class="highlighter-rouge"&gt;exponential solver&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Exponential equations are solved by using logarithms. Currently the &lt;code class="highlighter-rouge"&gt;expo_solver&lt;/code&gt; reduces the equation to log form which can further be handled by solveset itself. For this purpose &lt;a href="http://docs.sympy.org/latest/tutorial/simplification.html#expand-log"&gt;expand_log&lt;/a&gt; function of sympy is used which reduces the equation using log identities.
-Take for example a simple exponential equation &lt;code class="highlighter-rouge"&gt;3**(2*x) - 2**(x + 3)&lt;/code&gt;, this equation can be reduced to &lt;code class="highlighter-rouge"&gt;2*x*log(3) - (x+3)*log(2)&lt;/code&gt;, this type of equation is easily solvable by &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once we approve on the documentation and the working of exponential solver I will proceed to implement logarithmic solver (probably in the coming week).&lt;/p&gt;
-
-&lt;p&gt;Hope things go as planned!!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=45</guid>
-      <author>Jashanpreet Singh Sraw (jashan498)</author>
-      <title>Jashanpreet Singh Sraw (jashan498): Week 2 (25 May &#x2013; 1 June)</title>
-      <pubDate>Fri, 01 Jun 2018 18:53:34 GMT</pubDate>
-      <link>https://singhjashan.wordpress.com/2018/06/01/week-3-25-may-1-june/</link>
-      <description>&lt;h2&gt;&lt;/h2&gt;
-&lt;p&gt;Exams kept me occupied for previous 11 days so I wasn&amp;#8217;t able to contribute much. Coming to this week&amp;#8217;s work, I created two pull request:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/14751"&gt;#14751&lt;/a&gt; :This PR implemented&amp;#160;&lt;code&gt;remove_load&lt;/code&gt;&amp;#160;method to remove previously applied loads on the beam object.&amp;#160;This method is&amp;#160; little different from adding a negative load to make net equal to zero and would work only if that particular load exists on beam.&lt;/li&gt;
-&lt;li&gt;&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14753"&gt;#14753&lt;/a&gt;&amp;#160; : This PR implemented&amp;#160;&lt;code&gt;point_cflexure&lt;/code&gt;&amp;#160;method to find &lt;a href="https://en.wikipedia.org/wiki/Contraflexure"&gt;point of contraflexure&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/14751"&gt;#14751&lt;/a&gt; also included&amp;#160;&lt;code&gt;applied_loads&lt;/code&gt;&amp;#160;method which keeps a track of all load applied on beam.&lt;/p&gt;
-&lt;p&gt;It is different from&amp;#160;&lt;code&gt;b.load&lt;/code&gt;&amp;#160;as it treat each load as a separate entity.&amp;#160;&lt;code&gt;load&lt;/code&gt;&amp;#160;property would sum up all the loads at a particular point but&amp;#160;&lt;code&gt;applied_loads&lt;/code&gt;&amp;#160;will still show them as separate loads. For example&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; b.apply_load(4, 2, -1)
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(2, 2, -1)
-&amp;gt;&amp;gt;&amp;gt; b.load
-6*SingularityFunction(x, 2, -1)
-&amp;gt;&amp;gt;&amp;gt; b.applied_loads
-[(4, 2, -1, None), (2, 2, -1, None)]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The only difficulty with &lt;a href="https://github.com/sympy/sympy/pull/14753"&gt;#14753&lt;/a&gt;&amp;#160; occured in finding solution of&amp;#160;&lt;code&gt;moment_curve&lt;/code&gt;&amp;#160;.&amp;#160; Actually moment is zero outside the spam length too, which made&amp;#160;&lt;code&gt;solve&lt;/code&gt;&amp;#160;to return a solution in form of&amp;#160;&lt;code&gt;Interval&lt;/code&gt;&amp;#160;which is not a compatible return type for&amp;#160;&lt;code&gt;solve&lt;/code&gt;.&amp;#160;&lt;code&gt;solveset&lt;/code&gt;&amp;#160;was of no help too as it can&amp;#8217;t be used with multivariate expressions. The problem, however, was solved by wrapping&amp;#160;&lt;code&gt;bending_moment&lt;/code&gt;&amp;#160; with a&amp;#160;&lt;code&gt;Piecewise&lt;/code&gt;&amp;#160;function with its value equal to&amp;#160;&lt;code&gt;float("nan")&lt;/code&gt;&amp;#160;outside the spam length.&lt;/p&gt;
-&lt;h3&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Make&amp;#160;&lt;code&gt;beam.py&lt;/code&gt;&amp;#160;compatible to solve non-prismatic beams.&lt;/li&gt;
-&lt;li&gt;Try to find a way around for the issue occurring in PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14681"&gt;#14681&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Support for non-horizontal beams.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://gxyd.github.io/blogs/os_day2</guid>
-      <author>Gaurav Dhingra (gxyd)</author>
-      <title>Gaurav Dhingra (gxyd): Operating Systems - Day 2</title>
-      <pubDate>Wed, 30 May 2018 00:00:00 GMT</pubDate>
-      <link>https://gxyd.github.io/blogs/os_day2/</link>
-      <description>&lt;p&gt;Patch policy:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Patch should have a &lt;i&gt;&lt;b&gt;Subject&lt;/b&gt;: [PATCH] Docs: Add info on supported kernels to REPORTING-BUGS.&lt;/i&gt;. Here clearly &lt;i&gt;Docs&lt;/i&gt; indicate that it that the patch makes changes to the documentation section.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;i&gt;Why&amp;#8217;s&lt;/i&gt; are more important than &lt;i&gt;What&lt;/i&gt; in body of patch (aka commit message?).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;It seems like a lot of drivers subfolder have a separate file &amp;#8220;TODO&amp;#8221; listing the work that needs to be done. For example, currently there is a file drivers/dma/TODO which lists a few tasks that needs to be done, here is the list of task mentioned in that file:&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Move remaining drivers to use new slave interface&lt;/li&gt;
-      &lt;li&gt;Remove old slave pointer machansim&lt;/li&gt;
-      &lt;li&gt;Check other subsystems for dma drivers and merge/move to dmaengine&lt;/li&gt;
-      &lt;li&gt;Remove &lt;code class="highlighter-rouge"&gt;dma_slave_config&lt;/code&gt;&amp;#8217;s dma direction.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;h3 id="include-guard"&gt;Include guard&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Include_guard"&gt;Include guard&lt;/a&gt; is one of the topics I went through since seeing header file, it seems to be appearing at the top. Since I am also using CodeBlocks for coding in C these days, Codeblocks provides with automatic inclusion of &lt;i&gt;include guard&lt;/i&gt;(aka &lt;i&gt;macro guard&lt;/i&gt;) when we start a new header file.&lt;/p&gt;
-
-&lt;p&gt;In a C/C++ program if a function/struct/&amp;#8230; is defined more than once, then it raises an error (&lt;b&gt;one definition rule&lt;/b&gt;). To avoid this problem include guards are used.&lt;/p&gt;
-
-&lt;div class="highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;#ifndef FILE_NAME_H
-#define FILE_NAME_H
-
-
-/* code goes here */
-
-
-#endif /* end of include guard
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;for complete understandstanding, see &lt;a href="https://en.wikipedia.org/wiki/Include_guard#Use_of_#include_guards"&gt;this example&lt;/a&gt;. Though I still need to figure out why on this line &lt;a href="https://elixir.bootlin.com/linux/latest/source/drivers/staging/board/board.h#L2"&gt;drivers/staging/board/board.h#line2&lt;/a&gt; we have use of &lt;code class="highlighter-rouge"&gt;__&lt;/code&gt; around the file name.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h3 id="static-keyword-in-c"&gt;static keyword in C&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This &lt;a href="https://stackoverflow.com/a/572550/3396379"&gt;stackoverflow answer suffices&lt;/a&gt;, actually &lt;code class="highlighter-rouge"&gt;static&lt;/code&gt; is used quite a lot in kernel code, which made me to have a look at its meaning.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h3 id="difference-between-header-and-source-file-in-c-also-in-c"&gt;difference between header and source file in C (also in C++)&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This &lt;a href="https://gxyd.github.io/answer on stackoverflow"&gt;https://stackoverflow.com/questions/3482948/any-fundamental-difference-between-source-and-header-files-in-c&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id="typedef-in-c"&gt;typedef in C&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;code class="highlighter-rouge"&gt;typedef&lt;/code&gt; is a reserved keyword in C. It creates an alias name for another datatype. Example (from wikipedia):&lt;/p&gt;
-&lt;div class="highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;typedef int length;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Let&amp;#8217;s see an example from linux kernel source code:&lt;/p&gt;
-&lt;div class="highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;typedef unsigned char  uch;
-typedef unsigned short  ush;
-typedef unsigned long  ulg;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;From this, it is very clear what purpose does &lt;code class="highlighter-rouge"&gt;typedef&lt;/code&gt; does have. But, I beilieve I saw someuse of &lt;code class="highlighter-rouge"&gt;typedef&lt;/code&gt; related to &lt;code class="highlighter-rouge"&gt;struct&lt;/code&gt; in linux kernel code but I don&amp;#8217;t remember where, but will write about it when I come across it.&lt;/p&gt;
-
-&lt;p&gt;USEFUL INFO: I found this website which hosts the kernel source online &lt;a href="https://elixir.bootlin.com/linux/latest/source"&gt;https://elixir.bootlin.com/linux/latest/source&lt;/a&gt;, I found it to be pretty handy to use. It&amp;#8217;s better than github&amp;#8217;s online source code viewer I&amp;#8217;d say.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h3 id="code-analysing-section"&gt;code analysing section&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Let&amp;#8217;s see this codeblock taken from []&lt;/p&gt;
-&lt;div class="highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;struct ashmem_area {
-    char name[ASHMEM_FULL_NAME_LEN];
-    struct list_head_unpinned_list;
-    struct file *file;
-    size_t size;
-    unsigned long prot_mask;
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;h3 id="hexadecimal-representation-of-address"&gt;Hexadecimal representation of address&lt;/h3&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Often used is the hexadecimal representation for address (saw that in lecture by Prof. Jakob Eriksson). For ex, convert 10,995 into hexadecimal value would be 2AF3. The prefix &lt;code class="highlighter-rouge"&gt;0x&lt;/code&gt; is used in C (and probably also in assembly) to denote this in hexadecimal system, which would denote this value by &lt;code class="highlighter-rouge"&gt;0x2AF3&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/05/gsoc-week2</guid>
-      <author>Sidhant Nagpal (sidhantnagpal)</author>
-      <title>Sidhant Nagpal (sidhantnagpal): GSoC: SymPy - Week 2</title>
-      <pubDate>Tue, 29 May 2018 00:00:00 GMT</pubDate>
-      <link>https://sidhantnagpal.github.io/2018/05/gsoc-week2.html</link>
-      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.github.io/files/gsoc-sympy.png" style="width: 80%; height: 80%; float: left; margin-left: 50px;" /&gt;
-&lt;br clear="all" /&gt;&lt;/p&gt;
-
-&lt;p&gt;The second week of Coding Period has concluded.&lt;/p&gt;
-
-&lt;p&gt;I started the week by finalizing the PR &lt;a href="https://github.com/sympy/sympy/pull/14725"&gt;#14725&lt;/a&gt;. The PR has been merged successfully. Fast Walsh Hadamard Transform (&lt;code class="highlighter-rouge"&gt;fwht&lt;/code&gt;) will be added along with XOR Convolution at a later point of time.&lt;/p&gt;
-
-&lt;p&gt;Late this week, I started working on the convolution module &lt;a href="https://github.com/sympy/sympy/pull/14745"&gt;PR #14745&lt;/a&gt; with the aim of adding the following along with appropriate tests.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Convolution using Fast Fourier Transform (&lt;code class="highlighter-rouge"&gt;convolution_fft&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;Convolution using Number Theoretic Transform (&lt;code class="highlighter-rouge"&gt;convolution_ntt&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;General Convolution method (&lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; and &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; suggested using &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; as the name for the methods instead of &lt;code class="highlighter-rouge"&gt;conv&lt;/code&gt;.
-I had a detailed discussion with &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; regarding the API of the methods, the need to tie convolution with DFT (Discrete Fourier Transform), and handling the cyclic convolution case.&lt;/p&gt;
-
-&lt;p&gt;Successive reviews helped in the following changes to PR:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;including &lt;code class="highlighter-rouge"&gt;cycle&lt;/code&gt; for general &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; method&lt;/li&gt;
-  &lt;li&gt;usage of &lt;code class="highlighter-rouge"&gt;**hints&lt;/code&gt; argument in &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; for flexibility of the API&lt;/li&gt;
-  &lt;li&gt;handling empty list &lt;code class="highlighter-rouge"&gt;[]&lt;/code&gt; cases&lt;/li&gt;
-  &lt;li&gt;defaulting &lt;code class="highlighter-rouge"&gt;cycle=0&lt;/code&gt; as normal convolution&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Looking forward to another exciting week.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://ravicharann.github.io/blog//Word-Reduction/</guid>
-      <author>Ravicharan (RavicharanN)</author>
-      <title>Ravicharan (RavicharanN): Using automaton for word reduction in Rewriting Systems</title>
-      <pubDate>Mon, 28 May 2018 00:00:00 GMT</pubDate>
-      <link>https://ravicharann.github.io/blog//Word-Reduction/</link>
-      <description>&lt;p&gt;GSoC'18 Week 1 and 2</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-2</guid>
-      <author>Yathartha Joshi (Yathartha22)</author>
-      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 2 - Getting started with transolve</title>
-      <pubDate>Sun, 27 May 2018 00:00:00 GMT</pubDate>
-      <link>https://Yathartha22.github.io//gsoc-week-2</link>
-      <description>&lt;p&gt;So this is the end of the second week of GSoC and I am still working on implementing and improving &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt;. In the previous week Amit and I discussed about the things that are necessary for implementing &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt;. I have covered it in the previous &lt;a href="https://yathartha22.github.io//gsoc-week-1"&gt;blog post&lt;/a&gt;. Based on the discussions I have a submitted a WIP PR &lt;a href="https://github.com/sympy/sympy/pull/14736"&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In the second meeting we had &lt;a href="https://github.com/hargup"&gt;Harsh&lt;/a&gt; joining us to the discussion.&lt;/p&gt;
-
-&lt;p&gt;Amit and Harsh stressed on making transolve modular and extensilbe, unlike &lt;code class="highlighter-rouge"&gt;_tsolve&lt;/code&gt; which lacks these features (though it is very powerful).&lt;/p&gt;
-
-&lt;p&gt;So there are few things that &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt; should have:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Proper documentation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Documentation is always a very important aspect of any software. Therefore to make it easy to understand to the users, transolve needs to have a proper descriptive documentation that should explain why, what and how of transolve. Amit suggested on covering every detail of the working of function. It should cover the following:&lt;/p&gt;
-
-&lt;div class="highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;- What is transolve.
-- How to use transolve.
-- Why it is better than `_tsolve`.
-- How equations are solved.
-- How to add a new class of equations.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Extensibility&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt; should be extensible, i.e. the design of the API should be such that it becomes easy to add a new class of equation solver without affecting the structure of the function.
-The idea to make this happen is to have a two step procedure of equation solving. &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt; will solve any equation by first identifying the class of the equations (a helper will do that) and then calling another helper to solve that equation. So in this way one needs to figure out how to identify the equation and how to solve it. Once this is done he just needs to invoke the helpers at the proper location in transolve.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Modularity&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As it is clear from the above point, &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt; will have two step procedure for solving different classes of equations. Helper function needs to be implemented for identification and solving equations. This will make &lt;code class="highlighter-rouge"&gt;transolve&lt;/code&gt; modular as solving equations will not depend on the main function.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Proof of correctness&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Since identification and solving equations will be achieved with few heuristics/algorithms. There should be a proper document of its prof of correctness. I will be adding proper documentation with examples explaining its authenticity.&lt;/p&gt;
-
-&lt;p&gt;Apart from this Amit also adviced on reading documentation of &lt;a href="https://github.com/sympy/sympy/blob/master/sympy/solvers/ode.py"&gt;ode&lt;/a&gt; module so as to get an idea, also importing tests from solve, making it atleast as powerful as _tsolve will be other things that needs care.&lt;/p&gt;
-
-&lt;p&gt;I will be focussing on completing it by this week!!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-2627530986362511513</guid>
-      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
-      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 2</title>
-      <pubDate>Sat, 26 May 2018 20:39:44 GMT</pubDate>
-      <link>http://ashishkg0022.blogspot.com/2018/05/gsoc-2018-week-2.html</link>
-      <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;Hello everyone. Here is the brief work done and progress in my project (Rubi) in the second week.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;This week was quite frustrating for me. I gave a lot of time but the outcome was little less. Initially my aim was to solve the problem of the order in which rule was matched. But I have to revert back to my initial structure as the new structure was extremely time consuming. Next I thought to keep track of the rules applied to an expression. This could be a great help in debugging too. So I implemented it.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;Next I moved on to testing &lt;i&gt;trinomial_products . &lt;/i&gt;But here also results were not good. Our rules are of older version (4.10.8) , but we did not have the test-suite of that version. So I tried extremely hard to test those tests with rubi 4.10.8 . For 3 - 4 days , I put a great effort. At last I realised, things will not work this way. So, I then mailed to Albert, the maintainer of original Rubi, asking him for the test-suite of older version. And the good part is that he has provided me the test-suite today. So now I will move to test our rubi with this test-suite.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;In between all this, I found some errors in utility function . I corrected them and updated the &lt;a href="https://github.com/sympy/sympy/pull/14724"&gt;PR&lt;/a&gt;.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;Here are the works done by me this week :&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;ul style="text-align: left;"&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;Made necessary changes in the &lt;i&gt;parsetools&lt;/i&gt; and &lt;i&gt;rubi , &lt;/i&gt;so that it keeps track of the rules applied to an expression.&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;&lt;i&gt;test_1_2 &lt;/i&gt;of algebraic rules completely passes without any failure. (Removed all &lt;i&gt;@XFAIL &lt;/i&gt;from &lt;i&gt;test_1_2 &lt;/i&gt;)&lt;/span&gt;&lt;/li&gt;&lt;li style="text-align: justify;"&gt;&lt;span&gt;Corrected &lt;i&gt;AppellF1, NegQ, PositiveQ, BinomialMatchQ, TrinomialMatchQ &lt;/i&gt;in the utility functions.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;div style="text-align: justify;"&gt;&lt;span&gt;For the upcoming week I plan to make test suits of &lt;i&gt;trinomial&lt;/i&gt; and &lt;i&gt;miscellaneous algebra &lt;/i&gt;.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>
