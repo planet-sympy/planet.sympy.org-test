@@ -17,18 +17,6 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Amit Kumar (aktech)</foaf:name>
-        <foaf:weblog>
-          <foaf:Document rdf:about="http://aktech.github.io/blog">
-            <rdfs:seeAlso>
-              <rss:channel rdf:about="http://iamit.in/blog/feeds/sympy.xml"/>
-            </rdfs:seeAlso>
-          </foaf:Document>
-        </foaf:weblog>
-      </foaf:Agent>
-    </foaf:member>
-    <foaf:member>
-      <foaf:Agent>
         <foaf:name>Isuru Fernando (isuruf)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="http://isuruf.blogspot.com/">
@@ -113,18 +101,6 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Arif Ahmed (ArifAhmed1995)</foaf:name>
-        <foaf:weblog>
-          <foaf:Document rdf:about="https://arif7blog.wordpress.com">
-            <rdfs:seeAlso>
-              <rss:channel rdf:about="https://arif7blog.wordpress.com/feed/"/>
-            </rdfs:seeAlso>
-          </foaf:Document>
-        </foaf:weblog>
-      </foaf:Agent>
-    </foaf:member>
-    <foaf:member>
-      <foaf:Agent>
         <foaf:name>Bj&#xF6;rn Dahlgren (bjodah)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="http://bjodah.github.io/blog/">
@@ -142,6 +118,18 @@
           <foaf:Document rdf:about="https://gxyd.github.io/">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://gxyd.github.io/atom.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Amit Kumar (aktech)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://aktech.github.io/blog">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://iamit.in/blog/feeds/sympy.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
@@ -307,7 +295,7 @@
       <foaf:Agent>
         <foaf:name>Aaron Meurer (asmeurer)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="https://asmeurer.github.io/blog/">
+          <foaf:Document rdf:about="https://asmeurer.com/blog/">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://www.asmeurer.com/blog/rss.xml"/>
             </rdfs:seeAlso>
