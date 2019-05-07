@@ -65,18 +65,6 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Shekhar Prasad Rajak (shekharrajak)</foaf:name>
-        <foaf:weblog>
-          <foaf:Document rdf:about="http://shekharrajak.github.io">
-            <rdfs:seeAlso>
-              <rss:channel rdf:about="http://shekharrajak.github.io/feed.xml"/>
-            </rdfs:seeAlso>
-          </foaf:Document>
-        </foaf:weblog>
-      </foaf:Agent>
-    </foaf:member>
-    <foaf:member>
-      <foaf:Agent>
         <foaf:name>Srajan Garg (srajangarg)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="http://srajangarg.github.io//">
@@ -113,6 +101,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Gagandeep Singh (czgdp1807)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://czgdp1807.github.io/">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://czgdp1807.github.io/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Gaurav Dhingra (gxyd)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://gxyd.github.io/">
@@ -127,7 +127,7 @@
       <foaf:Agent>
         <foaf:name>Amit Kumar (aktech)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="https://aktech.github.io/blog">
+          <foaf:Document rdf:about="https://iamit.in/blog">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://iamit.in/blog/feeds/sympy.xml"/>
             </rdfs:seeAlso>
@@ -221,6 +221,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Shekhar Prasad Rajak (shekharrajak)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://shekharrajak.github.io">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://shekharrajak.github.io/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Shikhar Jaiswal (ShikharJ)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://shikharj.github.io//">
@@ -283,7 +295,7 @@
       <foaf:Agent>
         <foaf:name>Valeriia Gladkova (valglad)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="http://valglad.github.io/">
+          <foaf:Document>
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://valglad.github.io/feed.xml"/>
             </rdfs:seeAlso>
