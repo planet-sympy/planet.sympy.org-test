@@ -137,6 +137,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Jogi Miglani (jmig5776)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document>
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://jmig5776.github.io/feed.sympy.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Kshitij Saraogi(kshitij10496)</foaf:name>
         <foaf:weblog>
           <foaf:Document>
@@ -295,7 +307,7 @@
       <foaf:Agent>
         <foaf:name>Valeriia Gladkova (valglad)</foaf:name>
         <foaf:weblog>
-          <foaf:Document>
+          <foaf:Document rdf:about="http://valglad.github.io/">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://valglad.github.io/feed.xml"/>
             </rdfs:seeAlso>

@@ -7,6 +7,30 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://czgdp1807.github.io/first_blog</guid>
+      <author>Gagandeep Singh (czgdp1807)</author>
+      <title>Gagandeep Singh (czgdp1807): Beginning GSoC 2019</title>
+      <pubDate>Tue, 07 May 2019 00:00:00 GMT</pubDate>
+      <link>https://czgdp1807.github.io/first_blog/</link>
+      <description>&lt;p&gt;I am very happy to share with you that on 6th May, 2019 I was accepted as a
+GSoC student of &lt;a href="https://www.sympy.org/"&gt;SymPy&lt;/a&gt;. I would be working on statistics module under the guidance
+of my mentors, &lt;a href="https://github.com/Upabjojr"&gt;Francesco Bonazzi&lt;/a&gt; and &lt;a href="https://github.com/sidhantnagpal"&gt;Sidhant Nagpal&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I know Francesco since I began contributing to stats module. We had discussions
+on various issues like, complicated results by statistics module and inclusion
+of stochastic processes in SymPy. I also worked with Sidhant while solving an
+issue of wrong PDF of Gumbel distribution. I believe that they both are very great
+people to learn from.&lt;/p&gt;
+
+&lt;p&gt;I will also work with Ritesh Kumar who has also been accepted to stats module. I
+haven&amp;#8217;t interacted with him yet. Let&amp;#8217;s see how we coordinate our work to make this
+project a success.&lt;/p&gt;
+
+&lt;p&gt;Infact, my first learning experience was using jekyll to set up this blog on github
+pages. Since, this was my first usage of jekyll and github pages, I struggled a bit to find
+the right resource. If you are also going to use jekyll then I would say, visit &lt;a href="https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll"&gt;this page&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://asmeurer.com/blog/posts/whats-new-in-sympy-14/</guid>
       <author>Aaron Meurer (asmeurer)</author>
       <title>Aaron Meurer (asmeurer): What's New in SymPy 1.4</title>
@@ -1498,34 +1522,6 @@ x*(8*newton + y, 1)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Make sure&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14865"&gt;#14865&lt;/a&gt;&amp;#160;gets merged.&lt;/li&gt;
 &lt;li&gt;Open a Pull Request and start working on 3dbeam class.&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/07/gsoc-week8</guid>
-      <author>Sidhant Nagpal (sidhantnagpal)</author>
-      <title>Sidhant Nagpal (sidhantnagpal): GSoC 2018: SymPy - Week 8</title>
-      <pubDate>Fri, 06 Jul 2018 00:00:00 GMT</pubDate>
-      <link>https://sidhantnagpal.github.io/2018/07/gsoc-week8</link>
-      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.com/files/gsoc-sympy.png" style="width: 75%; height: 75%; float: left; margin-left: 55px;" /&gt;
-&lt;br clear="all" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This week I started working on adding M&amp;#246;bius Transform to the &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module using Yate&amp;#8217;s DP (Dynamic Programming) method for implementation as part of PR &lt;a href="https://github.com/sympy/sympy/pull/14853"&gt;#14853&lt;/a&gt;. The proposed transforms are part of &lt;code class="highlighter-rouge"&gt;sympy.discrete.transforms&lt;/code&gt; module.&lt;/p&gt;
-
-&lt;p&gt;After discussing with &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt;, the methods implementing this transform were added with appropriate names. The keyword &lt;code class="highlighter-rouge"&gt;subset&lt;/code&gt; is used as a boolean to choose whether enumeration is done over subsets or supersets. The usage for the transform is:&lt;/p&gt;
-&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;mobius_transform&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;inverse_mobius_transform&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;seq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'w x y z'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;mobius_transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;inverse_mobius_transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;inverse_mobius_transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;mobius_transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The PR was merged successfully, after inclusion of docstring and unit tests for the transform.&lt;/p&gt;
-
-&lt;p&gt;Looking forward to another exciting week.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
