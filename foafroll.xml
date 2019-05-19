@@ -257,6 +257,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Shubham Kumar Jha (ShubhamKJha)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://shubhamkjha.github.io/">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://shubhamkjha.github.io/sympy_feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Subham Tibra (shubhamtibra)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://shubhamtibra.wordpress.com">

@@ -7,6 +7,14 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://shubhamkjha.github.io/2019/05/12/Beginning-GSoC-2019</guid>
+      <author>Shubham Kumar Jha (ShubhamKJha)</author>
+      <title>Shubham Kumar Jha (ShubhamKJha): Beginning GSoC 2019: with SymPy</title>
+      <pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate>
+      <link>https://shubhamkjha.github.io/2019/05/12/Beginning-GSoC-2019.html</link>
+      <description>&lt;p&gt;Finally, the result of GSoC-2019 came on 6th of May, 2019. I am very happy to inform that my proposal on improving the assumptions mechanism has been accepted by SymPy for this year&amp;#8217;s GSoC. For those who don&amp;#8217;t know, SymPy is an open-sourced Computer Algebra System(CAS) written in Python. It was started by Ondrej Cetrik(@cetrik) in 2006, as a project. Since 2007, SymPy has participated in Google Summer of Code every year. GSoC has given much boost to the development of SymPy&amp;#8217;s codebase.</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://czgdp1807.github.io/first_blog</guid>
       <author>Gagandeep Singh (czgdp1807)</author>
       <title>Gagandeep Singh (czgdp1807): Beginning GSoC 2019</title>
@@ -1503,25 +1511,6 @@ The idea is based on the fact that natural log in undefined for negative and zer
 &lt;/ul&gt;
 
 &lt;p&gt;Read this &lt;a href="http://localhost:4000/gsoc-week-5"&gt;blog&lt;/a&gt; for better understanding of logarithmic solving.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=65</guid>
-      <author>Jashanpreet Singh Sraw (jashan498)</author>
-      <title>Jashanpreet Singh Sraw (jashan498): Week 7: Using continuum_mechanics with units</title>
-      <pubDate>Sat, 07 Jul 2018 07:59:05 GMT</pubDate>
-      <link>https://singhjashan.wordpress.com/2018/07/07/week-7-30-june-06-july/</link>
-      <description>&lt;p&gt;This week I mainly focused on finding and solving a bug due to which continuum_mechanics gave&amp;#160;&lt;em&gt;ValueError&lt;/em&gt; on using units with the quantities passed. Initially, I created&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14856"&gt;#14856&lt;/a&gt;, which included a workaround in the Beam class itself to handle that error. But&amp;#160;&lt;a href="https://github.com/parsoyaarihant"&gt;Arihant&lt;/a&gt;&amp;#160;suggested opening a separate PR as the error was occurring due to a bug in the separate module.&lt;/p&gt;
-&lt;p&gt;So,&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14865"&gt;#14865&lt;/a&gt;&amp;#160;was created. &lt;em&gt;is_commutative&amp;#160;&lt;/em&gt;attribute was added in the&amp;#160;&lt;em&gt;Prefix&lt;/em&gt; class&amp;#160; (setting &lt;em&gt;Prefix&lt;/em&gt;.&lt;em&gt;is_commutative &lt;/em&gt;to&lt;em&gt; True&amp;#160;&lt;/em&gt;removed&amp;#160;&lt;em&gt;PolynomialError&lt;/em&gt;). While doing changes in the PR, another bug appeared:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.physics.units import meter, newton, kilo
-&amp;gt;&amp;gt;&amp;gt; from sympy.physics.units.util import quantity_simplify
-&lt;/code&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; quantity_simplify(x*(8*newton + y))
-x*(8*newton + y, 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This bug was solved with few changes. After&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14865"&gt;#14865&lt;/a&gt;&amp;#160;gets merged, continuum_mechanics should work with quantities involving units.&lt;/p&gt;
-&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Make sure&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14865"&gt;#14865&lt;/a&gt;&amp;#160;gets merged.&lt;/li&gt;
-&lt;li&gt;Open a Pull Request and start working on 3dbeam class.&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
