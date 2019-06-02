@@ -233,6 +233,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Nikhil Maan (Sc0rpi0n101)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://sc0rpi0n101.github.io/">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://sc0rpi0n101.github.io/index.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Shekhar Prasad Rajak (shekharrajak)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://shekharrajak.github.io">
