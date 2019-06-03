@@ -2,8 +2,8 @@
 <opml version="2.0">
   <head>
     <title>Planet SymPy</title>
-    <dateCreated>Sun, 02 Jun 2019 22:39:16 GMT</dateCreated>
-    <dateModified>Sun, 02 Jun 2019 22:39:16 GMT</dateModified>
+    <dateCreated>Mon, 03 Jun 2019 18:03:57 GMT</dateCreated>
+    <dateModified>Mon, 03 Jun 2019 18:03:57 GMT</dateModified>
     <ownerName>Sumith</ownerName>
     <ownerEmail>sumith1896@gmail.com</ownerEmail>
   </head>
@@ -15,10 +15,14 @@
     <outline text="Ranjith Kumar (ranjithkumar007)" xmlUrl="http://ranjithkumar007.github.io/feed.xml"/>
     <outline text="Srajan Garg (srajangarg)" xmlUrl="http://srajangarg.github.io/feed.xml"/>
     <outline text="Sumith (sumith1896)" xmlUrl="http://sumith1896.github.io/feeds/feed.sympy.xml"/>
+    <outline text="Ankit Pandey (anpandey)" xmlUrl="https://anpandey.github.io/atom-sympy.xml"/>
+    <outline text="Arighna Chakrabarty (arighnaiitg)" xmlUrl="https://arighnaiitg.github.io/feed.xml"/>
     <outline text="Bj&#xF6;rn Dahlgren (bjodah)" xmlUrl="https://bjodah.github.io/blog/rss.xml"/>
     <outline text="Gagandeep Singh (czgdp1807)" xmlUrl="https://czgdp1807.github.io/feed.xml"/>
+    <outline text="Divyanshu Thakur (divyanshu132)" xmlUrl="https://divyanshu132.github.io/feed.sympy.xml"/>
     <outline text="Gaurav Dhingra (gxyd)" xmlUrl="https://gxyd.github.io/atom.xml"/>
     <outline text="Amit Kumar (aktech)" xmlUrl="https://iamit.in/blog/feeds/sympy.xml"/>
+    <outline text="Ishan Joshi (ishanaj)" xmlUrl="https://ishanaj.wordpress.com/category/sympy/feed/"/>
     <outline text="Jogi Miglani (jmig5776)" xmlUrl="https://jmig5776.github.io/feed.sympy.xml"/>
     <outline text="Kshitij Saraogi(kshitij10496)" xmlUrl="https://kshitij10496.github.io/feed.xml"/>
     <outline text="Abdullah Javed Nesar (Abdullahjavednesar)" xmlUrl="https://nesar2017.wordpress.com/feed/"/>
@@ -26,6 +30,7 @@
     <outline text="Arihant Parsoya (parsoyaarihant)" xmlUrl="https://parsoyaarihant.github.io/blog/feed.xml"/>
     <outline text="Rajith Vidanaarachchi (rajithv)" xmlUrl="https://rajithsays.wordpress.com/category/symengine/feed/"/>
     <outline text="Ravicharan (RavicharanN)" xmlUrl="https://ravicharann.github.io/blog/feed.xml"/>
+    <outline text="Ritesh Kumar (ritesh99rakesh)" xmlUrl="https://ritesh99rakesh.github.io/feed.xml"/>
     <outline text="Sampad Saha (sampadsaha5)" xmlUrl="https://sampadblog.wordpress.com/feed/"/>
     <outline text="Nikhil Maan (Sc0rpi0n101)" xmlUrl="https://sc0rpi0n101.github.io/index.xml"/>
     <outline text="Shekhar Prasad Rajak (shekharrajak)" xmlUrl="https://shekharrajak.github.io/feed.xml"/>
@@ -37,6 +42,7 @@
     <outline text="Szymon Mieszczak (szymag)" xmlUrl="https://szymag.github.io/feed.xml"/>
     <outline text="Valeriia Gladkova (valglad)" xmlUrl="https://valglad.github.io/feed.xml"/>
     <outline text="Aaron Meurer (asmeurer)" xmlUrl="https://www.asmeurer.com/blog/rss.xml"/>
+    <outline text="Zhiqi KANG (kangzhiq)" xmlUrl="https://www.kangzhiq.com/tag/sympy/feed/"/>
     <outline text="Yathartha Joshi (Yathartha22)" xmlUrl="https://yathartha22.github.io/feed.sympy.xml"/>
   </body>
 </opml>

@@ -7,6 +7,115 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://www.kangzhiq.com/?p=11</guid>
+      <author>Zhiqi KANG (kangzhiq)</author>
+      <title>Zhiqi KANG (kangzhiq): [GSoC] WEEK 1!</title>
+      <pubDate>Sun, 02 Jun 2019 22:38:28 GMT</pubDate>
+      <link>https://www.kangzhiq.com/2019/06/03/gsoc-week-1/</link>
+      <description>&lt;p&gt;Hello everyone! Here comes the end of the first coding week. This blog is dedicated to present the progress that I have had during the past week. &lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;PRs&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;This week the PR about  ArrayComprehension   is merged. &lt;a href="https://github.com/sympy/sympy/pull/16845"&gt;#16845&lt;/a&gt;. This class is designed as an extension of list comprehension in Python, which enables the list comprehension with symbolic dimensions. &lt;/p&gt;
+
+
+
+&lt;p&gt;A new PR &lt;a href="https://github.com/sympy/sympy/pull/16937"&gt;#16937&lt;/a&gt; about the sparse array being cast to dense array in the case of derive_by_array is opened. But somes improvements are still needed. The challenge is to find an approriate method to override and perform a derivative correctly. &lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Issues&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;An issue &lt;a href="https://github.com/sympy/sympy/issues/16911"&gt;#16911&lt;/a&gt; is opened. It is in fact a discussion about implementing a NumPy-Like behavior in Array module. It is interesting because my mentor was, at first, not in favor of this implementation. But some differences of behavior between the Array module in SymPy and the one in NumPy did change his mind. So this implementation can be kept in my proposal and will be my tasks for the next phase.&lt;/p&gt;
+
+
+
+&lt;p&gt;Another issue &lt;a href="https://github.com/sympy/sympy/issues/16941"&gt;#16941&lt;/a&gt; whose aim is to list out all cases where a sparse array is cast to dense arrays is opened this week. Not only as a discussion, this issue would also be a overview of the problems so that the PRs like &lt;a href="https://github.com/sympy/sympy/pull/16937"&gt;#16937&lt;/a&gt; can refer to it. A checklist is being updated to show the avancement. &lt;/p&gt;
+
+
+
+&lt;p&gt;Please feel free to comment on the issues or the PRs that I opened. I would love to listen to your opinions.&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Reviews&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;After the merge of ArrayComprehension, another student  &lt;a href="https://github.com/czgdp1807"&gt;Gagandeep Singh&lt;/a&gt;  opened a new PR to ameliorate the code quality of this class. I have also participated as a reviewer to offer some help. I have also leant a lot from the discussion.&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Related works&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;Not much, due to the burden of projects in college. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://ishanaj.wordpress.com/?p=42</guid>
+      <author>Ishan Joshi (ishanaj)</author>
+      <title>Ishan Joshi (ishanaj): GSoC&#x2019;19: Week 1 &#x2013; Starting with the CrossSection class</title>
+      <pubDate>Sun, 02 Jun 2019 18:39:36 GMT</pubDate>
+      <link>https://ishanaj.wordpress.com/2019/06/03/gsoc19-week-1-starting-with-the-crosssection-class/</link>
+      <description>&lt;p&gt;The &lt;strong&gt;GSoC&lt;/strong&gt; timeline started as soon as the projects were announced and so did the work on projects.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Community bonding&lt;/strong&gt; period ended last week. There wasn&amp;#8217;t much work in the community bonding period. All I had to do was to extend my knowledge base related to the project and to familiarize with the development flow.&lt;/p&gt;
+&lt;p&gt;I started with going through the geometry module, which has a major role to play in the implementation of the &lt;strong&gt;Stage-I&lt;/strong&gt; i.e. the implementation of CrossSection module. Also, I studied about the different properties of cross-sections, like, the first moment of area, polar modulus, section modulus, etc.&lt;/p&gt;
+&lt;p&gt;So the coding period started on &lt;strong&gt;27&lt;sup&gt;th&lt;/sup&gt; May&lt;/strong&gt; and now the first week is completed. My task in the first week was to start the implementation of the CrossSection module. It majorly comprised of defining a &lt;strong&gt;new class CrossSection&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Major tasks&lt;/strong&gt; inside the CrossSection class were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Defining the different geometries using the geometry module:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Circle:&amp;#160;&lt;/strong&gt;A circular cross-section was easily defined by using class &lt;a href="https://docs.sympy.org/latest/modules/geometry/ellipses.html#sympy.geometry.ellipse.Circle"&gt;sympy.geometry.ellipses.Circle&lt;/a&gt;&lt;span&gt;.&amp;#160;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rectangle, I-section, T-section, triangle:&amp;#160;&lt;/strong&gt;These four shapes were defined using class &lt;a href="https://docs.sympy.org/latest/modules/geometry/polygons.html#sympy.geometry.polygon.Polygon"&gt;sympy.geometry.polygons.Polygon&lt;/a&gt;. These geometries were defined using &lt;strong&gt;point to point mapping&lt;/strong&gt; in the counter-clockwise direction in such a way that it starts at the origin and joins all the given points or vertices of the polygon in the given sequence.&lt;/li&gt;
+&lt;li&gt;All these geometries were defined in a way that they lie in the first quadrant, in order to get correct values of the centroid.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Defining different properties of the above cross-sections:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Area&lt;/li&gt;
+&lt;li&gt;Centroid&lt;/li&gt;
+&lt;li&gt;Second moment&lt;/li&gt;
+&lt;li&gt;Polar modulus&lt;/li&gt;
+&lt;li&gt;Section Modulus&lt;/li&gt;
+&lt;li&gt;First moment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Implementing these was not that difficult as area, centroid, the second moment are already implemented in the geometry module. On the other hand, polar modulus and section modulus were specifically defined in the CrossSection module separately for each geometry.&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;The problem of defining the first moment of area: &lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The way the first moment of area is calculated can be seen from &lt;a href="https://skyciv.com/tutorials/calculating-statical-or-first-moment-of-area-of-beam-sections/"&gt;here&lt;/a&gt;. And since the first moment of area is required majorly to calculate the &lt;a href="http://abe-research.illinois.edu/faculty/dickc/Engineering/beamshear2b.htm"&gt;Transverse shear stress&lt;/a&gt; on a beam, we are interested only in the first moment along the x-axis (or the horizontal axis).&lt;/p&gt;
+&lt;p&gt;But just a day pondering over it I realized that the first moment calculated as above calculates it for the extreme layer of the beam. Probably, we will have to return it &lt;strong&gt;in terms of y&lt;/strong&gt;, so that the shear stress at any layer could be calculated.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;where &amp;#8220;y&amp;#8221;&amp;#160;&lt;/strong&gt;is the distance of the layer of the beam from the neutral axis&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;So, I will be opening an &lt;strong&gt;issue-cum-discussion &lt;/strong&gt;regarding the above problem to discuss it with the mentors. Also, I will soon be opening a &lt;strong&gt;work-in-progress&lt;/strong&gt; &lt;strong&gt;PR&lt;/strong&gt; regarding what has been implemented.&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;Next Week:&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Completing the CrossSection class and linking it with the beam module via an&lt;strong&gt; add_cross_section() &lt;/strong&gt;function.&lt;/li&gt;
+&lt;li&gt;Adding tests to the CrossSection module and in the Beam module&lt;/li&gt;
+&lt;li&gt;Completing documentation of the CrossSection module.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since I had to travel this weekend there was a bit of delay in the progress. But I am positive that I will be able to compensate for it in the next week. Also, I will try to keep the work a bit in advance.&lt;/p&gt;
+&lt;p&gt;Will keep you updated!&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://username.github.io/2019-06-02-gsoc-week1/</guid>
+      <author>Arighna Chakrabarty (arighnaiitg)</author>
+      <title>Arighna Chakrabarty (arighnaiitg): GSoC Week 1 !!</title>
+      <pubDate>Sun, 02 Jun 2019 07:00:00 GMT</pubDate>
+      <link>https://username.github.io/2019-06-02-gsoc-week1/</link>
+      <description>&lt;p&gt;Week 1 ends.. - 
+          Week 1 of the Coding Period (Phase 1) is coming to an end. It was a hectic week for me, as I had to travel in the initial days of the week, but the work done in Community Bonding Period, helped me to progress faster. I also had a meeting...</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://czgdp1807.github.io/first_week</guid>
       <author>Gagandeep Singh (czgdp1807)</author>
       <title>Gagandeep Singh (czgdp1807): Week 1 - All about design, imporvements and bug fixes</title>
@@ -21,6 +130,75 @@
 &lt;p&gt;Doing all this I learnt a lot of things. The most important was that API design matters the most. Without it, it&amp;#8217;s not possible to develop a good class structure. Thanks to Francesco for making me learn this fact. The other thing is, how sometimes even to make small changes in a large code base, it takes hours to get it right. Another fact which I learnt is how small optimisations in a large of code base can improve the performance.&lt;/p&gt;
 
 &lt;p&gt;See you next week with some more progress. :)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://anpandey.github.io/posts/sympy/2019-05-31-week-1.html</guid>
+      <author>Ankit Pandey (anpandey)</author>
+      <title>Ankit Pandey (anpandey): Google Summer of Code: Week 1</title>
+      <pubDate>Fri, 31 May 2019 00:00:00 GMT</pubDate>
+      <link>https://anpandey.github.io/posts/sympy/2019-05-31-week-1.html</link>
+      <description>&lt;p&gt;&lt;article&gt;
+    &lt;section class="header"&gt;
+        Posted on May 31, 2019
+        
+            by Ankit Pandey
+        
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;p&gt;For the past week, I&amp;#8217;ve been working on adding support for &lt;a href="https://lfortran.org/"&gt;LFortran&lt;/a&gt; to SymPy&amp;#8217;s code generation capabilities. My current goal is to emulate SymPy&amp;#8217;s &lt;code&gt;fcode&lt;/code&gt;, which converts a SymPy expression to an equivalent expression in Fortran, utilizing only LFortran as a backend. This post is an outline of what I&amp;#8217;ve done (and learned) over last week.&lt;/p&gt;
+&lt;h1 id="lfortran"&gt;LFortran&lt;/h1&gt;
+&lt;p&gt;LFortran is a Fortran (with some extensions) to LLVM compiler. One advantage that this design provides is that it enables interactive execution of Fortran code. LFortran can also be used as a Jupyter kernel, which means it can be used in a Jupyter notebook environment (you can even find an online interactive demo &lt;a href="https://mybinder.org/v2/gl/lfortran%2Fweb%2Flfortran-binder/master?filepath=Demo.ipynb"&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In addition to being able to parse code, LFortran also provides the functionality of traversing a parse tree and generating the equivalent Fortran code. This means that if we want to generate Fortran code from a SymPy expression, the only work that we have to do is convert the SymPy expression tree to its LFortran equivalent.&lt;/p&gt;
+&lt;h2 id="lfortran-builder"&gt;LFortran Builder&lt;/h2&gt;
+&lt;p&gt;LFortran provides a number of convenience functions for building a Fortran AST. Since LFortran is still in early alpha, there are currently only about a dozen builder functions. However, these few basic functions are enough for constructing simple expressions in the Fortran AST. As an example, if we wanted to construct the expression represented by &lt;code&gt;c = a + b&lt;/code&gt;, where each variable involved is an integer, we could do something like:&lt;/p&gt;
+&lt;div class="sourceCode"&gt;&lt;pre class="sourceCode python"&gt;&lt;code class="sourceCode python"&gt;&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="im"&gt;import&lt;/span&gt; lfortran.asr.builder &lt;span class="im"&gt;as&lt;/span&gt; builder
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="im"&gt;import&lt;/span&gt; lfortran.asr.asr &lt;span class="im"&gt;as&lt;/span&gt; asr
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; integer &lt;span class="op"&gt;=&lt;/span&gt; builder.make_type_integer()
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; a &lt;span class="op"&gt;=&lt;/span&gt; asr.Variable(name&lt;span class="op"&gt;=&lt;/span&gt;&lt;span class="st"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;, &lt;span class="bu"&gt;type&lt;/span&gt;&lt;span class="op"&gt;=&lt;/span&gt;integer)
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; b &lt;span class="op"&gt;=&lt;/span&gt; asr.Variable(name&lt;span class="op"&gt;=&lt;/span&gt;&lt;span class="st"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;, &lt;span class="bu"&gt;type&lt;/span&gt;&lt;span class="op"&gt;=&lt;/span&gt;integer)
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; c &lt;span class="op"&gt;=&lt;/span&gt; asr.Variable(name&lt;span class="op"&gt;=&lt;/span&gt;&lt;span class="st"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;, &lt;span class="bu"&gt;type&lt;/span&gt;&lt;span class="op"&gt;=&lt;/span&gt;integer)
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="bu"&gt;sum&lt;/span&gt; &lt;span class="op"&gt;=&lt;/span&gt; builder.make_binop(a, asr.Add(), b)
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; expr &lt;span class="op"&gt;=&lt;/span&gt; asr.Assignment(c, &lt;span class="bu"&gt;sum&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;LFortran also provides functionality to visualize what the expression tree looks like:&lt;/p&gt;
+
+&lt;div class="sourceCode"&gt;
+&lt;pre class="sourceCode python"&gt;&lt;code class="sourceCode python"&gt;&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="im"&gt;import&lt;/span&gt; lfortran.asr.pprint &lt;span class="im"&gt;as&lt;/span&gt; pprint
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; pprint.pprint_asr(expr)
+&lt;span class="kw"&gt;stmt.Assignment&lt;/span&gt;
+&amp;#9500;&amp;#9472;target&lt;span class="op"&gt;=&lt;/span&gt;c
+&amp;#9584;&amp;#9472;value&lt;span class="op"&gt;=&lt;/span&gt;&lt;span class="kw"&gt;expr.BinOp&lt;/span&gt;
+  &amp;#9500;&amp;#9472;left&lt;span class="op"&gt;=&lt;/span&gt;a
+  &amp;#9500;&amp;#9472;op&lt;span class="op"&gt;=&lt;/span&gt;&lt;span class="kw"&gt;operator.Add&lt;/span&gt;
+  &amp;#9500;&amp;#9472;right&lt;span class="op"&gt;=&lt;/span&gt;b
+  &amp;#9584;&amp;#9472;type&lt;span class="op"&gt;=&lt;/span&gt;&lt;span class="kw"&gt;ttype.Integer&lt;/span&gt;
+    &amp;#9500;&amp;#9472;kind&lt;span class="op"&gt;=&lt;/span&gt;&lt;span class="dv"&gt;4&lt;/span&gt;
+    &amp;#9584;&amp;#9472;dims&lt;span class="op"&gt;=&lt;/span&gt;[]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id="sympy-to-lfortran-converter"&gt;Sympy to LFortran Converter&lt;/h1&gt;
+&lt;p&gt;I&amp;#8217;ve started with the implementation of a basic SymPy to LFortran converter utilizing the AST builder described above, with the current &lt;a href="https://github.com/sympy/sympy/pull/16931"&gt;pull request&lt;/a&gt; available on the SymPy GitHub. The converter follows the same node visitor class structure as all of the other code printers (it even inherits the &lt;code&gt;CodePrinter&lt;/code&gt; class, despite the methods not producing strings but rather AST nodes). Here&amp;#8217;s a simple example that demonstrates the conversion of a simple expression to an equivalent in LFortran:&lt;/p&gt;
+&lt;div class="sourceCode"&gt;&lt;pre class="sourceCode python"&gt;&lt;code class="sourceCode python"&gt;&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="im"&gt;from&lt;/span&gt; sympy.abc &lt;span class="im"&gt;import&lt;/span&gt; x
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="im"&gt;from&lt;/span&gt; sympy.codegen.lfort &lt;span class="im"&gt;import&lt;/span&gt; sympy_to_lfortran
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="im"&gt;import&lt;/span&gt; lfortran
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; e &lt;span class="op"&gt;=&lt;/span&gt; x &lt;span class="op"&gt;+&lt;/span&gt; &lt;span class="dv"&gt;1&lt;/span&gt;
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; e_converted &lt;span class="op"&gt;=&lt;/span&gt; sympy_to_lfortran(e)
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; lfortran.ast_to_src(lfortran.asr_to_ast(e_converted)).replace(&lt;span class="st"&gt;'&lt;/span&gt;&lt;span class="ch"&gt;\n&lt;/span&gt;&lt;span class="st"&gt;'&lt;/span&gt;, &lt;span class="st"&gt;''&lt;/span&gt;)
+&lt;span class="co"&gt;'(x) + (1)'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There are two things to notice here. The first is that I had to replace all the newlines in the generated expression, since a &lt;a href="https://gitlab.com/lfortran/lfortran/issues/110"&gt;bug in LFortran&lt;/a&gt; causes too many newlines to be printed. The second is that there are a number of redundant parentheses in the printed expression. While this isn&amp;#8217;t an outright bug, it&amp;#8217;s another aspect of LFortran that is currently being improved upon.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve also add another function, &lt;code&gt;sympy_to_lfortran_wrapped&lt;/code&gt;, which wraps an expression in a function definition, (poorly) emulating the wrapping part of &lt;a href="https://docs.sympy.org/latest/modules/utilities/autowrap.html"&gt;&lt;code&gt;autowrap&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="sourceCode"&gt;
+&lt;pre class="sourceCode python"&gt;&lt;code class="sourceCode python"&gt;&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="im"&gt;from&lt;/span&gt; sympy.codegen.lfort &lt;span class="im"&gt;import&lt;/span&gt; sympy_to_lfortran_wrapped
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; e_wrapped &lt;span class="op"&gt;=&lt;/span&gt; sympy_to_lfortran_wrapped(e)
+&lt;span class="op"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="bu"&gt;print&lt;/span&gt;(lfortran.ast_to_src(lfortran.asr_to_ast(e_wrapped)))
+&lt;span class="st"&gt;integer function f(x) result(ret)
+integer, intent(in) :: x
+ret = 1 + x
+end function&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Since LFortran can directly compile the AST to an LLVM intermediate representation, a future implementation of &lt;code&gt;autowrap&lt;/code&gt; might be implemented by compiling the output of this function (instead of first completely generating the code and then feeding it to &lt;code&gt;gfortran&lt;/code&gt; as it&amp;#8217;s done right now).&lt;/p&gt;
+&lt;h1 id="next-steps"&gt;Next Steps&lt;/h1&gt;
+&lt;p&gt;For the next couple of days, I will try to extend the types of SymPy expressions that may be converted. One thing to note is that there isn&amp;#8217;t a perfect correspondence between SymPy and LFortran AST nodes. LFortran supports nodes for operations like unary subtraction and division, which SymPy converts into multiplication and division respectively. On top of this, I&amp;#8217;ll also add some tests for the functionality that I have implemented so far. After that, I&amp;#8217;ll start with work on SymPy&amp;#8217;s matrix expression code generation (the second part of my GSoC project) and pick LFortran up again close to the end of the summer.&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;</description>
     </item>
     <item>
       <guid isPermaLink="false">https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</guid>
@@ -48,12 +226,184 @@ Today is May 31, it&amp;rsquo;s been 5 days of work and I&amp;rsquo;ve had some 
       <description>&lt;p&gt;So, here I am with another set of experiences to share with you, i.e., the Community Bonding of GSoC. After discussing with my fellow developers, and my mentors, we reframed our timeline. I will be working on very interesting topics in statistics, including, joint distributions, Markov chains, random matrices, assumptions of dependence and simplifying the results of the stats module. For a head start, I started working on adding multivariate distributions and the good news is that I have completed majority of the work, apart from some technical constraints which will be solved by another project very soon. If you are interested in seeing the code, take a look at the PRs #16576, #16808, #16825. Infact, apart from the stats module, I also had an opportunity to work on other modules of SymPy, like, I improved the API of Sum in sympy.concrete, allowing Range to be passed as limits and that too while working on discrete joint distributions. You can check the PR #16810 for the details. Thanks to Christopher Smith for helping me with this. Still there are issues like, #16833 which require a lot of discussion before concrete implementation, will update you on this if some progress takes place. Apart from coding, we had discussions on design of Markov chain and random matrices. I also made two prototypes at PR #16852, and #16866 . We are currently having more to think on this part, like API, class structure, etc. Overall, the bonding period was very a great learning experience about how various modules affect each other and bring the best out of SymPy. See you soon in the next blog. :)</description>
     </item>
     <item>
+      <guid isPermaLink="false">https://username.github.io/2019-05-26-gsoc-end-of-community-bonding-period/</guid>
+      <author>Arighna Chakrabarty (arighnaiitg)</author>
+      <title>Arighna Chakrabarty (arighnaiitg): GSoC - Community Bonding Period Ends !!</title>
+      <pubDate>Sun, 26 May 2019 07:00:00 GMT</pubDate>
+      <link>https://username.github.io/2019-05-26-gsoc-end-of-community-bonding-period/</link>
+      <description>&lt;p&gt;The Journey will begin now !! - 
+          The all-important Community Bonding Period ends!! During these three weeks, I have come to learn a lot more things about SymPy, and especially its Series module, the module I would be improving this summer. The first week of the CBP was wasted since I had college exams going on, and...</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://www.kangzhiq.com/?p=8</guid>
+      <author>Zhiqi KANG (kangzhiq)</author>
+      <title>Zhiqi KANG (kangzhiq): [GSoC 2019]Brief report upon the progress over the community bonding period</title>
+      <pubDate>Sun, 26 May 2019 01:36:52 GMT</pubDate>
+      <link>https://www.kangzhiq.com/2019/05/26/gsoc-2019brief-report-upon-the-progress-over-the-community-bonding-period/</link>
+      <description>&lt;h4&gt;&lt;strong&gt;Linear Algebra : Tensor Core&lt;/strong&gt;&lt;/h4&gt;
+
+
+
+&lt;h3&gt;Overview&lt;/h3&gt;
+
+
+
+&lt;p style="text-align: left;"&gt;After the official announcement of selection result, I was happy to be one of the students to work with &lt;a href="https://www.sympy.org/en/index.html"&gt;SymPy&lt;/a&gt; over this summer program. A first greeting between the the mentors and me was efficient. Since then, I have been preparing for the launch of the program: creating my personal blog, reading the codebase of SymPy, discussing with my mentors about some details of the proposal, contributing to a new class named ArrayComprehension. Thank to the help of my mentors and other contributors in the community, I understand better the workflow and some coding conventions. Besides, due to the constraint of spare time, I have had some difficulties at the beginning to arrange my timetable. Now I have a more reliable estimation about how many hours I can spend on the program while the college semester is not yet finished. &lt;/p&gt;
+
+
+
+&lt;h3&gt; Progress regarding the project&lt;/h3&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;My personal blog&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;Every student is supposed to maintain a blog on which one should update the progress of each week. I think it is also time for me to create a personal site as an access to introduce myself to the world. I used WordPress as the CMS(Content Management System). I wanted to have a first blog as a global presentation of GSoC, unfortunately I was too busy to do it.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Codebase of Sympy&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;I have read carefully the code of the Array module and have browsed the entire Tensor module. As for other modules, I only had a look at those that I would probably use in the during this project. By carefully, I would like to say that I tested each method by instantiating an example. Some debuggings were also helpful when I tried to understand the purpose of some codes.&lt;/p&gt;
+
+
+
+&lt;p&gt;However, I have to admit that I still have a lot of things to learn and to get familiar with. For example, I didn&amp;#8217;t notice the coding convention of the constructor which passes the parameters to superclass in order to make sure the possibility of rebuilding the object. Because if the lack of experience, I may need help and guidance, in the most of time, from other contributors, especially from my mentors.&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Discussion of proposal&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;I have created a documentation in which I specify some detailed questions about my proposal. For example, the NumPy-like syntax was something that I considered working on. But it turns out to be unnecessary to do so. &lt;a href="https://docs.google.com/document/d/1Xsdwz9C38zNoF5MkM29NB0kCZKXvdGJU1oa5VjOVzFc/edit"&gt;Doc of questions&lt;/a&gt; This documentation will be continuously updated. It can serve as a tract of our discussion and some decisions that we make together. &lt;/p&gt;
+
+
+
+&lt;p&gt;Even though I didn&amp;#8217;t have enough time to explore the task like Codegen and Integration over array, I hope that I can have a better view of these tasks before its beginning. After a discussion with me mentors, I can make sure that I have at least a clear understanding of the tasks over phase 1. &lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;ArrayComprehension class&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16845/commits/8effbb6600b7e4cfd7d7f5765dce7ba60ed680dc"&gt;#16845&lt;/a&gt; This class is not really planned in my proposal, yet it helps me a lot regarding the understanding of the codebase and some coding conventions. Its creation comes from the need of a symbolic list comprehension of two other students in the stats groupe. To be honest, these two students set me a good example during this period. Their dynamicity in contributing to SymPy becomes not only a stress but also an encouragement to me.&lt;/p&gt;
+
+
+
+&lt;p&gt;For now, the basic structure of ArrayComprehension is established, thanks to the review of Francesco and other contributors in the community. I will continue to working on it so that it would help the students of stats get over the problem.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;h3&gt; Estimation of availability during phase 1 &lt;/h3&gt;
+
+
+
+&lt;p&gt;After the practice of the past three weeks, I think I found a feasible solution to schedule the work of GSoC and my regular timetable. I have to say that I recently changed the college, this brand-new life gave me as great a challenge as the one of GSoC. Moreover, I have 3 academic projects to do and 4 final exams to prepare. Thus, I would like to reduce my planning working time for the first phase, if I can have the agreement of my mentors. I will make sure the advancement of the project(as it is planned in the proposal), but I cannot be engaged with too much extra work during this period. Once the semester is over, I will make up for the shortage of working hours.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;table class="wp-block-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Monday       &lt;/td&gt;&lt;td&gt;Tuesday       &lt;/td&gt;&lt;td&gt;Wednesday &lt;/td&gt;&lt;td&gt;Thursday  &lt;/td&gt;&lt;td&gt;Friday&lt;/td&gt;&lt;td&gt;Saturday&lt;/td&gt;&lt;td&gt;Sunday&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2h&lt;br /&gt;22&amp;#65306;00 *- &lt;br /&gt;24&amp;#65306;00&lt;/td&gt;&lt;td&gt;4h&lt;br /&gt;20&amp;#65306;00 &amp;#8211;  &lt;br /&gt;24&amp;#65306;00&lt;/td&gt;&lt;td&gt;&lt;br /&gt;4h&lt;br /&gt;20&amp;#65306;00 &amp;#8211;&lt;br /&gt;24&amp;#65306;00&lt;br /&gt;&lt;/td&gt;&lt;td&gt;4h&lt;br /&gt;20&amp;#65306;00-&lt;br /&gt;24&amp;#65306;00&lt;/td&gt;&lt;td&gt;4h&lt;br /&gt;20&amp;#65306;00 &amp;#8211; &lt;br /&gt;24&amp;#65306;00&lt;/td&gt;&lt;td&gt;6h&lt;br /&gt;3h + 3h&lt;/td&gt;&lt;td&gt;6h&lt;br /&gt;3h + 3h&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+
+
+&lt;p&gt;*Based on UTC+2&lt;br /&gt;The average working hours would be 30h per week. Then I will work 50h per week next phase to ensure the 40 hours in average. That is totally possible since I will be on vacation.&lt;/p&gt;
+
+
+
+&lt;h3&gt;Ameliorations and conclusion&lt;/h3&gt;
+
+
+
+&lt;p&gt;Since the project will officially start in a very soon future, I would like to propose some possible ameliorations about myself, based on what I have done in the past three weeks.&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Be more active in contributing&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;I have seen the two students in stats sent many PRs and contributed as well in reviewing other&amp;#8217;s PRs. That would be a good example for me to follow. I can surely learn a lot from reviering other&amp;#8217;s code.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Ask well-considered question but don&amp;#8217;t be afraid to say it out&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;I always want to maintain a good impression of myself to others, which makes me hesitate a lot when I want to ask a question. I think it is better to face the weak points of myself rather than hide it. I am a newbie to the Open Source world, there are surely a lot of things to learn. Please forgive me, Francesco and Sartaj, if my questions seem silly to you.&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Prepare for the next phase once it is possible&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;Due to my constraint of time, I could not prepare very well for the next phase, which makes me worried. It would be good if I can finalize the work of this phase 1 earlier so that I would have some extra time to think about the phase 2 and 3. &lt;br /&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://ritesh99rakesh.github.io/SymPy_post1</guid>
+      <author>Ritesh Kumar (ritesh99rakesh)</author>
+      <title>Ritesh Kumar (ritesh99rakesh): Beginning GSoC&#x2019;19</title>
+      <pubDate>Sun, 26 May 2019 00:00:00 GMT</pubDate>
+      <link>https://ritesh99rakesh.github.io/SymPy_post1/</link>
+      <description>&lt;p&gt;Hello! This is my first blog.</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://divyanshu132.github.io//GSoC2019-with-sympy</guid>
+      <author>Divyanshu Thakur (divyanshu132)</author>
+      <title>Divyanshu Thakur (divyanshu132): GSoC 2019 Acceptance</title>
+      <pubDate>Fri, 24 May 2019 00:00:00 GMT</pubDate>
+      <link>https://divyanshu132.github.io//GSoC2019-with-sympy</link>
+      <description>&lt;p&gt;&lt;img src="https://divyanshu132.github.io/public/gsoc.png" style="width: 30%; height: 30%; float: left;" /&gt;
+&lt;img src="https://divyanshu132.github.io/public/sympy.png" style="width: 25%; height: 25%; float: right; margin-right: 100px;" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The results of &lt;strong&gt;&lt;a href="https://summerofcode.withgoogle.com/projects/#5688477549592576"&gt;Google Summer of Code&lt;/a&gt;&lt;/strong&gt; were out on 06 May 2019 and guess what I got selected and will be working under &lt;strong&gt;&lt;a href="http://sympy.org"&gt;Sympy&lt;/a&gt;&lt;/strong&gt; for the next 3 months. I will be working on my project, &lt;a href="https://github.com/sympy/sympy/wiki/GSoC-2019-Application-Divyanshu:-Group-Theory"&gt;Group Theory&lt;/a&gt;, during this period. I am really excited to work with such an amazing organization. I would like to thank all the mentors especially &lt;a href="https://github.com/jksuom"&gt;Kalevi Suominen&lt;/a&gt; and &lt;a href="https://github.com/asmeurer"&gt;Aaron Meurer&lt;/a&gt;, for guiding me in my proposal and PR&amp;#8217;s. The best part is I got my favourite mentor &lt;strong&gt;Kalevi Suominen&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The first phase is the &lt;em&gt;Community Bonding Period&lt;/em&gt;, which has nearly come to an end. In this period I mainly focussed on the following things.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Setting up blog and synchronizing it with planet sympy.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Discussing possible means of communication, weekly meetings etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Planning the implementation of some of the features of the project with Kalevi.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Familiarizing with the codebase of sympy/combinatorics and see how it may help solving the problems while implementing the project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Getting more in-depth theoretical knowledge of the features to be implemented.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Looking forward for a really productive and wonderful summer ahead.&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://shubhamkjha.github.io/2019/05/12/Beginning-GSoC-2019</guid>
       <author>Shubham Kumar Jha (ShubhamKJha)</author>
       <title>Shubham Kumar Jha (ShubhamKJha): Beginning GSoC 2019: with SymPy</title>
       <pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate>
       <link>https://shubhamkjha.github.io/2019/05/12/Beginning-GSoC-2019.html</link>
       <description>&lt;p&gt;Finally, the result of GSoC-2019 came on 6th of May, 2019. I am very happy to inform that my proposal on improving the assumptions mechanism has been accepted by SymPy for this year&amp;#8217;s GSoC. For those who don&amp;#8217;t know, SymPy is an open-sourced Computer Algebra System(CAS) written in Python. It was started by Ondrej Cetrik(@cetrik) in 2006, as a project. Since 2007, SymPy has participated in Google Summer of Code every year. GSoC has given much boost to the development of SymPy&amp;#8217;s codebase.</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://username.github.io/2019-05-09-gsoc-selection/</guid>
+      <author>Arighna Chakrabarty (arighnaiitg)</author>
+      <title>Arighna Chakrabarty (arighnaiitg): GSoC' 19 @ SymPy !!!</title>
+      <pubDate>Thu, 09 May 2019 07:00:00 GMT</pubDate>
+      <link>https://username.github.io/2019-05-09-gsoc-selection/</link>
+      <description>&lt;p&gt;Sorry for the late post!! The results of Google Summer of Code were out on 6th of May 2019. I was overjoyed to see that I was selected as a student, under Sympy , an organization in which I had been contributing for the past 1+ year. My project for...</description>
     </item>
     <item>
       <guid isPermaLink="false">https://czgdp1807.github.io/first_blog</guid>
@@ -1170,231 +1520,6 @@ Equations that these identifiers can&amp;#8217;t identify will be further solved
 &lt;p&gt;Successive reviews and discussions were helpful in finalizing the Pull Requests.&lt;/p&gt;
 
 &lt;p&gt;Looking forward to the final week of Coding Period.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://nkhlpappu.wordpress.com/?p=13</guid>
-      <author>Nikhil Pappu (NikhilPappu)</author>
-      <title>Nikhil Pappu (NikhilPappu): Autolev Parser: Status Update</title>
-      <pubDate>Fri, 27 Jul 2018 20:24:12 GMT</pubDate>
-      <link>https://nkhlpappu.wordpress.com/2018/07/27/autolev-parser-status-update-3/</link>
-      <description>&lt;p&gt;Hello Everyone. I have been working on getting the PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14758"&gt;#14758&lt;/a&gt;&amp;#160;into shape and now it is finally merged. I have written my own tests for the PR so as to not include copyrighted files that belong to the creators of Autolev.&lt;/p&gt;
-&lt;p&gt;I am now working on a &lt;a href="https://gitlab.com/NikhilPappu/test-examples/"&gt;test-examples repo&lt;/a&gt; which serves as a showcase of the parser and also as a source of additional tests. The repo is private on GitLab as it contains copyrighted files. You can request access at the repo link above. Files from this repo can be copied over to the test_examples folder of parsing/autolev to use them as tests. From now, I will be working on adding more examples from the PyDy example repo, Autolev Tutorial, and Dynamics Online to this repo while improving the code of the parser to parse all these codes. I am also making note of things like errors, inaccuracies etc to include them in the Documentation.&lt;/p&gt;
-&lt;p&gt;I will open another PR once I have made enough number of changes to the parser code.&lt;/p&gt;
-&lt;p&gt;Here is my plan for the future of this project:&lt;/p&gt;
-&lt;p&gt;Till the end of GSoC:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Work on getting the test-examples repo in good shape.&lt;/li&gt;
-&lt;li&gt;Write extensive Documentation (explaining what the parser can do, how to use it,&amp;#160; limitations, issues, future improvements etc).&lt;/li&gt;
-&lt;li&gt;Work on as many Dynamics Online codes (which I shall include in the repo) as possible (Wrap up Ch4 and hoping to get half of Ch5 done (as it is quite big)).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Post GSoC:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Finish the rest of the Dynamics Online Book (Whatever is left of Ch5 and also Ch6 which I think is less important).&lt;/li&gt;
-&lt;li&gt;Work on the issues that I will be listing down in the documentation one by one after discussing the possible fixes (Some of these might require changes in the parser while some others require changes in the SymPy code while I do not have much of an idea about the fixes of some other ones).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Thanks,&lt;/p&gt;
-&lt;p&gt;Nikhil&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=93</guid>
-      <author>Jashanpreet Singh Sraw (jashan498)</author>
-      <title>Jashanpreet Singh Sraw (jashan498): Week 10: Implementing plotting methods</title>
-      <pubDate>Tue, 24 Jul 2018 18:12:09 GMT</pubDate>
-      <link>https://singhjashan.wordpress.com/2018/07/24/week-10-implementing-plotting-methods/</link>
-      <description>&lt;p&gt;This week I started working on implementing methods to plot Shear force, bending moment, slope and deflection diagrams.&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14967"&gt;#14967&lt;/a&gt;&amp;#160;was created for it.&lt;/p&gt;
-&lt;p&gt;Mainly four methods were added to the Beam class:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;plot_shear_force: This method returns a plot for Shear force present in the Beam object.&lt;/li&gt;
-&lt;li&gt;plot_bending_moment: This method returns a plot for Bending moment present in the Beam object.&lt;/li&gt;
-&lt;li&gt;plot_slope: This method returns a plot for slope of the elastic curve of the Beam.&lt;/li&gt;
-&lt;li&gt;plot_delfection: This method returns a plot for the deflection curve of the Beam object.&lt;/li&gt;
-&lt;li&gt;plot_loading_results: This method returns&amp;#160;fig object containing subplots of Shear Force, Bending Moment,&amp;#160;Slope and Deflection of the Beam object.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://github.com/jashan498/beam_examples/blob/master/beam_plots.ipynb"&gt;Here&lt;/a&gt;&amp;#160;is a sample notebook demonstrating how to use these plotting methods.&lt;/p&gt;
-&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Make sure&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14967"&gt;#14967&lt;/a&gt;&amp;#160;gets merged.&lt;/li&gt;
-&lt;li&gt;Add more beam problems to the documentation.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://ravicharann.github.io/blog//misc/</guid>
-      <author>Ravicharan (RavicharanN)</author>
-      <title>Ravicharan (RavicharanN): Subgroup quotients, Polycyclic groups and misc</title>
-      <pubDate>Tue, 24 Jul 2018 00:00:00 GMT</pubDate>
-      <link>https://ravicharann.github.io/blog//misc/</link>
-      <description>&lt;p&gt;GSoC'18 Week 9 &amp; 10</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-4503634706614858581</guid>
-      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
-      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 10</title>
-      <pubDate>Sun, 22 Jul 2018 15:35:32 GMT</pubDate>
-      <link>http://ashishkg0022.blogspot.com/2018/07/gsoc-2018-week-10.html</link>
-      <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Hello everyone. Here is the brief progress of Rubi&amp;nbsp;module in the 10th week of GSoC period.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Last week, we were able to load all rules. Rubi has now come in a very stable and working condition. One Missing thing in the main &lt;a href="https://github.com/sympy/sympy/pull/14756"&gt;PR&lt;/a&gt; was missing instructions and documentation. This week I tried my best to write instructions, so that a new user can easily get familiar with it. I have kept it really simple.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Initially, I wrote a script in Mathematica to generate downvalues&amp;nbsp;in separate files. This was done till now manually, but now it's automated. Then I wrote a sympy&amp;nbsp;script to generate all rules and constraints in proper files directly just by running a function.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;For a more easier understanding of steps, I created&amp;nbsp;`rubi_parsing_guide.md` explaining all steps.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Next thing I realised that it would be good if we create a parsing script for the tests too. Till now I used maple format. But a lot of manual things were required. So I wrote a script which directly parses tests into sympy&amp;nbsp;format. All this are added properly in `rubi_parsing_guide.md`.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;`init` in Rubi&amp;nbsp;too was updated with proper explanation of basic structure of rules and constraints. I also updated docs of few important utility_functions.&lt;/span&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Now a new user can easily get familiar with Rubi and working with it will be simple.&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;I have also opened a new &lt;a href="https://github.com/sympy/sympy/pull/14956"&gt;PR&lt;/a&gt; for new utility_functions. Once the old &lt;a href="https://github.com/sympy/sympy/pull/14756"&gt;PR&lt;/a&gt; gets merged, we can merge this.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://Yathartha22.github.io//gsoc-week-10</guid>
-      <author>Yathartha Joshi (Yathartha22)</author>
-      <title>Yathartha Joshi (Yathartha22): GSoC 2018 - Week 10 - Continuing with logarithmic solver</title>
-      <pubDate>Sun, 22 Jul 2018 00:00:00 GMT</pubDate>
-      <link>https://Yathartha22.github.io//gsoc-week-10</link>
-      <description>&lt;p&gt;This week started with the merge of the PR &lt;a href="https://github.com/sympy/sympy/pull/14736"&gt;#14736&lt;/a&gt;. Yehhhh!!!!!. So now &lt;code class="highlighter-rouge"&gt;solveset&lt;/code&gt; will be able to solve a varied type of exponential equations.  Next work is going on to build the logarithmic and lambert solver.&lt;/p&gt;
-
-&lt;p&gt;A lot of discussion has been taken place over the implementation of the logarithmic solver, there were mainly two points to consider:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How the logarithmic equation gets evaluated, i.e., should we consider solutions that would make the log term negative.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Take for instance a logarithmic equation &lt;code class="highlighter-rouge"&gt;log(x - 3) + log(x + 3) = 0&lt;/code&gt;, when solved the solutions would be &lt;code class="highlighter-rouge"&gt;-sqrt(10) and sqrt(10)&lt;/code&gt;, but &lt;code class="highlighter-rouge"&gt;-sqrt(10)&lt;/code&gt; make the log term negative. So the question was what should we do for such a scenario? Should we add a check to remove these solution or just accept. it.&lt;/p&gt;
-
-&lt;p&gt;As of now as suggested by &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; and &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; we should focus on the liberal interpratation for evaluating equations: if an expression can be written in its equivalent form and makes sense then we can consider solutions of this equivalent form. Therefore both the above solutions are acceptable.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How the identification of the logarithmic equations would take place.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The identification of logarithmic type is another question and is still yet to be agreed upon. At first the implementation was done by extracting each term of the expression and see if it has &lt;code class="highlighter-rouge"&gt;log&lt;/code&gt; terms in it, this wasn&amp;#8217;t the best of the method as we are trying to identify a large class of logarithmic equation while solving is done only for a subset of those equations (only those that can be reduced by &lt;code class="highlighter-rouge"&gt;logcombine&lt;/code&gt;). So Amit and Chris stressed upon making the logarithmic identification for equations that its solver would solve. So as of now I have made changes accordingly.&lt;/p&gt;
-
-&lt;p&gt;Another problem that this PR is facing is of the infinite recursion. The equations that both exponential and logarithmic can&amp;#8217;t solve but still their respective solver try to handle gets into infinite recursion. One way (though not appropriate) is to use &lt;code class="highlighter-rouge"&gt;flags&lt;/code&gt; like in &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt;, using this would remove the infinite recursion but is not the best way to  handle, therefore I am looking into ways on how to get this fixed.&lt;/p&gt;
-
-&lt;p&gt;Apart from the work on log solver, I did some work on lambert solver- how the implementation would go, ran all the tests of &lt;code class="highlighter-rouge"&gt;solve&lt;/code&gt;, differentiated the tests that &lt;code class="highlighter-rouge"&gt;_solve_lambert&lt;/code&gt; could solve and that &lt;code class="highlighter-rouge"&gt;bivariate_type&lt;/code&gt; would. I will be adding a PR for this in a day or so.&lt;/p&gt;
-
-&lt;p&gt;Next week goals:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Finish things with logarithmic solver&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sending a PR for lambert solver and try to finish its work as quickly as possible.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://sidhantnagpal.github.io/2018/07/gsoc-week10</guid>
-      <author>Sidhant Nagpal (sidhantnagpal)</author>
-      <title>Sidhant Nagpal (sidhantnagpal): GSoC 2018: SymPy - Week 10</title>
-      <pubDate>Sat, 21 Jul 2018 00:00:00 GMT</pubDate>
-      <link>https://sidhantnagpal.github.io/2018/07/gsoc-week10</link>
-      <description>&lt;p&gt;&lt;img src="https://sidhantnagpal.com/files/gsoc-sympy.png" style="width: 75%; height: 75%; float: left; margin-left: 55px;" /&gt;
-&lt;br clear="all" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This week SymPy 1.2 was released, which included the &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module. The complete changelog for the SymPy 1.2 is &lt;a href="https://github.com/sympy/sympy/wiki/Release-Notes-for-1.2"&gt;here&lt;/a&gt;. I started the week by cleaning up &lt;code class="highlighter-rouge"&gt;discrete&lt;/code&gt; module, improving the API of public &lt;code class="highlighter-rouge"&gt;convolution&lt;/code&gt; method by attending to reviews by &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; and &lt;a href="https://github.com/jksuom"&gt;Kalevi&lt;/a&gt; and fixing issue &lt;a href="https://github.com/sympy/sympy/issues/14901"&gt;#14901&lt;/a&gt; reported by &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; in &lt;a href="https://github.com/sympy/sympy/pull/14907"&gt;PR #14907&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href="https://github.com/sympy/sympy/pull/14907"&gt;PR #14907&lt;/a&gt; has been merged successfully and will be part of SymPy 1.2.1.&lt;/p&gt;
-
-&lt;p&gt;Late this week, I started working on the convolution module for inclusion of &lt;code class="highlighter-rouge"&gt;covering_product&lt;/code&gt;.
-The &lt;a href="https://github.com/sympy/sympy/pull/14928"&gt;PR #14298&lt;/a&gt; included the same with documentation, doctests and unit tests.
-The implementation of &lt;code class="highlighter-rouge"&gt;covering_product&lt;/code&gt; uses M&amp;#246;bius Transform with subset enumeration (&lt;code class="highlighter-rouge"&gt;mobius_transform(..., subset=True)&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;inverse_mobius_transform(..., subset=True)&lt;/code&gt;). As included in the PR, the usage for the same is:&lt;/p&gt;
-
-&lt;div class="language-python highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;covering_product&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'u v x y z'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;covering_product&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;covering_product&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Looking forward to the next week, where I will be implementing &lt;code class="highlighter-rouge"&gt;intersecting_product&lt;/code&gt; as the final method for the convolution module.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://nkhlpappu.wordpress.com/?p=9</guid>
-      <author>Nikhil Pappu (NikhilPappu)</author>
-      <title>Nikhil Pappu (NikhilPappu): Autolev Parser: Status Update</title>
-      <pubDate>Fri, 20 Jul 2018 22:31:06 GMT</pubDate>
-      <link>https://nkhlpappu.wordpress.com/2018/07/20/autolev-parser-status-update-2/</link>
-      <description>&lt;p&gt;I have been working on improving the parser by parsing Dynamics online codes, planning out how to go about writing tests and other aspects of the project and getting the PR into shape.&lt;/p&gt;
-&lt;p&gt;I am currently working on writing tests to cover all the rules of the parser. I should be done with this in 2 days.&lt;/p&gt;
-&lt;p&gt;This is the plan I have for the third phase:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Make the PR merge ready:&lt;/span&gt;
-&lt;ol&gt;
-&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Finish the tests for the parser rules and get the PR merged.&lt;/span&gt;&lt;/li&gt;
-&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;open a new PR to work on further improvements.&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;additional_tests (will be added in a private BitBucket repo). Here I shall go through many codes from these sources and improve the parser to parse most of these. I shall take notes on little details and errors so that I can include them in the documentation.&lt;/span&gt;
-&lt;ol&gt;
-&lt;li&gt;PyDy example repo (mass spring damper, double pendulum, chaos pendulum examples)&lt;/li&gt;
-&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Dynamics Online Chapters 1 &amp;#8211; 4&lt;/span&gt;&lt;/li&gt;
-&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Autolev Tutorial Examples (5.1 &amp;#8211; 5.7)&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li style="font-weight: 400;"&gt;&lt;span style="font-weight: 400;"&gt;Documentation (What the parser can do, How it should be used, Limitations, Future improvements etc)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Make the parser parse Dynamics Online Chapter 5 codes and the Bicycle Model.&lt;/li&gt;
-&lt;li&gt;&lt;span style="font-weight: 400;"&gt;Final Report&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://singhjashan.wordpress.com/?p=71</guid>
-      <author>Jashanpreet Singh Sraw (jashan498)</author>
-      <title>Jashanpreet Singh Sraw (jashan498): Week 8 &amp; 9: Beam_3d class</title>
-      <pubDate>Tue, 17 Jul 2018 16:42:54 GMT</pubDate>
-      <link>https://singhjashan.wordpress.com/2018/07/17/week-8-9-07-july-20-july/</link>
-      <description>&lt;p&gt;I started implementing Beam_3d class which can be used to find Shear force, Bending moment, Slope, Deflection and other few things for the Beam object.&amp;#160; PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14883"&gt;#14883&lt;/a&gt;&amp;#160;was created for this.&lt;/p&gt;
-&lt;p&gt;I implemented Beam_3d class using&amp;#160;&amp;#160;&lt;a href="http://homes.civil.aau.dk/jc/FemteSemester/Beams3D.pdf" rel="nofollow"&gt;this paper&lt;/a&gt;&amp;#160;as a reference. Actually, like Beam class, it uses a few sets of equations to find certain quantities:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;To find&amp;#160;&lt;em&gt;Shear force&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;Bending moment&lt;/em&gt;&lt;br /&gt;
-&lt;a href="https://user-images.githubusercontent.com/31389737/42560335-0c45e50e-8514-11e8-9fb1-f9d27040b4d8.png" rel="noopener"&gt;&lt;img alt="shear" src="https://user-images.githubusercontent.com/31389737/42560335-0c45e50e-8514-11e8-9fb1-f9d27040b4d8.png" /&gt;&lt;/a&gt;&lt;br /&gt;
-where&amp;#160;&lt;em&gt;[N, Q&lt;sub&gt;y&lt;/sub&gt;, Q&lt;sub&gt;z&lt;/sub&gt;]&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;[M&lt;sub&gt;x&lt;/sub&gt;, M&lt;sub&gt;y&lt;/sub&gt;, M&lt;sub&gt;z&lt;/sub&gt;]&lt;/em&gt;&amp;#160;are the shear force and bending moment along x-y-z-axes respectively (&lt;em&gt;q&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;m&lt;/em&gt;&amp;#160;are applied load and moment).&lt;/li&gt;
-&lt;li&gt;To find&amp;#160;&lt;em&gt;Slope&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;Deflection&lt;/em&gt;:&lt;br /&gt;
-&lt;a href="https://user-images.githubusercontent.com/31389737/42560803-2e2ea592-8515-11e8-81cc-b511e1286ff5.png" rel="noopener"&gt;&lt;img alt="def_1" src="https://user-images.githubusercontent.com/31389737/42560803-2e2ea592-8515-11e8-81cc-b511e1286ff5.png" /&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;a href="https://user-images.githubusercontent.com/31389737/42560832-466c2986-8515-11e8-9ac7-4a0939a41a52.png" rel="noopener"&gt;&lt;img alt="def_2" src="https://user-images.githubusercontent.com/31389737/42560832-466c2986-8515-11e8-9ac7-4a0939a41a52.png" /&gt;&lt;/a&gt;&lt;br /&gt;
-where&amp;#160;&lt;em&gt;[w&lt;sub&gt;x&lt;/sub&gt;, w&lt;sub&gt;y&lt;/sub&gt;, w&lt;sub&gt;z&lt;/sub&gt;]&lt;/em&gt;&amp;#160;and&amp;#160;&lt;em&gt;[&amp;#952;&lt;sub&gt;x&lt;/sub&gt;, &amp;#952;&lt;sub&gt;y&lt;/sub&gt;, &amp;#952;&lt;sub&gt;z&lt;/sub&gt;]&lt;/em&gt;&amp;#160;are deflection and slope along three axes respectively.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Example for the API:&lt;/p&gt;
-&lt;p&gt;There is a beam of l meters long. A constant distributed load of magnitude q&lt;br /&gt;
-is applied along the y-axis from start till the end of the beam. A constant distributed&lt;br /&gt;
-moment of magnitude m is also applied along the z-axis from start till the end of the beam. Beam is fixed at both of its end. So, deflection of the beam at the both ends&lt;br /&gt;
-is restricted.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.physics.continuum_mechanics.beam import Beam_3d
-&amp;gt;&amp;gt;&amp;gt; from sympy import symbols
-&amp;gt;&amp;gt;&amp;gt; l, E, G, I, A = symbols('l, E, G, I, A')
-&amp;gt;&amp;gt;&amp;gt; b = Beam_3d(l, E, G, I, A)
-&amp;gt;&amp;gt;&amp;gt; b.apply_support(0, "fixed")
-&amp;gt;&amp;gt;&amp;gt; b.apply_support(l, "fixed")
-&amp;gt;&amp;gt;&amp;gt; q, m = symbols('q, m')
-&amp;gt;&amp;gt;&amp;gt; b.apply_load(q, dir="y")
-&amp;gt;&amp;gt;&amp;gt; b.apply_moment_load(m, dir="z")
-&amp;gt;&amp;gt;&amp;gt; b.shear_force()
-[0, -q*x, 0]
-&amp;gt;&amp;gt;&amp;gt; b.bending_moment()
-[0, 0, -m*x + q*x**2/2]
-&amp;gt;&amp;gt;&amp;gt; b.solve_slope_deflection()
-&amp;gt;&amp;gt;&amp;gt; b.slope()
-[0, 0, l*x*(-l*q + 3*l*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(2*(A*G*l**2 + 12*E*I)) + 3*m)/(6*E*I)
-+ q*x**3/(6*E*I) + x**2*(-l*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(2*(A*G*l**2 + 12*E*I))
-- m)/(2*E*I)]
-&amp;gt;&amp;gt;&amp;gt; b.deflection()
-[0, -l**2*q*x**2/(12*E*I) + l**2*x**2*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(8*E*I*(A*G*l**2 + 12*E*I))
-+ l*m*x**2/(4*E*I) - l*x**3*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(12*E*I*(A*G*l**2 + 12*E*I)) - m*x**3/(6*E*I)
-+ q*x**4/(24*E*I) + l*x*(A*G*l**2*q - 2*A*G*l*m + 12*E*I*q)/(2*A*G*(A*G*l**2 + 12*E*I)) - q*x**2/(2*A*G), 0]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;As this class is relatively new, it would require a few improvements in the future:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;As&amp;#160;&lt;code&gt;Beam_3d&lt;/code&gt;&amp;#160;doesn&amp;#8217;t use&amp;#160;&lt;code&gt;SingularityFunction&lt;/code&gt;, I was unable to find a way to represent point load/moments. So for now&amp;#160;&lt;code&gt;Beam_3d&lt;/code&gt;&amp;#160; only supports continous load (applied over the whole span length of beam).&lt;/li&gt;
-&lt;li&gt;Also,&amp;#160;This class assumes that any kind of distributed load/moment is&lt;br /&gt;
-applied throughout the span of a beam.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For now, after discussing it with Arihant, we decided to raise NotImplementedError in such cases.&lt;/p&gt;
-&lt;h2&gt;&lt;em&gt;&lt;strong&gt;Next Week&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Make sure PR&amp;#160;&lt;a href="https://github.com/sympy/sympy/pull/14883"&gt;#14883&lt;/a&gt;&amp;#160;gets merge by the end of next week.&lt;/li&gt;
-&lt;li&gt;Start implementing plotting methods for Beam class.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">tag:blogger.com,1999:blog-1036447522835236737.post-5913583019178491882</guid>
-      <author>Ashish Kumar Gaurav (ashishkg0022)</author>
-      <title>Ashish Kumar Gaurav (ashishkg0022): GSoC 2018: Week 9</title>
-      <pubDate>Sun, 15 Jul 2018 15:13:26 GMT</pubDate>
-      <link>http://ashishkg0022.blogspot.com/2018/07/gsoc-2018-week-9.html</link>
-      <description>&lt;div dir="ltr" style="text-align: left;"&gt;&lt;br /&gt;&lt;div style="text-align: justify;"&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;Hello everyone. Here is the progress of &lt;/span&gt;rubi&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt; module in the 9th week of GSoC period.&lt;/span&gt;&lt;/div&gt;&lt;span style="font-family: Arial, Helvetica, sans-serif;"&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;In the very beginning of the week, the PR for appelf1 was merged. My aim for this week was to load all rules and test at least&amp;nbsp;a small part for each type of rule. Due to the time factor, its not possible to test all. Moreover, rubi needs to be updated to the latest version, so the test suite too will be updated.&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;I started with trigo rules. They are huge in number. They were never tested before, so some utility_functions like `&lt;i&gt;TrigReduce&lt;/i&gt;`, `&lt;i&gt;KnownTrigIntegrandQ&lt;/i&gt;`, `&lt;i&gt;FunctionOfTrig&lt;/i&gt;` etc were wrong. They were corrected. Soon I realised a difference between sympy and Mathematica. In mathematica, `&lt;i&gt;1/Cot[x]`&lt;/i&gt; is automatically transformed to `&lt;i&gt;Tan[x]&lt;/i&gt;` and `&lt;i&gt;1/Tan[x]&lt;/i&gt;` too was transformed to `&lt;i&gt;Cot[x]`&lt;/i&gt;. But in sympy, these are different. So, `&lt;i&gt;tan(x)&lt;/i&gt;` didn't match to `&lt;i&gt;cot(x)&lt;/i&gt;` . Francesco suggested to replace all `&lt;i&gt;cot&lt;/i&gt;` with `&lt;i&gt;1/tan&lt;/i&gt;`&amp;nbsp; and similarly for `&lt;i&gt;sec&lt;/i&gt;` and `&lt;i&gt;csc`&lt;/i&gt; (in the code generator too).&amp;nbsp;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;Next, I moved to `&lt;i&gt;inverse_trigo&lt;/i&gt;`, `&lt;i&gt;hyperbolic&lt;/i&gt;` and `&lt;i&gt;inverse_hyperbolic&lt;/i&gt;`. I tested some test cases for all these rules. I also tested `&lt;i&gt;error_functions&lt;/i&gt;` completely to make sure `&lt;i&gt;special_functions&lt;/i&gt;` are working properly.&amp;nbsp;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;After all this, I feel rubi is in a stable and working condition. The loading time is around `&lt;i&gt;10 minutes`&lt;/i&gt;. Except for the loading time, the performance of rubi is good.&amp;nbsp;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style="text-align: justify;"&gt;I have left `&lt;i&gt;DerivativeIntegration&lt;/i&gt;` and `&lt;i&gt;Piecewise&lt;/i&gt;` rules. We will be discussing it.&amp;nbsp;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>
