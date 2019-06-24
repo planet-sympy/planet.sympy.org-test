@@ -103,7 +103,7 @@
       <foaf:Agent>
         <foaf:name>Arighna Chakrabarty (arighnaiitg)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="https://username.github.io">
+          <foaf:Document rdf:about="https://arighnaiitg.github.io">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://arighnaiitg.github.io/feed.xml"/>
             </rdfs:seeAlso>
@@ -187,7 +187,7 @@
       <foaf:Agent>
         <foaf:name>Jogi Miglani (jmig5776)</foaf:name>
         <foaf:weblog>
-          <foaf:Document>
+          <foaf:Document rdf:about="https://jmig5776.github.io//">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://jmig5776.github.io/feed.sympy.xml"/>
             </rdfs:seeAlso>
@@ -295,9 +295,9 @@
       <foaf:Agent>
         <foaf:name>Nikhil Maan (Sc0rpi0n101)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="https://sc0rpi0n101.github.io/">
+          <foaf:Document rdf:about="https://sc0rpi0n101.github.io/categories/gsoc/">
             <rdfs:seeAlso>
-              <rss:channel rdf:about="https://sc0rpi0n101.github.io/index.xml"/>
+              <rss:channel rdf:about="https://sc0rpi0n101.github.io/categories/gsoc/index.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
