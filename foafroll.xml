@@ -317,23 +317,11 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Shikhar Jaiswal (ShikharJ)</foaf:name>
-        <foaf:weblog>
-          <foaf:Document rdf:about="https://shikharj.github.io//">
-            <rdfs:seeAlso>
-              <rss:channel rdf:about="https://shikharj.github.io/feed.xml"/>
-            </rdfs:seeAlso>
-          </foaf:Document>
-        </foaf:weblog>
-      </foaf:Agent>
-    </foaf:member>
-    <foaf:member>
-      <foaf:Agent>
         <foaf:name>Shubham Kumar Jha (ShubhamKJha)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="https://shubhamkjha.github.io/">
+          <foaf:Document rdf:about="http://shubhamjha.com/">
             <rdfs:seeAlso>
-              <rss:channel rdf:about="https://shubhamkjha.github.io/sympy_feed.xml"/>
+              <rss:channel rdf:about="https://shubhamjha.com/sympy_feed.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>

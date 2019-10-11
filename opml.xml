@@ -2,8 +2,8 @@
 <opml version="2.0">
   <head>
     <title>Planet SymPy</title>
-    <dateCreated>Mon, 24 Jun 2019 18:20:17 GMT</dateCreated>
-    <dateModified>Mon, 24 Jun 2019 18:20:17 GMT</dateModified>
+    <dateCreated>Fri, 11 Oct 2019 21:22:04 GMT</dateCreated>
+    <dateModified>Fri, 11 Oct 2019 21:22:04 GMT</dateModified>
     <ownerName>Sumith</ownerName>
     <ownerEmail>sumith1896@gmail.com</ownerEmail>
   </head>
@@ -34,8 +34,7 @@
     <outline text="Sampad Saha (sampadsaha5)" xmlUrl="https://sampadblog.wordpress.com/feed/"/>
     <outline text="Nikhil Maan (Sc0rpi0n101)" xmlUrl="https://sc0rpi0n101.github.io/categories/gsoc/index.xml"/>
     <outline text="Shekhar Prasad Rajak (shekharrajak)" xmlUrl="https://shekharrajak.github.io/feed.xml"/>
-    <outline text="Shikhar Jaiswal (ShikharJ)" xmlUrl="https://shikharj.github.io/feed.xml"/>
-    <outline text="Shubham Kumar Jha (ShubhamKJha)" xmlUrl="https://shubhamkjha.github.io/sympy_feed.xml"/>
+    <outline text="Shubham Kumar Jha (ShubhamKJha)" xmlUrl="https://shubhamjha.com/sympy_feed.xml"/>
     <outline text="Subham Tibra (shubhamtibra)" xmlUrl="https://shubhamtibra.wordpress.com/feed/"/>
     <outline text="Sidhant Nagpal (sidhantnagpal)" xmlUrl="https://sidhantnagpal.com/rss-gsoc.xml"/>
     <outline text="Jashanpreet Singh Sraw (jashan498)" xmlUrl="https://singhjashan.wordpress.com/feed/"/>
