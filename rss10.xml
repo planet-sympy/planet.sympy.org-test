@@ -7,6 +7,27 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://sachin-4099.github.io//GSoC-2020-with-sympy</guid>
+      <author>Sachin Agarwal (sachin-4099)</author>
+      <title>Sachin Agarwal (sachin-4099): GSoC 2020 Acceptance</title>
+      <pubDate>Thu, 07 May 2020 00:00:00 GMT</pubDate>
+      <link>https://sachin-4099.github.io//GSoC-2020-with-sympy</link>
+      <description>&lt;p&gt;&lt;img src="https://sachin-4099.github.io/public/gsoc.png" style="width: 30%; height: 30%; float: left;" /&gt;
+&lt;img src="https://sachin-4099.github.io/public/sympy.png" style="width: 25%; height: 25%; float: right; margin-right: 100px;" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The results of &lt;strong&gt;&lt;a href="https://summerofcode.withgoogle.com/organizations/4831132022996992/#5816442299088896"&gt;Google Summer of Code&lt;/a&gt;&lt;/strong&gt; were out on 04 May 2020 and I am pleased to share with you that my proposal with &lt;strong&gt;&lt;a href="http://sympy.org"&gt;Sympy&lt;/a&gt;&lt;/strong&gt; was accepted.&lt;/p&gt;
+
+&lt;p&gt;I would like to thank all the members of the organisation especially &lt;a href="https://github.com/jksuom"&gt;Kalevi Suominen&lt;/a&gt; for guiding me in my proposal and PR&amp;#8217;s. I am really excited to work for such an amazing organization.&lt;/p&gt;
+
+&lt;p&gt;I will be working on my project, &lt;a href="https://drive.google.com/file/d/1OgbnWLzQzaLfmmSM-fK09TCJmUzJ6tq4/view?usp=sharing"&gt;Amendments to Limit Evaluation and Series Expansion&lt;/a&gt;, during a period of 3 months spanning from June to August, under the mentorship of &lt;a href="https://github.com/jksuom"&gt;Kalevi Suominen&lt;/a&gt; and &lt;a href="https://github.com/leosartaj"&gt;Sartaj Singh&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My primary focus will be to work on the &lt;code class="language-plaintext highlighter-rouge"&gt;series&lt;/code&gt; module and make it more robust as it is the backbone of all the limit evaluations performed by the library.&lt;/p&gt;
+
+&lt;p&gt;Looking forward for a really productive and wonderful summer ahead.&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2020/04/19/sym_dl</guid>
       <author>Gagandeep Singh (czgdp1807)</author>
       <title>Gagandeep Singh (czgdp1807): Deep Learning for Symbolic Mathematics</title>
@@ -2141,33 +2162,6 @@ the end of the tenth week, and we have entered the final phase of the project.&l
       <link>https://arighnaiitg.github.io/2019-08-05-gsoc-week10/</link>
       <description>&lt;p&gt;Week 10 ends.. - 
           Phase 3 of the GSoC coding period is traversong smoothly. !! I and Sartaj had a meeting on the 05th of August, about the timeline of the next 2 weeks. Here are the deliverables that have been completed in this week, including the minutes of the meeting. The second aseries...</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://divyanshu132.github.io//gsoc-week-10</guid>
-      <author>Divyanshu Thakur (divyanshu132)</author>
-      <title>Divyanshu Thakur (divyanshu132): GSoC 2019 - Week 10 - Induced Pcgs for polycyclic subgroups</title>
-      <pubDate>Mon, 05 Aug 2019 00:00:00 GMT</pubDate>
-      <link>https://divyanshu132.github.io//gsoc-week-10</link>
-      <description>&lt;p&gt;The tenth week of coding period has ended and a new PR&lt;a href="https://github.com/sympy/sympy/pull/17317"&gt;sympy/sympy#17317&lt;/a&gt; has been introduced. The PR implements induced Pcgs and exponent vector for polycyclic subgroups with respect to the original pcgs of the group.
-Below is an example to show the functionality.&lt;/p&gt;
-
-&lt;div class="highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from sympy.combinatorics import *
-&amp;gt;&amp;gt;&amp;gt; S = SymmetricGroup(8)
-&amp;gt;&amp;gt;&amp;gt; G = S.sylow_subgroup(2)
-&amp;gt;&amp;gt;&amp;gt; gens = [G[0], G[1]]
-&amp;gt;&amp;gt;&amp;gt; PcGroup = G.polycyclic_group()
-&amp;gt;&amp;gt;&amp;gt; collector = PcGroup.collector
-&amp;gt;&amp;gt;&amp;gt; ipcgs = collector.induced_pcgs(gens)
-&amp;gt;&amp;gt;&amp;gt; [gen.order() for gen in ipcgs]
-[2, 2, 2]
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Further it can also be used to implement &lt;code class="highlighter-rouge"&gt;Canonical polycyclic sequence&lt;/code&gt; which can be used to check if two subgroups of polycyclic presented group &lt;code class="highlighter-rouge"&gt;G&lt;/code&gt; are equal or not.&lt;/p&gt;
-
-&lt;p&gt;For the next week I&amp;#8217;ll try to complete the documentation work on polycyclic groups and open a PR for the same.&lt;/p&gt;
-
-&lt;p&gt;Till then, good byee..&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
