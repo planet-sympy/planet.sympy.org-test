@@ -2169,44 +2169,5 @@ Below is an example to show the functionality.&lt;/p&gt;
 
 &lt;p&gt;Till then, good byee..&lt;/p&gt;</description>
     </item>
-    <item>
-      <guid isPermaLink="false">https://jmig5776.github.io//gsoc-week-10</guid>
-      <author>Jogi Miglani (jmig5776)</author>
-      <title>Jogi Miglani (jmig5776): GSoC 2019 - Week 10</title>
-      <pubDate>Sun, 04 Aug 2019 00:00:00 GMT</pubDate>
-      <link>https://jmig5776.github.io//gsoc-week-10</link>
-      <description>&lt;p&gt;This was the tenth week meeting with the GSoC mentors which was scheduled on
-Sunday 4th August, 2019 between 1:00 - 2:00 PM (IST). Me, Yathartha
-were the attendees of the meeting.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Discussing previous week&amp;#8217;s progress&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Progress of &lt;code class="highlighter-rouge"&gt;_solve_modular&lt;/code&gt;:- In PR &lt;a href="https://github.com/sympy/sympy/pull/16976"&gt;#16976&lt;/a&gt;
-After discussing with Yathartha, I decided to change the basic model of the &lt;code class="highlighter-rouge"&gt;_solve_modular &lt;/code&gt;
-such that I should be able to target equations more efficiently and also the rest
-of the types of equation should return ConditionSet. Cases like &lt;code class="highlighter-rouge"&gt;Mod(a**x, m) - rhs = 0&lt;/code&gt;
-are special type and will be handled differently with the helper functions of ntheory module.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Progress of ImageSet Union:- In PR &lt;a href="https://github.com/sympy/sympy/pull/17079"&gt;#17079&lt;/a&gt;
-This PR is currently been left for review.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Next week goals&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Work upon &lt;code class="highlighter-rouge"&gt;_solve_modular&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;In the following week I will be changing the domain of solving equations to
-Integers only.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Code improvement takes time!!&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

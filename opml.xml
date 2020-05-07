@@ -2,8 +2,8 @@
 <opml version="2.0">
   <head>
     <title>Planet SymPy</title>
-    <dateCreated>Thu, 07 May 2020 16:42:03 GMT</dateCreated>
-    <dateModified>Thu, 07 May 2020 16:42:03 GMT</dateModified>
+    <dateCreated>Thu, 07 May 2020 16:57:23 GMT</dateCreated>
+    <dateModified>Thu, 07 May 2020 16:57:23 GMT</dateModified>
     <ownerName>Sumith</ownerName>
     <ownerEmail>sumith1896@gmail.com</ownerEmail>
   </head>
@@ -39,6 +39,7 @@
     <outline text="Shubham Kumar Jha (ShubhamKJha)" xmlUrl="https://shubhamjha.com/sympy_feed.xml"/>
     <outline text="Subham Tibra (shubhamtibra)" xmlUrl="https://shubhamtibra.wordpress.com/feed/"/>
     <outline text="Jashanpreet Singh Sraw (jashan498)" xmlUrl="https://singhjashan.wordpress.com/feed/"/>
+    <outline text="Smit Lunagariya (Smit-create)" xmlUrl="https://smit-create.github.io/rss.xml"/>
     <outline text="Szymon Mieszczak (szymag)" xmlUrl="https://szymag.github.io/feed.xml"/>
     <outline text="Valeriia Gladkova (valglad)" xmlUrl="https://valglad.github.io/feed.xml"/>
     <outline text="Aaron Meurer (asmeurer)" xmlUrl="https://www.asmeurer.com/blog/rss.xml"/>
