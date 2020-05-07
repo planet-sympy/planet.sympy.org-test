@@ -7,6 +7,850 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2020/04/19/sym_dl</guid>
+      <author>Gagandeep Singh (czgdp1807)</author>
+      <title>Gagandeep Singh (czgdp1807): Deep Learning for Symbolic Mathematics</title>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 GMT</pubDate>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2020/04/19/sym_dl.html</link>
+      <description>&lt;p&gt;Existence of dataset generators which are capable of generating data distributions other than what the model has been trained on i.e., capable of producing dataset shift. For example, using summation properties of integration. To prove that infinite types of dataset generators are possible. This model will give results even for those functions which don&amp;#8217;t have any closed form integral. The model should be trained over expressions containing * and / operators, because expressions containing + and - can be evaluated by applying + and - over the result of args of respective operators. There is no need for trigonometric operators as all of them can be expressed in terms of exponential operators. See, https://en.wikipedia.org/wiki/Integration_using_Euler%27s_formula for more details.</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2020/04/16/optimal_offloading</guid>
+      <author>Gagandeep Singh (czgdp1807)</author>
+      <title>Gagandeep Singh (czgdp1807): Optimization of Offloading Scheme Algorithm for Large Number of Tasks in Mobile-Edge Computing</title>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 GMT</pubDate>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2020/04/16/optimal_offloading.html</link>
+      <description>&lt;p&gt;Introduction</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2020/04/10/api_designs</guid>
+      <author>Gagandeep Singh (czgdp1807)</author>
+      <title>Gagandeep Singh (czgdp1807): Designing APIs</title>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 GMT</pubDate>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2020/04/10/api_designs.html</link>
+      <description>&lt;p&gt;It&amp;#8217;s been quite some time, around 2 years or so, I have been contributing to various projects on Github and majority of my time goes into discussions, rather than coding things out. It was in the summers of 2019 when I started to write code from scratch rather than fixing bugs in others&amp;#8217; codes. I was supposed to write code for Markov chains, as a part of GSoC with SymPy. Well, I literally coded it out without even discussing about it&amp;#8217;s design with the community and as expected my patch was rejected for a first few times. Thanks to Francesco who told me about my mistake that we shouldn&amp;#8217;t just dive into implementation when writing quality software which is to be used by a lot of users and not just me. He told that the first step of a software engineering pipeline is designing stable APIs through some use cases. So, in this blog, I will share with you my thoughts, on the basis of my experiences, on how to design APIs, on what parameters an API should be judged.</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2020/04/09/iit_story</guid>
+      <author>Gagandeep Singh (czgdp1807)</author>
+      <title>Gagandeep Singh (czgdp1807): The IIT Story</title>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 GMT</pubDate>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2020/04/09/iit_story.html</link>
+      <description>&lt;p&gt;The story is published by Tell Me Your Story OPC Pvt. Ltd. in the series ON THE WAY TO IIT which is going to be released as eBook on amazon.com. Link to the eBook will be posted here as soon as it&amp;#8217;s up.</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://asmeurer.com/blog/posts/verifying-the-riemann-hypothesis-with-sympy-and-mpmath/</guid>
+      <author>Aaron Meurer (asmeurer)</author>
+      <title>Aaron Meurer (asmeurer): Verifying the Riemann Hypothesis with SymPy and mpmath</title>
+      <pubDate>Tue, 31 Mar 2020 21:12:54 GMT</pubDate>
+      <link>https://asmeurer.com/blog/posts/verifying-the-riemann-hypothesis-with-sympy-and-mpmath/</link>
+      <description>&lt;div&gt;&lt;p&gt;Like most people, I've had a lot of free time recently, and I've spent some of
+it watching various YouTube videos about the &lt;a href="https://en.wikipedia.org/wiki/Riemann_hypothesis"&gt;Riemann
+Hypothesis&lt;/a&gt;. I've collected
+the videos I've watched into &lt;a href="https://www.youtube.com/playlist?list=PLrFrByaoJbcqKjzgJvLs2-spSmzP7jolT"&gt;YouTube
+playlist&lt;/a&gt;.
+The playlist is sorted with the most mathematically approachable videos first,
+so even if you haven't studied complex analysis before, you can watch the
+first few. If you have studied complex analysis, all the videos will be within
+your reach (none of them are highly technical with proofs). Each video
+contains parts that aren't in any of the other videos, so you will get
+something out of watching each of them.&lt;/p&gt;
+&lt;p&gt;One of the &lt;a href="https://www.youtube.com/watch?v=lyf9W2PWm40&amp;amp;list=PLrFrByaoJbcqKjzgJvLs2-spSmzP7jolT&amp;amp;index=8"&gt;videos near the end of the
+playlist&lt;/a&gt;
+is a lecture by Keith Conrad. In it, he mentioned a method by which one could
+go about verifying the Riemann Hypothesis with a computer. I wanted to see if
+I could do this with SymPy and mpmath. It turns out you can.&lt;/p&gt;
+&lt;h2&gt;Background Mathematics&lt;/h2&gt;
+&lt;h3&gt;Euler's Product Formula&lt;/h3&gt;
+&lt;p&gt;Before we get to the computations, let's go over some mathematical background.
+As you may know, the Riemann Hypothesis is one of the 7 &lt;a href="https://en.wikipedia.org/wiki/Millennium_Prize_Problems"&gt;Millennium Prize
+Problems&lt;/a&gt; outlined by
+the Clay Mathematics Institute in 2000. The problems have gained some fame
+because each problem comes with a $1,000,000 prize if solved. One problem, the
+&lt;a href="https://en.wikipedia.org/wiki/Poincar%C3%A9_conjecture"&gt;Poincar&amp;#233; conjecture&lt;/a&gt;,
+has already been solved (Grigori Perelman who solved it turned down the 1
+million dollar prize). The remainder remain unsolved.&lt;/p&gt;
+&lt;p&gt;The Riemann Hypothesis is one of the most famous of these problems. The reason
+for this is that the problem is central many open questions in number theory.
+There are hundreds of theorems which are only known to be true contingent on
+the Riemann Hypothesis, meaning that if the Riemann Hypothesis were proven,
+immediately hundreds of theorems would be proven as well. Also, unlike some
+other Millennium Prize problems, like P=NP, the Riemann Hypothesis is almost
+universally believed to be true by mathematicians. So it's not a question of
+whether or not it is true, just one of how to actually prove it. The problem
+has been open for over 160 years, and while many advances have been made, no
+one has yet come up with a proof of it (crackpot proofs aside).&lt;/p&gt;
+&lt;p&gt;To understand the statement of the hypothesis, we must first define the zeta
+function. Let&lt;/p&gt;
+&lt;p&gt;$$\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}$$&lt;/p&gt;
+&lt;p&gt;(that squiggle $\zeta$ is the lowercase Greek letter zeta). This expression
+makes sense if $s$ is an integer greater than or equal to 2, $s=2, 3, 4, \ldots$,
+since we know from simple arguments from calculus that the summation converges
+in those cases (it isn't important for us what those values are, only that the
+summation converges). The story begins with Euler, who in 1740 considered the
+following infinite product:&lt;/p&gt;
+&lt;p&gt;$$\prod_{\text{$p$ prime}}\frac{1}{1 -
+\frac{1}{p^s}}.$$&lt;/p&gt;
+&lt;p&gt;The product ranges over all prime numbers, i.e., it is
+$$\left(\frac{1}{1 - \frac{1}{2^s}}\right)\cdot\left(\frac{1}{1 -
+\frac{1}{3^s}}\right)\cdot\left(\frac{1}{1 - \frac{1}{5^s}}\right)\cdots.$$
+The fraction $\frac{1}{1 - \frac{1}{p}}$ may seem odd at first, but consider
+the famous geometric series formula, $$\sum_{k=0}^\infty r^k = \frac{1}{1 -
+r},$$ which is true for $|r| &amp;lt; 1$. Our fraction is exactly of this form, with
+$r = \frac{1}{p^s}$. So substituting, we have&lt;/p&gt;
+&lt;p&gt;$$\prod_{\text{$p$ prime}}\frac{1}{1 - \frac{1}{p^s}} =
+\prod_{\text{$p$ prime}}\sum_{k=0}^\infty \left(\frac{1}{p^s}\right)^k =
+\prod_{\text{$p$ prime}}\sum_{k=0}^\infty \left(\frac{1}{p^k}\right)^s.$$&lt;/p&gt;
+&lt;p&gt;Let's take a closer look at what this is. It is&lt;/p&gt;
+&lt;p&gt;$$\left(\frac{1}{p_1^s} + \frac{1}{p_1^{2s}} + \frac{1}{p_1^{3s}} +
+\cdots\right)\cdot\left(\frac{1}{p_2^s} + \frac{1}{p_2^{2s}} +
+\frac{1}{p_2^{3s}} + \cdots\right)\cdot\left(\frac{1}{p_3^s} + \frac{1}{p_3^{2s}} +
+\frac{1}{p_3^{3s}} + \cdots\right)\cdots,$$&lt;/p&gt;
+&lt;p&gt;where $p_1$ is the first prime, $p_2$ is the second prime, and so on. Now
+think about how to expand finite products of finite sums, for instance,
+$$(x_1 + x_2 + x_3)(y_1 + y_2 + y_3)(z_1 + z_2 + z_3).$$ To expand the above,
+you would take a sum of every combination where you pick one $x$ term, one $y$
+term, and one $z$ term, giving&lt;/p&gt;
+&lt;p&gt;$$x_1y_1z_1 + x_1y_1z_2 + \cdots + x_2y_1z_3 + \cdots + x_3y_2z_1 + \cdots + x_3y_3z_3.$$&lt;/p&gt;
+&lt;p&gt;So to expand the infinite product, we do the same thing. We take every
+combination of picking $1/p_i^{ks}$, with one $k$ for each $i$. If we pick
+infinitely many non-$1$ powers, the product will be zero, so we only need to
+consider terms where there are finitely many primes. The resulting sum will be
+something like&lt;/p&gt;
+&lt;p&gt;$$\frac{1}{1^s} + \frac{1}{p_1^s} + \frac{1}{p_2^s} + \frac{1}{\left(p_1^2\right)^s} +
+\frac{1}{p_3^s} + \frac{1}{\left(p_1p_2\right)^s} + \cdots,$$&lt;/p&gt;
+&lt;p&gt;where each prime power combination is picked exactly once. However, we know by
+the &lt;a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic"&gt;Fundamental Theorem of
+Arithmetic&lt;/a&gt;
+that when you take all combinations of products of primes that you get each
+positive integer exactly once. So the above sum is just&lt;/p&gt;
+&lt;p&gt;$$\frac{1}{1^s} + \frac{1}{2^s} + \frac{1}{3^s} + \cdots,$$ which is just
+$\zeta(s)$ as we defined it above.&lt;/p&gt;
+&lt;p&gt;In other words,&lt;/p&gt;
+&lt;p&gt;$$\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} = \prod_{\text{$p$
+prime}}\frac{1}{1 - \frac{1}{p^s}},$$ for $s = 2, 3, 4, \ldots$. This is known
+as Euler's product formula for the zeta function. Euler's product formula
+gives us our first clue as to why the zeta function can give us insights into
+prime numbers.&lt;/p&gt;
+&lt;h3&gt;Analytic Continuation&lt;/h3&gt;
+&lt;p&gt;In 1859, Bernhard Riemann wrote a &lt;a href="https://en.wikipedia.org/wiki/On_the_Number_of_Primes_Less_Than_a_Given_Magnitude"&gt;short 9 page paper on number theory and the
+zeta
+function&lt;/a&gt;.
+It was the only paper Riemann ever wrote on the subject of number theory, but
+it is undoubtedly one of the most important papers every written on the
+subject.&lt;/p&gt;
+&lt;p&gt;In the paper, Riemann considered that the zeta function summation,&lt;/p&gt;
+&lt;p&gt;$$\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s},$$&lt;/p&gt;
+&lt;p&gt;makes sense not just for integers $s = 2, 3, 4, \ldots$, but for any real
+number $s &amp;gt; 1$ (if $s = 1$, the summation is the &lt;a href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)"&gt;harmonic
+series&lt;/a&gt;, which
+famously diverges). In fact, it is not hard to see that for complex $s$, the
+summation makes sense so long as $\mathrm{Re}(s) &amp;gt; 1$ (for more about what it
+even means for $s$ to be complex in that formula, and the basic ideas of
+analytic continuation, I recommend &lt;a href="https://www.youtube.com/watch?v=sD0NjbwqlYw&amp;amp;list=PLrFrByaoJbcqKjzgJvLs2-spSmzP7jolT&amp;amp;index=3"&gt;3Blue1Brown's
+video&lt;/a&gt;
+from my YouTube playlist).&lt;/p&gt;
+&lt;p&gt;Riemann wanted to extend this function to the entire complex plane, not just
+$\mathrm{Re}(s) &amp;gt; 1$. The process of doing this is called &lt;a href="https://en.wikipedia.org/wiki/Analytic_continuation"&gt;analytic
+continuation&lt;/a&gt;. The theory
+of complex analysis tells us that if we can find an extension of $\zeta(s)$ to
+the whole complex plan that remains differentiable, then that extension is
+unique, and we can reasonably say that that &lt;em&gt;is&lt;/em&gt; the definition of the
+function everywhere.&lt;/p&gt;
+&lt;p&gt;Riemann used the following approach. Consider what we might call the
+"completed zeta function"&lt;/p&gt;
+&lt;p&gt;$$Z(s) = \pi^{-\frac{s}{2}}\Gamma\left(\frac{s}{2}\right)\zeta(s).$$&lt;/p&gt;
+&lt;p&gt;Using Fourier analysis, Riemann gave a formula for $Z(s)$ that is defined
+everywhere, allowing us to use it to define $\zeta(s)$ to the left of 1. I
+won't repeat Riemann's formula for $Z(s)$ as the exact formula isn't
+important, but from it one could also see&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;$Z(s)$ is defined everywhere in the complex plane, except for simple poles at 0
+and 1.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$Z(s) = Z(1 - s).$ This means if we have a value for $s$ that is right of
+the line $\mathrm{Re}(z) = \frac{1}{2},$ we can get a value to the left of
+it by reflecting it over the real-axis and the line at $\frac{1}{2}$ (to
+see this, note that the average of $s$ and $1 - s$ is $1/2$, so the
+midpoint of a line connecting the two should always go through the point
+$1/2$).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img alt="Reflection of s and 1 - s" src="https://asmeurer.com/blog/s-and-1-s.svg" width="608" /&gt;
+&lt;p&gt;(Reflection of $s$ and $1 - s$. Created with
+&lt;a href="https://www.geogebra.org/graphing/c9rzy9hj"&gt;Geogebra&lt;/a&gt;)&lt;/p&gt;
+&lt;h3&gt;Zeros&lt;/h3&gt;
+&lt;p&gt;Looking at $Z(s)$, it is a product of three parts. So the zeros and poles of
+$Z(s)$ correspond to the zeros and poles of these parts, unless they cancel.
+$\pi^{-\frac{s}{2}}$ is the easiest: it has no zeros and no poles. The second
+part is the &lt;a href="https://en.wikipedia.org/wiki/Gamma_function"&gt;gamma function&lt;/a&gt;.
+$\Gamma(z)$ has no zeros and has simple poles at nonpositive integers $z=0,
+-1, -2, \ldots$.&lt;/p&gt;
+&lt;p&gt;So taking this, along with the fact that $Z(s)$ is entire except for simple
+poles at 0 and 1, we get from $$\zeta(s) =
+\frac{Z(s)}{\pi^{-\frac{s}{2}}\Gamma\left(\frac{s}{2}\right)}$$&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$Z(s)$ has a simple pole at 1, which means that $\zeta(s)$ does as well.
+This is not surprising, since we already know the summation formula from
+above diverges as $s$ approaches 1.&lt;/li&gt;
+&lt;li&gt;$Z(s)$ has a simple pole at 0. Since $\Gamma\left(\frac{s}{2}\right)$ also
+has a simple pole at 0, they must cancel and $\zeta(s)$ must have neither a
+zero nor a pole at 0 (in fact, $\zeta(0) = -1/2$).&lt;/li&gt;
+&lt;li&gt;Since $\Gamma\left(\frac{s}{2}\right)$ has no zeros, there are no further
+poles of $\zeta(s)$. Thus, $\zeta(s)$ is entire everywhere except for a
+simple pole at $s=1$.&lt;/li&gt;
+&lt;li&gt;$\Gamma\left(\frac{s}{2}\right)$ has poles at the remaining negative even
+integers. Since $Z(s)$ has no poles there, these must correspond to zeros
+of $\zeta(s)$. These are the so-called "trivial" zeros of the zeta
+function, at $s=-2, -4, -6, \ldots$. The term "trivial" here is a relative
+one. They are trivial to see from the above formula, whereas other zeros of
+$\zeta(s)$ are much harder to find.&lt;/li&gt;
+&lt;li&gt;$\zeta(s) \neq 0$ if $\mathrm{Re}(s) &amp;gt; 1$. One way to see this is from the
+Euler product formula. Since each term in the product is not zero, the
+function itself cannot be zero (this is a bit hand-wavy, but it can be made
+rigorous). This implies that $Z(s) \neq 0$ in this region as well. We can
+reflect $\mathrm{Re}(s) &amp;gt; 1$ over the line at $\frac{1}{2}$ by considering
+$\zeta(1 - s)$. Using the above formula and the fact that $Z(s) = Z(1 -
+s)$, we see that $\zeta(s)$ cannot be zero for $\mathrm{Re}(s) &amp;lt; 0$ either,
+with the exception of the aforementioned trivial zeros at $s=-2, -4, -6,
+\ldots$.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Thus, any non-trivial zeros of $\zeta(s)$ must have real part between 0 and 1.
+This is the so-called "critical strip". Riemann hypothesized that these zeros
+are not only between 0 and 1, but are in fact on the line dividing the strip
+at real part equal to $1/2$. This line is called the "critical line". This is
+Riemann's famous hypothesis: that all the non-trivial zeros of $\zeta(s)$ have
+real part equal to $1/2$.&lt;/p&gt;
+&lt;h3&gt;Computational Verification&lt;/h3&gt;
+&lt;p&gt;Whenever you have a mathematical hypothesis, it is good to check if it is true
+numerically. Riemann himself used some methods (not the same ones we use here)
+to numerically estimate the first few non-trivial zeros of $\zeta(s)$, and
+found that they lied on the critical line, hence the motivation for his
+hypothesis. Here is an &lt;a href="https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Zeta/EZeta.pdf"&gt;English
+translation&lt;/a&gt;
+of his original paper if you are interested.&lt;/p&gt;
+&lt;p&gt;If we verified that all the zeros in the critical strip from, say,
+$\mathrm{Im}(s) = 0$ to $\mathrm{Im}(s) = N$ are in fact on the critical line
+for some large $N$, then it would give evidence that the Riemann Hypothesis is
+true. However, to be sure, this would not constitute a proof.
+&lt;a href="https://en.wikipedia.org/wiki/G._H._Hardy"&gt;Hardy&lt;/a&gt; showed in 1914 that
+$\zeta(s)$ has infinitely many zeros on the critical strip, so only finding
+finitely many of them would not suffice as a proof. (Although if we were to
+find a counter-example, a zero &lt;em&gt;not&lt;/em&gt; on the critical line, that WOULD
+constitute a proof that the Hypothesis is false. However, there are strong
+reasons to believe that the hypothesis is not false, so this would be unlikely
+to happen.)&lt;/p&gt;
+&lt;p&gt;How would we verify that the zeros are all on the line $1/2$. We can find
+zeros of $\zeta(s)$ numerically, but how would we know if the real part is
+really exactly 0.5 and not 0.500000000000000000000000000000000001? And more
+importantly, just because we find some zeros, it doesn't mean that we have all
+of them. Maybe we can find a bunch of zeros on the critical line, but how
+would we be sure that there aren't other zeros lurking around elsewhere on the
+critical strip?&lt;/p&gt;
+&lt;p&gt;We want to find rigorous answers to these two questions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;How can we count the number of zeros between $\mathrm{Im}(s) = 0$ and
+$\mathrm{Im}(s) = N$ of $\zeta(s)$?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How can we verify that all those zeros lie on the critical line, that is,
+they have real part equal to exactly $1/2$?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Counting Zeros Part 1&lt;/h4&gt;
+&lt;p&gt;To answer the first question, we can make use of a powerful theorem from
+complex analysis called the &lt;a href="https://en.wikipedia.org/wiki/Argument_principle#Generalized_argument_principle"&gt;argument
+principle&lt;/a&gt;.
+The argument principle says that if $f$ is a meromorphic function on some
+closed contour $C$, and does not have any zeros or poles on $C$ itself, then&lt;/p&gt;
+&lt;p&gt;$$\frac{1}{2\pi i}\oint_C \frac{f'(z)}{f(z)}\,dz = \#\left\{\text{zeros of $f$
+inside of C}\right\} - \#\left\{\text{poles of $f$
+inside of C}\right\},$$ where all zeros and poles are counted with
+multiplicity.&lt;/p&gt;
+&lt;p&gt;In other words, the integral on the left-hand side counts the number of zeros
+of $f$ minus the number of poles of $f$ in a region. The argument principle is
+quite easy to show given the Cauchy residue theorem (see the above linked
+Wikipedia article for a proof). The expression $f'(z)/f(z)$ is called the
+"&lt;a href="https://en.wikipedia.org/wiki/Logarithmic_derivative"&gt;logarithmic
+derivative&lt;/a&gt; of $f$",
+because it equals $\frac{d}{dz} \log(f(z))$ (although it makes sense even without
+defining what "$\log$" means).&lt;/p&gt;
+&lt;p&gt;One should take a moment to appreciate the beauty of this result. The
+left-hand side is an integral, something we generally think of as being a
+continuous quantity. But it is always exactly equal to an integer. Results
+such as these give us a further glimpse at how analytic functions and complex
+analysis can produce theorems about number theory, a field which one would
+naively think can only be studied via discrete means. In fact, these methods
+are far more powerful than discrete methods. For many results in number
+theory, we only know how to prove them using complex analytic means. So-called
+&lt;a href="https://en.wikipedia.org/wiki/Elementary_proof"&gt;"elementary" proofs&lt;/a&gt; for
+these results, or proofs that only use discrete methods and do not use complex
+analysis, have not yet been found.&lt;/p&gt;
+&lt;p&gt;Practically speaking, the fact that the above integral is exactly an integer
+means that if we compute it numerically and it comes out to something like
+0.9999999, we know that it must in fact equal exactly 1. So as long as we get
+a result that is near an integer, we can round it to the exact answer.&lt;/p&gt;
+&lt;p&gt;We can integrate a contour along the critical strip up to some $\mathrm{Im}(s)
+= N$ to count the number of zeros up to $N$ (we have to make sure to account
+for the poles. I go into more details about this when I actually compute the
+integral below).&lt;/p&gt;
+&lt;h4&gt;Counting Zeros Part 2&lt;/h4&gt;
+&lt;p&gt;So using the argument principle, we can count the number of zeros in a region.
+Now how can we verify that they all lie on the critical line? The answer lies
+in the $Z(s)$ function defined above. By the points outlined in the previous
+section, we can see that $Z(s)$ is zero exactly where $\zeta(s)$ is zero on
+the critical strip, and it is not zero anywhere else. In other words,&lt;/p&gt;
+&lt;div style="text-align: center;"&gt; &lt;b&gt;the zeros of $Z(s)$ are exactly the non-trivial zeros of $\zeta(s)$.&lt;/b&gt;&lt;/div&gt;
+&lt;p&gt;This helps us because $Z(s)$ has a nice property on the critical line. First
+we note that $Z(s)$ commutes with conjugation, that is $\overline{Z(s)} =
+Z(\overline{s})$ (this isn't obvious from what I have shown, but it is true).
+On the critical line $\frac{1}{2} + it$, we have&lt;/p&gt;
+&lt;p&gt;$$\overline{Z\left(\frac{1}{2} + it\right)} = Z\left(\overline{\frac{1}{2} +
+it}\right) = Z\left(\frac{1}{2} - it\right).$$&lt;/p&gt;
+&lt;p&gt;However, $Z(s) = Z(1 - s)$, and $1 - \left(\frac{1}{2} - it\right) =
+\frac{1}{2} + it$, so&lt;/p&gt;
+&lt;p&gt;$$\overline{Z\left(\frac{1}{2} + it\right)} = Z\left(\frac{1}{2} +
+it\right),$$&lt;/p&gt;
+&lt;p&gt;which means that $Z\left(\frac{1}{2} + it\right)$ is real valued for real $t$.&lt;/p&gt;
+&lt;p&gt;This simplifies things a lot, because it is much easier to find zeros of a real
+function. In fact, we don't even care about finding the zeros, only counting
+them. Since $Z(s)$ is continuous, we can use a simple method: counting sign
+changes. If a continuous real function changes signs from negative to positive or from
+positive to negative n times in an interval, then it must have at least n
+zeros in that interval. It may have more, for instance, if some zeros are
+clustered close together, or if a zero has a multiplicity greater than 1, but
+we know that there must be at least n.&lt;/p&gt;
+&lt;p&gt;So our approach to verifying the Riemann Hypothesis is as such:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Integrate $\frac{1}{2\pi i}\oint_C Z'(s)/Z(s)\,ds$ along a contour $C$
+that runs along the critical strip up to some $\mathrm{Im}(s) = N$. The
+integral will tell us there are exactly $n$ zeros in the contour, counting
+multiplicity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Try to find $n$ sign changes of $Z(1/2 + it)$ for $t\in [0, N]$. If we can
+find $n$ of them, we are done. We have confirmed all the zeros are on the
+critical line.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Step 2 would fail if the Riemann Hypothesis is false, in which case a zero
+wouldn't be on the critical line. But it would also fail if a zero has a
+multiplicity greater than 1, since the integral would count it more times than
+the sign changes. Fortunately, as it turns out, the Riemann Hypothesis has
+been verified up to N = 10000000000000, and no one has yet found a zero of the
+zeta function yet that has a multiplicity greater than 1, so we should not
+expect that to happen (no one has yet found a counterexample to the Riemann
+Hypothesis either).&lt;/p&gt;
+&lt;h2&gt;Verification with SymPy and mpmath&lt;/h2&gt;
+&lt;p&gt;We now use SymPy and mpmath to compute the above quantities. We use
+&lt;a href="https://www.sympy.org/"&gt;SymPy&lt;/a&gt; to do symbolic manipulation for us, but the
+heavy work is done by &lt;a href="http://mpmath.org/doc/current/index.html"&gt;mpmath&lt;/a&gt;.
+mpmath is a pure Python library for arbitrary precision numerics. It is used
+by SymPy under the hood, but it will be easier for us to use it directly. It
+can do, among other things, numeric integration. When I first tried to do
+this, I tried using the &lt;a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.zeta.html"&gt;&lt;code&gt;scipy.special&lt;/code&gt; zeta
+function&lt;/a&gt;,
+but unfortunately, it does not support complex arguments.&lt;/p&gt;
+&lt;p&gt;First we do some basic imports&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; from sympy import *
+&amp;gt;&amp;gt;&amp;gt; import mpmath
+&amp;gt;&amp;gt;&amp;gt; import numpy as np
+&amp;gt;&amp;gt;&amp;gt; import matplotlib.pyplot as plt
+&amp;gt;&amp;gt;&amp;gt; s = symbols('s')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define the completed zeta function $Z = \pi^{-s/2}\Gamma(s/2)\zeta(s)$.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Z = pi**(-s/2)*gamma(s/2)*zeta(s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can verify that Z is indeed real for $s = \frac{1}{2} + it.$&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; Z.subs(s, 1/2 + 0.5j).evalf()
+-1.97702795164031 + 5.49690501450151e-17*I
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We get a small imaginary part due to the way floating point arithmetic works.
+Since it is below &lt;code&gt;1e-15&lt;/code&gt;, we can safely ignore it.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;D&lt;/code&gt; will be the logarithmic derivative of &lt;code&gt;Z&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; D = simplify(Z.diff(s)/Z)
+&amp;gt;&amp;gt;&amp;gt; D
+polygamma(0, s/2)/2 - log(pi)/2 + Derivative(zeta(s), s)/zeta(s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is $$\frac{\operatorname{polygamma}{\left(0,\frac{s}{2} \right)}}{2} -
+\frac{\log{\left(\pi \right)}}{2} + \frac{
+\zeta'\left(s\right)}{\zeta\left(s\right)}.$$&lt;/p&gt;
+&lt;p&gt;Note that logarithmic derivatives behave similar to logarithms. The
+logarithmic derivative of a product is the sum of logarithmic derivatives (the
+$\operatorname{polygamma}$ function is the derivative of $\Gamma$).&lt;/p&gt;
+&lt;p&gt;We now use
+&lt;a href="https://docs.sympy.org/latest/modules/utilities/lambdify.html#sympy.utilities.lambdify.lambdify"&gt;&lt;code&gt;lambdify&lt;/code&gt;&lt;/a&gt;
+to convert the SymPy expressions &lt;code&gt;Z&lt;/code&gt; and &lt;code&gt;D&lt;/code&gt; into functions that are evaluated
+using mpmath. A technical difficulty here is that the derivative of the zeta
+function $\zeta'(s)$ does not have a closed-form expression. &lt;a href="http://mpmath.org/doc/current/functions/zeta.html?highlight=zeta#mpmath.zeta"&gt;mpmath's &lt;code&gt;zeta&lt;/code&gt;
+can evaluate
+$\zeta'$&lt;/a&gt;
+but it doesn't yet work with &lt;code&gt;sympy.lambdify&lt;/code&gt; (see &lt;a href="https://github.com/sympy/sympy/issues/11802"&gt;SymPy issue
+11802&lt;/a&gt;). So we have to manually
+define &lt;code&gt;"Derivative"&lt;/code&gt; in lambdify, knowing that it will be the derivative of
+&lt;code&gt;zeta&lt;/code&gt; when it is called. Beware that this is only correct for this specific
+expression where we know that &lt;code&gt;Derivative&lt;/code&gt; will be &lt;code&gt;Derivative(zeta(s), s)&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; Z_func = lambdify(s, Z, 'mpmath')
+&amp;gt;&amp;gt;&amp;gt; D_func = lambdify(s, D, modules=['mpmath',
+...     {'Derivative': lambda expr, z: mpmath.zeta(z, derivative=1)}])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now define a function to use the argument principle to count the number of
+zeros up to $Ni$. Due to the symmetry $Z(s) = Z(1 - s)$, it is only necessary
+to count zeros in the top half-plane.&lt;/p&gt;
+&lt;p&gt;We have to be careful about the poles of $Z(s)$ at 0 and 1. We can either
+integrate right above them, or expand the contour to include them. I chose to
+do the former, starting at $0.1i$. It is known that there $\zeta(s)$ has no
+zeros near the real axis on the critical strip. I could have also expanded the
+contour to go around 0 and 1, and offset the result by 2 to account for the
+integral counting those points as poles.&lt;/p&gt;
+&lt;p&gt;It has also been shown that there are no zeros on the lines $\mathrm{Re}(s) =
+0$ or $\mathrm{Re}(s) = 1$, so we do not need to worry about that. If the
+upper point of our contour happens to have zeros exactly on it, we would be
+very unlucky, but even if this were to happen we could just adjust it up a
+little bit.&lt;/p&gt;
+&lt;img alt="Our contour" src="https://asmeurer.com/blog/contour-c.svg" width="608" /&gt;
+&lt;p&gt;(Our contour with $N=10$. Created with &lt;a href="https://www.geogebra.org/graphing/nmnsaywd"&gt;Geogebra&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://mpmath.org/doc/current/calculus/integration.html#mpmath.quad"&gt;&lt;code&gt;mpmath.quad&lt;/code&gt;&lt;/a&gt;
+can take a list of points to compute a contour. The &lt;code&gt;maxdegree&lt;/code&gt; parameter
+allows us to increase the degree of the quadrature if it becomes necessary to
+get an accurate result.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; def argument_count(func, N, maxdegree=6):
+...     return 1/(2*mpmath.pi*1j)*(mpmath.quad(func,
+...         [1 + 0.1j, 1 + N*1j, 0 + N*1j, 0 + 0.1j,  1 + 0.1j],
+...         maxdegree=maxdegree))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let's test it. Lets count the zeros of $$s^2 - s + 1/2$$ in the box
+bounded by the above rectangle ($N = 10$).&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; expr = s**2 - s + S(1)/2
+&amp;gt;&amp;gt;&amp;gt; argument_count(lambdify(s, expr.diff(s)/expr), 10)
+mpc(real='1.0', imag='3.4287545414000525e-24')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The integral is 1. We can confirm there is indeed one
+zero in this box, at $\frac{1}{2} + \frac{i}{2}$.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; solve(s**2 - s + S(1)/2)
+[1/2 - I/2, 1/2 + I/2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now compute points of $Z$ along the critical line so we can count the sign
+changes. We also make provisions in case we have to increase the precision of
+mpmath to get correct results here. &lt;code&gt;dps&lt;/code&gt; is the number of digits of precision
+the values are computed to. The default is 15, but mpmath can compute values
+to any number of digits.
+&lt;a href="http://mpmath.org/doc/current/general.html#chop"&gt;&lt;code&gt;mpmath.chop&lt;/code&gt;&lt;/a&gt; zeros out
+values that are close to &lt;code&gt;0&lt;/code&gt;, which removes any numerically insignificant
+imaginary parts that arise from the floating point evaluation.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; def compute_points(Z_func, N, npoints=10000, dps=15):
+...     import warnings
+...     old_dps = mpmath.mp.dps
+...     points = np.linspace(0, N, npoints)
+...     try:
+...         mpmath.mp.dps = dps
+...         L = [mpmath.chop(Z_func(i)) for i in 1/2 + points*1j]
+...     finally:
+...         mpmath.mp.dps = old_dps
+...     if L[-1] == 0:
+...         # mpmath will give 0 if the precision is not high enough, since Z
+...         # decays rapidly on the critical line.
+...         warnings.warn("You may need to increase the precision")
+...     return L
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next define a function to count the number of sign changes in a list of real
+values.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; def sign_changes(L):
+...     """
+...     Count the number of sign changes in L
+...
+...     Values of L should all be real.
+...     """
+...     changes = 0
+...     assert im(L[0]) == 0, L[0]
+...     s = sign(L[0])
+...     for i in L[1:]:
+...         assert im(i) == 0, i
+...         s_ = sign(i)
+...         if s_ == 0:
+...             # Assume these got chopped to 0
+...             continue
+...         if s_ != s:
+...             changes += 1
+...         s = s_
+...     return changes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For example, for $\sin(s)$ from -10 to 10, there are 7 zeros ($3\pi\approx
+9.42$).&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; sign_changes(lambdify(s, sin(s))(np.linspace(-10, 10)))
+7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can check how many zeros of $Z(s)$ (and hence non-trivial zeros of
+$\zeta(s)$) we can find. According to
+&lt;a href="https://en.wikipedia.org/wiki/Riemann_hypothesis"&gt;Wikipedia&lt;/a&gt;, the first few
+non-trivial zeros of $\zeta(s)$ in the upper half-plane are 14.135, 21.022,
+and 25.011.&lt;/p&gt;
+&lt;p&gt;First try up to $N=20$.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; argument_count(D_func, 20)
+mpc(real='0.99999931531867581', imag='-3.2332902529067346e-24')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Mathematically, the above value &lt;em&gt;must&lt;/em&gt; be an integer, so we know it is 1.&lt;/p&gt;
+&lt;p&gt;Now check the number of sign changes of $Z(s)$ from $\frac{1}{2} + 0i$ to
+$\frac{1}{2} + 20i$.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; L = compute_points(Z_func, 20)
+&amp;gt;&amp;gt;&amp;gt; sign_changes(L)
+1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So it checks out. There is one zero between $0$ and $20i$ on the critical
+strip, and it is in fact on the critical line, as expected!&lt;/p&gt;
+&lt;p&gt;Now let's verify the other two zeros from Wikipedia.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; argument_count(D_func, 25)
+mpc(real='1.9961479945577916', imag='-3.2332902529067346e-24')
+&amp;gt;&amp;gt;&amp;gt; L = compute_points(Z_func, 25)
+&amp;gt;&amp;gt;&amp;gt; sign_changes(L)
+2
+&amp;gt;&amp;gt;&amp;gt; argument_count(D_func, 30)
+mpc(real='2.9997317058520916', imag='-3.2332902529067346e-24')
+&amp;gt;&amp;gt;&amp;gt; L = compute_points(Z_func, 30)
+&amp;gt;&amp;gt;&amp;gt; sign_changes(L)
+3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Both check out as well.&lt;/p&gt;
+&lt;p&gt;Since we are computing the points, we can go ahead and make a plot as well.
+However, there is a technical difficulty. If you naively try to plot $Z(1/2 +
+it)$, you will find that it decays rapidly, so fast that you cannot really
+tell where it crosses 0:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; def plot_points_bad(L, N):
+...     npoints = len(L)
+...     points = np.linspace(0, N, npoints)
+...     plt.figure()
+...     plt.plot(points, L)
+...     plt.plot(points, [0]*npoints, linestyle=':')
+&amp;gt;&amp;gt;&amp;gt; plot_points_bad(L, 30)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src="https://asmeurer.com/blog/riemann-bad.svg" width="608" /&gt;
+&lt;p&gt;So instead of plotting $Z(1/2 + it)$, we plot $\log(|Z(1/2 + it)|)$. The
+logarithm will make the zeros go to $-\infty$, but these will be easy to see.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; def plot_points(L, N):
+...     npoints = len(L)
+...     points = np.linspace(0, N, npoints)
+...     p = [mpmath.log(abs(i)) for i in L]
+...     plt.figure()
+...     plt.plot(points, p)
+...     plt.plot(points, [0]*npoints, linestyle=':')
+&amp;gt;&amp;gt;&amp;gt; plot_points(L, 30)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src="https://asmeurer.com/blog/riemann-30.svg" width="608" /&gt;
+&lt;p&gt;The spikes downward are the zeros.&lt;/p&gt;
+&lt;p&gt;Finally, let's check up to N=100. &lt;a href="https://oeis.org/A072080"&gt;OEIS A072080&lt;/a&gt;
+gives the number of zeros of $\zeta(s)$ in upper half-plane up to $10^ni$.
+According to it, we should get 29 zeros between $0$ and $100i$.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; argument_count(D_func, 100)
+mpc(real='28.248036536895913', imag='-3.2332902529067346e-24')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is not near an integer. This means we need to increase the precision of
+the quadrature (the &lt;code&gt;maxdegree&lt;/code&gt; argument).&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; argument_count(D_func, 100, maxdegree=9)
+mpc(real='29.000000005970151', imag='-3.2332902529067346e-24')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And the sign changes...&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; L = compute_points(Z_func, 100)
+__main__:11: UserWarning: You may need to increase the precision
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Our guard against the precision being too low was triggered. Try raising it
+(the default dps is 15).&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; L = compute_points(Z_func, 100, dps=50)
+&amp;gt;&amp;gt;&amp;gt; sign_changes(L)
+29
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;They both give 29. So we have verified the Riemann Hypothesis up to $100i$!&lt;/p&gt;
+&lt;p&gt;Here is a plot of these 29 zeros.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-py"&gt;&amp;gt;&amp;gt;&amp;gt; plot_points(L, 100)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src="https://asmeurer.com/blog/riemann-100.svg" width="608" /&gt;
+&lt;p&gt;(remember that the spikes downward are the zeros)&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;$N=100$ takes a few minutes to compute, and I imagine larger and larger values
+would require increasing the precision more, slowing it down even further, so
+I didn't go higher than this. But it is clear that this method works.&lt;/p&gt;
+&lt;p&gt;This was just me playing around with SymPy and mpmath, but if I wanted to
+actually verify the Riemann Hypothesis, I would try to find a more efficient
+method of computing the above quantities. For the sake of simplicity, I used
+$Z(s)$ for both the argument principle and sign changes computations, but it
+would have been more efficient to use $\zeta(s)$ for the argument principle
+integral, since it has a simpler formula. It would also be useful if there
+were a formula with similar properties to $Z(s)$ (real on the critical line
+with the same zeros as $\zeta(s)$), but that did not decay as rapidly.&lt;/p&gt;
+&lt;p&gt;Furthermore, for the argument principle integral, I would like to see precise
+error estimates for the integral. We saw above with $N=100$ with the default
+quadrature that we got a value of 28.248, which is not close to an integer.
+This tipped us off that we should increase the quadrature, which ended up
+giving us the right answer, but if the original number happened to be close to
+an integer, we might have been fooled. Ideally, one would like know the exact
+quadrature degree needed. If you can get error estimates guaranteeing the
+error for the integral will be less than 0.5, you can always round the answer
+to the nearest integer. For the sign changes, you don't need to be as
+rigorous, because simply seeing as many sign changes as you have zeros is
+sufficient. However, one could certainly be more efficient in computing the
+values along the interval, rather than just naively computing 10000 points and
+raising the precision until it works, as I have done.&lt;/p&gt;
+&lt;p&gt;One would also probably want to use a faster integrator than mpmath (like one
+written in C), and perhaps also find a faster to evaluate expression than the
+one I used for $Z(s)$. It is also possible that one could special-case the
+quadrature algorithm knowing that it will be computed on $\zeta'(s)/\zeta(s)$.&lt;/p&gt;
+&lt;p&gt;In this post I described the Riemann zeta function and the Riemann Hypothesis,
+and showed how to computationally verify it. But I didn't really go over the
+details of why the Riemann Hypothesis matters. I encourage you to watch the
+videos in my &lt;a href="https://www.youtube.com/playlist?list=PLrFrByaoJbcqKjzgJvLs2-spSmzP7jolT"&gt;YouTube
+playlist&lt;/a&gt;
+if you want to know this. Among other things, the truth of the Riemann
+Hypothesis would give a very precise bound on the distribution of prime
+numbers. Also, the non-trivial zeros of $\zeta(s)$ are, in some sense, the
+"spectrum" of the prime numbers, meaning they exactly encode the position of
+every prime on the number line.&lt;/p&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2020/02/16/gsoc</guid>
+      <author>Gagandeep Singh (czgdp1807)</author>
+      <title>Gagandeep Singh (czgdp1807): Google Summer of Code - What &amp; How?</title>
+      <pubDate>Sun, 16 Feb 2020 00:00:00 GMT</pubDate>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2020/02/16/gsoc.html</link>
+      <description>&lt;p&gt;I am writing this blog entry for sharing some of my personal opinions about this awesome open source program, Google Summer of Code or simply GSoC. I will address various common questions related to this program i.e., What it is all about? and How to achieve it? I hope you can form a reason of yours to participate in it.</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2020/02/08/1907_06890</guid>
+      <author>Gagandeep Singh (czgdp1807)</author>
+      <title>Gagandeep Singh (czgdp1807): A General Framework for Uncertainty Estimation in Deep Learning</title>
+      <pubDate>Sat, 08 Feb 2020 00:00:00 GMT</pubDate>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2020/02/08/1907_06890.html</link>
+      <description>&lt;p&gt;Introduction and Background</description>
+    </item>
+    <item>
+      <guid isPermaLink="false">http://ishanaj.wordpress.com/?p=122</guid>
+      <author>Ishan Joshi (ishanaj)</author>
+      <title>Ishan Joshi (ishanaj): Everything about SymPy&#x2019;s Column module</title>
+      <pubDate>Thu, 28 Nov 2019 19:56:42 GMT</pubDate>
+      <link>https://ishanaj.wordpress.com/2019/11/29/everything-about-sympys-column-module/</link>
+      <description>&lt;p&gt;The Column class implemented in &lt;a href="https://github.com/sympy/sympy/pull/17122"&gt;PR #17122&lt;/a&gt; enables the
+continuum mechanics module of SymPy to deal with column buckling related
+calculations. The Column module can calculate the moment equation, deflection
+equation, slope equation and the critical load for a column defined by a user.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Example use-case of Column class:&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;pre class="brush: python; collapse: false; title: ; wrap-lines: false; notranslate"&gt;
+&amp;gt;&amp;gt;&amp;gt; from sympy.physics.continuum_mechanics.column import Column
+&amp;gt;&amp;gt;&amp;gt; from sympy import Symbol, symbols
+&amp;gt;&amp;gt;&amp;gt; E, I, P = symbols('E, I, P', positive=True)
+&amp;gt;&amp;gt;&amp;gt; c = Column(3, E, I, 78000, top="pinned", bottom="pinned")
+&amp;gt;&amp;gt;&amp;gt; c.end_conditions
+{'bottom': 'pinned', 'top': 'pinned'}
+&amp;gt;&amp;gt;&amp;gt; c.boundary_conditions
+{'deflection': [(0, 0), (3, 0)], 'slope': [(0, 0)]}
+&amp;gt;&amp;gt;&amp;gt; c.moment()
+78000*y(x)
+&amp;gt;&amp;gt;&amp;gt; c.solve_slope_deflection()
+&amp;gt;&amp;gt;&amp;gt; c.deflection()
+C1*sin(20*sqrt(195)*x/(sqrt(E)*sqrt(I)))
+&amp;gt;&amp;gt;&amp;gt; c.slope()
+20*sqrt(195)*C1*cos(20*sqrt(195)*x/(sqrt(E)*sqrt(I)))/(sqrt(E)*sqrt(I))
+&amp;gt;&amp;gt;&amp;gt; c.critical_load()
+pi**2*E*I/9
+&lt;/pre&gt;
+
+
+
+&lt;h1&gt;&lt;strong&gt;The Column class&lt;/strong&gt;&lt;/h1&gt;
+
+
+
+&lt;p&gt;The Column class is non-mutable,&lt;span id="more-122"&gt;&lt;/span&gt; which means unlike the Beam class, a user cannot change the attributes of the class once they are defined along with the object definition. Therefore to change the attribute values one will have to define a new object.&lt;/p&gt;
+
+
+
+&lt;h3&gt;&lt;strong&gt;Reasons for creating a non-mutable class&lt;/strong&gt;&lt;/h3&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt; From a backward-compatibility perspective, it is always possible to  adopt a different plan and add mutability later but not the other way  around. &lt;/li&gt;&lt;li&gt;Most things are immutable in SymPy which is useful for caching etc. Matrix is an example where allowing mutability has lead to many problems that are now impossible to fix without breaking backwards compatibility.&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;h2&gt;&lt;strong&gt;Working of the column class:&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;
+The &lt;strong&gt;governing equation&lt;/strong&gt; for column buckling is:&lt;/p&gt;
+
+
+
+&lt;div class="wp-block-image"&gt;&lt;figure class="aligncenter"&gt;&lt;img alt="" src="https://lh3.googleusercontent.com/qfv6QbVnotFKUPebBoLgBNPjNz5uhN6g2-mbfBzDTR13Cb5z4BkAM7RHGerTtvqEzMzjQFL8r44iYeIVTm0OpYX6f0QWn2rCuz1qxKNVnvM6LHnTX9mfJ9pyBzPmBaFGZPrdiy-p" /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;If we determine the the &lt;strong&gt;moment equation&lt;/strong&gt; of the column ,on which the buckling load is applied, and place it in the above equation,  we might be able to get the deflection by further solving the differential equation for &lt;strong&gt;y&lt;/strong&gt;. &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Step-1: To determine the internal moment.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;This is simply done by assuming deflection at any arbitrary cross section at a distance&lt;strong&gt; x&lt;/strong&gt; from the bottom as &lt;strong&gt;y &lt;/strong&gt;and then multiplying this by the load &lt;strong&gt;P&lt;/strong&gt; and for eccentric load another moment of magnitude &lt;strong&gt;P*e&lt;/strong&gt; is added to the moment.&lt;/p&gt;
+
+
+
+&lt;figure class="wp-block-image size-large"&gt;&lt;img alt="" class="wp-image-129" src="https://ishanaj.files.wordpress.com/2019/11/image-2.png?w=641" /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Simple load&lt;/strong&gt; &lt;strong&gt;is given by&lt;/strong&gt;:&amp;#160;&lt;/p&gt;
+
+
+
+&lt;figure class="wp-block-image"&gt;&lt;img alt="" src="https://lh3.googleusercontent.com/mY4nhR2YWfTEITzlL8LFRGnPq2KXPcwbyAGajOWtTkMEBYtTKGya0n4r62RolTLImOGjXazs0RqAjOyAy3K94vrM4G_xZxRKV-GBdG2uULX9qap7xPsgI6ahIY4-tXbx1zYH2LNR" /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Eccentric load is given by:&amp;#160;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;figure class="wp-block-image"&gt;&lt;img alt="" src="https://lh3.googleusercontent.com/vIfQDO151xRZO2hcDi9pSPeyafqlYmTUBnr_zszHjiZiv07cOA6xnuu__5EslONxpPtQFY5RaUGLXefgY0AtHip6Y6LgANv3XZ1uo790QctxO-Q5qTledCkiTuKzmpaMzJ5LBt-e" /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Step-2: &lt;/strong&gt;This moment can then be substituted in the governing equation and the resulting differential equation can be solved using SymPy&amp;#8217;s &lt;strong&gt;dsolve()&lt;/strong&gt; for the &lt;strong&gt;deflection y&lt;/strong&gt;.&lt;/p&gt;
+
+
+
+&lt;h2&gt;&lt;strong&gt;Applying different end-conditions&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;The above steps considers a simple example of a column pinned at both of its ends. But the end-condition of the column can vary, which will cause the moment equation to to vary.&lt;/p&gt;
+
+
+
+&lt;p&gt;Currently &lt;strong&gt;four&lt;/strong&gt; basic supports are implemented:&amp;#160; Pinned-pinned, fixed-fixed, fixed-pinned, one pinned-other free.&lt;/p&gt;
+
+
+
+&lt;p&gt;Depending on the supports the moment due to applied load would change as:&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Pinned-Pinned:&lt;/strong&gt;&amp;nbsp; no change in moment&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;div class="wp-block-image"&gt;&lt;figure class="aligncenter"&gt;&lt;img alt="" src="https://lh5.googleusercontent.com/1rNjrJP3SC6q80sWh9m5-EAj80_YLYSmCECNYMqGh0n24r7EAqP5D8b-joCrvjhV0pnoQeD5EWrcStUufFj8zgHGSIMkk-lrnRPfkxYIJP42RIzh6pCNxthuEP83wWDdhAAZ8I30" /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+
+&lt;div class="wp-block-image"&gt;&lt;figure class="aligncenter is-resized"&gt;&lt;img alt="" height="218" src="https://lh4.googleusercontent.com/ki5Fbllhkj2xCcEJiRQxPyuTDlJnQGPfjcvk2GNjnJq5tNd83--zKWRKMck4v9TRx7SINESjNxcmdsXaXh6Le1-fBp8pQLY7pVTy-H_o895Ts_813cFmjlQDfbp34i3RJ3Qvb9RR" width="217" /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Fixed-fixed&lt;/strong&gt;: reaction moment M is included&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;div class="wp-block-image"&gt;&lt;figure class="aligncenter"&gt;&lt;img alt="" src="https://lh6.googleusercontent.com/76IEGW9i83Am9oy_YQC7xm2BVGnEw_BcgM_bQxUgnVdWY4hBpgIIbhE4bG0C8FLpNYpajyoi7F_z8g4uVLfEZOfjv3dQBQ9fvLnIFVZUJvsIaleRSUVA7B1vrQsBj5FY3Ln3H6sx" /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+
+&lt;div class="wp-block-image"&gt;&lt;figure class="aligncenter"&gt;&lt;img alt="" src="https://lh3.googleusercontent.com/8jXG4tyFMgAzJOanpHqj-d_f37-OkFrntfuhulynED1JjhNT6h_UkHmcAtDyN3Rem95uYIoKuhHUkslItdgIictxZC8dS_6mA9xbW-YxcDgMtyJ-L46UExUNH8VR8octca5v7RWa" /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Fixed-pinned:&lt;/strong&gt;&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;div class="wp-block-image"&gt;&lt;figure class="aligncenter"&gt;&lt;img alt="" src="https://lh5.googleusercontent.com/zphyPG-BZaoTYFrhY1NVWVza7oBX85d-K3HIDXF02bpcG_3gMsA8zMD-T6UO1X7GX4ssJYeok9IFCILq18GZMDkztjLdA_IA_Otq-qSM30Us22gwqPjPwPnhubYPG3jwtwzq0yML" /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+
+&lt;p&gt;Here &lt;strong&gt;M&lt;/strong&gt; is the restraint moment at &lt;strong&gt;B (&lt;/strong&gt;which is fixed&lt;strong&gt;). &lt;/strong&gt;To counter this, another moment is considered by applying a horizontal force &lt;strong&gt;F&lt;/strong&gt; at point A.&lt;/p&gt;
+
+
+
+&lt;div class="wp-block-image"&gt;&lt;figure class="aligncenter"&gt;&lt;img alt="" src="https://lh5.googleusercontent.com/2Wlvbp1qFbq2p9uf057TCNM7StusOl0J5VAFU-qMQ0BhKTDDdtvP_l-tPgSkC9vmmsAaJd3QR8sEddl_z4LsAqo5FBKEvQNVF6eEssYdex61ENPUb4qWf6nFV7OkZV1Hy5ftDCdJ" /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;One pinned- other free:&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;div class="wp-block-image"&gt;&lt;figure class="aligncenter"&gt;&lt;img alt="" src="https://lh6.googleusercontent.com/8vG470fp-wb2CzGMHfR5_chDnr4SqLGM0pAaRXXLSiDklpxXlcCoVOAh8q4dc97ZjWF3GM5-HvPGO1RzRhevUpDxl-cM6pHhztiTxJY-P7Ft04bfciVYK-FnzYJTZr4TvNqqX_wJ" /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+
+&lt;div class="wp-block-image"&gt;&lt;figure class="aligncenter"&gt;&lt;img alt="" src="https://lh3.googleusercontent.com/eoHyQWUNWNOTFDsofRof215piNvdk9OqETpA4YQWRlp904vpTx69eKRxW12NdAHGxTBNRs63oyP87cMT36DE5judlZWoVeh_7zpP7Vxq5MZ_RkUieecAZGgxSm8Hj5RpKrZIk87g" /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+
+&lt;h2&gt; &lt;strong&gt;Solving for slope and critical load&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Once we get the deflection equation we can solve for the slope by differentiating the deflection equation with respect to &lt;strong&gt;x&lt;/strong&gt;. This is done by SymPy&amp;#8217;s &lt;strong&gt;diff()&lt;/strong&gt; function&lt;/p&gt;
+
+
+&lt;pre class="brush: python; collapse: false; title: ; wrap-lines: false; notranslate"&gt;
+self._slope = self._deflection.diff(x)
+&lt;/pre&gt;
+
+
+
+&lt;h2&gt;&lt;strong&gt;Critical load&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Critical load for single bow buckling condition can be easily determined by the substituting the boundary conditions in the deflection equation and solving it for &lt;strong&gt;P&lt;/strong&gt; i.e the load.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Even if the user provides the applied load, during the entire calculation, we consider the  load to be &lt;strong&gt;P&lt;/strong&gt;. Whenever the &lt;strong&gt;moment()&lt;/strong&gt;, &lt;strong&gt;slope(), deflection(),&lt;/strong&gt; &lt;strong&gt;etc&lt;/strong&gt;. methods are called the variable &lt;strong&gt;P &lt;/strong&gt;is replaced with the users value. This is done so that it is easier for us to calculate the critical load in the end.&lt;/p&gt;
+
+
+&lt;pre class="brush: python; collapse: false; title: ; wrap-lines: false; notranslate"&gt;
+defl_eqs = []
+# taking last two bounndary conditions which are actually
+# the initial boundary conditions.
+for point, value in self._boundary_conditions['deflection'][-2:]:
+    defl_eqs.append(self._deflection.subs(x, point) - value)
+
+# C1, C2 already solved, solve for P
+self._critical_load = solve(defl_eqs, P, dict=True)[0][P]
+&lt;/pre&gt;
+
+
+
+&lt;p&gt;The case of the pinned-pinned end condition is a bit tricky.  On solving the differential equation via &lt;strong&gt;dsolve()&lt;/strong&gt;, the deflection comes out to be zero. This problem has been described in &lt;a href="https://ishanaj.wordpress.com/2019/07/08/gsoc19-week-6-completing-the-column-class/#more-56"&gt;this&lt;/a&gt; blog. Its calculation is handled a bit differently in the &lt;a href="https://github.com/sympy/sympy/pull/17122/files#diff-00c8ee080a295764f42be4b0e448935dR225"&gt;code&lt;/a&gt;. Instead of directly solving it via &lt;strong&gt;dsolve()&lt;/strong&gt;, it is solved in steps, and the trivial solutions are removed. This technique not only solves for the deflection of the column, but simultaneously also calculates the critical load it can bear.&lt;/p&gt;
+
+
+
+&lt;p&gt;Although this may be considered as a hack to the problem. I think in future it would be better if &lt;strong&gt;dsolve()&lt;/strong&gt; gets the ability to remove the trivial solutions. But this seems to be better as of now.&lt;/p&gt;
+
+
+
+&lt;p&gt;A problem that still persists is the calculation of critical load for pinned-fixed end condition. Currently, it has been made as an XFAIL, since to resolve that either &lt;strong&gt;solve()&lt;/strong&gt; or &lt;strong&gt;solveset() &lt;/strong&gt;has to return the solution in the required form. An &lt;a href="https://github.com/sympy/sympy/issues/17162"&gt;issue &lt;/a&gt;has been raised on GitHub, regarding the same.&lt;/p&gt;
+
+
+
+&lt;p&gt;Hope that gives a crisp idea about the functioning of SymPy&amp;#8217;s Column module.&lt;/p&gt;
+
+
+
+&lt;p&gt;Thanks!&lt;/p&gt;</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://asmeurer.com/blog/posts/quansight-labs-work-update-for-september-2019/</guid>
       <author>Aaron Meurer (asmeurer)</author>
       <title>Aaron Meurer (asmeurer): Quansight Labs Work Update for September, 2019</title>
@@ -321,7 +1165,7 @@ or write to the SymPy mailing list.&lt;/p&gt;&lt;/div&gt;</description>
       <title>Nikhil Maan (Sc0rpi0n101): Week 12: The Final Week</title>
       <pubDate>Fri, 23 Aug 2019 00:00:00 GMT</pubDate>
       <link>https://sc0rpi0n101.github.io/2019/08/week-12-the-final-week/</link>
-      <description>&lt;p&gt;&amp;#8220;Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.&amp;#8221;  &amp;#8212; Norman Augustine
+      <description>&lt;p&gt;&amp;#8220;Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.&amp;#8221; &amp;#8212; Norman Augustine
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week will be the last week of coding for GSoC 2019. It is time to finish work now.
  The C Parser Travis Build Tests Documentation  The C Parser I completed the C Parser last week along with the documentation for the module.</description>
     </item>
@@ -335,24 +1179,36 @@ or write to the SymPy mailing list.&lt;/p&gt;&lt;/div&gt;</description>
  The Fortran Parser The C Parser Documentation Travis Build  The Fortran Parser The Fortran Parser is complete. The Pull Request has also been merged. The parser is merged in master and will be a part of the next SymPy release. You can check out the source code for the Parser at the Pull Request.</description>
     </item>
     <item>
-      <guid isPermaLink="false">http://shubhamjha.com/2019/08/21/GSoC-Week-12-(The-Final-Week)</guid>
+      <guid isPermaLink="false">https://www.shubhamjha.com/posts/GSoC-Week-12-(The-Final-Week)</guid>
       <author>Shubham Kumar Jha (ShubhamKJha)</author>
       <title>Shubham Kumar Jha (ShubhamKJha): GSoC 2019: Week 12 (The Final Week)</title>
-      <pubDate>Wed, 21 Aug 2019 00:00:00 GMT</pubDate>
-      <link>http://shubhamjha.com/2019/08/21/GSoC-Week-12-(The-Final-Week).html</link>
+      <pubDate>Tue, 20 Aug 2019 18:30:00 GMT</pubDate>
+      <link>https://www.shubhamjha.com/posts/GSoC-Week-12-(The-Final-Week)/</link>
       <description>&lt;p&gt;The last week of coding period is officially over. A summary of the work done during this week is:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/17379"&gt;#17379&lt;/a&gt; is now complete and currently under review. I will try to get it merged within this week.&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/17392"&gt;#17392&lt;/a&gt; still needs work. I will try to put a closure to this by the end of week.&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/17440"&gt;#17440&lt;/a&gt; was started. It attempts to add a powerful (but optional) SAT solving engine to SymPy (&lt;a href="https://pypi.org/project/pycosat/"&gt;pycosat&lt;/a&gt;). The performance gain for SAT solver is also subtle here: Using this
-    &lt;div class="highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;from sympy import *
+    &lt;div class="language-plaintext highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;from sympy import *
 from sympy.abc import x
 r = random_poly(x, 100, -100, 100)
 ans = ask(Q.positive(r), Q.positive(x))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;p&gt;The performance is like&lt;/p&gt;
-    &lt;div class="highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;# In master
+    &lt;div class="language-plaintext highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;# In master
  |  `- 0.631 check_satisfiability  sympy/assumptions/satask.py:30
  |     `- 0.607 satisfiable  sympy/logic/inference.py:38
  |        `- 0.607 dpll_satisfiable  sympy/logic/algorithms/dpll2.py:21
@@ -360,14 +1216,14 @@ ans = ask(Q.positive(r), Q.positive(x))
  |  `- 0.122 check_satisfiability  sympy/assumptions/satask.py:30
  |     `- 0.098 satisfiable  sympy/logic/inference.py:39
  |        `- 0.096 pycosat_satisfiable  sympy/logic/algorithms/pycosat_wrapper.py:11
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;p&gt;It is finished and under review now.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Also, with the end of GSoC 2019, final evaluations have started. I will be writing a final report to the whole project by the end of this week.&lt;/p&gt;
 
-&lt;p&gt;So far it has been a great and enriching experience for me. It was my first attempt at GSoC and I am lucky to get such an exposure. I acknowledge that I started with an abstract idea of the project but I now understand both the need and the code of &lt;code class="highlighter-rouge"&gt;New Assumptions&lt;/code&gt; pretty well (thanks to &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; who wrote the most of it). The system is still in its early phases and needs a lot more work. I am happy to be a part of it and I will be available to work on it.&lt;/p&gt;
+&lt;p&gt;So far it has been a great and enriching experience for me. It was my first attempt at GSoC and I am lucky to get such an exposure. I acknowledge that I started with an abstract idea of the project but I now understand both the need and the code of &lt;code class="language-plaintext highlighter-rouge"&gt;New Assumptions&lt;/code&gt; pretty well (thanks to &lt;a href="https://github.com/asmeurer"&gt;Aaron&lt;/a&gt; who wrote the most of it). The system is still in its early phases and needs a lot more work. I am happy to be a part of it and I will be available to work on it.&lt;/p&gt;
 
 &lt;p&gt;This is the last weekly report but I will still be contributing to SymPy and open source in general. I will try to write more of such experiences through this portal. Till then, Good bye and thank you!&lt;/p&gt;</description>
     </item>
@@ -431,189 +1287,20 @@ next week ends.&lt;/p&gt;
           So, finally after a long summer GSoC has come to an end!! It has been a great experience, and something which I will cherish for the rest of my life. I would like to thank my mentor Sartaj, who has been guiding me through the thick and thin of times....</description>
     </item>
     <item>
-      <guid isPermaLink="false">https://czgdp1807.github.io/week_12</guid>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2019/08/20/week_12</guid>
       <author>Gagandeep Singh (czgdp1807)</author>
       <title>Gagandeep Singh (czgdp1807): Week 12 - Ending GSoC 2019</title>
       <pubDate>Tue, 20 Aug 2019 00:00:00 GMT</pubDate>
-      <link>https://czgdp1807.github.io/week_12/</link>
-      <description>&lt;p&gt;As the title suggests, with the third phase, the journey of my GSoC 2019 comes to an end. It was full of challanges, learning experiences, and above all interaction with the open source community of &lt;code class="highlighter-rouge"&gt;SymPy&lt;/code&gt;.&lt;br /&gt;
-In this blog post I will share with you the work done between phase 2 and phase 3, in terms of PRs, merged and open.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Merged&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17174"&gt;#17174&lt;/a&gt; : In this PR, Gaussian ensembles were added to &lt;code class="highlighter-rouge"&gt;sympy.stats&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17304"&gt;#17304&lt;/a&gt; : While working on the above PR, I got an idea to open this one to add cicular ensembles to &lt;code class="highlighter-rouge"&gt;sympy.stats&lt;/code&gt;. I learned a lot about Haar measure while working on this.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17306"&gt;#17306&lt;/a&gt;: This PR added matrices with random expressions. The challenging part of this PR was to generate canonical results for passing the tests.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17336"&gt;#17336&lt;/a&gt; : This was related to bug fix in &lt;code class="highlighter-rouge"&gt;Q.ask&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Matrix&lt;/code&gt;. Take a look at an example &lt;a href="https://github.com/sympy/sympy/pull/17336#issue-304058013"&gt;here&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Open&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17387"&gt;#17387&lt;/a&gt; : This PR aims to add support for assumptions of dependence among random variables, like, &lt;code class="highlighter-rouge"&gt;Covariance&lt;/code&gt;, etc.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17146"&gt;#17146&lt;/a&gt; : This PR is in its last stages to fix and upgrade the &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt; set and we are finalizing few things, like changes in the output of &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt;. As planned I was successful at writing exhaustive and systematic tests.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Well, now, time to say good bye! It was a nice experience writing about journey in this blog. If you have read this from the beginning then thanks a lot buddy, and I wish for your acceptance in GSoC 2020. Keep Open Sourcing :D&lt;/p&gt;</description>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2019/08/20/week_12.html</link>
+      <description>&lt;p&gt;As the title suggests, with the third phase, the journey of my GSoC 2019 comes to an end. It was full of challanges, learning experiences, and above all interaction with the open source community of SymPy. In this blog post I will share with you the work done between phase 2 and phase 3, in terms of PRs, merged and open.</description>
     </item>
     <item>
-      <guid isPermaLink="false">https://czgdp1807.github.io/z_final_report</guid>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2019/08/20/z_final_report</guid>
       <author>Gagandeep Singh (czgdp1807)</author>
       <title>Gagandeep Singh (czgdp1807): Final Report</title>
       <pubDate>Tue, 20 Aug 2019 00:00:00 GMT</pubDate>
-      <link>https://czgdp1807.github.io/z_final_report/</link>
-      <description>&lt;p&gt;This report summarizes the work done in my GSoC 2019 project, &lt;strong&gt;Enhancement of Statistics Module&lt;/strong&gt; wth SymPy. A step by step development of the project is available at &lt;a href="https://czgdp1807.github.io"&gt;czgdp1807.github.io&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;About Me&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I am a third year Bachelor of Technology student at Indian Institute of Technology, Jodhpur in the department of Computer Science and Engineering.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Project Outline&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The project plan was focused on the following areas of statistics that were required to be added to &lt;code class="highlighter-rouge"&gt;sympy.stats&lt;/code&gt;.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Community Bonding&lt;/strong&gt; - I was supposed to add, Dirichlet Distribution, Multivariate Ewens Distribution, Multinomial Distribution, Negative multinomial distribution, and Generalized multivariate log-gamma distribution to &lt;code class="highlighter-rouge"&gt;sympy.stats.joint_rv_types&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Phase 1&lt;/strong&gt; - I was supposed to work on stochastic processes, primraly on Markov chains, including it&amp;#8217;s API design, algorithm and implementation.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Phase 2&lt;/strong&gt; - I was expected to work on random matrices, including Gaussian ensembles and matrices with random expressions as their elements.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Phase 3&lt;/strong&gt; - I planned to work on assumptions of dependence, improving result generation by &lt;code class="highlighter-rouge"&gt;sympy.stats&lt;/code&gt; and improving other modules so that &lt;code class="highlighter-rouge"&gt;sympy.stats&lt;/code&gt; can function properly.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Pull Requests&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This section describes the actual work done during the coding period in terms of merged PRs.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Community Bonding&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16576"&gt;#16576&lt;/a&gt;: This PR added &lt;code class="highlighter-rouge"&gt;Dirichlet&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;MultivariteEwens&lt;/code&gt; distributions.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16808"&gt;#16808&lt;/a&gt; : This PR added &lt;code class="highlighter-rouge"&gt;Multinomial&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;NegativeMultinomial&lt;/code&gt; distribution.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16810"&gt;#16810&lt;/a&gt; : This PR improved the API of &lt;code class="highlighter-rouge"&gt;Sum&lt;/code&gt; by allowing &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt; as the limits.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16825"&gt;#16825&lt;/a&gt; : This PR in continuation, added &lt;code class="highlighter-rouge"&gt;GeneralizedMultivariateLogGamma&lt;/code&gt; distribution. This was an interesting one due to the complexity involved in its PDF.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16834"&gt;#16834&lt;/a&gt; : This PR enhanced the &lt;code class="highlighter-rouge"&gt;Multinomial&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;NegativeMultinomial&lt;/code&gt; distributions by allowing symbolic dimensions for them.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Phase 1&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16897"&gt;#16897&lt;/a&gt; : This was related to &lt;code class="highlighter-rouge"&gt;sympy.core&lt;/code&gt; and it helped in removing disparity in the results of special function &lt;code class="highlighter-rouge"&gt;gamma&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16908"&gt;#16908&lt;/a&gt; : This PR improved &lt;code class="highlighter-rouge"&gt;sympy.stats.frv&lt;/code&gt; by allowing conditions with foriegn symbols.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16913"&gt;#16913&lt;/a&gt; : This removed the unreachable code from &lt;code class="highlighter-rouge"&gt;sympy.stats.frv&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16914"&gt;#16914&lt;/a&gt; : This PR allowed symbolic dimensions to &lt;code class="highlighter-rouge"&gt;MultivariateEwens&lt;/code&gt; distribution.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16929"&gt;#16929&lt;/a&gt; : This one was for the &lt;code class="highlighter-rouge"&gt;sympy.tensor&lt;/code&gt; module. It optimized the &lt;code class="highlighter-rouge"&gt;ArrayComprehension&lt;/code&gt; and covered some corner cases.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16981"&gt;#16981&lt;/a&gt; : This PR added the architecture of stochastic processes. It also added discrete Markov chain to &lt;code class="highlighter-rouge"&gt;sympy.stats&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17030"&gt;#17030&lt;/a&gt; : Some features like, &lt;code class="highlighter-rouge"&gt;joint_dsitribution&lt;/code&gt; were added to stochastic processes in this PR.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17046"&gt;#17046&lt;/a&gt; : Some common properties of discrete Markov chains, like fundamental matrix, fixed row vector were added.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Phase 2&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16934"&gt;#16934&lt;/a&gt; : The bug fixes for &lt;code class="highlighter-rouge"&gt;sympy.stats.joint_rv_types&lt;/code&gt; were complete and the further work has been handed over to my co-student, Ritesh.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16962"&gt;#16962&lt;/a&gt; : This was continuation of the work done in phase 1 for allowing symbolic dimensions in finite random variables. As I planned, this PR got merged in phase 2, after some changes.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17083"&gt;#17083&lt;/a&gt;: The work done in this PR framed the platform and reason for the next one. The algorithm that got merged was a bit difficult to extend, and maintain. Thanks to Francesco for his &lt;a href="https://github.com/sympy/sympy/pull/17083#issuecomment-508256359"&gt;comment&lt;/a&gt; for motivating me to re-think the whole framework.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17163"&gt;#17163&lt;/a&gt; : This was one of the most challenging PRs of the project, because, it involved re-designing the algorithm, refactoring the code and moreover lot of thinking. The details can be found at &lt;a href="https://github.com/sympy/sympy/pull/17163#issuecomment-510939984"&gt;this comment&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Phase 3&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17174"&gt;#17174&lt;/a&gt; : In this PR, Gaussian ensembles were added to &lt;code class="highlighter-rouge"&gt;sympy.stats&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17304"&gt;#17304&lt;/a&gt; : While working on the above PR, I got an idea to open this one to add cicular ensembles to &lt;code class="highlighter-rouge"&gt;sympy.stats&lt;/code&gt;. I learned a lot about Haar measure while working.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17306"&gt;#17306&lt;/a&gt;: This PR added matrices with random expressions. The challenging part of this PR was to generate canonical results for passing the tests.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17336"&gt;#17336&lt;/a&gt; : This was related to bug fix in &lt;code class="highlighter-rouge"&gt;Q.ask&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;Matrix&lt;/code&gt;. Take a look at an example &lt;a href="https://github.com/sympy/sympy/pull/17336#issue-304058013"&gt;here&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Miscellaneous Work&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This section contains some of my PRs related to miscellanous issues like, workflow improvement, etc.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/16899"&gt;#16899&lt;/a&gt; : This was a workflow related to PR to ignore the &lt;code class="highlighter-rouge"&gt;.vscode&lt;/code&gt; folder.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17003"&gt;#17003&lt;/a&gt; : This PR ignored the &lt;code class="highlighter-rouge"&gt;__pycahce__&lt;/code&gt; folder by adding it &lt;code class="highlighter-rouge"&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Future Work&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The following PRs are open and are in their last stages for merging. Any interested student can take a look at them to extend my work in his/her GSoC project.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17387"&gt;#17387&lt;/a&gt; : This PR aims to add support for assumptions of dependence among random variables, like, &lt;code class="highlighter-rouge"&gt;Covariance&lt;/code&gt;, etc.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://github.com/sympy/sympy/pull/17146"&gt;#17146&lt;/a&gt; : This PR is in its last stages to fix and upgrade the &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt; set and we are finalizing few things, like changes in the output of &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt;. As planned I was successful at writing exhaustive and systematic tests.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Apart from the above, work on densities of Circular ensembles remains to be done. One can read the Theorem 3, page 8 of &lt;a href="https://arxiv.org/pdf/1103.3408.pdf"&gt;this paper&lt;/a&gt;.&lt;/p&gt;</description>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2019/08/20/z_final_report.html</link>
+      <description>&lt;p&gt;This report summarizes the work done in my GSoC 2019 project, Enhancement of Statistics Module wth SymPy. A step by step development of the project is available at czgdp1807.github.io.</description>
     </item>
     <item>
       <guid isPermaLink="false">https://divyanshu132.github.io//gsoc-week-12</guid>
@@ -1130,25 +1817,19 @@ Proposal and/or thought over during the SoC) which can extend my GSoC project.&l
 &lt;p&gt;Thanks!&lt;/p&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">https://czgdp1807.github.io/week_11</guid>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2019/08/13/week_11</guid>
       <author>Gagandeep Singh (czgdp1807)</author>
       <title>Gagandeep Singh (czgdp1807): Week 11 - Final touches</title>
       <pubDate>Tue, 13 Aug 2019 00:00:00 GMT</pubDate>
-      <link>https://czgdp1807.github.io/week_11/</link>
-      <description>&lt;p&gt;So, the second last week of the project is over and we have decided to improve on the work we have done so far in the last few days. Read below to know more.&lt;/p&gt;
-
-&lt;p&gt;In this week, I worked on, &lt;a href="https://github.com/sympy/sympy/pull/17146"&gt;#17146&lt;/a&gt; concered with symbolic &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt;, &lt;a href="https://github.com/sympy/sympy/pull/17387"&gt;#17387&lt;/a&gt; related to assumptions of dependence among random variables, &lt;a href="https://github.com/sympy/sympy/pull/17336"&gt;#17336&lt;/a&gt; which fixed the bug in &lt;code class="highlighter-rouge"&gt;Q.hermitian&lt;/code&gt; the one I told you about in my previous post, and &lt;a href="https://github.com/sympy/sympy/pull/17306"&gt;#17306&lt;/a&gt;, implementing the matrices with random expressions.&lt;/p&gt;
-
-&lt;p&gt;In fact, the last two PRs are merged. Now, coming on to symbolic &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt;, I have completed the testing of all the methods except &lt;code class="highlighter-rouge"&gt;slicing&lt;/code&gt; feature of &lt;code class="highlighter-rouge"&gt;__getitem__&lt;/code&gt;, which I will do in this week. Regarding, the bug in &lt;code class="highlighter-rouge"&gt;Q.hermitian&lt;/code&gt;, well, my code at first, was giving incorrect results due to overriding problems in the logic. Francesco, helped me correct them and it&amp;#8217;s finally in. The major part of the week was devoted to assumptions of dependence. I did some study from Wikipedia, and implemented the class &lt;code class="highlighter-rouge"&gt;DependentPSpace&lt;/code&gt;. I have kept the class static because it will handle queries of the type, &lt;code class="highlighter-rouge"&gt;density(X + Y, Eq(Covariance(X, Y), S(1)/2)&lt;/code&gt; which from my point of view doesn&amp;#8217;t require creation of a probability space object.&lt;/p&gt;
-
-&lt;p&gt;Coming on to the plan for the last week, we have decided that no new PRs will be opened and focus will be towards completing the already open PRs, so that we have most of our work completed. Francesco has also suggested to test the newly introduced classes with the ones of Wolfram Alpha, so that there are no inconsistencies.&lt;/p&gt;</description>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2019/08/13/week_11.html</link>
+      <description>&lt;p&gt;So, the second last week of the project is over and we have decided to improve on the work we have done so far in the last few days. Read below to know more.</description>
     </item>
     <item>
-      <guid isPermaLink="false">http://shubhamjha.com/2019/08/13/GSoC-Week-10-and-11</guid>
+      <guid isPermaLink="false">https://www.shubhamjha.com/posts/GSoC-Week-10-and-11</guid>
       <author>Shubham Kumar Jha (ShubhamKJha)</author>
       <title>Shubham Kumar Jha (ShubhamKJha): GSoC 2019: Week 10 and 11</title>
-      <pubDate>Tue, 13 Aug 2019 00:00:00 GMT</pubDate>
-      <link>http://shubhamjha.com/2019/08/13/GSoC-Week-10-and-11.html</link>
+      <pubDate>Mon, 12 Aug 2019 18:30:00 GMT</pubDate>
+      <link>https://www.shubhamjha.com/posts/GSoC-Week-10-and-11/</link>
       <description>&lt;p&gt;So, the second last week of the official coding period is over now. During the last two weeks, I was mostly occupied with on-campus placement drives, hence I couldn&amp;#8217;t put up a blog earlier. A summary of my work during these weeks is as follows:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1156,13 +1837,16 @@ Proposal and/or thought over during the SoC) which can extend my GSoC project.&l
     &lt;p&gt;First of all, &lt;a href="https://github.com/sympy/sympy/pull/17144"&gt;#17144&lt;/a&gt; is merged &amp;#128516;. This was a large PR and hence took time to get fully reviewed. With this, the performance of New assumptions comes closer to that of the old system. Currently, queries are evaluated about &lt;strong&gt;20X&lt;/strong&gt; faster than before.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/17379"&gt;#17379&lt;/a&gt; attempts to remove SymPy&amp;#8217;s costly &lt;strong&gt;rcall()&lt;/strong&gt; from the whole assumptions mechanism. It&amp;#8217;s a follow-up from &lt;a href="https://github.com/sympy/sympy/pull/17144"&gt;#17144&lt;/a&gt; and the performance gain is subtle for large queries. E.g.
-    &lt;div class="language-py highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+    &lt;div class="language-py highlighter-rouge"&gt;&lt;div class="highlight"&gt;&lt;pre class="highlight"&gt;&lt;code&gt;&lt;table class="rouge-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="rouge-gutter gl"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class="rouge-code"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
 &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random_poly&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ask&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Q&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;positive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;Q&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;positive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;In the master it takes &lt;code class="highlighter-rouge"&gt;4.292 s&lt;/code&gt;, out of this &lt;code class="highlighter-rouge"&gt;2.483 s&lt;/code&gt; is spent in &lt;strong&gt;rcall&lt;/strong&gt;. With this, the time spent is &lt;code class="highlighter-rouge"&gt;1.929 s&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;0.539 s&lt;/code&gt; respectively.&lt;/p&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;In the master it takes &lt;code class="language-plaintext highlighter-rouge"&gt;4.292 s&lt;/code&gt;, out of this &lt;code class="language-plaintext highlighter-rouge"&gt;2.483 s&lt;/code&gt; is spent in &lt;strong&gt;rcall&lt;/strong&gt;. With this, the time spent is &lt;code class="language-plaintext highlighter-rouge"&gt;1.929 s&lt;/code&gt; and &lt;code class="language-plaintext highlighter-rouge"&gt;0.539 s&lt;/code&gt; respectively.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/17392"&gt;#17392&lt;/a&gt; attempts to make the New Assumptions able to handle queries which involve Relationals. Currently, it works only with simple queries (e.g. &lt;code class="highlighter-rouge"&gt;ask(x&amp;gt;y, Q.positive(x) &amp;amp; Q.negative(y))&lt;/code&gt; now evaluates &lt;code class="highlighter-rouge"&gt;True&lt;/code&gt;) just like the way old system works. This is a much-awaited functionality for the new system. Also, during this I realized that sathandlers lack many necessary facts. This PR also adds many new facts to the system.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/sympy/sympy/pull/17392"&gt;#17392&lt;/a&gt; attempts to make the New Assumptions able to handle queries which involve Relationals. Currently, it works only with simple queries (e.g. &lt;code class="language-plaintext highlighter-rouge"&gt;ask(x&amp;gt;y, Q.positive(x) &amp;amp; Q.negative(y))&lt;/code&gt; now evaluates &lt;code class="language-plaintext highlighter-rouge"&gt;True&lt;/code&gt;) just like the way old system works. This is a much-awaited functionality for the new system. Also, during this I realized that sathandlers lack many necessary facts. This PR also adds many new facts to the system.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;For the last week of coding, my attempt would be to complete both of these PRs and get them merged. Also, I will try to add new facts to sathandlers.&lt;/p&gt;</description>
@@ -1349,18 +2033,6 @@ then emptySet is being returned.&lt;/p&gt;
 &lt;p&gt;Code improvement takes time!!&lt;/p&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">https://www.kangzhiq.com/?p=39</guid>
-      <author>Zhiqi KANG (kangzhiq)</author>
-      <title>Zhiqi KANG (kangzhiq): [GSoC 2019] Week 10!</title>
-      <pubDate>Sat, 10 Aug 2019 14:02:22 GMT</pubDate>
-      <link>https://www.kangzhiq.com/2019/08/10/gsoc-2019-week-10/</link>
-      <description>&lt;p&gt;A lot of modifications have been made to the PR &lt;a href="https://github.com/sympy/sympy/pull/17308"&gt;#17308&lt;/a&gt; so that the functionality can be well implemented and the code could be clean and efficient.&lt;/p&gt;
-
-
-
-&lt;p&gt;The PR is merged to the master branch.&lt;/p&gt;</description>
-    </item>
-    <item>
       <guid isPermaLink="false">https://anpandey.github.io/posts/sympy/2019-08-06-week-10.html</guid>
       <author>Ankit Pandey (anpandey)</author>
       <title>Ankit Pandey (anpandey): Google Summer of Code Week 10: Matrix Wildcard Redux</title>
@@ -1374,19 +2046,12 @@ then emptySet is being returned.&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;ll try to get started with some optimizations that utilize this wildcard class once the pull request gets merged.&lt;/p&gt;</description>
     </item>
     <item>
-      <guid isPermaLink="false">https://czgdp1807.github.io/week_10</guid>
+      <guid isPermaLink="false">https://czgdp1807.github.io/czgdp1807.github.io/2019/08/06/week_10</guid>
       <author>Gagandeep Singh (czgdp1807)</author>
       <title>Gagandeep Singh (czgdp1807): Week 10 - Debugging, testing and Haar measure</title>
       <pubDate>Tue, 06 Aug 2019 00:00:00 GMT</pubDate>
-      <link>https://czgdp1807.github.io/week_10/</link>
-      <description>&lt;p&gt;This week was about a lot of debugging and testing. I also got to know some facts about random matrices and group theory.&lt;/p&gt;
-
-&lt;p&gt;With the ending of 10th week, we have entered the second last week of the project. Well, this week was full of finding bugs, correcting and testing them. Mainly, I worked on, &lt;a href="https://github.com/sympy/sympy/pull/17146"&gt;#17146&lt;/a&gt;, &lt;a href="https://github.com/sympy/sympy/pull/17304"&gt;#17304&lt;/a&gt;, &lt;a href="https://github.com/sympy/sympy/pull/17336"&gt;#17336&lt;/a&gt; and &lt;a href="https://github.com/sympy/sympy/pull/17306"&gt;#17306&lt;/a&gt;. The first one was related to symbolic &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt;, and it lacked systematic and robust tests. I pushed some commits to resolve the issue, though more is to be done. Now, coming to the second PR, it was related to circular ensembles. I got to know that distribution of these ensembles is something called Haar measure on &lt;code class="highlighter-rouge"&gt;U(n)&lt;/code&gt;, group of unitary matrices. I was not familiar with this. Thanks to &lt;a href="https://github.com/jksuom"&gt;jksuom&lt;/a&gt; for sharing some papers for the same. I will go through them in the following week. The third PR fixes a bug which was found while working on circular ensembles. Acutally, &lt;code class="highlighter-rouge"&gt;ask(Q.hermitian(Matrix([[2, 2 + I, 4], [2 - I, 3, I], [4, -I, 1]])))&lt;/code&gt; was giving &lt;code class="highlighter-rouge"&gt;False&lt;/code&gt;, however clearly the matrix is hermitian. So, I went ahead fixing it and waiting for reviews on my approach. The last one is related to matrices with random elements and it is complete after fixing a few bugs related to canonical outputs.&lt;/p&gt;
-
-&lt;p&gt;What I learnt this week? 
-Well, I learnt, &lt;strong&gt;When you think your work is complete, well, sorry to say, that&amp;#8217;s the beginning ;-)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Bye!!&lt;/p&gt;</description>
+      <link>https://czgdp1807.github.io/czgdp1807.github.io/2019/08/06/week_10.html</link>
+      <description>&lt;p&gt;This week was about a lot of debugging and testing. I also got to know some facts about random matrices and group theory.</description>
     </item>
     <item>
       <guid isPermaLink="false">https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/</guid>
@@ -1394,7 +2059,7 @@ Well, I learnt, &lt;strong&gt;When you think your work is complete, well, sorry 
       <title>Nikhil Maan (Sc0rpi0n101): Week 10: The Finished Parser</title>
       <pubDate>Tue, 06 Aug 2019 00:00:00 GMT</pubDate>
       <link>https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/</link>
-      <description>&lt;p&gt;&amp;#8220;Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.&amp;#8221;  &amp;#8212; Norman Augustine
+      <description>&lt;p&gt;&amp;#8220;Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.&amp;#8221; &amp;#8212; Norman Augustine
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
  The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.</description>
     </item>
@@ -1542,161 +2207,6 @@ Integers only.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Code improvement takes time!!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://www.kangzhiq.com/?p=36</guid>
-      <author>Zhiqi KANG (kangzhiq)</author>
-      <title>Zhiqi KANG (kangzhiq): [GSoC 2019] WEEK 9!</title>
-      <pubDate>Sat, 03 Aug 2019 16:49:34 GMT</pubDate>
-      <link>https://www.kangzhiq.com/2019/08/04/gsoc-2019-week-8-2/</link>
-      <description>&lt;p&gt;I am so happy to pass the second evaluation!&lt;/p&gt;
-
-
-
-&lt;p&gt;This week is dedicated to the implementation of new iteration functionalities in &lt;code&gt;Array&lt;/code&gt; module. Since the behaviour of &lt;code&gt;__getitem__&lt;/code&gt; is changed last week, we need to find a way to replace the old way of iterating arrays.&lt;/p&gt;
-
-
-
-&lt;p&gt;For this purpose, a generator is implemented to enable the iteration over each element, which was the old way in SymPy to iterate the array. This functionality is equivalent to flattening the array and then visiting one by one these elements, so the new class is named as &lt;code&gt;Flatten&lt;/code&gt;. The advantage of generator will contribute to less memeory cose while iterating. This implementation corresponds as well the lazy-evaluation that I planned to implement in my proposal.&lt;/p&gt;
-
-
-
-&lt;p&gt;So the implementation is in &lt;a href="https://github.com/sympy/sympy/pull/17308"&gt;#17308&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://arighnaiitg.github.io/2019-08-01-gsoc-week9/</guid>
-      <author>Arighna Chakrabarty (arighnaiitg)</author>
-      <title>Arighna Chakrabarty (arighnaiitg): GSoC Week 9 !!</title>
-      <pubDate>Thu, 01 Aug 2019 07:00:00 GMT</pubDate>
-      <link>https://arighnaiitg.github.io/2019-08-01-gsoc-week9/</link>
-      <description>&lt;p&gt;Week 9 ends.. - 
-          The last phase of this journey has started. I am happy to let you know that I have passed Phase 2 successfully. Phase 3 will include merging of some important code written in Phase 2, and also implementation of some other useful code. I had a meeting with Sartaj in...</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://shubhamjha.com/2019/07/31/GSoC-Week-9</guid>
-      <author>Shubham Kumar Jha (ShubhamKJha)</author>
-      <title>Shubham Kumar Jha (ShubhamKJha): GSoC 2019: Week 9</title>
-      <pubDate>Wed, 31 Jul 2019 00:00:00 GMT</pubDate>
-      <link>http://shubhamjha.com/2019/07/31/GSoC-Week-9.html</link>
-      <description>&lt;p&gt;I spent most of this week getting &lt;a href="https://github.com/sympy/sympy/pull/17144"&gt;#17144&lt;/a&gt; ready to be merged. I had to change a lot of things from the last attempt. One of such was an attempt on &lt;strong&gt;early encoding&lt;/strong&gt;, I had tried it on &lt;strong&gt;Literals&lt;/strong&gt;. They were eventually going to be encoded so I tried to do this when &lt;strong&gt;Literals&lt;/strong&gt; were created only. But as Aaron suggested, my approach had left encodings in the global space and hence could leak memory. During the week, I tried to attach encoding to the &lt;strong&gt;CNF&lt;/strong&gt; object itself but it would have needed a lot of refactoring, since &lt;strong&gt;CNF&lt;/strong&gt; objects interacted with other such objects. So, after some attempts, at the end I left the encoding to be done at last in &lt;strong&gt;EncodedCNF&lt;/strong&gt; object. Currently, this is ready to be merged.&lt;/p&gt;
-
-&lt;p&gt;For the coming weeks, I would try to improve over this.&lt;/p&gt;
-
-&lt;p&gt;This was also the week for second monthly evaluation and I feel happy to announce that I passed it. From this week my college has also started but I am still able to give the required time to this project and complete it.&lt;/p&gt;
-
-&lt;p&gt;Will keep you updated. Thank you !&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">http://ishanaj.wordpress.com/?p=74</guid>
-      <author>Ishan Joshi (ishanaj)</author>
-      <title>Ishan Joshi (ishanaj): GSoC&#x2019;19: Week-9- Analyzing the draw() function</title>
-      <pubDate>Mon, 29 Jul 2019 05:43:20 GMT</pubDate>
-      <link>https://ishanaj.wordpress.com/2019/07/29/gsoc19-week-9-analyzing-the-draw-function/</link>
-      <description>&lt;p&gt;With the
-end of this week the third phase officially ends. &lt;/p&gt;
-
-
-
-&lt;p&gt;There has been some discussions in the &lt;a href="https://github.com/sympy/sympy/pull/17240"&gt;PR #17240&lt;/a&gt; which implements the &lt;strong&gt;draw() &lt;/strong&gt;function. We might change the name of the function to &lt;strong&gt;plot() &lt;/strong&gt;which is more consistent with the previous beam methods &lt;strong&gt;plot_shear_force()&lt;/strong&gt;, &lt;strong&gt;plot_bending_moment(), &lt;/strong&gt;etc.&lt;/p&gt;
-
-
-
-&lt;p&gt;Another discussion was about making this beam diagram a part of the &lt;strong&gt;plot_loading_results(), &lt;/strong&gt;which basically intends to plot all the beam related plots. Although currently the beam diagram uses &lt;strong&gt;matplotlib &lt;/strong&gt;as an external module, whereas the &lt;strong&gt;plot_loading_results()&lt;/strong&gt; uses &lt;strong&gt;PlotGrid&lt;/strong&gt; which is Sympy&amp;#8217;s internal functionality. So it would be a bit tricky to merge those two.&lt;span id="more-74"&gt;&lt;/span&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;We also discussed the idea or rather the possibility of directly making use of SymPy&amp;#8217;s own plot to create a beam diagram. SymPy&amp;#8217;s &lt;strong&gt;plot() &lt;/strong&gt;is capable to plotting Singularity functions, so the load applied on the beam can also be plotted using &lt;strong&gt;sympy.plot() &lt;/strong&gt;as beam.load is indeed in terms of singularity function. But there is a problem when it comes to point loads and moment loads as the are in terms singularity function of negative order (or exponent). Not sure whether the sympy plot for singularity functions of negative order is plotted correctly, but the current plot won&amp;#8217;t help us in drawing point loads and moment loads. We might have to deal with it separately.&lt;/p&gt;
-
-
-
-&lt;p&gt;I have
-opened a discussion in the &lt;a href="https://groups.google.com/forum/?fromgroups#!topic/sympy/gmBNI-sffls"&gt;mailing
-list&lt;/a&gt; regarding whether the plot is correct for singularity functions of negative
-order, or what else should be done in order to get it corrected.&lt;/p&gt;
-
-
-
-&lt;p&gt;Also, it will be difficult to plot a rectangle (for making beam) and markers (for making supports) via sympy.plot(). One idea is to go with the &lt;strong&gt;_backend&lt;/strong&gt; attribute of sympy.plot() which helps in directly using the &lt;strong&gt;backend &lt;/strong&gt;(i.e. matplotlib backend). I will have a look over it.&lt;/p&gt;
-
-
-
-&lt;p&gt;Of
-course if the beam diagram is made using SymPy&amp;#8217;s own plot it would surely be
-preferred but for that we also need work on &lt;strong&gt;sympy.plot()&lt;/strong&gt; as currently it is limited to certain functionalities.&lt;/p&gt;
-
-
-
-&lt;p&gt;From the
-next week I will be starting with the last phase of implementing a Truss structure
-and its respective calculations.&lt;/p&gt;
-
-
-
-&lt;p&gt;Since only last few weeks are left, I think I will be able to make a draft PR for the last phase implementation by the end of the next week. And then we would only be left with minor things and leftovers of the previous phases.&lt;/p&gt;
-
-
-
-&lt;p&gt;Also, I am glad to share that I was able to pass the second evaluations. So once again thank you mentors for all your support and guidance!&lt;/p&gt;
-
-
-
-&lt;h2&gt;&lt;strong&gt;Next Week:&lt;/strong&gt;&lt;/h2&gt;
-
-
-
-&lt;ul&gt;&lt;li&gt;Starting phase-IV&amp;nbsp; implementations&lt;/li&gt;&lt;li&gt;Simultaneously working and discussing previous
-PR&amp;#8217;s.&lt;/li&gt;&lt;/ul&gt;
-
-
-
-&lt;p&gt;Will
-keep you updated!&lt;/p&gt;
-
-
-
-&lt;p&gt;Thanks!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://czgdp1807.github.io/week_9</guid>
-      <author>Gagandeep Singh (czgdp1807)</author>
-      <title>Gagandeep Singh (czgdp1807): Week 9 - Lots of reviews</title>
-      <pubDate>Mon, 29 Jul 2019 00:00:00 GMT</pubDate>
-      <link>https://czgdp1807.github.io/week_9/</link>
-      <description>&lt;p&gt;This week I recieved a lot of reviews from the members of community on my various PRs and this has formed the base of the work for the next week. Let me share some of those reviews with you.&lt;/p&gt;
-
-&lt;p&gt;As I told you that the PR &lt;a href="https://github.com/sympy/sympy/pull/17146"&gt;#17146&lt;/a&gt; was pending for reviews. Well, I received a lot of comments from &lt;a href="https://github.com/oscarbenjamin"&gt;@oscarbenjamin&lt;/a&gt; and &lt;a href="https://github.com/smichr"&gt;@smichr&lt;/a&gt; on pretty printing of symbolic &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt;, the way tests are written, about &lt;code class="highlighter-rouge"&gt;inf&lt;/code&gt; and &lt;code class="highlighter-rouge"&gt;sup&lt;/code&gt; of &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt;. This in turn helped me to discover bugs in other features of &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt;, like, &lt;code class="highlighter-rouge"&gt;reversed&lt;/code&gt;. In the following week, I will work on this stuff and will correct the things. Now moving on to the random matrices, i.e., the PR &lt;a href="https://github.com/sympy/sympy/pull/17174"&gt;#17174&lt;/a&gt; has been merged but more work is to be done for &lt;code class="highlighter-rouge"&gt;Matrix&lt;/code&gt; with entries as random variables. In fact, I studied about expressions of random matrices and summarised the results &lt;a href="https://github.com/sympy/sympy/pull/17174#issuecomment-514985333"&gt;here&lt;/a&gt;. Though the findings suggest specific algorithms for specific expressions like sum. I am still looking for a more generalized technique and will update you if found any.&lt;/p&gt;
-
-&lt;p&gt;So, coming to the learning aspect. This week I learnt about the importance of exhaustive and systematic tests. The tests which I wrote for symbolic &lt;code class="highlighter-rouge"&gt;Range&lt;/code&gt; aren&amp;#8217;t so systematic and robust. I have found a way to improve them from &lt;a href="https://github.com/sympy/sympy/pull/17146#discussion_r307971324"&gt;this comment&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;That&amp;#8217;s all for now, signing off!!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://divyanshu132.github.io//gsoc-week-9</guid>
-      <author>Divyanshu Thakur (divyanshu132)</author>
-      <title>Divyanshu Thakur (divyanshu132): GSoC 2019 - Week 9 - Merged Polycyclic groups</title>
-      <pubDate>Mon, 29 Jul 2019 00:00:00 GMT</pubDate>
-      <link>https://divyanshu132.github.io//gsoc-week-9</link>
-      <description>&lt;p&gt;Hello everyone, the ninth week of coding period has ended and there is a really good news the polycyclic group PR &lt;a href="https://github.com/sympy/sympy/pull/16991"&gt;sympy/sympy#16991&lt;/a&gt; that we were working from the last one and half months is finally merged. This week I didn&amp;#8217;t do that much work except organizing different methods and fixing small issues in the above pr to get it merged.&lt;/p&gt;
-
-&lt;p&gt;There has been a lot of rearrangement of methods, where most of the methods were moved to the class &lt;code class="highlighter-rouge"&gt;Collector&lt;/code&gt; from the class &lt;code class="highlighter-rouge"&gt;PolycyclicGroup&lt;/code&gt;. Now, we do not need free symbols in-hand, they can be computed by the Collector if not provided by the user. There are few more things which are changed like relative order is computed in the course of polycyclic sequence and series computation. For better look one can go through the above Pr.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;m hopping to implement few things next week which are mentioned below.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Induced polycyclic sequence for a subgroup.&lt;/li&gt;
-  &lt;li&gt;Get started with writing docs for polycyclic groups.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Till then, good byee..&lt;/p&gt;</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/</guid>
-      <author>Nikhil Maan (Sc0rpi0n101)</author>
-      <title>Nikhil Maan (Sc0rpi0n101): Week 9: It's the Evaluation Week!!</title>
-      <pubDate>Sun, 28 Jul 2019 00:00:00 GMT</pubDate>
-      <link>https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/</link>
-      <description>&lt;p&gt;Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
- The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&amp;rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.</description>
     </item>
   </channel>
 </rss>

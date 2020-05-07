@@ -65,6 +65,30 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Ritesh Kumar (ritesh99rakesh)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document>
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="http://ritesh99rakesh.github.io/feed.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
+        <foaf:name>Sidhant Nagpal (sidhantnagpal)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://sidhantnagpal.github.io">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="http://sidhantnagpal.com/rss-gsoc.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Srajan Garg (srajangarg)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="http://srajangarg.github.io//">
@@ -127,7 +151,7 @@
       <foaf:Agent>
         <foaf:name>Gagandeep Singh (czgdp1807)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="https://czgdp1807.github.io/">
+          <foaf:Document rdf:about="https://czgdp1807.github.io/czgdp1807.github.io/">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://czgdp1807.github.io/feed.xml"/>
             </rdfs:seeAlso>
@@ -209,6 +233,18 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
+        <foaf:name>Naman Gera (namannimmo10)</foaf:name>
+        <foaf:weblog>
+          <foaf:Document rdf:about="https://namannimmo10.github.io/emerald/">
+            <rdfs:seeAlso>
+              <rss:channel rdf:about="https://namannimmo10.github.io/emerald/atom.xml"/>
+            </rdfs:seeAlso>
+          </foaf:Document>
+        </foaf:weblog>
+      </foaf:Agent>
+    </foaf:member>
+    <foaf:member>
+      <foaf:Agent>
         <foaf:name>Abdullah Javed Nesar (Abdullahjavednesar)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://nesar2017.wordpress.com">
@@ -269,18 +305,6 @@
     </foaf:member>
     <foaf:member>
       <foaf:Agent>
-        <foaf:name>Ritesh Kumar (ritesh99rakesh)</foaf:name>
-        <foaf:weblog>
-          <foaf:Document rdf:about="https://ritesh99rakesh.github.io/">
-            <rdfs:seeAlso>
-              <rss:channel rdf:about="https://ritesh99rakesh.github.io/feed.xml"/>
-            </rdfs:seeAlso>
-          </foaf:Document>
-        </foaf:weblog>
-      </foaf:Agent>
-    </foaf:member>
-    <foaf:member>
-      <foaf:Agent>
         <foaf:name>Sampad Saha (sampadsaha5)</foaf:name>
         <foaf:weblog>
           <foaf:Document rdf:about="https://sampadblog.wordpress.com">
@@ -319,7 +343,7 @@
       <foaf:Agent>
         <foaf:name>Shubham Kumar Jha (ShubhamKJha)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="http://shubhamjha.com/">
+          <foaf:Document rdf:about="https://www.shubhamjha.com/">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://shubhamjha.com/sympy_feed.xml"/>
             </rdfs:seeAlso>
@@ -334,18 +358,6 @@
           <foaf:Document rdf:about="https://shubhamtibra.wordpress.com">
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://shubhamtibra.wordpress.com/feed/"/>
-            </rdfs:seeAlso>
-          </foaf:Document>
-        </foaf:weblog>
-      </foaf:Agent>
-    </foaf:member>
-    <foaf:member>
-      <foaf:Agent>
-        <foaf:name>Sidhant Nagpal (sidhantnagpal)</foaf:name>
-        <foaf:weblog>
-          <foaf:Document rdf:about="https://sidhantnagpal.github.io">
-            <rdfs:seeAlso>
-              <rss:channel rdf:about="https://sidhantnagpal.com/rss-gsoc.xml"/>
             </rdfs:seeAlso>
           </foaf:Document>
         </foaf:weblog>
@@ -403,7 +415,7 @@
       <foaf:Agent>
         <foaf:name>Zhiqi KANG (kangzhiq)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="https://www.kangzhiq.com">
+          <foaf:Document>
             <rdfs:seeAlso>
               <rss:channel rdf:about="https://www.kangzhiq.com/tag/sympy/feed/"/>
             </rdfs:seeAlso>
