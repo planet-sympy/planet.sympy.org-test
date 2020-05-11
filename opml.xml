@@ -2,8 +2,8 @@
 <opml version="2.0">
   <head>
     <title>Planet SymPy</title>
-    <dateCreated>Fri, 08 May 2020 19:38:46 GMT</dateCreated>
-    <dateModified>Fri, 08 May 2020 19:38:46 GMT</dateModified>
+    <dateCreated>Mon, 11 May 2020 15:33:06 GMT</dateCreated>
+    <dateModified>Mon, 11 May 2020 15:33:06 GMT</dateModified>
     <ownerName>Sumith</ownerName>
     <ownerEmail>sumith1896@gmail.com</ownerEmail>
   </head>
@@ -17,6 +17,7 @@
     <outline text="Sidhant Nagpal (sidhantnagpal)" xmlUrl="http://sidhantnagpal.com/rss-gsoc.xml"/>
     <outline text="Srajan Garg (srajangarg)" xmlUrl="http://srajangarg.github.io/feed.xml"/>
     <outline text="Sumith (sumith1896)" xmlUrl="http://sumith1896.github.io/feeds/feed.sympy.xml"/>
+    <outline text="Abhinav Anand (abhinav28071999)" xmlUrl="https://abhinav28071999.github.io/feed.xml"/>
     <outline text="Ankit Pandey (anpandey)" xmlUrl="https://anpandey.github.io/atom-sympy.xml"/>
     <outline text="Arighna Chakrabarty (arighnaiitg)" xmlUrl="https://arighnaiitg.github.io/feed.xml"/>
     <outline text="Bj&#xF6;rn Dahlgren (bjodah)" xmlUrl="https://bjodah.github.io/blog/rss.xml"/>
