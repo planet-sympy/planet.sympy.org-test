@@ -2,8 +2,8 @@
 <opml version="2.0">
   <head>
     <title>Planet SymPy</title>
-    <dateCreated>Mon, 11 May 2020 15:33:06 GMT</dateCreated>
-    <dateModified>Mon, 11 May 2020 15:33:06 GMT</dateModified>
+    <dateCreated>Tue, 19 May 2020 05:39:03 GMT</dateCreated>
+    <dateModified>Tue, 19 May 2020 05:39:03 GMT</dateModified>
     <ownerName>Sumith</ownerName>
     <ownerEmail>sumith1896@gmail.com</ownerEmail>
   </head>
@@ -21,7 +21,6 @@
     <outline text="Ankit Pandey (anpandey)" xmlUrl="https://anpandey.github.io/atom-sympy.xml"/>
     <outline text="Arighna Chakrabarty (arighnaiitg)" xmlUrl="https://arighnaiitg.github.io/feed.xml"/>
     <outline text="Bj&#xF6;rn Dahlgren (bjodah)" xmlUrl="https://bjodah.github.io/blog/rss.xml"/>
-    <outline text="Gagandeep Singh (czgdp1807)" xmlUrl="https://czgdp1807.github.io/feed.xml"/>
     <outline text="Divyanshu Thakur (divyanshu132)" xmlUrl="https://divyanshu132.github.io/feed.sympy.xml"/>
     <outline text="Faisal Riyaz (friyaz)" xmlUrl="https://friyaz.github.io/feed.sympy.xml"/>
     <outline text="Gaurav Dhingra (gxyd)" xmlUrl="https://gxyd.github.io/atom.xml"/>
@@ -42,7 +41,7 @@
     <outline text="Shubham Kumar Jha (ShubhamKJha)" xmlUrl="https://shubhamjha.com/sympy_feed.xml"/>
     <outline text="Subham Tibra (shubhamtibra)" xmlUrl="https://shubhamtibra.wordpress.com/feed/"/>
     <outline text="Jashanpreet Singh Sraw (jashan498)" xmlUrl="https://singhjashan.wordpress.com/feed/"/>
-    <outline text="Smit Lunagariya (Smit-create)" xmlUrl="https://smit-create.github.io/rss.xml"/>
+    <outline text="Smit Lunagariya (Smit-create)" xmlUrl="https://smit-create.github.io/feed.xml"/>
     <outline text="Szymon Mieszczak (szymag)" xmlUrl="https://szymag.github.io/feed.xml"/>
     <outline text="Valeriia Gladkova (valglad)" xmlUrl="https://valglad.github.io/feed.xml"/>
     <outline text="Aaron Meurer (asmeurer)" xmlUrl="https://www.asmeurer.com/blog/rss.xml"/>
