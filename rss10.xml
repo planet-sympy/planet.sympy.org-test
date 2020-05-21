@@ -7,6 +7,14 @@
     <description>Planet SymPy - http://planet.sympy.org/</description>
     <atom:link href="http://planet.sympy.org/rss10.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <guid isPermaLink="false">http://abhinav28071999.github.io/Gsoc-Sympy</guid>
+      <author>Abhinav Anand (abhinav28071999)</author>
+      <title>Abhinav Anand (abhinav28071999): Google Summer of Code 2020 with Sympy!</title>
+      <pubDate>Wed, 20 May 2020 00:00:00 GMT</pubDate>
+      <link>http://abhinav28071999.github.io/Gsoc-Sympy/</link>
+      <description>&lt;p&gt;From my first year i always wanted to get selected for Gsoc and do some exiciting projects, but never took it seriously. When i reached my third year i made up my mind that it is a high time for preparig for Gsoc. For Gsoc 2020 i choose to apply to Sympy as i found this community very intresting. I took a head start and started contributing for four months before the application period. It was a really nice experience and i meet some really interesting people. I am glad that i made the right decision of choosing this organization.</description>
+    </item>
+    <item>
       <guid isPermaLink="false">https://smit-create.github.io/Smit-create.github.io/2020/05/17/community_period</guid>
       <author>Smit Lunagariya (Smit-create)</author>
       <title>Smit Lunagariya (Smit-create): Community Bonding Period-GSoC 2020</title>
@@ -2293,47 +2301,6 @@ keep you updated!&lt;/p&gt;
       <link>https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/</link>
       <description>&lt;p&gt;Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
  The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&amp;rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.</description>
-    </item>
-    <item>
-      <guid isPermaLink="false">https://jmig5776.github.io//gsoc-week-9</guid>
-      <author>Jogi Miglani (jmig5776)</author>
-      <title>Jogi Miglani (jmig5776): GSoC 2019 - Week 9</title>
-      <pubDate>Sat, 27 Jul 2019 00:00:00 GMT</pubDate>
-      <link>https://jmig5776.github.io//gsoc-week-9</link>
-      <description>&lt;p&gt;This was the eigth week meeting with the GSoC mentors which was scheduled on
-Saturday 27th July, 2019 between 1:30 - 2:30 PM (IST). Me, Yathartha and Amit
-were the attendees of the meeting.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Discussing previous week&amp;#8217;s progress&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Progress of &lt;code class="highlighter-rouge"&gt;_solve_modular&lt;/code&gt;:- In PR &lt;a href="https://github.com/sympy/sympy/pull/16976"&gt;#16976&lt;/a&gt;
-I implemented the basic design of &lt;code class="highlighter-rouge"&gt;_solve_modular&lt;/code&gt;. Some very good suggestion by
-Yathartha for creating &lt;code class="highlighter-rouge"&gt;_invert_modular&lt;/code&gt; were very helpful. Now basically the
-&lt;code class="highlighter-rouge"&gt;_solve_modular&lt;/code&gt; first do preprocessing and invert it and then find solution and
-in final domain intersection takes place.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Progress of ImageSet Union:- In PR &lt;a href="https://github.com/sympy/sympy/pull/17079"&gt;#17079&lt;/a&gt;
-I will be implementing an algorithm based on heurestics for performing ImageSet
-Union this week. Basic code is being already written for defining a function and
-only algorithm part is left which will be performed in this week.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Next week goals&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Work upon &lt;code class="highlighter-rouge"&gt;_solve_modular&lt;/code&gt; and ImageSet Union PR&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Code improvement takes time!!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

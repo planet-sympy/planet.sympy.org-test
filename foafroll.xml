@@ -7,7 +7,7 @@
       <foaf:Agent>
         <foaf:name>Ashish Kumar Gaurav (ashishkg0022)</foaf:name>
         <foaf:weblog>
-          <foaf:Document rdf:about="http://ashishkg0022.blogspot.com/">
+          <foaf:Document>
             <rdfs:seeAlso>
               <rss:channel rdf:about="http://ashishkg0022.blogspot.in/feeds/posts/default?alt=rss"/>
             </rdfs:seeAlso>
